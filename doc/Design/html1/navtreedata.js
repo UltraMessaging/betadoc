@@ -106,7 +106,14 @@ var NAVTREE =
         [ "Arrival Order, Fragments Not Reassembled", "index.html#arrivalorderfragmentsnotreassembled", null ]
       ] ],
       [ "Loss Detection Using TSNIs", "index.html#lossdetectionusingtsnis", null ],
-      [ "Receiver Keepalive Using Session Messages", "index.html#receiverkeepaliveusingsesssionmessages", null ]
+      [ "Receiver Keepalive Using Session Messages", "index.html#receiverkeepaliveusingsesssionmessages", null ],
+      [ "Extended Messaging Example", "index.html#extendedmessagingexample", [
+        [ "Example First Message", "index.html#examplefirstmessage", null ],
+        [ "Example Batching", "index.html#examplebatching", null ],
+        [ "Example UM Fragmentation", "index.html#exampleumfragmentation", null ],
+        [ "Example Loss Recovery", "index.html#examplelossrecovery", null ],
+        [ "Example Unrecoverable Loss", "index.html#exampleunrecoverableloss", null ]
+      ] ]
     ] ],
     [ "UM Features", "index.html#umfeatures", [
       [ "Transport Services Provider (XSP)", "index.html#transportservicesproviderxsp", [
