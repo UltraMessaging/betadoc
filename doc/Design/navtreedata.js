@@ -5,7 +5,8 @@ var NAVTREE =
     [ "Fundamental Concepts", "fundamentalconcepts.html", [
       [ "Topic Structure and Management", "fundamentalconcepts.html#topicstructureandmanagement", [
         [ "Message Ordering", "fundamentalconcepts.html#messageordering", null ],
-        [ "Topic Resolution Overview", "fundamentalconcepts.html#topicresolutionoverview", null ]
+        [ "Topic Resolution Overview", "fundamentalconcepts.html#topicresolutionoverview", null ],
+        [ "Topic Resolution Domain", "fundamentalconcepts.html#topicresolutiondomain", null ]
       ] ],
       [ "Persistence", "fundamentalconcepts.html#persistence", null ],
       [ "Queuing", "fundamentalconcepts.html#queuing", null ],
@@ -38,7 +39,11 @@ var NAVTREE =
         [ "UM Hot Failover Across Contexts Objects", "umobjects.html#umhotfailoveracrosscontextsobjects", null ],
         [ "Zero Object Delivery", "umobjects.html#zeroobjectdelivery", null ]
       ] ],
-      [ "Event Queue Object", "umobjects.html#eventqueueobject", null ]
+      [ "Event Queue Object", "umobjects.html#eventqueueobject", null ],
+      [ "Message Object", "umobjects.html#messageobject", [
+        [ "Message Object Deletion", "umobjects.html#messageobjectdeletion", null ],
+        [ "Message Object Retention", "umobjects.html#messageobjectretention", null ]
+      ] ]
     ] ],
     [ "Transport Types", "transporttypes.html", [
       [ "Transport TCP", "transporttypes.html#transporttcp", null ],
@@ -68,28 +73,46 @@ var NAVTREE =
         [ ".NET Code Examples for LBT-SMX", "transporttypes.html#netcodeexamplesforlbtsmx", null ],
         [ "LBT-SMX Resource Manager", "transporttypes.html#lbtsmxresourcemanager", null ]
       ] ],
-      [ "Transport LBT-RDMA", "transporttypes.html#transportlbtrdma", [
-        [ "Similarities with Other UM Transports", "transporttypes.html#similaritieswithotherumstransports", null ],
-        [ "Differences from Other UM Transports", "transporttypes.html#differencesfromotherumstransports", null ]
-      ] ],
       [ "Transport Broker", "transporttypes.html#transportbroker", null ]
     ] ],
+    [ "Topic Resolution Description", "topicresolutiondescription.html", [
+      [ "TR Protocol Comparison", "topicresolutiondescription.html#trprotocolcomparison", [
+        [ "Multicast UDP TR", "topicresolutiondescription.html#multicastudptr", null ],
+        [ "Unicast UDP TR", "topicresolutiondescription.html#unicastudptr", null ],
+        [ "TCP TR", "topicresolutiondescription.html#tcptr", null ]
+      ] ],
+      [ "UDP-Based Topic Resolution Details", "topicresolutiondescription.html#udpbasedtopicresolutiondetails", [
+        [ "Sources Advertise", "topicresolutiondescription.html#sourcesadvertise", null ],
+        [ "Receivers Query", "topicresolutiondescription.html#receiversquery", null ],
+        [ "Wildcard Receiver Topic Resolution", "topicresolutiondescription.html#wildcardreceivertopicresolution", null ],
+        [ "Initial Phase", "topicresolutiondescription.html#initialphase", null ],
+        [ "Sustaining Phase", "topicresolutiondescription.html#sustainingphase", null ],
+        [ "Quiescent Phase", "topicresolutiondescription.html#quiescentphase", null ],
+        [ "Store (context) Name Resolution", "topicresolutiondescription.html#storecontextnameresolution", null ],
+        [ "UDP Topic Resolution Configuration Options", "topicresolutiondescription.html#udptopicresolutionconfigurationoptions", null ],
+        [ "Unicast Topic Resolution", "topicresolutiondescription.html#unicasttopicresolution", null ],
+        [ "Network Address Translation (NAT)", "topicresolutiondescription.html#networkaddresstranslationnat", null ],
+        [ "Example NAT Configuration", "topicresolutiondescription.html#examplenatconfiguration", null ]
+      ] ],
+      [ "UDP-Based Topic Resolution Strategies", "topicresolutiondescription.html#udpbasedtopicresolutionstrategies", [
+        [ "Default TR", "topicresolutiondescription.html#defaulttr", null ],
+        [ "Query-Centric TR", "topicresolutiondescription.html#querycentrictr", null ],
+        [ "Known Query Threshold TR", "topicresolutiondescription.html#knownquerythresholdtr", null ],
+        [ "Advertise-Centric TR", "topicresolutiondescription.html#advertisecentrictr", null ]
+      ] ],
+      [ "TCP-Based Topic Resolution Details", "topicresolutiondescription.html#tcpbasedtopicresolutiondetails", [
+        [ "TCP-Based TR and Fault Tolerance", "topicresolutiondescription.html#tcpbasedtrandfaulttolerance", null ],
+        [ "TCP-Based TR Version Interoperability", "topicresolutiondescription.html#tcpbasedtrversioninteroperability", null ],
+        [ "TCP-Based TR Configuration", "topicresolutiondescription.html#tcpbasedtrconfiguration", null ],
+        [ "SRS Service", "topicresolutiondescription.html#srsservice", null ]
+      ] ]
+    ] ],
     [ "Architecture", "architecture.html", [
+      [ "UM Software Stack", "architecture.html#umsoftwarestack", [
+        [ "Delivery Controller", "architecture.html#deliverycontroller", null ]
+      ] ],
       [ "Embedded Mode", "architecture.html#embeddedmode", null ],
       [ "Sequential Mode", "architecture.html#sequentialmode", null ],
-      [ "Topic Resolution Description", "architecture.html#topicresolutiondescription", [
-        [ "Multicast Topic Resolution", "architecture.html#multicasttopicresolution", null ],
-        [ "Sources Advertise", "architecture.html#sourcesadvertise", null ],
-        [ "Receivers Query", "architecture.html#receiversquery", null ],
-        [ "Wildcard Receiver Topic Resolution", "architecture.html#wildcardreceivertopicresolution", null ],
-        [ "Initial Phase", "architecture.html#initialphase", null ],
-        [ "Sustaining Phase", "architecture.html#sustainingphase", null ],
-        [ "Quiescent Phase", "architecture.html#quiescentphase", null ],
-        [ "Store (context) Name Resolution", "architecture.html#storecontextnameresolution", null ],
-        [ "Topic Resolution Configuration Options", "architecture.html#topicresolutionconfigurationoptions", null ],
-        [ "Unicast Topic Resolution", "architecture.html#unicasttopicresolution", null ],
-        [ "Network Address Translation (NAT)", "architecture.html#networkaddresstranslationnat", null ]
-      ] ],
       [ "Message Batching", "architecture.html#messagebatching", [
         [ "Implicit Batching", "architecture.html#implicitbatching", null ],
         [ "Intelligent Batching", "architecture.html#intelligentbatching", null ],
@@ -108,11 +131,12 @@ var NAVTREE =
       [ "Loss Detection Using TSNIs", "architecture.html#lossdetectionusingtsnis", null ],
       [ "Receiver Keepalive Using Session Messages", "architecture.html#receiverkeepaliveusingsesssionmessages", null ],
       [ "Extended Messaging Example", "architecture.html#extendedmessagingexample", [
-        [ "Example First Message", "architecture.html#examplefirstmessage", null ],
-        [ "Example Batching", "architecture.html#examplebatching", null ],
-        [ "Example UM Fragmentation", "architecture.html#exampleumfragmentation", null ],
-        [ "Example Loss Recovery", "architecture.html#examplelossrecovery", null ],
-        [ "Example Unrecoverable Loss", "architecture.html#exampleunrecoverableloss", null ]
+        [ "Example: First Message", "architecture.html#examplefirstmessage", null ],
+        [ "Example: Batching", "architecture.html#examplebatching", null ],
+        [ "Example: UM Fragmentation", "architecture.html#exampleumfragmentation", null ],
+        [ "Example: Loss Recovery", "architecture.html#examplelossrecovery", null ],
+        [ "Example: Unrecoverable Loss", "architecture.html#exampleunrecoverableloss", null ],
+        [ "Example: Transport Deletion", "architecture.html#exampletransportdeletion", null ]
       ] ]
     ] ],
     [ "UM Features", "umfeatures.html", [
@@ -136,17 +160,6 @@ var NAVTREE =
         [ "OTR With Persistence", "umfeatures.html#otrwithump", null ],
         [ "OTR Options Summary", "umfeatures.html#otroptionssummary", null ]
       ] ],
-      [ "Smart Sources", "umfeatures.html#smartsources", [
-        [ "Smart Sources and Memory Management", "umfeatures.html#smartsourcesandmemorymanagement", null ],
-        [ "Smart Sources Configuration", "umfeatures.html#smartsourceconfiguration", null ],
-        [ "Smart Source Defensive Checks", "umfeatures.html#smartsourcedefensivechecks", null ],
-        [ "Smart Sources Restrictions", "umfeatures.html#smartsourcerestrictions", null ]
-      ] ],
-      [ "Zero-Copy Send API", "umfeatures.html#zerocopysendapi", [
-        [ "Zero-Copy Send Compatibility", "umfeatures.html#zerocopysendcompatibility", null ],
-        [ "Zero-Copy Restrictions", "umfeatures.html#zerocopyrestrictions", null ]
-      ] ],
-      [ "Comparison of Zero Copy and Smart Sources", "umfeatures.html#comparisonofzerocopyandsmartsources", null ],
       [ "Encrypted TCP", "umfeatures.html#encryptedtcp", [
         [ "TLS Authentication", "umfeatures.html#tlsauthentication", null ],
         [ "TLS Backwards Compatibility", "umfeatures.html#tlsbackwardscompatibility", null ],
@@ -169,10 +182,6 @@ var NAVTREE =
       [ "High-resolution Timestamps", "umfeatures.html#highresolutiontimestamps", [
         [ "Timestamp Restrictions", "umfeatures.html#timestamprestrictions", null ],
         [ "Timestamp Configuration Summary", "umfeatures.html#timestampconfigurationsummary", null ]
-      ] ],
-      [ "Receive Multiple Datagrams", "umfeatures.html#receivemultipledatagrams", [
-        [ "Receive Multiple Datagrams Compatibility", "umfeatures.html#receivemultipledatagramscompatibility", null ],
-        [ "Receive Multiple Datagrams Restrictions", "umfeatures.html#receivemultipledatagramsrestrictions", null ]
       ] ],
       [ "Message Properties", "umfeatures.html#messageproperties", [
         [ "Smart Sources and Message Properties", "umfeatures.html#smartsourcesandmessageproperties", null ],
@@ -230,10 +239,128 @@ var NAVTREE =
         [ "Daemon Statistics Details", "umfeatures.html#daemonstatisticsdetails", null ]
       ] ]
     ] ],
+    [ "Advanced Optimizations", "advancedoptimizations.html", [
+      [ "Receive Buffer Recycling", "advancedoptimizations.html#receivebufferrecycling", [
+        [ "Receive Buffer Recycling Restrictions", "advancedoptimizations.html#receivebufferrecyclingrestrictions", null ]
+      ] ],
+      [ "Single Receiving Thread", "advancedoptimizations.html#singlereceivingthread", [
+        [ "Single Receiving Thread Restrictions", "advancedoptimizations.html#singlereceivingthreadrestrictions", null ]
+      ] ],
+      [ "lbm_context_process_events_ex", "advancedoptimizations.html#lbmcontextprocesseventsex", [
+        [ "Context Lock Reduction", "advancedoptimizations.html#contextlockreduction", null ],
+        [ "Context Lock Reduction Restrictions", "advancedoptimizations.html#contextlockreductionrestrictions", null ],
+        [ "Gettimeofday Reduction", "advancedoptimizations.html#gettimeofdayreduction", null ],
+        [ "Gettimeofday Reduction Restrictions", "advancedoptimizations.html#gettimeofdayreductionrestrictions", null ]
+      ] ],
+      [ "Receive Multiple Datagrams", "advancedoptimizations.html#receivemultipledatagrams", [
+        [ "Receive Multiple Datagrams Compatibility", "advancedoptimizations.html#receivemultipledatagramscompatibility", null ],
+        [ "Receive Multiple Datagrams Restrictions", "advancedoptimizations.html#receivemultipledatagramsrestrictions", null ]
+      ] ],
+      [ "Smart Sources", "advancedoptimizations.html#smartsources", [
+        [ "Smart Source Message Buffers", "advancedoptimizations.html#smartsourcemessagebuffers", null ],
+        [ "Smart Sources and Memory Management", "advancedoptimizations.html#smartsourcesandmemorymanagement", null ],
+        [ "Smart Sources Configuration", "advancedoptimizations.html#smartsourceconfiguration", null ],
+        [ "Smart Source Defensive Checks", "advancedoptimizations.html#smartsourcedefensivechecks", null ],
+        [ "Smart Sources Restrictions", "advancedoptimizations.html#smartsourcerestrictions", null ]
+      ] ],
+      [ "Zero-Copy Send API", "advancedoptimizations.html#zerocopysendapi", [
+        [ "Zero-Copy Send Compatibility", "advancedoptimizations.html#zerocopysendcompatibility", null ],
+        [ "Zero-Copy Restrictions", "advancedoptimizations.html#zerocopyrestrictions", null ]
+      ] ],
+      [ "Comparison of Zero Copy and Smart Sources", "advancedoptimizations.html#comparisonofzerocopyandsmartsources", null ],
+      [ "UM Daemons as Windows Services", "advancedoptimizations.html#umdaemonsaswindowsservices", null ]
+    ] ],
+    [ "Manpage for SRS", "manpageforsrs.html", [
+      [ "SRS Command Line", "manpageforsrs.html#srscommandline", null ]
+    ] ],
+    [ "SRS Configuration File", "srsconfigurationfile.html", [
+      [ "SRS Configuration Elements", "srsconfigurationfile.html#srsconfigurationelements", [
+        [ "SRS Element \"<um-srs>\"", "srsconfigurationfile.html#srselementumsrs", null ],
+        [ "SRS Element \"<daemon-monitor>\"", "srsconfigurationfile.html#srselementdaemonmonitor", null ],
+        [ "SRS Element \"<lbm-attributes>\"", "srsconfigurationfile.html#srselementlbmattributes", null ],
+        [ "SRS Element \"<option>\"", "srsconfigurationfile.html#srselementoption", null ],
+        [ "SRS Element \"<publish-connection-events>\"", "srsconfigurationfile.html#srselementpublishconnectionevents", null ],
+        [ "SRS Element \"<publishing-interval>\"", "srsconfigurationfile.html#srselementpublishinginterval", null ],
+        [ "SRS Element \"<internal-config-opts>\"", "srsconfigurationfile.html#srselementinternalconfigopts", null ],
+        [ "SRS Element \"<config-opts>\"", "srsconfigurationfile.html#srselementconfigopts", null ],
+        [ "SRS Element \"<um-client-error-stats>\"", "srsconfigurationfile.html#srselementumclienterrorstats", null ],
+        [ "SRS Element \"<srs-error-stats>\"", "srsconfigurationfile.html#srselementsrserrorstats", null ],
+        [ "SRS Element \"<connection-events>\"", "srsconfigurationfile.html#srselementconnectionevents", null ],
+        [ "SRS Element \"<um-client-stats>\"", "srsconfigurationfile.html#srselementumclientstats", null ],
+        [ "SRS Element \"<srs-stats>\"", "srsconfigurationfile.html#srselementsrsstats", null ],
+        [ "SRS Element \"<default>\"", "srsconfigurationfile.html#srselementdefault", null ],
+        [ "SRS Element \"<debug-monitor>\"", "srsconfigurationfile.html#srselementdebugmonitor", null ],
+        [ "SRS Element \"<enabled>\"", "srsconfigurationfile.html#srselementenabled", null ],
+        [ "SRS Element \"<ping-interval>\"", "srsconfigurationfile.html#srselementpinginterval", null ],
+        [ "SRS Element \"<port>\"", "srsconfigurationfile.html#srselementport", null ],
+        [ "SRS Element \"<interface>\"", "srsconfigurationfile.html#srselementinterface", null ],
+        [ "SRS Element \"<srs>\"", "srsconfigurationfile.html#srselementsrs", null ],
+        [ "SRS Element \"<clientactor>\"", "srsconfigurationfile.html#srselementclientactor", null ],
+        [ "SRS Element \"<batch-frame-max-datagram-size>\"", "srsconfigurationfile.html#srselementbatchframemaxdatagramsize", null ],
+        [ "SRS Element \"<batch-frame-max-record-count>\"", "srsconfigurationfile.html#srselementbatchframemaxrecordcount", null ],
+        [ "SRS Element \"<source-info-queue-service-interval>\"", "srsconfigurationfile.html#srselementsourceinfoqueueserviceinterval", null ],
+        [ "SRS Element \"<request-stream-max-msg-count>\"", "srsconfigurationfile.html#srselementrequeststreammaxmsgcount", null ],
+        [ "SRS Element \"<otidmap>\"", "srsconfigurationfile.html#srselementotidmap", null ],
+        [ "SRS Element \"<async-receiver-distribution>\"", "srsconfigurationfile.html#srselementasyncreceiverdistribution", null ],
+        [ "SRS Element \"<shards>\"", "srsconfigurationfile.html#srselementshards", null ],
+        [ "SRS Element \"<state-lifetime>\"", "srsconfigurationfile.html#srselementstatelifetime", null ],
+        [ "SRS Element \"<daemon>\"", "srsconfigurationfile.html#srselementdaemon", null ],
+        [ "SRS Element \"<pid-file>\"", "srsconfigurationfile.html#srselementpidfile", null ],
+        [ "SRS Element \"<log>\"", "srsconfigurationfile.html#srselementlog", null ]
+      ] ],
+      [ "SRS XSD file", "srsconfigurationfile.html#srsxsdfile", null ]
+    ] ],
+    [ "SRS Daemon Statistics", "srsdaemonstatistics.html", [
+      [ "Message Type: SRS_STATS", "srsdaemonstatistics.html#messagetypesrsstats", null ],
+      [ "Message Type: SRS_ERROR_STATS", "srsdaemonstatistics.html#messagetypesrserrorstats", null ],
+      [ "Message Type: UM_CLIENT_STATS", "srsdaemonstatistics.html#messagetypeumclientstats", null ],
+      [ "Message Type: UM_CLIENT_ERROR_STATS", "srsdaemonstatistics.html#messagetypeumclienterrorstats", null ],
+      [ "Message Type: CONNECTION_EVENTS", "srsdaemonstatistics.html#messagetypeconnectionevents", null ],
+      [ "Message Type: CONFIG_OPTS", "srsdaemonstatistics.html#messagetypeconfigopts", null ],
+      [ "Message Type: INTERNAL_CONFIG_OPTS", "srsdaemonstatistics.html#messagetypeinternalconfigopts", null ],
+      [ "Request Type: REPORT_SRS_VERSION", "srsdaemonstatistics.html#requesttypereportsrsversion", null ],
+      [ "Request Type: REPORT_MONITOR_INFO", "srsdaemonstatistics.html#requesttypereportmonitorinfo", null ],
+      [ "Request Type: SET_PUBLISHING_INTERVAL", "srsdaemonstatistics.html#requesttypesetpublishinginterval", null ]
+    ] ],
     [ "Manpage for lbmrd", "manpageforlbmrd.html", [
-      [ "lbmrd Command Line", "manpageforlbmrd.html#lbmrdcommandline", null ],
-      [ "lbmrd Configuration File", "manpageforlbmrd.html#lbmrdconfigurationfile", [
-        [ "Dummy lbmrd Configuration File", "manpageforlbmrd.html#dummylbmrdconfigurationfile", null ]
+      [ "lbmrd Command Line", "manpageforlbmrd.html#lbmrdcommandline", null ]
+    ] ],
+    [ "lbmrd Configuration File", "lbmrdconfigurationfile.html", [
+      [ "lbmrd Configuration Elements", "lbmrdconfigurationfile.html#lbmrdconfigurationelements", [
+        [ "LBMRD Element \"<lbmrd>\"", "lbmrdconfigurationfile.html#lbmrdelementlbmrd", null ],
+        [ "LBMRD Element \"<transformations>\"", "lbmrdconfigurationfile.html#lbmrdelementtransformations", null ],
+        [ "LBMRD Element \"<transform>\"", "lbmrdconfigurationfile.html#lbmrdelementtransform", null ],
+        [ "LBMRD Element \"<rule>\"", "lbmrdconfigurationfile.html#lbmrdelementrule", null ],
+        [ "LBMRD Element \"<replace>\"", "lbmrdconfigurationfile.html#lbmrdelementreplace", null ],
+        [ "LBMRD Element \"<match>\"", "lbmrdconfigurationfile.html#lbmrdelementmatch", null ],
+        [ "LBMRD Element \"<domains>\"", "lbmrdconfigurationfile.html#lbmrdelementdomains", null ],
+        [ "LBMRD Element \"<domain>\"", "lbmrdconfigurationfile.html#lbmrdelementdomain", null ],
+        [ "LBMRD Element \"<network>\"", "lbmrdconfigurationfile.html#lbmrdelementnetwork", null ],
+        [ "LBMRD Element \"<daemon>\"", "lbmrdconfigurationfile.html#lbmrdelementdaemon", null ],
+        [ "LBMRD Element \"<resolver_unicast_send_socket_buffer>\"", "lbmrdconfigurationfile.html#lbmrdelementresolver_unicast_send_socket_buffer", null ],
+        [ "LBMRD Element \"<resolver_unicast_receiver_socket_buffer>\"", "lbmrdconfigurationfile.html#lbmrdelementresolver_unicast_receiver_socket_buffer", null ],
+        [ "LBMRD Element \"<log>\"", "lbmrdconfigurationfile.html#lbmrdelementlog", null ],
+        [ "LBMRD Element \"<ttl>\"", "lbmrdconfigurationfile.html#lbmrdelementttl", null ],
+        [ "LBMRD Element \"<port>\"", "lbmrdconfigurationfile.html#lbmrdelementport", null ],
+        [ "LBMRD Element \"<interface>\"", "lbmrdconfigurationfile.html#lbmrdelementinterface", null ],
+        [ "LBMRD Element \"<activity>\"", "lbmrdconfigurationfile.html#lbmrdelementactivity", null ]
+      ] ],
+      [ "Dummy lbmrd Configuration File", "lbmrdconfigurationfile.html#dummylbmrdconfigurationfile", null ],
+      [ "Lbmrd DTD file", "lbmrdconfigurationfile.html#lbmrddtdfile", null ]
+    ] ],
+    [ "Packet Loss", "packetloss.html", [
+      [ "UM Recovery of Lost Packets", "packetloss.html#umrecoveryoflostpackets", null ],
+      [ "Packet Loss Points", "packetloss.html#packetlosspoints", [
+        [ "Loss: Switch Egress Port", "packetloss.html#lossswitchegressport", null ],
+        [ "Loss: NIC Ring Buffer", "packetloss.html#lossnicringbuffer", null ],
+        [ "Loss: Socket Buffer", "packetloss.html#losssocketbuffer", null ],
+        [ "Loss: Other", "packetloss.html#lossother", null ]
+      ] ],
+      [ "Verifying Loss Detection Tools", "packetloss.html#verifyinglossdetectiontools", [
+        [ "Prepare to Verify", "packetloss.html#preparetoverify", null ],
+        [ "Verifying Switch Loss", "packetloss.html#verifyingswitchloss", null ],
+        [ "Verifying NIC Loss", "packetloss.html#verifyingnicloss", null ],
+        [ "Verifying Socket Buffer Loss", "packetloss.html#verifyingsocketbufferloss", null ]
       ] ]
     ] ],
     [ "UM Glossary", "umglossary.html", [
@@ -248,6 +375,7 @@ var NAVTREE =
       [ "Glossary I", "umglossary.html#glossaryi", null ],
       [ "Glossary J", "umglossary.html#glossaryj", null ],
       [ "Glossary L", "umglossary.html#glossaryl", null ],
+      [ "Glossary K", "umglossary.html#glossaryk", null ],
       [ "Glossary M", "umglossary.html#glossarym", null ],
       [ "Glossary N", "umglossary.html#glossaryn", null ],
       [ "Glossary O", "umglossary.html#glossaryo", null ],
@@ -266,7 +394,8 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"architecture.html"
+"advancedoptimizations.html",
+"umfeatures.html#requestmessage"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

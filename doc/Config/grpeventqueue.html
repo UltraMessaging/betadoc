@@ -57,11 +57,11 @@ $(document).ready(function(){initNavTree('grpeventqueue.html','');});
 <div class="textblock"><p><br />
  </p>
 <h1><a class="anchor" id="eventqueueref"></a>
-Reference</h1>
+Reference&nbsp;&nbsp;<small><a href="#eventqueueref">&lt;-</a></small></h1>
 <p><br />
  </p>
 <h2><a class="anchor" id="eventqueuenameeventqueue"></a>
-event_queue_name (event_queue)</h2>
+event_queue_name (event_queue)&nbsp;&nbsp;<small><a href="#eventqueuenameeventqueue">&lt;-</a></small></h2>
 <dl class="section user"><dt></dt><dd>The name of an event queue, limited to 128 alphanumeric characters, hyphens or underscores.</dd></dl>
 <dl class="section user"><dt></dt><dd><table class="doxtable">
 <tr>
@@ -77,7 +77,7 @@ event_queue_name (event_queue)</h2>
 <p><br />
  </p>
 <h2><a class="anchor" id="queueageenabledeventqueue"></a>
-queue_age_enabled (event_queue)</h2>
+queue_age_enabled (event_queue)&nbsp;&nbsp;<small><a href="#queueageenabledeventqueue">&lt;-</a></small></h2>
 <dl class="section user"><dt></dt><dd>Controls whether the length of time each event spends on the event queue is measured. Useful only if you are monitoring event queue statistics.</dd></dl>
 <dl class="section user"><dt></dt><dd><table class="doxtable">
 <tr>
@@ -105,7 +105,7 @@ queue_age_enabled (event_queue)</h2>
 <p><br />
  </p>
 <h2><a class="anchor" id="queuecancellationcallbacksenabledeventqueue"></a>
-queue_cancellation_callbacks_enabled (event_queue)</h2>
+queue_cancellation_callbacks_enabled (event_queue)&nbsp;&nbsp;<small><a href="#queuecancellationcallbacksenabledeventqueue">&lt;-</a></small></h2>
 <dl class="section user"><dt></dt><dd>Flag indicating whether the event queue is to do appropriate locking to provide cancellation callback support for cancel/delete functions.</dd></dl>
 <dl class="section user"><dt></dt><dd><table class="doxtable">
 <tr>
@@ -131,7 +131,7 @@ queue_cancellation_callbacks_enabled (event_queue)</h2>
 <p><br />
  </p>
 <h2><a class="anchor" id="queuecountenabledeventqueue"></a>
-queue_count_enabled (event_queue)</h2>
+queue_count_enabled (event_queue)&nbsp;&nbsp;<small><a href="#queuecountenabledeventqueue">&lt;-</a></small></h2>
 <dl class="section user"><dt></dt><dd>Controls whether the numbers of each type of queue entry are counted. Useful only if you are monitoring event queue statistics.</dd></dl>
 <dl class="section user"><dt></dt><dd><table class="doxtable">
 <tr>
@@ -159,13 +159,13 @@ queue_count_enabled (event_queue)</h2>
 <p><br />
  </p>
 <h2><a class="anchor" id="queuedelaywarningeventqueue"></a>
-queue_delay_warning (event_queue)</h2>
+queue_delay_warning (event_queue)&nbsp;&nbsp;<small><a href="#queuedelaywarningeventqueue">&lt;-</a></small></h2>
 <dl class="section user"><dt></dt><dd>The event queue delay threshold (in microseconds) at which the monitor function for the event queue is called. This delay is the time that an event has been queued before being dispatched. A value of 0 indicates the event queue delay is not to be monitored and checked.</dd></dl>
 <dl class="section user"><dt></dt><dd><table class="doxtable">
 <tr>
 <td><em>Scope:</em> </td><td>event_queue </td></tr>
 <tr>
-<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sdfmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a72438fab15bf500af58d2a8a521e470d">lbm_ulong_t</a></b> </td></tr>
+<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a72438fab15bf500af58d2a8a521e470d">lbm_ulong_t</a></b> </td></tr>
 <tr>
 <td><em>Units:</em> </td><td>microseconds </td></tr>
 <tr>
@@ -177,7 +177,7 @@ queue_delay_warning (event_queue)</h2>
 <p><br />
  </p>
 <h2><a class="anchor" id="queueenqueuenotificationeventqueue"></a>
-queue_enqueue_notification (event_queue)</h2>
+queue_enqueue_notification (event_queue)&nbsp;&nbsp;<small><a href="#queueenqueuenotificationeventqueue">&lt;-</a></small></h2>
 <dl class="section user"><dt></dt><dd>Flag indicating whether to call the monitor function when an event is enqueued into the given event queue. The thread enqueuing the event is the one that calls this function. So, when this is called, the monitoring function in use should only assume this is only notification of enqueuing. The monitor function should not dispatch events directly.</dd></dl>
 <dl class="section user"><dt></dt><dd><table class="doxtable">
 <tr>
@@ -203,7 +203,7 @@ queue_enqueue_notification (event_queue)</h2>
 <p><br />
  </p>
 <h2><a class="anchor" id="queueobjectspurgedoncloseeventqueue"></a>
-queue_objects_purged_on_close (event_queue)</h2>
+queue_objects_purged_on_close (event_queue)&nbsp;&nbsp;<small><a href="#queueobjectspurgedoncloseeventqueue">&lt;-</a></small></h2>
 <dl class="section user"><dt></dt><dd>Flag indicating whether the event queue should be immediately purged of any pending events associated with a recently closed object (e.g. source, receiver) during the close operation, or be left on the queue to be discarded as the event queue drains normally. In either case, UM does not deliver the defunct events to the application. The <code>Immediate purge</code> setting reclaims memory immediately, while the <code>Delay purge</code> setting spreads the reclamation work over time, reducing the CPU impact of closing objects associated with the queue.</dd></dl>
 <dl class="section user"><dt></dt><dd><table class="doxtable">
 <tr>
@@ -229,7 +229,7 @@ queue_objects_purged_on_close (event_queue)</h2>
 <p><br />
  </p>
 <h2><a class="anchor" id="queueservicetimeenabledeventqueue"></a>
-queue_service_time_enabled (event_queue)</h2>
+queue_service_time_enabled (event_queue)&nbsp;&nbsp;<small><a href="#queueservicetimeenabledeventqueue">&lt;-</a></small></h2>
 <dl class="section user"><dt></dt><dd>Controls whether the amount of time required to service each event on the event queue is measured. Useful only if you are monitoring event queue statistics.</dd></dl>
 <dl class="section user"><dt></dt><dd><table class="doxtable">
 <tr>
@@ -257,13 +257,13 @@ queue_service_time_enabled (event_queue)</h2>
 <p><br />
  </p>
 <h2><a class="anchor" id="queuesizewarningeventqueue"></a>
-queue_size_warning (event_queue)</h2>
+queue_size_warning (event_queue)&nbsp;&nbsp;<small><a href="#queuesizewarningeventqueue">&lt;-</a></small></h2>
 <dl class="section user"><dt></dt><dd>The event queue size threshold (in number of events) at which the monitor function for the event queue is called. A value of 0 indicates the event queue size is not to be monitored and checked.</dd></dl>
 <dl class="section user"><dt></dt><dd><table class="doxtable">
 <tr>
 <td><em>Scope:</em> </td><td>event_queue </td></tr>
 <tr>
-<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sdfmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a72438fab15bf500af58d2a8a521e470d">lbm_ulong_t</a></b> </td></tr>
+<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a72438fab15bf500af58d2a8a521e470d">lbm_ulong_t</a></b> </td></tr>
 <tr>
 <td><em>Units:</em> </td><td>number of events </td></tr>
 <tr>

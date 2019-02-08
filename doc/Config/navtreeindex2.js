@@ -1,5 +1,9 @@
 var NAVTREEINDEX2 =
 {
+"grpultramessagingpersistence.html#umeconsensussequencenumberbehaviorsource":[40,0,7],
+"grpultramessagingpersistence.html#umeexplicitackonlyreceiver":[40,0,8],
+"grpultramessagingpersistence.html#umeflightsizebehaviorsource":[40,0,10],
+"grpultramessagingpersistence.html#umeflightsizebytessource":[40,0,11],
 "grpultramessagingpersistence.html#umeflightsizesource":[40,0,9],
 "grpultramessagingpersistence.html#umeforcereclaimfunctionsource":[40,0,12],
 "grpultramessagingpersistence.html#umelatejoinsource":[40,0,13],
@@ -103,8 +107,8 @@ var NAVTREEINDEX2 =
 "grpwildcardreceiver.html#resolverwildcardquerybpscontext":[38,0,8],
 "grpwildcardreceiver.html#resolverwildcardreceivermaptableszcontext":[38,0,9],
 "grpwildcardreceiver.html#wildcardreceiverref":[38,0],
-"index.html":[0],
 "index.html":[],
+"index.html":[0],
 "index.html#assignmentflow":[0,0,1],
 "index.html#assignmentmethods":[0,0,0],
 "index.html#configurationfiles":[0,0,5],

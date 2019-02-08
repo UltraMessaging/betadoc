@@ -58,11 +58,11 @@ $(document).ready(function(){initNavTree('grprequestoperation.html','');});
 <p><br />
  </p>
 <h1><a class="anchor" id="requestoperationref"></a>
-Reference</h1>
+Reference&nbsp;&nbsp;<small><a href="#requestoperationref">&lt;-</a></small></h1>
 <p><br />
  </p>
 <h2><a class="anchor" id="requesttcpexclusiveaddrcontext"></a>
-request_tcp_exclusiveaddr (context)</h2>
+request_tcp_exclusiveaddr (context)&nbsp;&nbsp;<small><a href="#requesttcpexclusiveaddrcontext">&lt;-</a></small></h2>
 <dl class="section user"><dt></dt><dd>Applicable only to Windows. Indicate whether the TCP accepting socket should set SO_EXCLUSIVEADDRUSE or not before it binds. The default setting in Windows allows multiple binds to the same port. By default, UM will set SO_EXCLUSIVEADDRUSE to minimize port sharing. Refer to Microsoft's web site for more information on SO_EXCLUSIVEADDRUSE.</dd></dl>
 <dl class="section user"><dt></dt><dd><table class="doxtable">
 <tr>
@@ -88,7 +88,7 @@ request_tcp_exclusiveaddr (context)</h2>
 <p><br />
  </p>
 <h2><a class="anchor" id="requesttcplistenbacklogcontext"></a>
-request_tcp_listen_backlog (context)</h2>
+request_tcp_listen_backlog (context)&nbsp;&nbsp;<small><a href="#requesttcplistenbacklogcontext">&lt;-</a></small></h2>
 <dl class="section user"><dt></dt><dd>The backlog used in the TCP listen() call to set the queue length for incoming connections.</dd></dl>
 <dl class="section user"><dt></dt><dd><table class="doxtable">
 <tr>
@@ -104,7 +104,7 @@ request_tcp_listen_backlog (context)</h2>
 <p><br />
  </p>
 <h2><a class="anchor" id="requesttcpreuseaddrcontext"></a>
-request_tcp_reuseaddr (context)</h2>
+request_tcp_reuseaddr (context)&nbsp;&nbsp;<small><a href="#requesttcpreuseaddrcontext">&lt;-</a></small></h2>
 <dl class="section user"><dt></dt><dd>Whether the TCP session should set SO_REUSEADDR or not before it binds. </dd></dl>
 <dl class="section user"><dt></dt><dd></dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>This option is not recommended for Microsoft Windows users because the SO_REUSEADDR socket option in Windows allows a socket to forcibly bind to a port in use by another socket. Multiple sockets using the same port results in indeterminate behavior.</dd></dl>

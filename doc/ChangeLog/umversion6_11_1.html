@@ -55,14 +55,15 @@ $(document).ready(function(){initNavTree('umversion6_11_1.html','');});
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>The most-significant update to UM version 6.11.1 is a set of performance improvements to the Persistent Store daemon. Some performance improvements were also applied to the data receive path for applications.</p>
+<dl class="section attention"><dt>Attention</dt><dd>See <a class="el" href="umversion6_11_1.html#deprecationsfor6111">Deprecations for 6.11.1</a> for important information regarding future platform support for UM daemons.</dd></dl>
 <p><br />
  </p>
 <h1><a class="anchor" id="enhancementsfor6_11_1"></a>
-Enhancements for 6.11.1</h1>
+Enhancements for 6.11.1&nbsp;&nbsp;<small><a href="#enhancementsfor6_11_1">&lt;-</a></small></h1>
 <p><br />
  </p>
 <h2><a class="anchor" id="streamingenhancementsfor6_11_1"></a>
-Streaming Enhancements for 6.11.1</h2>
+Streaming Enhancements for 6.11.1&nbsp;&nbsp;<small><a href="#streamingenhancementsfor6_11_1">&lt;-</a></small></h2>
 <p>The following new features and enhancements apply to UMS, UMP, and UMQ products.</p>
 <ul>
 <li>
@@ -71,7 +72,7 @@ Performance improvements made to the data reception code paths, including reduct
 <p><br />
  </p>
 <h2><a class="anchor" id="persistenceenhancementsfor6_11_1"></a>
-Persistence Enhancements for 6.11.1</h2>
+Persistence Enhancements for 6.11.1&nbsp;&nbsp;<small><a href="#persistenceenhancementsfor6_11_1">&lt;-</a></small></h2>
 <p>The following new features and enhancements apply to UMP and UMQ products.</p>
 <ul>
 <li>
@@ -80,7 +81,7 @@ The Persistent Store benefits from the performance enhancements made on the data
 <p><br />
  </p>
 <h2><a class="anchor" id="queuingenhancementsfor6_11_1"></a>
-Queuing Enhancements for 6.11.1</h2>
+Queuing Enhancements for 6.11.1&nbsp;&nbsp;<small><a href="#queuingenhancementsfor6_11_1">&lt;-</a></small></h2>
 <p>The following new features and enhancements apply to the UMQ product.</p>
 <ul>
 <li>
@@ -89,7 +90,7 @@ None. </li>
 <p><br />
  </p>
 <h2><a class="anchor" id="dynamicrouterenhancementsfor6_11_1"></a>
-Dynamic Router Enhancements for 6.11.1</h2>
+Dynamic Router Enhancements for 6.11.1&nbsp;&nbsp;<small><a href="#dynamicrouterenhancementsfor6_11_1">&lt;-</a></small></h2>
 <p>The following new features and enhancements apply to the Dynamic Routing Option (DRO).</p>
 <ul>
 <li>
@@ -98,11 +99,11 @@ None. </li>
 <p><br />
  </p>
 <h1><a class="anchor" id="fixedlimitationsfor6_11_1"></a>
-Fixed Limitations for 6.11.1</h1>
+Fixed Limitations for 6.11.1&nbsp;&nbsp;<small><a href="#fixedlimitationsfor6_11_1">&lt;-</a></small></h1>
 <p><br />
  </p>
 <h2><a class="anchor" id="streamingfixedlimitationsfor6_11_1"></a>
-Streaming Fixed Limitations for 6.11.1</h2>
+Streaming Fixed Limitations for 6.11.1&nbsp;&nbsp;<small><a href="#streamingfixedlimitationsfor6_11_1">&lt;-</a></small></h2>
 <p>The following bug fixes apply to UMS, UMP, and UMQ products.</p>
 <table class="doxtable">
 <tr>
@@ -111,11 +112,11 @@ Streaming Fixed Limitations for 6.11.1</h2>
 <p><br />
  </p>
 <h2><a class="anchor" id="persistencefixedlimitationsfor6_11_1"></a>
-Persistence Fixed Limitations for 6.11.1</h2>
+Persistence Fixed Limitations for 6.11.1&nbsp;&nbsp;<small><a href="#persistencefixedlimitationsfor6_11_1">&lt;-</a></small></h2>
 <p>The following bug fixes apply to UMP and UMQ products.</p>
 <table class="doxtable">
 <tr>
-<td>10332, 10409 </td><td><p class="starttd">FIXED: <em>When the Persistent Store is configured to publish <a class="elRef" doxygen="/29W/Amun/home/sford/sdfmac_DEV_MAIN/29West/lbm/doc/ChangeLog/ume.tag:../UME/" href="../UME/storedaemonstatistics.html">Daemon Statistics</a>, there is a small chance that it will fail to initialize properly. It might log the error:</em> <br />
+<td>10332, 10409 </td><td><p class="starttd">FIXED: <em>When the Persistent Store is configured to publish <a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/ChangeLog/ume.tag:../UME/" href="../UME/storedaemonstatistics.html">Daemon Statistics</a>, there is a small chance that it will fail to initialize properly. It might log the error:</em> <br />
 <code>[CRITICAL]: Store-10184-80: umestore_dmon_publish: CoreApi-5688-2996: src must be valid</code> <br />
 <em>and could exit with a segmentation fault.</em></p>
 <p class="endtd"></p>
@@ -125,7 +126,7 @@ Persistence Fixed Limitations for 6.11.1</h2>
 <p class="endtd"></p>
 </td></tr>
 <tr>
-<td>10404, 10411</td><td><p class="starttd">FIXED: <em>When using <a class="elRef" doxygen="/29W/Amun/home/sford/sdfmac_DEV_MAIN/29West/lbm/doc/ChangeLog/ume.tag:../UME/" href="../UME/operationalview.html#receiverpacedpersistenceoperations">RPP</a> with <a class="elRef" doxygen="/29W/Amun/home/sford/sdfmac_DEV_MAIN/29West/lbm/doc/ChangeLog/ume.tag:../UME/" href="../UME/configurationreferenceforumestored.html#umecfgrepositorytype">repository-type</a> "disk", it is possible for a <a class="elRef" doxygen="/29W/Amun/home/sford/sdfmac_DEV_MAIN/29West/lbm/doc/ChangeLog/config.tag:../Config/" href="../Config/grpultramessagingpersistence.html#umereceiverpacedpersistencereceiver">blocking receiver</a> to get unrecoverable loss. This loss can be accompanied by the following warning in the Persistent Store log file:</em> <br />
+<td>10404, 10411</td><td><p class="starttd">FIXED: <em>When using <a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/ChangeLog/ume.tag:../UME/" href="../UME/operationalview.html#receiverpacedpersistenceoperations">RPP</a> with <a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/ChangeLog/ume.tag:../UME/" href="../UME/configurationreferenceforumestored.html#umecfgrepositorytype">repository-type</a> "disk", it is possible for a <a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/ChangeLog/config.tag:../Config/" href="../Config/grpultramessagingpersistence.html#umereceiverpacedpersistencereceiver">blocking receiver</a> to get unrecoverable loss. This loss can be accompanied by the following warning in the Persistent Store log file:</em> <br />
 <code>[WARNING]: WARNING: failed assertion [ntohl(ohdr-&gt;sqn)==rec-&gt;sqn]</code></p>
 <p class="endtd"></p>
 </td></tr>
@@ -135,7 +136,7 @@ Persistence Fixed Limitations for 6.11.1</h2>
 <p><br />
  </p>
 <h2><a class="anchor" id="queuingfixedlimitationsfor6_11_1"></a>
-Queuing Fixed Limitations for 6.11.1</h2>
+Queuing Fixed Limitations for 6.11.1&nbsp;&nbsp;<small><a href="#queuingfixedlimitationsfor6_11_1">&lt;-</a></small></h2>
 <p>The following bug fixes apply to the UMQ product.</p>
 <ul>
 <li>
@@ -144,12 +145,44 @@ None. </li>
 <p><br />
  </p>
 <h2><a class="anchor" id="dynamicrouterfixedlimitationsfor6_11_1"></a>
-Dynamic Router Fixed Limitations for 6.11.1</h2>
+Dynamic Router Fixed Limitations for 6.11.1&nbsp;&nbsp;<small><a href="#dynamicrouterfixedlimitationsfor6_11_1">&lt;-</a></small></h2>
 <p>The following bug fixes apply to the Dynamic Routing Option (DRO).</p>
 <ul>
 <li>
 None. </li>
 </ul>
+<p><br />
+ </p>
+<h1><a class="anchor" id="deprecationsfor6111"></a>
+Deprecations for 6.11.1&nbsp;&nbsp;<small><a href="#deprecationsfor6111">&lt;-</a></small></h1>
+<p>Starting with UM version 6.12, the UM daemons will no longer be available on certain platforms.</p>
+<dl class="section note"><dt>Note</dt><dd>User applications will continue to be fully supported on all platforms. These deprecations only apply to UM daemon executables, such as the Store Daemon and the Dynamic Router daemon.</dd></dl>
+<p>UM daemons will continue to be available on the following platforms: </p><ul>
+<li>
+Persistent Store daemon ("stored"): Linux 64-bit, Windows 64-bit. </li>
+<li>
+UM Dynamic Router daemon ("tnwgd"): Linux 64-bit, Windows 64 and 32-bit. </li>
+<li>
+UM Manager daemon ("ummd"): Linux 64-bit, Windows 64-bit. </li>
+<li>
+UM Resolution daemon ("lbmrd"): Linux 64-bit, Windows 64-bit. </li>
+<li>
+UM Queue Broker (ActiveMQ): Linux 64-bit, Windows 64-bit. </li>
+</ul>
+<p>The planned deprecated daemon platforms are: </p><ul>
+<li>
+Solaris (X86 and Sparc) </li>
+<li>
+AIX </li>
+<li>
+MacOS </li>
+<li>
+Linux 32-bit </li>
+<li>
+Windows 32-bit (except Dynamic Router "tnwgd", which will continue on 32-bit) </li>
+</ul>
+<p>User applications deployed on these platforms will fully interoperate with daemons running on the reduced set of platforms.</p>
+<p>Please contact support if any of these planned deprecations interfere with your existing or planned deployments. </p>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.8.11-->

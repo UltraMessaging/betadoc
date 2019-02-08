@@ -61,16 +61,16 @@ $(document).ready(function(){initNavTree('startupshutdownprocedures.html','');})
 <p><br />
  </p>
 <h1><a class="anchor" id="topicresolution"></a>
-Topic Resolution</h1>
+Topic Resolution&nbsp;&nbsp;<small><a href="#topicresolution">&lt;-</a></small></h1>
 <p>Your UM development or administration team should anticipate the time and bandwidth required to resolve all topics when all applications initially start. This team should also establish any restarting restrictions.</p>
 <p>Operations staff should not have any direct topic resolution tasks aside from monitoring the increased CPU and bandwidth usage.</p>
 <p>Topic resolution is the discovery of a topic's transport session information by a receiver to enable the receipt of topic messages. Although in a multicast environment, topic resolution does not need to be started or shutdown, it does use network resources and can cause deaf receivers and other problems if not operating properly. See <em>Topic Resolution</em> in the <em>UM Concepts Guide</em> for more detailed information.</p>
 <p>Applications cannot deliver messages until topic resolution completes. UM monitoring statistics are active before all topics resolve. In a large topic space approximately 10,000 topics) topic resolution messages may be 'staggered' or rate controlled, taking potentially several seconds to complete.</p>
-<p>For example, 10,000 topics at the default value of 1,000 for <a class="elRef" doxygen="/29W/Amun/home/sford/sdfmac_DEV_MAIN/29West/lbm/doc/Operations/config.tag:../Config/" href="../Config/grpresolveroperation.html#resolverinitialadvertisementspersecondcontext">resolver_initial_advertisements_per_second (context)</a> will take 10 seconds to send out an advertisement for every topic. If all receiving applications have been started first, fully resolving all topics may not take much more than 10 seconds. The rate of topic resolution can also be controlled with the <a class="elRef" doxygen="/29W/Amun/home/sford/sdfmac_DEV_MAIN/29West/lbm/doc/Operations/config.tag:../Config/" href="../Config/grpresolveroperation.html#resolverinitialadvertisementbpscontext">resolver_initial_advertisement_bps (context)</a> configuration option. Topic advertisements contain the topic string and approximately 110 bytes overhead. Topic queries from receivers contain no overhead, only the topic string.</p>
+<p>For example, 10,000 topics at the default value of 1,000 for <a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Operations/config.tag:../Config/" href="../Config/grpudpbasedresolveroperation.html#resolverinitialadvertisementspersecondcontext">resolver_initial_advertisements_per_second (context)</a> will take 10 seconds to send out an advertisement for every topic. If all receiving applications have been started first, fully resolving all topics may not take much more than 10 seconds. The rate of topic resolution can also be controlled with the <a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Operations/config.tag:../Config/" href="../Config/grpudpbasedresolveroperation.html#resolverinitialadvertisementbpscontext">resolver_initial_advertisement_bps (context)</a> configuration option. Topic advertisements contain the topic string and approximately 110 bytes overhead. Topic queries from receivers contain no overhead, only the topic string.</p>
 <p><br />
  </p>
 <h1><a class="anchor" id="umapplications"></a>
-UM Applications</h1>
+UM Applications&nbsp;&nbsp;<small><a href="#umapplications">&lt;-</a></small></h1>
 <p>Your UM development team should provide you with the application names, resident machines and startup parameters, along with a sequence of application/daemon startups and shutdowns.</p>
 <p>The following lists typical application startup errors.</p>
 <ul>
@@ -92,7 +92,7 @@ Multiple interfaces detected - LOG Level 5: WARNING: Host has multiple multicast
 <p><br />
  </p>
 <h1><a class="anchor" id="indicationsofpossibleapplicationshutdown"></a>
-Indications of Possible Application Shutdown</h1>
+Indications of Possible Application Shutdown&nbsp;&nbsp;<small><a href="#indicationsofpossibleapplicationshutdown">&lt;-</a></small></h1>
 <p>A UM application shutdown may not be obvious immediately, especially if you are monitoring scores of applications. The following lists events that may indicate an application has shutdown.</p>
 <ul>
 <li>
@@ -109,7 +109,7 @@ In an Application Log, disconnect events (LBM_SRC_EVENT_DISCONNECT) for unicast 
 <p><br />
  </p>
 <h1><a class="anchor" id="unicasttopicresolverlbmrd"></a>
-Unicast Topic Resolver (lbmrd)</h1>
+Unicast Topic Resolver (lbmrd)&nbsp;&nbsp;<small><a href="#unicasttopicresolverlbmrd">&lt;-</a></small></h1>
 <p>If not using multicast topic resolution, one or more instances of lbmrd must be started prior to stating applications. Unicast resolver daemons require an XML configuration file and multiple resolver daemons can be specified by your UM development team for resiliency. See UM Concepts Guide, Unicast Topic Resolution for more details.</p>
 <p>Execute the following command on the appropriate machine to start a unicast topic resolver (lbmrd).</p>
 <pre class="fragment">lbmrd --interface=ADDR -L daemon_logfile.out -p PORT lbmrd.cfg
@@ -123,12 +123,12 @@ Unicast Topic Resolver (lbmrd)</h1>
 <p><br />
  </p>
 <h1><a class="anchor" id="persistentstoreumestored"></a>
-Persistent Store (umestored)</h1>
+Persistent Store (umestored)&nbsp;&nbsp;<small><a href="#persistentstoreumestored">&lt;-</a></small></h1>
 <p>Stores can operate in disk-backed or memory-only mode specified in the store's XML configuration file. Disk backed stores are subject to the limitations of the disk hardware. Stores should not be run on virtual machines and each store should have a dedicated disk. UM holds messages in memory until written to disk.</p>
 <p><br />
  </p>
 <h2><a class="anchor" id="startingastore"></a>
-Starting a Store</h2>
+Starting a Store&nbsp;&nbsp;<small><a href="#startingastore">&lt;-</a></small></h2>
 <p>Execute the following command on the appropriate machine to start a (umestored):</p>
 <pre class="fragment">umestored config-file.xml
 </pre><ul>
@@ -150,7 +150,7 @@ State file - contains information about the current state of each client connect
 <p><br />
  </p>
 <h2><a class="anchor" id="restartingastore"></a>
-Restarting a Store</h2>
+Restarting a Store&nbsp;&nbsp;<small><a href="#restartingastore">&lt;-</a></small></h2>
 <p>Perform the following procedure to restart a store.</p>
 <ol>
 <li>
@@ -165,7 +165,7 @@ Run the command: "umestored config-file.xml". umestored automatically uses the e
 <p><br />
  </p>
 <h2><a class="anchor" id="commonstartupandshutdownissues"></a>
-Common Startup and Shutdown Issues</h2>
+Common Startup and Shutdown Issues&nbsp;&nbsp;<small><a href="#commonstartupandshutdownissues">&lt;-</a></small></h2>
 <ul>
 <li>
 Cache and state directories don't exist. </li>
@@ -181,13 +181,13 @@ Missing license details. </li>
 <p><br />
  </p>
 <h1><a class="anchor" id="umroutertnwgd"></a>
-UM Router (tnwgd)</h1>
+UM Router (tnwgd)&nbsp;&nbsp;<small><a href="#umroutertnwgd">&lt;-</a></small></h1>
 <p>When a UM Router starts it discovers all sources and receivers in the topic resolution domains to which it connects. This results in a measurable increase and overall volume of topic resolution traffic and can take some time to complete depending upon the number of sources, receivers, and topics. The rate limits set on topic resolution also affect the time to resolve all topics.</p>
 <p>See also <a class="el" href="startupshutdownprocedures.html#topicresolution">Topic Resolution</a>.</p>
 <p><br />
  </p>
 <h2><a class="anchor" id="startingaumrouter"></a>
-Starting a UM Router</h2>
+Starting a UM Router&nbsp;&nbsp;<small><a href="#startingaumrouter">&lt;-</a></small></h2>
 <p>Execute the following command on the appropriate machine to start a UM Router (tnwgd).</p>
 <pre class="fragment">tnwgd config-file.xml
 </pre><ul>
@@ -199,7 +199,7 @@ Observe the tnwgd logfile for errors and warnings. </li>
 <p><br />
  </p>
 <h2><a class="anchor" id="restartingaumrouter"></a>
-Restarting a UM Router</h2>
+Restarting a UM Router&nbsp;&nbsp;<small><a href="#restartingaumrouter">&lt;-</a></small></h2>
 <p>Perform the following procedure to restart a UM Router.</p>
 <ol>
 <li>
@@ -212,12 +212,12 @@ Run the command: tnwgd config-file.xml </li>
 <p><br />
  </p>
 <h1><a class="anchor" id="umanalysistools"></a>
-UM Analysis Tools</h1>
+UM Analysis Tools&nbsp;&nbsp;<small><a href="#umanalysistools">&lt;-</a></small></h1>
 <p>Tools available to analyze UM activity and performance.</p>
 <p><br />
  </p>
 <h2><a class="anchor" id="packetcapturetools"></a>
-Packet Capture Tools</h2>
+Packet Capture Tools&nbsp;&nbsp;<small><a href="#packetcapturetools">&lt;-</a></small></h2>
 <ul>
 <li>
 Wireshark® is an open-source network packet analysis tool, for which Informatica provides 'dissectors' describing our packet formats. It is used to open and sift through packet capture files, which can be gathered by a variety of both software and hardware tools. For more information about Wireshark or to download the UM Wireshark plugins, please visit <a href="http://www.29west.com/wireshark">http://www.29west.com/wireshark</a>. </li>
@@ -229,7 +229,7 @@ Tcpdump is the primary software method for gathering packet capture data from a 
 <p><br />
  </p>
 <h2><a class="anchor" id="resourcemonitors"></a>
-Resource Monitors</h2>
+Resource Monitors&nbsp;&nbsp;<small><a href="#resourcemonitors">&lt;-</a></small></h2>
 <ul>
 <li>
 Top is a system resource monitor available on Linux/Unix that presents a variety of useful data, such as CPU use (both average and per-CPU), including time spent in user mode, system mode, time processing interrupts, time spent waiting on I/O, etc. </li>
@@ -241,7 +241,7 @@ Microsoft ®Windows® System Resource Manager manages Windows Server® 2008 proc
 <p><br />
  </p>
 <h2><a class="anchor" id="processanalysistools"></a>
-Process Analysis Tools</h2>
+Process Analysis Tools&nbsp;&nbsp;<small><a href="#processanalysistools">&lt;-</a></small></h2>
 <ul>
 <li>
 <p class="startli"><b>pstack</b> dumps a stack trace for a process (pid). If the process named is part of a thread group, then</p>
@@ -253,7 +253,7 @@ Process Analysis Tools</h2>
 <p><br />
  </p>
 <h2><a class="anchor" id="networktools"></a>
-Network Tools</h2>
+Network Tools&nbsp;&nbsp;<small><a href="#networktools">&lt;-</a></small></h2>
 <ul>
 <li>
 <b>netstat</b> provides network statistics for a computer's configured network interfaces. This extensive command-line tool is available on Linux/Unix based systems and Windows operating systems. </li>
@@ -265,7 +265,7 @@ Network Tools</h2>
 <p><br />
  </p>
 <h2><a class="anchor" id="umtools"></a>
-UM Tools</h2>
+UM Tools&nbsp;&nbsp;<small><a href="#umtools">&lt;-</a></small></h2>
 <ul>
 <li>
 lbmmoncache is a utility that monitors both source notification and source/receiver statistics. Contact UM Support for more information about this utility. </li>
@@ -275,7 +275,7 @@ lbtrreq restarts the topic resolution process. Contact UM Support for more infor
 <p><br />
  </p>
 <h2><a class="anchor" id="umdebugflags"></a>
-UM Debug Flags</h2>
+UM Debug Flags&nbsp;&nbsp;<small><a href="#umdebugflags">&lt;-</a></small></h2>
 <p>The use of UM debug flags requires the assistance of UM Support. Also refer to the following Knowledge Base articles for more information about using debug flags. </p><ul>
 <li>
 <a href="https://kb.informatica.com/howto/4/Pages/80100.aspx">Using debug flags</a> </li>

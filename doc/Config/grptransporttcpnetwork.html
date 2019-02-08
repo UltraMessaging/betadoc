@@ -57,7 +57,7 @@ $(document).ready(function(){initNavTree('grptransporttcpnetwork.html','');});
 <div class="textblock"><p><br />
  </p>
 <h1><a class="anchor" id="tcptransportsessionmanagement"></a>
-TCP Transport Session Management</h1>
+TCP Transport Session Management&nbsp;&nbsp;<small><a href="#tcptransportsessionmanagement">&lt;-</a></small></h1>
 <p>The image below shows a simplified relationship between the primary TCP transport network options.</p>
 <div class="image">
 <img src="TCP-Net.png" alt="TCP-Net.png"/>
@@ -70,17 +70,17 @@ TCP Transport Session Management</h1>
 <p><br />
  </p>
 <h1><a class="anchor" id="transporttcpnetworkref"></a>
-Reference</h1>
+Reference&nbsp;&nbsp;<small><a href="#transporttcpnetworkref">&lt;-</a></small></h1>
 <p><br />
  </p>
 <h2><a class="anchor" id="transporttcpinterfacereceiver"></a>
-transport_tcp_interface (receiver)</h2>
+transport_tcp_interface (receiver)&nbsp;&nbsp;<small><a href="#transporttcpinterfacereceiver">&lt;-</a></small></h2>
 <dl class="section user"><dt></dt><dd>Specifies the network interface to which UM receivers bind before connecting to sources. You can specify the full IP address of interface, or just the network part (see <a class="el" href="generalconfigurationguidelines.html#specifyinginterfaces">Specifying Interfaces</a> for details). Default is set to <a class="el" href="grpmajoroptions.html#defaultinterfacecontext">default_interface (context)</a>, if specified.</dd></dl>
 <dl class="section user"><dt></dt><dd><table class="doxtable">
 <tr>
 <td><em>Scope:</em> </td><td>receiver </td></tr>
 <tr>
-<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sdfmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a0b66a5b33839617b2a822e4a20a8d535">lbm_ipv4_address_mask_t</a></b> </td></tr>
+<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a0b66a5b33839617b2a822e4a20a8d535">lbm_ipv4_address_mask_t</a></b> </td></tr>
 <tr>
 <td><em>Default value:</em> </td><td>0.0.0.0 (INADDR_ANY) </td></tr>
 <tr>
@@ -90,13 +90,13 @@ transport_tcp_interface (receiver)</h2>
 <p><br />
  </p>
 <h2><a class="anchor" id="transporttcpinterfacesource"></a>
-transport_tcp_interface (source)</h2>
+transport_tcp_interface (source)&nbsp;&nbsp;<small><a href="#transporttcpinterfacesource">&lt;-</a></small></h2>
 <dl class="section user"><dt></dt><dd>Specifies the network interface over which UM accepts connection requests (from topic receivers). You can specify the full IP address of interface, or just the network part (see <a class="el" href="generalconfigurationguidelines.html#specifyinginterfaces">Specifying Interfaces</a> for details). Be aware that this option is applied to the transport session when the first topic is created on that session. Thus, setting a different interface for a subsequent topic that maps onto the same transport session will have no effect. Default is set to <a class="el" href="grpmajoroptions.html#defaultinterfacecontext">default_interface (context)</a> if specified. Otherwise, it is set to INADDR_ANY, meaning that it will not bind to a specific interface. You can also modify the default by setting the option to 0.0.0.0/0 which produces the same result.</dd></dl>
 <dl class="section user"><dt></dt><dd><table class="doxtable">
 <tr>
 <td><em>Scope:</em> </td><td>source </td></tr>
 <tr>
-<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sdfmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a0b66a5b33839617b2a822e4a20a8d535">lbm_ipv4_address_mask_t</a></b> </td></tr>
+<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a0b66a5b33839617b2a822e4a20a8d535">lbm_ipv4_address_mask_t</a></b> </td></tr>
 <tr>
 <td><em>Default value:</em> </td><td>0.0.0.0 (INADDR_ANY) </td></tr>
 <tr>
@@ -106,14 +106,14 @@ transport_tcp_interface (source)</h2>
 <p><br />
  </p>
 <h2><a class="anchor" id="transporttcpmaximumportscontext"></a>
-transport_tcp_maximum_ports (context)</h2>
-<dl class="section user"><dt></dt><dd>Maximum number of TCP sessions to allocate. </dd></dl>
-<dl class="section user"><dt></dt><dd>See <a class="el" href="generalconfigurationguidelines.html#portassignments">Port Assignments</a> for more information about configuring ports.</dd></dl>
+transport_tcp_maximum_ports (context)&nbsp;&nbsp;<small><a href="#transporttcpmaximumportscontext">&lt;-</a></small></h2>
+<dl class="section user"><dt></dt><dd>Maximum size of TCP source transport session pool. </dd></dl>
+<dl class="section user"><dt></dt><dd>See <a class="el" href="grptransporttcpnetwork.html#tcptransportsessionmanagement">TCP Transport Session Management</a> for how TCP source transport sessions are managed.</dd></dl>
 <dl class="section user"><dt></dt><dd><table class="doxtable">
 <tr>
 <td><em>Scope:</em> </td><td>context </td></tr>
 <tr>
-<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sdfmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a86897f2fdd66aa7021683a4e72a4537b">lbm_uint16_t</a></b> </td></tr>
+<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a86897f2fdd66aa7021683a4e72a4537b">lbm_uint16_t</a></b> </td></tr>
 <tr>
 <td><em>Units:</em> </td><td>number of ports </td></tr>
 <tr>
@@ -125,14 +125,18 @@ transport_tcp_maximum_ports (context)</h2>
 <p><br />
  </p>
 <h2><a class="anchor" id="transporttcpportsource"></a>
-transport_tcp_port (source)</h2>
-<dl class="section user"><dt></dt><dd>The preferred TCP port number for this Topic. If 0, the context will attempt to find one in the given TCP port range. </dd></dl>
-<dl class="section user"><dt></dt><dd>See <a class="el" href="generalconfigurationguidelines.html#portassignments">Port Assignments</a> for more information about configuring ports.</dd></dl>
+transport_tcp_port (source)&nbsp;&nbsp;<small><a href="#transporttcpportsource">&lt;-</a></small></h2>
+<dl class="section user"><dt></dt><dd>The TCP port to be used for the source transport session. </dd></dl>
+<dl class="section user"><dt></dt><dd>Setting this option to non-zero overrides the use of the pool of TCP source transport sessions. </dd></dl>
+<dl class="section user"><dt></dt><dd>The UM source listens on this port. Receivers that join the source's transport session connect to this port, and the source sends message data across that connection. </dd></dl>
+<dl class="section user"><dt></dt><dd>See <a class="el" href="grptransporttcpnetwork.html#tcptransportsessionmanagement">TCP Transport Session Management</a> for how TCP source transport sessions are managed. </dd></dl>
+<dl class="section user"><dt></dt><dd>See <a class="el" href="generalconfigurationguidelines.html#portassignments">Port Assignments</a> for more information about configuring ports. </dd></dl>
+<dl class="section user"><dt></dt><dd>Note that this port is only used by TCP sources. Receiver port numbers are taken from the host's <a class="el" href="generalconfigurationguidelines.html#ephemeralports">Ephemeral Ports</a> and are not configurable.</dd></dl>
 <dl class="section user"><dt></dt><dd><table class="doxtable">
 <tr>
 <td><em>Scope:</em> </td><td>source </td></tr>
 <tr>
-<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sdfmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a86897f2fdd66aa7021683a4e72a4537b">lbm_uint16_t</a></b> </td></tr>
+<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a86897f2fdd66aa7021683a4e72a4537b">lbm_uint16_t</a></b> </td></tr>
 <tr>
 <td><em>Default value:</em> </td><td>0 (pick open port) </td></tr>
 <tr>
@@ -144,14 +148,18 @@ transport_tcp_port (source)</h2>
 <p><br />
  </p>
 <h2><a class="anchor" id="transporttcpporthighcontext"></a>
-transport_tcp_port_high (context)</h2>
-<dl class="section user"><dt></dt><dd>High port number to assign to TCP sessions. </dd></dl>
-<dl class="section user"><dt></dt><dd>See <a class="el" href="generalconfigurationguidelines.html#portassignments">Port Assignments</a> for more information about configuring ports.</dd></dl>
+transport_tcp_port_high (context)&nbsp;&nbsp;<small><a href="#transporttcpporthighcontext">&lt;-</a></small></h2>
+<dl class="section user"><dt></dt><dd>High TCP port number of range for pool of TCP source transport sessions. </dd></dl>
+<dl class="section user"><dt></dt><dd>When <a class="el" href="grptransporttcpnetwork.html#transporttcpportsource">transport_tcp_port (source)</a> is not specified, a newly-created transport session will use an unused port from this range. The UM source listens on this port. Receivers that join the source's transport session connect to this port, and the source sends message data across that connection. </dd></dl>
+<dl class="section user"><dt></dt><dd>See also <a class="el" href="grptransporttcpnetwork.html#transporttcpporthighcontext">transport_tcp_port_high (context)</a>. </dd></dl>
+<dl class="section user"><dt></dt><dd>See <a class="el" href="grptransporttcpnetwork.html#tcptransportsessionmanagement">TCP Transport Session Management</a> for how TCP source transport sessions are managed. </dd></dl>
+<dl class="section user"><dt></dt><dd>See <a class="el" href="generalconfigurationguidelines.html#portassignments">Port Assignments</a> for more information about configuring ports. </dd></dl>
+<dl class="section user"><dt></dt><dd>Note that this range of ports is only used by TCP sources. Receiver port numbers are taken from the host's <a class="el" href="generalconfigurationguidelines.html#ephemeralports">Ephemeral Ports</a> and are not configurable.</dd></dl>
 <dl class="section user"><dt></dt><dd><table class="doxtable">
 <tr>
 <td><em>Scope:</em> </td><td>context </td></tr>
 <tr>
-<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sdfmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a86897f2fdd66aa7021683a4e72a4537b">lbm_uint16_t</a></b> </td></tr>
+<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a86897f2fdd66aa7021683a4e72a4537b">lbm_uint16_t</a></b> </td></tr>
 <tr>
 <td><em>Default value:</em> </td><td>14390 </td></tr>
 <tr>
@@ -163,14 +171,18 @@ transport_tcp_port_high (context)</h2>
 <p><br />
  </p>
 <h2><a class="anchor" id="transporttcpportlowcontext"></a>
-transport_tcp_port_low (context)</h2>
-<dl class="section user"><dt></dt><dd>Low port number to assign to TCP sessions. </dd></dl>
-<dl class="section user"><dt></dt><dd>See <a class="el" href="generalconfigurationguidelines.html#portassignments">Port Assignments</a> for more information about configuring ports.</dd></dl>
+transport_tcp_port_low (context)&nbsp;&nbsp;<small><a href="#transporttcpportlowcontext">&lt;-</a></small></h2>
+<dl class="section user"><dt></dt><dd>Low TCP port number of range for pool of TCP source transport sessions. </dd></dl>
+<dl class="section user"><dt></dt><dd>When <a class="el" href="grptransporttcpnetwork.html#transporttcpportsource">transport_tcp_port (source)</a> is not specified, a newly-created transport session will use an unused port from this range. The UM source listens on this port. Receivers that join the source's transport session connect to this port, and the source sends message data across that connection. </dd></dl>
+<dl class="section user"><dt></dt><dd>See also <a class="el" href="grptransporttcpnetwork.html#transporttcpporthighcontext">transport_tcp_port_high (context)</a>. </dd></dl>
+<dl class="section user"><dt></dt><dd>See <a class="el" href="grptransporttcpnetwork.html#tcptransportsessionmanagement">TCP Transport Session Management</a> for how TCP source transport sessions are managed. </dd></dl>
+<dl class="section user"><dt></dt><dd>See <a class="el" href="generalconfigurationguidelines.html#portassignments">Port Assignments</a> for more information about configuring ports. </dd></dl>
+<dl class="section user"><dt></dt><dd>Note that this range of ports is only used by TCP sources. Receiver port numbers are taken from the host's <a class="el" href="generalconfigurationguidelines.html#ephemeralports">Ephemeral Ports</a> and are not configurable.</dd></dl>
 <dl class="section user"><dt></dt><dd><table class="doxtable">
 <tr>
 <td><em>Scope:</em> </td><td>context </td></tr>
 <tr>
-<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sdfmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a86897f2fdd66aa7021683a4e72a4537b">lbm_uint16_t</a></b> </td></tr>
+<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a86897f2fdd66aa7021683a4e72a4537b">lbm_uint16_t</a></b> </td></tr>
 <tr>
 <td><em>Default value:</em> </td><td>14371 </td></tr>
 <tr>

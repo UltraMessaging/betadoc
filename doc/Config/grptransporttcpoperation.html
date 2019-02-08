@@ -57,17 +57,17 @@ $(document).ready(function(){initNavTree('grptransporttcpoperation.html','');});
 <div class="textblock"><p><br />
  </p>
 <h1><a class="anchor" id="transporttcpoperationref"></a>
-Reference</h1>
+Reference&nbsp;&nbsp;<small><a href="#transporttcpoperationref">&lt;-</a></small></h1>
 <p><br />
  </p>
 <h2><a class="anchor" id="transportsessionmaximumbuffersource"></a>
-transport_session_maximum_buffer (source)</h2>
-<dl class="section user"><dt></dt><dd>Value used to control the maximum amount of data buffered in UM for the transport session used for the topic. For the normal multiple receiver behavior, this value represents the total buffered by all TCP receivers. For the bounded_latency and source_paced multiple receiver behavior, this value represents the individual receiver buffered amount. This option affects the transport session underlying the source rather than the source itself. The transport session uses the value from the first source created on the session and ignores subsequent sources. Refer to <a class="elRef" doxygen="/29W/Amun/home/sford/sdfmac_DEV_MAIN/29West/lbm/doc/Config/design.tag:../Design/" href="../Design/umobjects.html#sourceobject">Source Object</a> in the Ultra Messaging Concepts Guide for additional information.</dd></dl>
+transport_session_maximum_buffer (source)&nbsp;&nbsp;<small><a href="#transportsessionmaximumbuffersource">&lt;-</a></small></h2>
+<dl class="section user"><dt></dt><dd>Value used to control the maximum amount of data buffered in UM for the transport session used for the topic. For the normal multiple receiver behavior, this value represents the total buffered by all TCP receivers. For the bounded_latency and source_paced multiple receiver behavior, this value represents the individual receiver buffered amount. This option affects the transport session underlying the source rather than the source itself. The transport session uses the value from the first source created on the session and ignores subsequent sources. Refer to <a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Config/design.tag:../Design/" href="../Design/umobjects.html#sourceobject">Source Object</a> in the Ultra Messaging Concepts Guide for additional information.</dd></dl>
 <dl class="section user"><dt></dt><dd><table class="doxtable">
 <tr>
 <td><em>Scope:</em> </td><td>source </td></tr>
 <tr>
-<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sdfmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a72438fab15bf500af58d2a8a521e470d">lbm_ulong_t</a></b> </td></tr>
+<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a72438fab15bf500af58d2a8a521e470d">lbm_ulong_t</a></b> </td></tr>
 <tr>
 <td><em>Units:</em> </td><td>bytes </td></tr>
 <tr>
@@ -79,7 +79,7 @@ transport_session_maximum_buffer (source)</h2>
 <p><br />
  </p>
 <h2><a class="anchor" id="transporttcpactivitymethodreceiver"></a>
-transport_tcp_activity_method (receiver)</h2>
+transport_tcp_activity_method (receiver)&nbsp;&nbsp;<small><a href="#transporttcpactivitymethodreceiver">&lt;-</a></small></h2>
 <dl class="section user"><dt></dt><dd>For TCP sessions only. The type of timeout method to use for TCP receivers.</dd></dl>
 <dl class="section user"><dt></dt><dd><table class="doxtable">
 <tr>
@@ -105,13 +105,13 @@ transport_tcp_activity_method (receiver)</h2>
 <p><br />
  </p>
 <h2><a class="anchor" id="transporttcpactivitytimeoutreceiver"></a>
-transport_tcp_activity_timeout (receiver)</h2>
+transport_tcp_activity_timeout (receiver)&nbsp;&nbsp;<small><a href="#transporttcpactivitytimeoutreceiver">&lt;-</a></small></h2>
 <dl class="section user"><dt></dt><dd>For TCP sessions only. The maximum time that a TCP session may be quiescent before it is deleted and an EOS event is delivered for all topics using this transport session. A value greater than zero turns the timer on.</dd></dl>
 <dl class="section user"><dt></dt><dd><table class="doxtable">
 <tr>
 <td><em>Scope:</em> </td><td>receiver </td></tr>
 <tr>
-<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sdfmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a72438fab15bf500af58d2a8a521e470d">lbm_ulong_t</a></b> </td></tr>
+<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a72438fab15bf500af58d2a8a521e470d">lbm_ulong_t</a></b> </td></tr>
 <tr>
 <td><em>Units:</em> </td><td>milliseconds </td></tr>
 <tr>
@@ -123,13 +123,13 @@ transport_tcp_activity_timeout (receiver)</h2>
 <p><br />
  </p>
 <h2><a class="anchor" id="transporttcpactivitytimeoutsource"></a>
-transport_tcp_activity_timeout (source)</h2>
+transport_tcp_activity_timeout (source)&nbsp;&nbsp;<small><a href="#transporttcpactivitytimeoutsource">&lt;-</a></small></h2>
 <dl class="section user"><dt></dt><dd>For TCP sessions only. This timeout option enables using SO_KEEPALIVE to detect when a receiver does not cleanly disconnect or is no longer reachable from the source. When the timeout expires, a DISCONNECT source event is delivered. This option affects only Linux or Windows platforms. Outstanding TCP retransmit timers must expire before this timer starts. With a default Linux or Windows system configuration, TCP retransmit timers may take minutes or even hours to expire. Therefore the total time taken to detect an unreachable receiver may be significantly higher than the value configured for this timeout. A value of zero (0) defers TCP timeout to OS settings.</dd></dl>
 <dl class="section user"><dt></dt><dd><table class="doxtable">
 <tr>
 <td><em>Scope:</em> </td><td>source </td></tr>
 <tr>
-<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sdfmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a72438fab15bf500af58d2a8a521e470d">lbm_ulong_t</a></b> </td></tr>
+<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a72438fab15bf500af58d2a8a521e470d">lbm_ulong_t</a></b> </td></tr>
 <tr>
 <td><em>Units:</em> </td><td>milliseconds </td></tr>
 <tr>
@@ -141,7 +141,7 @@ transport_tcp_activity_timeout (source)</h2>
 <p><br />
  </p>
 <h2><a class="anchor" id="transporttcpcoalescethresholdsource"></a>
-transport_tcp_coalesce_threshold (source)</h2>
+transport_tcp_coalesce_threshold (source)&nbsp;&nbsp;<small><a href="#transporttcpcoalescethresholdsource">&lt;-</a></small></h2>
 <dl class="section user"><dt></dt><dd>UM passes implicitly batched messages to the Operating System sendmsg() as a set unless the size of the set exceeds the coalescing threshold at which point the messages are coalesced and passed to the O/S as one copy. This option accommodates the different number of iovecs supported by different O/Ss. Tuning this option balances the efficiency of less iovecs handled by the OS vs. the expense of an additional copy operation of the messages before sending. The default values are also the maximum allowable values.</dd></dl>
 <dl class="section user"><dt></dt><dd><table class="doxtable">
 <tr>
@@ -161,17 +161,17 @@ transport_tcp_coalesce_threshold (source)</h2>
 <p><br />
  </p>
 <h2><a class="anchor" id="transporttcpdatagrammaxsizecontext"></a>
-transport_tcp_datagram_max_size (context)</h2>
+transport_tcp_datagram_max_size (context)&nbsp;&nbsp;<small><a href="#transporttcpdatagrammaxsizecontext">&lt;-</a></small></h2>
 <dl class="section user"><dt></dt><dd>The maximum datagram size that can be generated for a TCP transport session. While TCP does not use UDP datagrams, this option limits the size of the UM message which is given to the underlying transport type, including all UM headers and overhead. It does not include TCP, IP, or packet overhead added by the network stack. The default value is 65535, the minimum is 500 bytes, and the maximum is 65535. </dd></dl>
-<dl class="section user"><dt></dt><dd>See <a class="elRef" doxygen="/29W/Amun/home/sford/sdfmac_DEV_MAIN/29West/lbm/doc/Config/design.tag:../Design/" href="../Design/architecture.html#messagefragmentationandreassembly">Message Fragmentation and Reassembly</a> for more information. </dd></dl>
-<dl class="section user"><dt></dt><dd>Informatica does not recommend setting datagram max size options to the network MTU. See <a class="elRef" doxygen="/29W/Amun/home/sford/sdfmac_DEV_MAIN/29West/lbm/doc/Config/design.tag:../Design/" href="../Design/architecture.html#datagrammaxsizeandnetworkmtu">Datagram Max Size and Network MTU</a>. </dd></dl>
+<dl class="section user"><dt></dt><dd>See <a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Config/design.tag:../Design/" href="../Design/architecture.html#messagefragmentationandreassembly">Message Fragmentation and Reassembly</a> for more information. </dd></dl>
+<dl class="section user"><dt></dt><dd>Informatica does not recommend setting datagram max size options to the network MTU. See <a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Config/design.tag:../Design/" href="../Design/architecture.html#datagrammaxsizeandnetworkmtu">Datagram Max Size and Network MTU</a>. </dd></dl>
 <dl class="section user"><dt></dt><dd></dd></dl>
-<dl class="section warning"><dt>Warning</dt><dd>When the DRO is in use, it is recommended that all UM applications and components (including the DRO and Persistent Store) share the same maximum datagram size setting. See <a class="elRef" doxygen="/29W/Amun/home/sford/sdfmac_DEV_MAIN/29West/lbm/doc/Config/gateway.tag:../Gateway/" href="../Gateway/umrouterconcepts.html#protocolconversion">Protocol Conversion</a>.</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>When the DRO is in use, it is recommended that all UM applications and components (including the DRO and Persistent Store) share the same maximum datagram size setting. See <a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Config/gateway.tag:../Gateway/" href="../Gateway/umrouterconcepts.html#protocolconversion">Protocol Conversion</a>.</dd></dl>
 <dl class="section user"><dt></dt><dd><table class="doxtable">
 <tr>
 <td><em>Scope:</em> </td><td>context </td></tr>
 <tr>
-<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sdfmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#abdb96b55cc467a75e1f9ec0036dbc14b">lbm_uint_t</a></b> </td></tr>
+<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#abdb96b55cc467a75e1f9ec0036dbc14b">lbm_uint_t</a></b> </td></tr>
 <tr>
 <td><em>Units:</em> </td><td>bytes </td></tr>
 <tr>
@@ -184,8 +184,28 @@ transport_tcp_datagram_max_size (context)</h2>
 </dd></dl>
 <p><br />
  </p>
+<h2><a class="anchor" id="transporttcpdrolossrecoverytimeoutreceiver"></a>
+transport_tcp_dro_loss_recovery_timeout (receiver)&nbsp;&nbsp;<small><a href="#transporttcpdrolossrecoverytimeoutreceiver">&lt;-</a></small></h2>
+<dl class="section user"><dt></dt><dd>For TCP transport session only in presence of DRO. The timeout for missing message before declaring unrecoverable loss.</dd></dl>
+<dl class="section user"><dt></dt><dd><table class="doxtable">
+<tr>
+<td><em>Scope:</em> </td><td>receiver </td></tr>
+<tr>
+<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a72438fab15bf500af58d2a8a521e470d">lbm_ulong_t</a></b> </td></tr>
+<tr>
+<td><em>Units:</em> </td><td>milliseconds </td></tr>
+<tr>
+<td><em>Default value:</em> </td><td>0 </td></tr>
+<tr>
+<td><em>When to Set:</em> </td><td>Can only be set during object initialization.</td></tr>
+<tr>
+<td><em>Version:</em> </td><td>This option was implemented in LBM 6.12 </td></tr>
+</table>
+</dd></dl>
+<p><br />
+ </p>
 <h2><a class="anchor" id="transporttcpexclusiveaddrsource"></a>
-transport_tcp_exclusiveaddr (source)</h2>
+transport_tcp_exclusiveaddr (source)&nbsp;&nbsp;<small><a href="#transporttcpexclusiveaddrsource">&lt;-</a></small></h2>
 <dl class="section user"><dt></dt><dd>Applicable only to Windows. Indicate whether the TCP session should set SO_EXCLUSIVEADDRUSE or not before it binds. The default setting in Windows allows multiple binds to the same port. By default, UM will set SO_EXCLUSIVEADDRUSE to minimize port sharing. Refer to Microsoft's web site for more information on SO_EXCLUSIVEADDRUSE.</dd></dl>
 <dl class="section user"><dt></dt><dd><table class="doxtable">
 <tr>
@@ -211,7 +231,7 @@ transport_tcp_exclusiveaddr (source)</h2>
 <p><br />
  </p>
 <h2><a class="anchor" id="transporttcplistenbacklogsource"></a>
-transport_tcp_listen_backlog (source)</h2>
+transport_tcp_listen_backlog (source)&nbsp;&nbsp;<small><a href="#transporttcplistenbacklogsource">&lt;-</a></small></h2>
 <dl class="section user"><dt></dt><dd>The backlog used in the TCP listen() call to set the queue length for incoming connections.</dd></dl>
 <dl class="section user"><dt></dt><dd><table class="doxtable">
 <tr>
@@ -229,8 +249,8 @@ transport_tcp_listen_backlog (source)</h2>
 <p><br />
  </p>
 <h2><a class="anchor" id="transporttcpmultiplereceiverbehaviorsource"></a>
-transport_tcp_multiple_receiver_behavior (source)</h2>
-<dl class="section user"><dt></dt><dd>This option determines the flow control behavior of a TCP source that is sending to multiple receivers. In particular, it addresses the scenario where some receivers are consuming messages slower than other receivers (or not at all). In this scenario, pending messages will be buffered by the source up to the configured limit specified by the <a class="el" href="grptransporttcpoperation.html#transportsessionmaximumbuffersource">transport_session_maximum_buffer (source)</a> option. Once that limit is reached, the source can either wait for slow receivers (resulting in a blocked source) or discard messages from the buffer (resulting in gaps and potentially unrecoverable loss of messages for slow receivers). This option affects the transport session underlying the source rather than the source itself. The transport session uses the value from the first source created on the session and ignores the value set for subsequent sources. Refer to <a class="elRef" doxygen="/29W/Amun/home/sford/sdfmac_DEV_MAIN/29West/lbm/doc/Config/design.tag:../Design/" href="../Design/umobjects.html#sourceobject">Source Object</a> in the Ultra Messaging Concepts Guide for additional information.</dd></dl>
+transport_tcp_multiple_receiver_behavior (source)&nbsp;&nbsp;<small><a href="#transporttcpmultiplereceiverbehaviorsource">&lt;-</a></small></h2>
+<dl class="section user"><dt></dt><dd>This option determines the flow control behavior of a TCP source that is sending to multiple receivers. In particular, it addresses the scenario where some receivers are consuming messages slower than other receivers (or not at all). In this scenario, pending messages will be buffered by the source up to the configured limit specified by the <a class="el" href="grptransporttcpoperation.html#transportsessionmaximumbuffersource">transport_session_maximum_buffer (source)</a> option. Once that limit is reached, the source can either wait for slow receivers (resulting in a blocked source) or discard messages from the buffer (resulting in gaps and potentially unrecoverable loss of messages for slow receivers). This option affects the transport session underlying the source rather than the source itself. The transport session uses the value from the first source created on the session and ignores the value set for subsequent sources. Refer to <a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Config/design.tag:../Design/" href="../Design/umobjects.html#sourceobject">Source Object</a> in the Ultra Messaging Concepts Guide for additional information.</dd></dl>
 <dl class="section user"><dt></dt><dd><table class="doxtable">
 <tr>
 <td><em>Scope:</em> </td><td>source </td></tr>
@@ -259,13 +279,13 @@ transport_tcp_multiple_receiver_behavior (source)</h2>
 <p><br />
  </p>
 <h2><a class="anchor" id="transporttcpmultiplereceiversendordersource"></a>
-transport_tcp_multiple_receiver_send_order (source)</h2>
+transport_tcp_multiple_receiver_send_order (source)&nbsp;&nbsp;<small><a href="#transporttcpmultiplereceiversendordersource">&lt;-</a></small></h2>
 <dl class="section user"><dt></dt><dd>In the case of multiple receivers, this option determines whether datagrams are sent to each receiver in the established order of receivers, or if receivers are selected in random order for each datagram transmission.</dd></dl>
 <dl class="section user"><dt></dt><dd><table class="doxtable">
 <tr>
 <td><em>Scope:</em> </td><td>source </td></tr>
 <tr>
-<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sdfmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a30c33f443cf2d228f4772d534ce3ee88">lbm_src_topic_attr_t</a></b> </td></tr>
+<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a30c33f443cf2d228f4772d534ce3ee88">lbm_src_topic_attr_t</a></b> </td></tr>
 <tr>
 <td><em>When to Set:</em> </td><td>Can only be set during object initialization.</td></tr>
 </table>
@@ -285,7 +305,7 @@ transport_tcp_multiple_receiver_send_order (source)</h2>
 <p><br />
  </p>
 <h2><a class="anchor" id="transporttcpnodelaysource"></a>
-transport_tcp_nodelay (source)</h2>
+transport_tcp_nodelay (source)&nbsp;&nbsp;<small><a href="#transporttcpnodelaysource">&lt;-</a></small></h2>
 <dl class="section user"><dt></dt><dd>Whether the TCP sockets used for the transport session should set TCP_NODELAY or not. (Setting TCP_NODELAY disables Nagle's algorithm.)</dd></dl>
 <dl class="section user"><dt></dt><dd><table class="doxtable">
 <tr>
@@ -311,13 +331,13 @@ transport_tcp_nodelay (source)</h2>
 <p><br />
  </p>
 <h2><a class="anchor" id="transporttcpreceiversocketbuffercontext"></a>
-transport_tcp_receiver_socket_buffer (context)</h2>
+transport_tcp_receiver_socket_buffer (context)&nbsp;&nbsp;<small><a href="#transporttcpreceiversocketbuffercontext">&lt;-</a></small></h2>
 <dl class="section user"><dt></dt><dd>Value used to set SO_RCVBUF value of the TCP receivers for topics. In some cases the OS will not allow all of this value to be used. A value of 0 instructs UM to use the default OS values. See the section on <a class="el" href="generalconfigurationguidelines.html#socketbuffersizes">Socket Buffer Sizes</a> for platform-dependent information.</dd></dl>
 <dl class="section user"><dt></dt><dd><table class="doxtable">
 <tr>
 <td><em>Scope:</em> </td><td>context </td></tr>
 <tr>
-<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sdfmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a72438fab15bf500af58d2a8a521e470d">lbm_ulong_t</a></b> </td></tr>
+<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a72438fab15bf500af58d2a8a521e470d">lbm_ulong_t</a></b> </td></tr>
 <tr>
 <td><em>Units:</em> </td><td>bytes </td></tr>
 <tr>
@@ -329,7 +349,7 @@ transport_tcp_receiver_socket_buffer (context)</h2>
 <p><br />
  </p>
 <h2><a class="anchor" id="transporttcpreuseaddrsource"></a>
-transport_tcp_reuseaddr (source)</h2>
+transport_tcp_reuseaddr (source)&nbsp;&nbsp;<small><a href="#transporttcpreuseaddrsource">&lt;-</a></small></h2>
 <dl class="section user"><dt></dt><dd>Whether the TCP session should set SO_REUSEADDR or not before it binds. </dd></dl>
 <dl class="section user"><dt></dt><dd></dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>This option is not recommended for Microsoft Windows users because the SO_REUSEADDR socket option in Windows allows a socket to forcibly bind to a port in use by another socket. Multiple sockets using the same port results in indeterminate behavior.</dd></dl>
@@ -357,13 +377,13 @@ transport_tcp_reuseaddr (source)</h2>
 <p><br />
  </p>
 <h2><a class="anchor" id="transporttcpsendersocketbuffersource"></a>
-transport_tcp_sender_socket_buffer (source)</h2>
+transport_tcp_sender_socket_buffer (source)&nbsp;&nbsp;<small><a href="#transporttcpsendersocketbuffersource">&lt;-</a></small></h2>
 <dl class="section user"><dt></dt><dd>Value used to set the SO_SNDBUF value of the TCP session. In some cases the OS will not allow all of this value to be used. A value of 0 instructs UM to use the OS defaults. See the section on <a class="el" href="generalconfigurationguidelines.html#socketbuffersizes">Socket Buffer Sizes</a> for platform-dependent information.</dd></dl>
 <dl class="section user"><dt></dt><dd><table class="doxtable">
 <tr>
 <td><em>Scope:</em> </td><td>source </td></tr>
 <tr>
-<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sdfmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a72438fab15bf500af58d2a8a521e470d">lbm_ulong_t</a></b> </td></tr>
+<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a72438fab15bf500af58d2a8a521e470d">lbm_ulong_t</a></b> </td></tr>
 <tr>
 <td><em>Units:</em> </td><td>bytes </td></tr>
 <tr>
@@ -375,7 +395,7 @@ transport_tcp_sender_socket_buffer (source)</h2>
 <p><br />
  </p>
 <h2><a class="anchor" id="transporttcpusesessionidsource"></a>
-transport_tcp_use_session_id (source)</h2>
+transport_tcp_use_session_id (source)&nbsp;&nbsp;<small><a href="#transporttcpusesessionidsource">&lt;-</a></small></h2>
 <dl class="section user"><dt></dt><dd>Control whether a session ID is used for TCP Transport sessions. This option should be set to 0 if a version 6.0 (and beyond) TCP source must interoperate with a version pre-6.0 receiver.</dd></dl>
 <dl class="section user"><dt></dt><dd><table class="doxtable">
 <tr>

@@ -56,6 +56,7 @@ var annotated_dup =
     [ "lbm_resolver_event_advertisement_t_stct", "structlbm__resolver__event__advertisement__t__stct.html", "structlbm__resolver__event__advertisement__t__stct" ],
     [ "lbm_resolver_event_func_t_stct", "structlbm__resolver__event__func__t__stct.html", "structlbm__resolver__event__func__t__stct" ],
     [ "lbm_resolver_event_info_t_stct", "structlbm__resolver__event__info__t__stct.html", "structlbm__resolver__event__info__t__stct" ],
+    [ "lbm_resolver_service_entry_t_stct", "structlbm__resolver__service__entry__t__stct.html", "structlbm__resolver__service__entry__t__stct" ],
     [ "lbm_serialized_response_t_stct", "structlbm__serialized__response__t__stct.html", "structlbm__serialized__response__t__stct" ],
     [ "lbm_src_cost_func_t_stct", "structlbm__src__cost__func__t__stct.html", "structlbm__src__cost__func__t__stct" ],
     [ "lbm_src_event_flight_size_notification_t_stct", "structlbm__src__event__flight__size__notification__t__stct.html", "structlbm__src__event__flight__size__notification__t__stct" ],

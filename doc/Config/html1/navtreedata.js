@@ -123,6 +123,7 @@ var NAVTREE =
         [ "default_interface (context)", "index.html#defaultinterfacecontext", null ],
         [ "fd_management_type (context)", "index.html#fdmanagementtypecontext", null ],
         [ "message_selector (receiver)", "index.html#messageselectorreceiver", null ],
+        [ "min_win_event_log_level (context)", "index.html#minwineventloglevelcontext", null ],
         [ "multiple_receive_maximum_datagrams (context)", "index.html#multiplereceivemaximumdatagramscontext", null ],
         [ "operational_mode (context)", "index.html#operationalmodecontext", null ],
         [ "operational_mode (xsp)", "index.html#operationalmodexsp", null ],
@@ -145,7 +146,7 @@ var NAVTREE =
         [ "zero_transports_function (xsp)", "index.html#zerotransportsfunctionxsp", null ]
       ] ]
     ] ],
-    [ "Resolver Operation Options", "index.html#grpresolveroperation", [
+    [ "UDP-Based Resolver Operation Options", "index.html#grpudpbasedresolveroperation", [
       [ "Minimum Values for Advertisement and Query Intervals", "index.html#minimumvaluesforadvertisementandqueryintervals", null ],
       [ "Reference", "index.html#resolveroperationref", [
         [ "disable_extended_topic_resolution_message_options (context)", "index.html#disableextendedtopicresolutionmessageoptionscontext", null ],
@@ -176,6 +177,7 @@ var NAVTREE =
         [ "resolver_receiver_map_tablesz (context)", "index.html#resolverreceivermaptableszcontext", null ],
         [ "resolver_send_final_advertisements (source)", "index.html#resolversendfinaladvertisementssource", null ],
         [ "resolver_send_initial_advertisement (source)", "index.html#resolversendinitialadvertisementsource", null ],
+        [ "resolver_service (context)", "index.html#resolverservicecontext", null ],
         [ "resolver_source_map_tablesz (context)", "index.html#resolversourcemaptableszcontext", null ],
         [ "resolver_string_hash_function (context)", "index.html#resolverstringhashfunctioncontext", null ],
         [ "resolver_string_hash_function_ex (context)", "index.html#resolverstringhashfunctionexcontext", null ],
@@ -232,6 +234,7 @@ var NAVTREE =
         [ "transport_tcp_activity_timeout (source)", "index.html#transporttcpactivitytimeoutsource", null ],
         [ "transport_tcp_coalesce_threshold (source)", "index.html#transporttcpcoalescethresholdsource", null ],
         [ "transport_tcp_datagram_max_size (context)", "index.html#transporttcpdatagrammaxsizecontext", null ],
+        [ "transport_tcp_dro_loss_recovery_timeout (receiver)", "index.html#transporttcpdrolossrecoverytimeoutreceiver", null ],
         [ "transport_tcp_exclusiveaddr (source)", "index.html#transporttcpexclusiveaddrsource", null ],
         [ "transport_tcp_listen_backlog (source)", "index.html#transporttcplistenbacklogsource", null ],
         [ "transport_tcp_multiple_receiver_behavior (source)", "index.html#transporttcpmultiplereceiverbehaviorsource", null ],
@@ -278,9 +281,9 @@ var NAVTREE =
         [ "transport_lbtrm_data_rate_limit (context)", "index.html#transportlbtrmdataratelimitcontext", null ],
         [ "transport_lbtrm_datagram_max_size (context)", "index.html#transportlbtrmdatagrammaxsizecontext", null ],
         [ "transport_lbtrm_preactivity_timeout (receiver)", "index.html#transportlbtrmpreactivitytimeoutreceiver", null ],
-        [ "transport_lbtrm_preallocate_receive_buffers (context)", "index.html#transportlbtrmpreallocatereceivebufferscontext", null ],
         [ "transport_lbtrm_rate_interval (context)", "index.html#transportlbtrmrateintervalcontext", null ],
         [ "transport_lbtrm_receiver_timestamp (context)", "index.html#transportlbtrmreceivertimestampcontext", null ],
+        [ "transport_lbtrm_recycle_receive_buffers (context)", "index.html#transportlbtrmrecyclereceivebufferscontext", null ],
         [ "transport_lbtrm_retransmit_rate_limit (context)", "index.html#transportlbtrmretransmitratelimitcontext", null ],
         [ "transport_lbtrm_sm_maximum_interval (source)", "index.html#transportlbtrmsmmaximumintervalsource", null ],
         [ "transport_lbtrm_sm_minimum_interval (source)", "index.html#transportlbtrmsmminimumintervalsource", null ],
@@ -325,8 +328,8 @@ var NAVTREE =
         [ "transport_lbtru_data_rate_limit (context)", "index.html#transportlbtrudataratelimitcontext", null ],
         [ "transport_lbtru_datagram_max_size (context)", "index.html#transportlbtrudatagrammaxsizecontext", null ],
         [ "transport_lbtru_maximum_connect_attempts (receiver)", "index.html#transportlbtrumaximumconnectattemptsreceiver", null ],
-        [ "transport_lbtru_preallocate_receive_buffers (context)", "index.html#transportlbtrupreallocatereceivebufferscontext", null ],
         [ "transport_lbtru_rate_interval (context)", "index.html#transportlbtrurateintervalcontext", null ],
+        [ "transport_lbtru_recycle_receive_buffers (context)", "index.html#transportlbtrurecyclereceivebufferscontext", null ],
         [ "transport_lbtru_retransmit_rate_limit (context)", "index.html#transportlbtruretransmitratelimitcontext", null ],
         [ "transport_lbtru_sm_maximum_interval (source)", "index.html#transportlbtrusmmaximumintervalsource", null ],
         [ "transport_lbtru_sm_minimum_interval (source)", "index.html#transportlbtrusmminimumintervalsource", null ],
@@ -339,14 +342,15 @@ var NAVTREE =
         [ "transport_lbtipc_activity_timeout (receiver)", "index.html#transportlbtipcactivitytimeoutreceiver", null ],
         [ "transport_lbtipc_behavior (source)", "index.html#transportlbtipcbehaviorsource", null ],
         [ "transport_lbtipc_datagram_max_size (context)", "index.html#transportlbtipcdatagrammaxsizecontext", null ],
+        [ "transport_lbtipc_dro_loss_recovery_timeout (receiver)", "index.html#transportlbtipcdrolossrecoverytimeoutreceiver", null ],
         [ "transport_lbtipc_id (source)", "index.html#transportlbtipcidsource", null ],
         [ "transport_lbtipc_id_high (context)", "index.html#transportlbtipcidhighcontext", null ],
         [ "transport_lbtipc_id_low (context)", "index.html#transportlbtipcidlowcontext", null ],
         [ "transport_lbtipc_maximum_receivers_per_transport (source)", "index.html#transportlbtipcmaximumreceiverspertransportsource", null ],
         [ "transport_lbtipc_pend_behavior_linger_loop_count (context)", "index.html#transportlbtipcpendbehaviorlingerloopcountcontext", null ],
-        [ "transport_lbtipc_preallocate_receive_buffers (context)", "index.html#transportlbtipcpreallocatereceivebufferscontext", null ],
         [ "transport_lbtipc_receiver_operational_mode (context)", "index.html#transportlbtipcreceiveroperationalmodecontext", null ],
         [ "transport_lbtipc_receiver_thread_behavior (context)", "index.html#transportlbtipcreceiverthreadbehaviorcontext", null ],
+        [ "transport_lbtipc_recycle_receive_buffers (context)", "index.html#transportlbtipcrecyclereceivebufferscontext", null ],
         [ "transport_lbtipc_sm_interval (source)", "index.html#transportlbtipcsmintervalsource", null ],
         [ "transport_lbtipc_transmission_window_size (source)", "index.html#transportlbtipctransmissionwindowsizesource", null ]
       ] ]
@@ -764,8 +768,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "index.html",
-"index.html#requesttcplistenbacklogcontext",
-"index.html#transporttcplistenbacklogsource"
+"index.html#requesttcpinterfacecontext",
+"index.html#transporttcpdrolossrecoverytimeoutreceiver"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

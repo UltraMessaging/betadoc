@@ -65,23 +65,23 @@ $(document).ready(function(){initNavTree('gettingstarted.html','');});
 <p><br />
  </p>
 <h1><a class="anchor" id="requirements"></a>
-Requirements</h1>
+Requirements&nbsp;&nbsp;<small><a href="#requirements">&lt;-</a></small></h1>
 <p>Ultra Messaging runs on a variety of current operating systems and chip sets.</p>
 <p><br />
  </p>
 <h2><a class="anchor" id="minimumsystemrequirements"></a>
-Minimum System Requirements</h2>
+Minimum System Requirements&nbsp;&nbsp;<small><a href="#minimumsystemrequirements">&lt;-</a></small></h2>
 <p>For Ultra Messaging, there are no strict requirements for hardware computing capacity and storage capacity. Such requirements depend on client applications and on configuration of clients and brokers.</p>
 <p><br />
  </p>
 <h2><a class="anchor" id="softwarerequirements"></a>
-Software Requirements</h2>
+Software Requirements&nbsp;&nbsp;<small><a href="#softwarerequirements">&lt;-</a></small></h2>
 <p>UMQ brokers require Java SE Development Kit 6 or later. Informatica recommends Java SE Development Kit 7.</p>
 <p>UMQ on UNIX requires an installation of a libstdc++ Standard C++ Library.</p>
 <p><br />
  </p>
 <h1><a class="anchor" id="singlenodeinstallation"></a>
-Single Node Installation</h1>
+Single Node Installation&nbsp;&nbsp;<small><a href="#singlenodeinstallation">&lt;-</a></small></h1>
 <p>To install UMQ on a host for a single-node deployment, perform the following steps. All examples are Linux examples.</p>
 <ol>
 <li>
@@ -105,7 +105,7 @@ Add the library to the library path. For example, use the following line: <pre c
 <p><br />
  </p>
 <h1><a class="anchor" id="startingasinglenodequeuingsystem"></a>
-Starting a Single-Node Queuing System</h1>
+Starting a Single-Node Queuing System&nbsp;&nbsp;<small><a href="#startingasinglenodequeuingsystem">&lt;-</a></small></h1>
 <p>After you have installed Ultra Messaging, run the daemons and sample applications to verify successful installation.</p>
 <ol>
 <li>
@@ -147,14 +147,14 @@ Quitting.... received 10 messages (0 reassigned, 0 resubmitted)
 </li>
 </ol>
 <h1><a class="anchor" id="shuttingdownasinglenodebroker"></a>
-Shutting Down a Single-Node Broker</h1>
+Shutting Down a Single-Node Broker&nbsp;&nbsp;<small><a href="#shuttingdownasinglenodebroker">&lt;-</a></small></h1>
 <p>Shut down the broker with the following command: </p><pre class="fragment">&lt;InstallDir&gt;/UMQ_6.12/&lt;platform&gt;/broker/apache-activemq-5.10.0/bin/activemq stop
 Kmsgs/sec. 0 Kmsgs/sec. 0 Kmsgs/sec. 0 Kmsgs/sec. 0 Kmsgs/sec. 0
 Kbps Kbps Kbps Kbps Kbps 1.998 Kbps
 </pre><p><br />
  </p>
 <h1><a class="anchor" id="highavailabilityinstallation"></a>
-High Availability Installation</h1>
+High Availability Installation&nbsp;&nbsp;<small><a href="#highavailabilityinstallation">&lt;-</a></small></h1>
 <p>A high-availability queuing system requires an Ultra Messaging installation on three hosts. To install UMQ on hosts for a high-availability queuing system, perform the following steps. All examples are Linux examples.</p>
 <dl class="section note"><dt>Note</dt><dd>Each node has a unique configuration file, but these configuration files are each in the same path- named directory. Therefore, the three installations must not be on the same NFS mounted disk.</dd></dl>
 <ol>
@@ -208,7 +208,7 @@ Depending on which host you are configuring, copy the default broker1, broker2, 
 </li>
 </ol>
 <h1><a class="anchor" id="startingahighavailabilityqueuingsystem"></a>
-Starting a High Availability Queuing System</h1>
+Starting a High Availability Queuing System&nbsp;&nbsp;<small><a href="#startingahighavailabilityqueuingsystem">&lt;-</a></small></h1>
 <p>After you have installed Ultra Messaging, run the daemons and sample applications to verify successful installation.</p>
 <ol>
 <li>
@@ -258,7 +258,7 @@ Quitting.... received 10 messages (0 reassigned, 0 resubmitted)
 </li>
 </ol>
 <h1><a class="anchor" id="shuttingdownhighavailabilitynodes"></a>
-Shutting Down High Availability Nodes</h1>
+Shutting Down High Availability Nodes&nbsp;&nbsp;<small><a href="#shuttingdownhighavailabilitynodes">&lt;-</a></small></h1>
 <p>To shut down a high availability queuing system node, perform the following steps:</p>
 <ol>
 <li>
@@ -275,13 +275,13 @@ Shut down the lbmrd process. </li>
 </li>
 </ol>
 <h1><a class="anchor" id="queuingupgradeconsiderations"></a>
-Queuing Upgrade Considerations</h1>
+Queuing Upgrade Considerations&nbsp;&nbsp;<small><a href="#queuingupgradeconsiderations">&lt;-</a></small></h1>
 <p>When UMQ 6.8 was released, it added some capabilities and deprecated others, when compared with pre-6.8 UMQ. You might need to change how you set configuration options or change function calls in your application code.</p>
 <p>If the application does not use UMQ-specific features other than Ultra Load Balancing (ULB), ignore this section. This section is a supplement to upgrade guidelines in the Release Notes and does not repeat the guidelines therein.</p>
 <p><br />
  </p>
 <h2><a class="anchor" id="configurationoptions"></a>
-Configuration Options</h2>
+Configuration Options&nbsp;&nbsp;<small><a href="#configurationoptions">&lt;-</a></small></h2>
 <p>When you upgrade client applications from versions prior to 6.8, you must change the following configuration settings:</p>
 <ul>
 <li>
@@ -293,7 +293,7 @@ Contexts that contain queue sources or receivers must specify a list of brokers 
 </li>
 </ul>
 <h2><a class="anchor" id="applicationcode"></a>
-Application Code</h2>
+Application Code&nbsp;&nbsp;<small><a href="#applicationcode">&lt;-</a></small></h2>
 <p>You might need to make changes to client application source code.</p>
 <p>You do not need to change any API calls unless the functions are deprecated. However, you must recompile client applications from versions prior to 6.8.</p>
 <p>UMQ client applications from versions prior to 6.8 might use the same context for both queue sources or receivers and topic sources or receivers. In such cases, you must create separate contexts for queue applications and non-queue applications.</p>

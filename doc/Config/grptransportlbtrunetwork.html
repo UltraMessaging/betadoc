@@ -57,7 +57,7 @@ $(document).ready(function(){initNavTree('grptransportlbtrunetwork.html','');});
 <div class="textblock"><p><br />
  </p>
 <h1><a class="anchor" id="lbtrutransportsessionmanagement"></a>
-LBT-RU Transport Session Management</h1>
+LBT-RU Transport Session Management&nbsp;&nbsp;<small><a href="#lbtrutransportsessionmanagement">&lt;-</a></small></h1>
 <p>The image below illustrates the relationship between the primary LBT-RU network options.</p>
 <div class="image">
 <img src="LBTRU-Net.png" alt="LBTRU-Net.png"/>
@@ -70,17 +70,17 @@ LBT-RU Transport Session Management</h1>
 <p><br />
  </p>
 <h1><a class="anchor" id="transportlbtrunetworkref"></a>
-Reference</h1>
+Reference&nbsp;&nbsp;<small><a href="#transportlbtrunetworkref">&lt;-</a></small></h1>
 <p><br />
  </p>
 <h2><a class="anchor" id="transportlbtruinterfacereceiver"></a>
-transport_lbtru_interface (receiver)</h2>
+transport_lbtru_interface (receiver)&nbsp;&nbsp;<small><a href="#transportlbtruinterfacereceiver">&lt;-</a></small></h2>
 <dl class="section user"><dt></dt><dd>Specifies the network interface over which UM LBT-RU receivers read application data messages. Can specify full IP address of interface, or just network part (see <a class="el" href="generalconfigurationguidelines.html#specifyinginterfaces">Specifying Interfaces</a> for details). Default is set to <a class="el" href="grpmajoroptions.html#defaultinterfacecontext">default_interface (context)</a> if specified. Otherwise, it is set to INADDR_ANY, meaning that it will accept incoming connection requests from any interface.</dd></dl>
 <dl class="section user"><dt></dt><dd><table class="doxtable">
 <tr>
 <td><em>Scope:</em> </td><td>receiver </td></tr>
 <tr>
-<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sdfmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a0b66a5b33839617b2a822e4a20a8d535">lbm_ipv4_address_mask_t</a></b> </td></tr>
+<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a0b66a5b33839617b2a822e4a20a8d535">lbm_ipv4_address_mask_t</a></b> </td></tr>
 <tr>
 <td><em>Default value:</em> </td><td>0.0.0.0 (INADDR_ANY) </td></tr>
 <tr>
@@ -90,13 +90,13 @@ transport_lbtru_interface (receiver)</h2>
 <p><br />
  </p>
 <h2><a class="anchor" id="transportlbtruinterfacesource"></a>
-transport_lbtru_interface (source)</h2>
+transport_lbtru_interface (source)&nbsp;&nbsp;<small><a href="#transportlbtruinterfacesource">&lt;-</a></small></h2>
 <dl class="section user"><dt></dt><dd>Specifies the network interface over which UM LBT-RU sources receive connection requests from topic receivers. Can specify full IP address of interface, or just network part (see <a class="el" href="generalconfigurationguidelines.html#specifyinginterfaces">Specifying Interfaces</a> for details). Be aware that this option is applied to the transport session when the first topic is created on that session. Thus, setting a different interface for a subsequent topic that maps onto the same transport session will have no effect. Default is set to <a class="el" href="grpmajoroptions.html#defaultinterfacecontext">default_interface (context)</a> if specified. Otherwise, it is set to INADDR_ANY, meaning that it will accept incoming connection requests from any interface.</dd></dl>
 <dl class="section user"><dt></dt><dd><table class="doxtable">
 <tr>
 <td><em>Scope:</em> </td><td>source </td></tr>
 <tr>
-<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sdfmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a0b66a5b33839617b2a822e4a20a8d535">lbm_ipv4_address_mask_t</a></b> </td></tr>
+<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a0b66a5b33839617b2a822e4a20a8d535">lbm_ipv4_address_mask_t</a></b> </td></tr>
 <tr>
 <td><em>Default value:</em> </td><td>0.0.0.0 (INADDR_ANY) </td></tr>
 <tr>
@@ -106,14 +106,14 @@ transport_lbtru_interface (source)</h2>
 <p><br />
  </p>
 <h2><a class="anchor" id="transportlbtrumaximumportscontext"></a>
-transport_lbtru_maximum_ports (context)</h2>
-<dl class="section user"><dt></dt><dd>Maximum number of unicast port numbers that LBT-RU will use for all implicitly allocated sessions. </dd></dl>
-<dl class="section user"><dt></dt><dd>See <a class="el" href="generalconfigurationguidelines.html#portassignments">Port Assignments</a> for more information about configuring ports.</dd></dl>
+transport_lbtru_maximum_ports (context)&nbsp;&nbsp;<small><a href="#transportlbtrumaximumportscontext">&lt;-</a></small></h2>
+<dl class="section user"><dt></dt><dd>Maximum size of LBT-RU source transport session pool. </dd></dl>
+<dl class="section user"><dt></dt><dd>See <a class="el" href="grptransporttcpnetwork.html#tcptransportsessionmanagement">TCP Transport Session Management</a> for how TCP source transport sessions are managed.</dd></dl>
 <dl class="section user"><dt></dt><dd><table class="doxtable">
 <tr>
 <td><em>Scope:</em> </td><td>context </td></tr>
 <tr>
-<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sdfmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a86897f2fdd66aa7021683a4e72a4537b">lbm_uint16_t</a></b> </td></tr>
+<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a86897f2fdd66aa7021683a4e72a4537b">lbm_uint16_t</a></b> </td></tr>
 <tr>
 <td><em>Units:</em> </td><td>number of ports </td></tr>
 <tr>
@@ -125,14 +125,17 @@ transport_lbtru_maximum_ports (context)</h2>
 <p><br />
  </p>
 <h2><a class="anchor" id="transportlbtruportsource"></a>
-transport_lbtru_port (source)</h2>
-<dl class="section user"><dt></dt><dd>The preferred unicast port number for this Topic. If 0, the context will attempt to find one in the given LBT-RU source port range. </dd></dl>
+transport_lbtru_port (source)&nbsp;&nbsp;<small><a href="#transportlbtruportsource">&lt;-</a></small></h2>
+<dl class="section user"><dt></dt><dd>The UDP port to be used for the source transport session. </dd></dl>
+<dl class="section user"><dt></dt><dd>This is the source-side option. For receive-side ports, see <a class="el" href="grptransportlbtrunetwork.html#transportlbtruportlowreceiver">transport_lbtru_port_low (receiver)</a>. </dd></dl>
+<dl class="section user"><dt></dt><dd>Setting this option to non-zero overrides the use of the pool of LBT-RU source transport sessions. </dd></dl>
+<dl class="section user"><dt></dt><dd>See <a class="el" href="grptransportlbtrunetwork.html#lbtrutransportsessionmanagement">LBT-RU Transport Session Management</a> for how LBT-RU source transport sessions are managed. </dd></dl>
 <dl class="section user"><dt></dt><dd>See <a class="el" href="generalconfigurationguidelines.html#portassignments">Port Assignments</a> for more information about configuring ports.</dd></dl>
 <dl class="section user"><dt></dt><dd><table class="doxtable">
 <tr>
 <td><em>Scope:</em> </td><td>source </td></tr>
 <tr>
-<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sdfmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a86897f2fdd66aa7021683a4e72a4537b">lbm_uint16_t</a></b> </td></tr>
+<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a86897f2fdd66aa7021683a4e72a4537b">lbm_uint16_t</a></b> </td></tr>
 <tr>
 <td><em>Default value:</em> </td><td>0 (use open port) </td></tr>
 <tr>
@@ -144,14 +147,18 @@ transport_lbtru_port (source)</h2>
 <p><br />
  </p>
 <h2><a class="anchor" id="transportlbtruporthighcontext"></a>
-transport_lbtru_port_high (context)</h2>
-<dl class="section user"><dt></dt><dd>High unicast port number to assign to LBT-RU sources. Clients send connection requests, ACKs, and NAKs to a port number in this range. </dd></dl>
+transport_lbtru_port_high (context)&nbsp;&nbsp;<small><a href="#transportlbtruporthighcontext">&lt;-</a></small></h2>
+<dl class="section user"><dt></dt><dd>High UDP port number of range for pool of LBT-RU source transport sessions. </dd></dl>
+<dl class="section user"><dt></dt><dd>When <a class="el" href="grptransportlbtrunetwork.html#transportlbtruportsource">transport_lbtru_port (source)</a> is not specified, a newly-created transport session will use an unused port from this range. Receivers that join the source's transport session send connection requests, acknowledgements, and NAKs to the source port. </dd></dl>
+<dl class="section user"><dt></dt><dd>See also <a class="el" href="grptransportlbtrunetwork.html#transportlbtruporthighcontext">transport_lbtru_port_high (context)</a>. </dd></dl>
+<dl class="section user"><dt></dt><dd>This is the source-side option. For the corresponding receiver option, see <a class="el" href="grptransportlbtrunetwork.html#transportlbtruporthighreceiver">transport_lbtru_port_high (receiver)</a>. </dd></dl>
+<dl class="section user"><dt></dt><dd>See <a class="el" href="grptransportlbtrunetwork.html#lbtrutransportsessionmanagement">LBT-RU Transport Session Management</a> for how LBT-RU source transport sessions are managed. </dd></dl>
 <dl class="section user"><dt></dt><dd>See <a class="el" href="generalconfigurationguidelines.html#portassignments">Port Assignments</a> for more information about configuring ports.</dd></dl>
 <dl class="section user"><dt></dt><dd><table class="doxtable">
 <tr>
 <td><em>Scope:</em> </td><td>context </td></tr>
 <tr>
-<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sdfmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a86897f2fdd66aa7021683a4e72a4537b">lbm_uint16_t</a></b> </td></tr>
+<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a86897f2fdd66aa7021683a4e72a4537b">lbm_uint16_t</a></b> </td></tr>
 <tr>
 <td><em>Default value:</em> </td><td>14389 </td></tr>
 <tr>
@@ -163,14 +170,17 @@ transport_lbtru_port_high (context)</h2>
 <p><br />
  </p>
 <h2><a class="anchor" id="transportlbtruporthighreceiver"></a>
-transport_lbtru_port_high (receiver)</h2>
-<dl class="section user"><dt></dt><dd>High port number to use for receiving LBT-RU data. All LBT-RU data for the topic will arrive on this range. </dd></dl>
+transport_lbtru_port_high (receiver)&nbsp;&nbsp;<small><a href="#transportlbtruporthighreceiver">&lt;-</a></small></h2>
+<dl class="section user"><dt></dt><dd>High port number to use for receiving LBT-RU data. </dd></dl>
+<dl class="section user"><dt></dt><dd>This is the receive-side option. For the corresponding source option, see <a class="el" href="grptransportlbtrunetwork.html#transportlbtruporthighcontext">transport_lbtru_port_high (context)</a>. </dd></dl>
+<dl class="section user"><dt></dt><dd>When a newly-created receiver joins a source's transport session, it finds a free port from this range, binds to it, and informs the source of the receiver's IP and port. The UM source will send message data to that IP and port. </dd></dl>
+<dl class="section user"><dt></dt><dd>Unlike most UM port ranges, if the library is not able to find an unused port in this range, it will log a warning (Core-5688-3300), but instead of failing the receiver creation, it will allocate a port from the host's ephemeral pool and operate normally. Thus, it is possible for a receiver to get messages on a port outside of the configured range. </dd></dl>
 <dl class="section user"><dt></dt><dd>See <a class="el" href="generalconfigurationguidelines.html#portassignments">Port Assignments</a> for more information about configuring ports.</dd></dl>
 <dl class="section user"><dt></dt><dd><table class="doxtable">
 <tr>
 <td><em>Scope:</em> </td><td>receiver </td></tr>
 <tr>
-<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sdfmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a86897f2fdd66aa7021683a4e72a4537b">lbm_uint16_t</a></b> </td></tr>
+<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a86897f2fdd66aa7021683a4e72a4537b">lbm_uint16_t</a></b> </td></tr>
 <tr>
 <td><em>Default value:</em> </td><td>14379 </td></tr>
 <tr>
@@ -182,14 +192,18 @@ transport_lbtru_port_high (receiver)</h2>
 <p><br />
  </p>
 <h2><a class="anchor" id="transportlbtruportlowcontext"></a>
-transport_lbtru_port_low (context)</h2>
-<dl class="section user"><dt></dt><dd>Low unicast port number to assign to LBT-RU sources. Clients send connection requests, ACKs, and NAKs to a port number in this range. </dd></dl>
+transport_lbtru_port_low (context)&nbsp;&nbsp;<small><a href="#transportlbtruportlowcontext">&lt;-</a></small></h2>
+<dl class="section user"><dt></dt><dd>Low UDP port number of range for pool of LBT-RU source transport sessions. </dd></dl>
+<dl class="section user"><dt></dt><dd>When <a class="el" href="grptransportlbtrunetwork.html#transportlbtruportsource">transport_lbtru_port (source)</a> is not specified, a newly-created transport session will use an unused port from this range. Receivers that join the source's transport session send connection requests, acknowledgements, and NAKs to the source port. </dd></dl>
+<dl class="section user"><dt></dt><dd>See also <a class="el" href="grptransportlbtrunetwork.html#transportlbtruporthighcontext">transport_lbtru_port_high (context)</a>. </dd></dl>
+<dl class="section user"><dt></dt><dd>This is the source-side option. For the corresponding receiver option, see <a class="el" href="grptransportlbtrunetwork.html#transportlbtruportlowreceiver">transport_lbtru_port_low (receiver)</a>. </dd></dl>
+<dl class="section user"><dt></dt><dd>See <a class="el" href="grptransportlbtrunetwork.html#lbtrutransportsessionmanagement">LBT-RU Transport Session Management</a> for how LBT-RU source transport sessions are managed. </dd></dl>
 <dl class="section user"><dt></dt><dd>See <a class="el" href="generalconfigurationguidelines.html#portassignments">Port Assignments</a> for more information about configuring ports.</dd></dl>
 <dl class="section user"><dt></dt><dd><table class="doxtable">
 <tr>
 <td><em>Scope:</em> </td><td>context </td></tr>
 <tr>
-<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sdfmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a86897f2fdd66aa7021683a4e72a4537b">lbm_uint16_t</a></b> </td></tr>
+<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a86897f2fdd66aa7021683a4e72a4537b">lbm_uint16_t</a></b> </td></tr>
 <tr>
 <td><em>Default value:</em> </td><td>14380 </td></tr>
 <tr>
@@ -201,14 +215,17 @@ transport_lbtru_port_low (context)</h2>
 <p><br />
  </p>
 <h2><a class="anchor" id="transportlbtruportlowreceiver"></a>
-transport_lbtru_port_low (receiver)</h2>
-<dl class="section user"><dt></dt><dd>Low port number to use for receiving LBT-RU data. All LBT-RU data for the topic will arrive on this range. </dd></dl>
+transport_lbtru_port_low (receiver)&nbsp;&nbsp;<small><a href="#transportlbtruportlowreceiver">&lt;-</a></small></h2>
+<dl class="section user"><dt></dt><dd>Low port number to use for receiving LBT-RU data. </dd></dl>
+<dl class="section user"><dt></dt><dd>This is the receive-side option. For the corresponding source option, see <a class="el" href="grptransportlbtrunetwork.html#transportlbtruportlowcontext">transport_lbtru_port_low (context)</a>. </dd></dl>
+<dl class="section user"><dt></dt><dd>When a newly-created receiver joins a source's transport session, it finds a free port from this range, binds to it, and informs the source of the receiver's IP and port. The UM source will send message data to that IP and port. </dd></dl>
+<dl class="section user"><dt></dt><dd>Unlike most UM port ranges, if the library is not able to find an unused port in this range, it will log a warning (Core-5688-3300), but instead of failing the receiver creation, it will allocate a port from the host's ephemeral pool and operate normally. Thus, it is possible for a receiver to get messages on a port outside of the configured range. </dd></dl>
 <dl class="section user"><dt></dt><dd>See <a class="el" href="generalconfigurationguidelines.html#portassignments">Port Assignments</a> for more information about configuring ports.</dd></dl>
 <dl class="section user"><dt></dt><dd><table class="doxtable">
 <tr>
 <td><em>Scope:</em> </td><td>receiver </td></tr>
 <tr>
-<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sdfmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a86897f2fdd66aa7021683a4e72a4537b">lbm_uint16_t</a></b> </td></tr>
+<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a86897f2fdd66aa7021683a4e72a4537b">lbm_uint16_t</a></b> </td></tr>
 <tr>
 <td><em>Default value:</em> </td><td>14360 </td></tr>
 <tr>

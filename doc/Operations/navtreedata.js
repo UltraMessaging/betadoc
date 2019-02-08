@@ -118,6 +118,7 @@ var NAVTREE =
     [ "UM Log Messages", "umlogmessages.html", [
       [ "UM Core Messages", "umlogmessages.html#umcoremessages", null ],
       [ "UM Core API Messages", "umlogmessages.html#umcoreapimessages", null ],
+      [ "UM SRS Log Messages", "umlogmessages.html#umsrslogmessages", null ],
       [ "UM Dynamic Routing Log Messages", "umlogmessages.html#umdynamicroutinglogmessages", null ],
       [ "UM Lbmrd Log Messages", "umlogmessages.html#umlbmrdlogmessages", null ],
       [ "UM Persistent Store Log Messages", "umlogmessages.html#umpersistentstorelogmessages", null ],

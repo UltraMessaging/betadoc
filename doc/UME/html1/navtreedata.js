@@ -82,8 +82,13 @@ var NAVTREE =
       [ "Designing Persistent Receivers", "index.html#designingpersistentreceivers", [
         [ "Receiver RegID Management", "index.html#receiverregidmanagement", null ],
         [ "Recovery Management", "index.html#recoverymanagement", null ],
+        [ "Duplicate Message Delivery", "index.html#duplicatmessagedelivery", null ],
+        [ "Setting Callback Function to Set Recovery Sequence Number", "index.html#settingcallbackfunctiontosetrecoverysequencenumber", null ],
         [ "Persistence Message Consumption", "index.html#persistencemessageconsumption", null ],
+        [ "Immediate Message Consumption", "index.html#immediatemessageconsumption", null ],
+        [ "Delayed Message Processing", "index.html#delayedmessageprocessing", null ],
         [ "Batching Acknowledgments", "index.html#batchingacknowledgments", null ],
+        [ "ACK Ordering", "index.html#ackordering", null ],
         [ "Explicit Acknowledgments", "index.html#explicitacknowledgments", null ],
         [ "Object-free Explicit Acknowledgments", "index.html#objectfreeexplicitacknowledgments", null ]
       ] ],
