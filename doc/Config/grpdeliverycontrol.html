@@ -80,7 +80,7 @@ Burst Loss&nbsp;&nbsp;<small><a href="#burstloss">&lt;-</a></small></h1>
 <div class="image">
 <img src="Burst_Loss.png" alt="Burst_Loss.png"/>
 </div>
- <p>For burst loss, a single <a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a6629139aaf902976c8df9de3f37d10db">LBM_MSG_UNRECOVERABLE_LOSS_BURST</a> event is delivered for the entire sequence number gap. (Contrast this with simple (not burst) loss events, where a separate <a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a88920e0a4188081f9a14fc8f76c18578">LBM_MSG_UNRECOVERABLE_LOSS</a> event will be delivered to the receiver for each lost sequence number.)</p>
+ <p>For burst loss, a single <a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a6629139aaf902976c8df9de3f37d10db">LBM_MSG_UNRECOVERABLE_LOSS_BURST</a> event is delivered for the entire sequence number gap. (Contrast this with simple (not burst) loss events, where a separate <a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a88920e0a4188081f9a14fc8f76c18578">LBM_MSG_UNRECOVERABLE_LOSS</a> event will be delivered to the receiver for each lost sequence number.)</p>
 <dl class="section note"><dt>Note</dt><dd>The burst loss control takes priority over all recovery methods. For example, if the receiver is reading a persistent stream and OTR is enabled, a gap longer than delivery_control_maximum_burst_loss will immediately declare the gap as unrecoverable without even trying to use OTR to recover. If gapless message delivery is a high priority, delivery_control_maximum_burst_loss should be set to a very large value.</dd>
 <dd>
 There is a possibility of successfully-received messages being discarded when a burst loss is detected. Let's say a minor loss event is followed by several successful message fragments. The delivery of those successfully-received message fragments will be delayed in hopes that the underlying transport layer can retrieve the missing data. However, if a burst loss is detected while the delivery controller is still waiting for recovery, the pending messages will be deleted as the loss-handling structures are cleaned up.</dd></dl>
@@ -113,7 +113,7 @@ delivery_control_loss_check_interval (receiver)&nbsp;&nbsp;<small><a href="#deli
 <tr>
 <td><em>Scope:</em> </td><td>receiver </td></tr>
 <tr>
-<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a72438fab15bf500af58d2a8a521e470d">lbm_ulong_t</a></b> </td></tr>
+<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a72438fab15bf500af58d2a8a521e470d">lbm_ulong_t</a></b> </td></tr>
 <tr>
 <td><em>Units:</em> </td><td>milliseconds </td></tr>
 <tr>
@@ -134,7 +134,7 @@ delivery_control_maximum_burst_loss (receiver)&nbsp;&nbsp;<small><a href="#deliv
 <tr>
 <td><em>Scope:</em> </td><td>receiver </td></tr>
 <tr>
-<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#abdb96b55cc467a75e1f9ec0036dbc14b">lbm_uint_t</a></b> </td></tr>
+<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#abdb96b55cc467a75e1f9ec0036dbc14b">lbm_uint_t</a></b> </td></tr>
 <tr>
 <td><em>Units:</em> </td><td>number of messages (fragments) </td></tr>
 <tr>
@@ -197,7 +197,7 @@ mim_delivery_control_loss_check_interval (context)&nbsp;&nbsp;<small><a href="#m
 <tr>
 <td><em>Scope:</em> </td><td>context </td></tr>
 <tr>
-<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a72438fab15bf500af58d2a8a521e470d">lbm_ulong_t</a></b> </td></tr>
+<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a72438fab15bf500af58d2a8a521e470d">lbm_ulong_t</a></b> </td></tr>
 <tr>
 <td><em>Units:</em> </td><td>milliseconds </td></tr>
 <tr>
@@ -244,7 +244,7 @@ source_notification_function (receiver)&nbsp;&nbsp;<small><a href="#sourcenotifi
 <tr>
 <td><em>Scope:</em> </td><td>receiver </td></tr>
 <tr>
-<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a45be527ef7ef03b53afd4b193558107f">lbm_rcv_src_notification_func_t</a></b> </td></tr>
+<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a45be527ef7ef03b53afd4b193558107f">lbm_rcv_src_notification_func_t</a></b> </td></tr>
 <tr>
 <td><em>Default value:</em> </td><td>NULL </td></tr>
 <tr>

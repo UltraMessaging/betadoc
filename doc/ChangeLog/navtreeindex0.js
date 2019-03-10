@@ -91,6 +91,8 @@ var NAVTREEINDEX0 =
 "umversion6_12.html#persistencefixedlimitationsfor6_12":[1,1,1],
 "umversion6_12.html#queuingenhancementsfor6_12":[1,0,2],
 "umversion6_12.html#queuingfixedlimitationsfor6_12":[1,1,2],
+"umversion6_12.html#smartsourceheadersizechange":[1,2,0],
+"umversion6_12.html#specialupgradeinsructionsfor6_12":[1,2],
 "umversion6_12.html#streamingenhancementsfor6_12":[1,0,0],
 "umversion6_12.html#streamingfixedlimitationsfor6_12":[1,1,0],
 "umversion6_5.html":[16],

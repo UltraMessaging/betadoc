@@ -8,6 +8,11 @@ var NAVTREE =
         [ "Topic Resolution Overview", "index.html#topicresolutionoverview", null ],
         [ "Topic Resolution Domain", "index.html#topicresolutiondomain", null ]
       ] ],
+      [ "Messaging Reliability", "index.html#messagingreliability", [
+        [ "Head Loss", "index.html#headloss", null ],
+        [ "Leading Loss", "index.html#leadingloss", null ],
+        [ "Tail Loss", "index.html#tailloss", null ]
+      ] ],
       [ "Persistence", "index.html#persistence", null ],
       [ "Queuing", "index.html#queuing", null ],
       [ "UM Router", "index.html#umrouter", null ],
@@ -22,9 +27,8 @@ var NAVTREE =
         [ "Transport Rate Control", "index.html#transportratecontrol", null ],
         [ "Topic Resolution Rate Control", "index.html#topicresolutionratecontrol", null ]
       ] ],
-      [ "Operational Statistics", "index.html#operationalstatistics", null ]
-    ] ],
-    [ "UM Objects", "index.html#umobjects", [
+      [ "Operational Statistics", "index.html#operationalstatistics", null ],
+      [ "Immediate Messaging", "index.html#immediatemessaging", null ],
       [ "Context Object", "index.html#contextobject", null ],
       [ "Topic Object", "index.html#topicobject", null ],
       [ "Source Object", "index.html#sourceobject", [
@@ -43,6 +47,9 @@ var NAVTREE =
       [ "Message Object", "index.html#messageobject", [
         [ "Message Object Deletion", "index.html#messageobjectdeletion", null ],
         [ "Message Object Retention", "index.html#messageobjectretention", null ]
+      ] ],
+      [ "Security Considerations", "index.html#securityconsiderations", [
+        [ "Webmon Security", "index.html#webmonsecurity", null ]
       ] ]
     ] ],
     [ "Transport Types", "index.html#transporttypes", [
@@ -121,7 +128,8 @@ var NAVTREE =
         [ "Adaptive Batching", "index.html#adaptivebatching", null ]
       ] ],
       [ "Message Fragmentation and Reassembly", "index.html#messagefragmentationandreassembly", [
-        [ "Datagram Max Size and Network MTU", "index.html#datagrammaxsizeandnetworkmtu", null ]
+        [ "Datagram Max Size and Network MTU", "index.html#datagrammaxsizeandnetworkmtu", null ],
+        [ "Datagrams and Kernel Bypass Network Drivers", "index.html#datagramsandkernelbypassnetworkdrivers", null ]
       ] ],
       [ "Ordered Delivery", "index.html#ordereddelivery", [
         [ "Sequence Number Order, Fragments Reassembled (Default Mode)", "index.html#sequencenumberorderfragmentsreassembleddefaultmode", null ],
@@ -183,7 +191,25 @@ var NAVTREE =
         [ "Timestamp Restrictions", "index.html#timestamprestrictions", null ],
         [ "Timestamp Configuration Summary", "index.html#timestampconfigurationsummary", null ]
       ] ],
+      [ "Unicast Immediate Messaging", "index.html#unicastimmediatemessaging", [
+        [ "UIM Addressing", "index.html#uimaddressing", null ],
+        [ "Receiving a UIM", "index.html#receivingauim", null ],
+        [ "Sending a UIM", "index.html#sendingauim", null ],
+        [ "UIM Connection Management", "index.html#uimconnectionmanagement", null ]
+      ] ],
+      [ "Multicast Immediate Messaging", "index.html#multicastimmediatemessaging", [
+        [ "Temporary Transport Session", "index.html#temporarytransportsession", null ],
+        [ "MIM Notifications", "index.html#mimnotifications", null ],
+        [ "Receiving Immediate Messages", "index.html#receivingimmediatemessages", null ],
+        [ "MIM and Wildcard Receivers", "index.html#mimandwildcardreceivers", null ],
+        [ "MIM Loss Handling", "index.html#mimlosshandling", null ],
+        [ "MIM Configuration", "index.html#mimconfiguration", null ],
+        [ "MIM Example Applications", "index.html#mimexampleapplications", null ]
+      ] ]
+    ] ],
+    [ "UM Objects", "index.html#umobjects", [
       [ "Message Properties", "index.html#messageproperties", [
+        [ "Message Properties Performance Considerations", "index.html#messagepropertiesperformanceconsiderations", null ],
         [ "Smart Sources and Message Properties", "index.html#smartsourcesandmessageproperties", null ],
         [ "Smart Source Message Properties Usage", "index.html#smartsourcemessagepropertiesusage", null ]
       ] ],
@@ -205,15 +231,6 @@ var NAVTREE =
         [ "Source String from Receive Event", "index.html#sourcestringfromreceiveevent", null ],
         [ "Source String from Source Notification Function", "index.html#sourcestringfromsourcenotificationfunction", null ],
         [ "Sending to Source Readiness", "index.html#sendingtosourcereadiness", null ]
-      ] ],
-      [ "Multicast Immediate Messaging", "index.html#multicastimmediatemessaging", [
-        [ "Temporary Transport Session", "index.html#temporarytransportsession", null ],
-        [ "MIM Notifications", "index.html#mimnotifications", null ],
-        [ "Receiving Immediate Messages", "index.html#receivingimmediatemessages", null ],
-        [ "MIM and Wildcard Receivers", "index.html#mimandwildcardreceivers", null ],
-        [ "Loss Handling", "index.html#losshandling", null ],
-        [ "MIM Configuration", "index.html#mimconfiguration", null ],
-        [ "MIM Example Applications", "index.html#mimexampleapplications", null ]
       ] ],
       [ "Spectrum", "index.html#spectrum", [
         [ "Spectrum Performance Advantages", "index.html#spectrumperformanceadvantages", null ],
@@ -267,19 +284,21 @@ var NAVTREE =
         [ "Zero-Copy Send Compatibility", "index.html#zerocopysendcompatibility", null ],
         [ "Zero-Copy Restrictions", "index.html#zerocopyrestrictions", null ]
       ] ],
-      [ "Comparison of Zero Copy and Smart Sources", "index.html#comparisonofzerocopyandsmartsources", null ],
-      [ "UM Daemons as Windows Services", "index.html#umdaemonsaswindowsservices", null ]
+      [ "Comparison of Zero Copy and Smart Sources", "index.html#comparisonofzerocopyandsmartsources", null ]
     ] ],
-    [ "Manpage for SRS", "index.html#manpageforsrs", [
-      [ "SRS Command Line", "index.html#srscommandline", null ]
+    [ "Man Pages for SRS", "index.html#manpagesforsrs", [
+      [ "SRS Man Page", "index.html#srsmanpage", null ],
+      [ "Srsds Man Page", "index.html#srsdsmanpage", null ]
     ] ],
     [ "SRS Configuration File", "index.html#srsconfigurationfile", [
       [ "SRS Configuration Elements", "index.html#srsconfigurationelements", [
         [ "SRS Element \"<um-srs>\"", "index.html#srselementumsrs", null ],
         [ "SRS Element \"<daemon-monitor>\"", "index.html#srselementdaemonmonitor", null ],
+        [ "SRS Element \"<remote-config-changes-request>\"", "index.html#srselementremoteconfigchangesrequest", null ],
+        [ "SRS Element \"<remote-snapshot-request>\"", "index.html#srselementremotesnapshotrequest", null ],
+        [ "SRS Element \"<publish-connection-events>\"", "index.html#srselementpublishconnectionevents", null ],
         [ "SRS Element \"<lbm-attributes>\"", "index.html#srselementlbmattributes", null ],
         [ "SRS Element \"<option>\"", "index.html#srselementoption", null ],
-        [ "SRS Element \"<publish-connection-events>\"", "index.html#srselementpublishconnectionevents", null ],
         [ "SRS Element \"<publishing-interval>\"", "index.html#srselementpublishinginterval", null ],
         [ "SRS Element \"<internal-config-opts>\"", "index.html#srselementinternalconfigopts", null ],
         [ "SRS Element \"<config-opts>\"", "index.html#srselementconfigopts", null ],
@@ -315,15 +334,20 @@ var NAVTREE =
       [ "Message Type: SRS_ERROR_STATS", "index.html#messagetypesrserrorstats", null ],
       [ "Message Type: UM_CLIENT_STATS", "index.html#messagetypeumclientstats", null ],
       [ "Message Type: UM_CLIENT_ERROR_STATS", "index.html#messagetypeumclienterrorstats", null ],
-      [ "Message Type: CONNECTION_EVENTS", "index.html#messagetypeconnectionevents", null ],
+      [ "Message Type: CONNECTION_EVENTS", "index.html#messagetypeconnectionevents", [
+        [ "Message Subtype: UM_CLIENT_CONNECT", "index.html#messagesubtypeumclientconnect", null ],
+        [ "Message Subtype: UM_CLIENT_DISCONNECT", "index.html#messagesubtypeumclientdisconnect", null ],
+        [ "Message Subtypes: SIR and SDR", "index.html#messagesubtypessirandsdr", null ]
+      ] ],
       [ "Message Type: CONFIG_OPTS", "index.html#messagetypeconfigopts", null ],
       [ "Message Type: INTERNAL_CONFIG_OPTS", "index.html#messagetypeinternalconfigopts", null ],
       [ "Request Type: REPORT_SRS_VERSION", "index.html#requesttypereportsrsversion", null ],
       [ "Request Type: REPORT_MONITOR_INFO", "index.html#requesttypereportmonitorinfo", null ],
       [ "Request Type: SET_PUBLISHING_INTERVAL", "index.html#requesttypesetpublishinginterval", null ]
     ] ],
-    [ "Manpage for lbmrd", "index.html#manpageforlbmrd", [
-      [ "lbmrd Command Line", "index.html#lbmrdcommandline", null ]
+    [ "Man Pages for Lbmrd", "index.html#manpagesforlbmrd", [
+      [ "Lbmrd Man Page", "index.html#lbmrdmanpage", null ],
+      [ "Lbmrds Man Page", "index.html#lbmrdsmanpage", null ]
     ] ],
     [ "lbmrd Configuration File", "index.html#lbmrdconfigurationfile", [
       [ "lbmrd Configuration Elements", "index.html#lbmrdconfigurationelements", [
@@ -395,7 +419,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "index.html",
-"index.html#srselementsourceinfoqueueserviceinterval"
+"index.html#srselementinterface"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

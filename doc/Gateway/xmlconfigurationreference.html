@@ -525,6 +525,19 @@ murmur2 - Good all-around hash function by Austin Appleby. Best for medium to lo
       . . .
       . . .
 &lt;/tnw-gateway&gt;
+</pre><p><b>Example</b> 2:</p>
+<p>Monitoring configuration options can be supplied directly in the XML.</p>
+<pre class="fragment">&lt;tnw-gateway version="1.0"&gt;
+  &lt;daemon&gt;
+    &lt;monitor interval=30&gt;
+      &lt;transport-module module="lbm"
+        options="config=/cfgs/TD1.cfg;context|request_tcp_interface=192.168.135.131"/&gt;
+      &lt;format-module options="config=/cfgs/TD1.cfg;separator=|"/&gt;
+    &lt;/monitor&gt;  
+  &lt;/daemon&gt;
+      . . .
+      . . .
+&lt;/tnw-gateway&gt;
 </pre><p><br />
  </p>
 <h2><a class="anchor" id="drocfg_format-module"></a>
@@ -563,6 +576,8 @@ murmur2 - Good all-around hash function by Austin Appleby. Best for medium to lo
 <h2><a class="anchor" id="drocfg_web-monitor"></a>
 &lt;web-monitor&gt;&nbsp;&nbsp;<small><a href="#drocfg_web-monitor">&lt;-</a></small></h2>
 <p>The <code>&lt;web-monitor&gt;</code> element identifies the address for the web monitor, in the form of interface:port. You can use "*" to specify the local host.</p>
+<p>Omit this element to disable the web monitor.</p>
+<p>See <a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Gateway/design.tag:../Design/" href="../Design/fundamentalconcepts.html#webmonsecurity">Webmon Security</a> for important security information.</p>
 <ul>
 <li>
 <b>Cardinality:</b> 0 or 1 </li>
@@ -590,7 +605,7 @@ murmur2 - Good all-around hash function by Austin Appleby. Best for medium to lo
  </p>
 <h2><a class="anchor" id="drocfg_daemon-monitor"></a>
 &lt;daemon-monitor&gt;&nbsp;&nbsp;<small><a href="#drocfg_daemon-monitor">&lt;-</a></small></h2>
-<p>The <code>&lt;daemon-monitor&gt;</code> element configures the Daemon Statistics feature. See <a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Gateway/design.tag:../Design/" href="../Design/umfeatures.html#daemonstatistics">Daemon Statistics</a> for general information on Daemon Statistics.</p>
+<p>The <code>&lt;daemon-monitor&gt;</code> element configures the Daemon Statistics feature. See <a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Gateway/design.tag:../Design/" href="../Design/umobjects.html#daemonstatistics">Daemon Statistics</a> for general information on Daemon Statistics.</p>
 <ul>
 <li>
 <b>Cardinality:</b> 0 or 1 </li>
@@ -625,7 +640,7 @@ murmur2 - Good all-around hash function by Austin Appleby. Best for medium to lo
  </p>
 <h2><a class="anchor" id="drocfg_remote-snapshot-request"></a>
 &lt;remote-snapshot-request&gt;&nbsp;&nbsp;<small><a href="#drocfg_remote-snapshot-request">&lt;-</a></small></h2>
-<p>The <code>&lt;remote-snapshot-request&gt;</code> element configures whether the UM Router will respond to monitoring apps requests to send on-demand snapshots of daemon statistics. See <a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Gateway/design.tag:../Design/" href="../Design/umfeatures.html#daemonstatistics">Daemon Statistics</a> for general information on Daemon Statistics.</p>
+<p>The <code>&lt;remote-snapshot-request&gt;</code> element configures whether the UM Router will respond to monitoring apps requests to send on-demand snapshots of daemon statistics. See <a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Gateway/design.tag:../Design/" href="../Design/umobjects.html#daemonstatistics">Daemon Statistics</a> for general information on Daemon Statistics.</p>
 <ul>
 <li>
 <b>Cardinality:</b> 0 or 1 </li>
@@ -660,7 +675,7 @@ murmur2 - Good all-around hash function by Austin Appleby. Best for medium to lo
  </p>
 <h2><a class="anchor" id="drocfg_remote-config-changes-request"></a>
 &lt;remote-config-changes-request&gt;&nbsp;&nbsp;<small><a href="#drocfg_remote-config-changes-request">&lt;-</a></small></h2>
-<p>The <code>&lt;remote-config-changes-request&gt;</code> element configures whether the UM Router will respond to monitoring apps requests to change the rate at which Daemon Statistics messages are published. See <a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Gateway/design.tag:../Design/" href="../Design/umfeatures.html#daemonstatistics">Daemon Statistics</a> for general information on Daemon Statistics.</p>
+<p>The <code>&lt;remote-config-changes-request&gt;</code> element configures whether the UM Router will respond to monitoring apps requests to change the rate at which Daemon Statistics messages are published. See <a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Gateway/design.tag:../Design/" href="../Design/umobjects.html#daemonstatistics">Daemon Statistics</a> for general information on Daemon Statistics.</p>
 <ul>
 <li>
 <b>Cardinality:</b> 0 or 1 </li>
@@ -1052,7 +1067,7 @@ murmur2 - Good all-around hash function by Austin Appleby. Best for medium to lo
 <tr>
 <td>value </td><td>The value of the option. </td><td>none </td></tr>
 </table>
-<dl class="section note"><dt>Note</dt><dd>Some UM options specify interfaces, which can be done by supplying the device name of the interface. Special care must be taken when supplying device names. See <a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Gateway/config.tag:../Config/" href="../Config/generalconfigurationguidelines.html#interfacedevicenamesandxml">Interface Device Names and XML</a> for details.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Some UM options specify interfaces, which can be done by supplying the device name of the interface. Special care must be taken when supplying device names. See <a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Gateway/config.tag:../Config/" href="../Config/generalconfigurationguidelines.html#interfacedevicenamesandxml">Interface Device Names and XML</a> for details.</dd></dl>
 <p><b>Example:</b> </p>
 <pre class="fragment">&lt;tnw-gateway version="1.0"&gt;
       . . .
@@ -3127,7 +3142,7 @@ The UM configuration specified for the portal determines the late join configura
  </p>
 <h2><a class="anchor" id="drocfg_publishing-interval"></a>
 &lt;publishing-interval&gt;&nbsp;&nbsp;<small><a href="#drocfg_publishing-interval">&lt;-</a></small></h2>
-<p>The <code>&lt;publishing-interval&gt;</code> element configures the rate at which Daemon Statistics messages are published. See <a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Gateway/design.tag:../Design/" href="../Design/umfeatures.html#daemonstatistics">Daemon Statistics</a> for general information on Daemon Statistics.</p>
+<p>The <code>&lt;publishing-interval&gt;</code> element configures the rate at which Daemon Statistics messages are published. See <a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Gateway/design.tag:../Design/" href="../Design/umobjects.html#daemonstatistics">Daemon Statistics</a> for general information on Daemon Statistics.</p>
 <ul>
 <li>
 <b>Cardinality:</b> 0 or 1 </li>
@@ -3157,7 +3172,7 @@ The UM configuration specified for the portal determines the late join configura
  </p>
 <h2><a class="anchor" id="drocfg_group"></a>
 &lt;group&gt;&nbsp;&nbsp;<small><a href="#drocfg_group">&lt;-</a></small></h2>
-<p>The <code>&lt;group&gt;</code> element configures the rate at which one particular grouping of Daemon Statistics messages are published. See <a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Gateway/design.tag:../Design/" href="../Design/umfeatures.html#daemonstatistics">Daemon Statistics</a> for general information on Daemon Statistics.</p>
+<p>The <code>&lt;group&gt;</code> element configures the rate at which one particular grouping of Daemon Statistics messages are published. See <a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Gateway/design.tag:../Design/" href="../Design/umobjects.html#daemonstatistics">Daemon Statistics</a> for general information on Daemon Statistics.</p>
 <ul>
 <li>
 <b>Cardinality:</b> 0 or 1 </li>

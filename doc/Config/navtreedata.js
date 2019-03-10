@@ -123,7 +123,6 @@ var NAVTREE =
         [ "default_interface (context)", "grpmajoroptions.html#defaultinterfacecontext", null ],
         [ "fd_management_type (context)", "grpmajoroptions.html#fdmanagementtypecontext", null ],
         [ "message_selector (receiver)", "grpmajoroptions.html#messageselectorreceiver", null ],
-        [ "min_win_event_log_level (context)", "grpmajoroptions.html#minwineventloglevelcontext", null ],
         [ "multiple_receive_maximum_datagrams (context)", "grpmajoroptions.html#multiplereceivemaximumdatagramscontext", null ],
         [ "operational_mode (context)", "grpmajoroptions.html#operationalmodecontext", null ],
         [ "operational_mode (xsp)", "grpmajoroptions.html#operationalmodexsp", null ],
@@ -487,29 +486,25 @@ var NAVTREE =
         [ "use_otr (receiver)", "grpofftransportrecovery.html#useotrreceiver", null ]
       ] ]
     ] ],
-    [ "Request Network Options", "grprequestnetwork.html", [
-      [ "Reference", "grprequestnetwork.html#requestnetworkref", [
-        [ "request_tcp_bind_request_port (context)", "grprequestnetwork.html#requesttcpbindrequestportcontext", null ],
-        [ "request_tcp_interface (context)", "grprequestnetwork.html#requesttcpinterfacecontext", null ],
-        [ "request_tcp_port (context)", "grprequestnetwork.html#requesttcpportcontext", null ],
-        [ "request_tcp_port_high (context)", "grprequestnetwork.html#requesttcpporthighcontext", null ],
-        [ "request_tcp_port_low (context)", "grprequestnetwork.html#requesttcpportlowcontext", null ]
+    [ "Unicast Immediate Messaging Network Options", "grpunicastimmediatemessagingnetwork.html", [
+      [ "Reference", "grpunicastimmediatemessagingnetwork.html#requestnetworkref", [
+        [ "request_tcp_bind_request_port (context)", "grpunicastimmediatemessagingnetwork.html#requesttcpbindrequestportcontext", null ],
+        [ "request_tcp_interface (context)", "grpunicastimmediatemessagingnetwork.html#requesttcpinterfacecontext", null ],
+        [ "request_tcp_port (context)", "grpunicastimmediatemessagingnetwork.html#requesttcpportcontext", null ],
+        [ "request_tcp_port_high (context)", "grpunicastimmediatemessagingnetwork.html#requesttcpporthighcontext", null ],
+        [ "request_tcp_port_low (context)", "grpunicastimmediatemessagingnetwork.html#requesttcpportlowcontext", null ]
       ] ]
     ] ],
-    [ "Request Operation Options", "grprequestoperation.html", [
-      [ "Reference", "grprequestoperation.html#requestoperationref", [
-        [ "request_tcp_exclusiveaddr (context)", "grprequestoperation.html#requesttcpexclusiveaddrcontext", null ],
-        [ "request_tcp_listen_backlog (context)", "grprequestoperation.html#requesttcplistenbacklogcontext", null ],
-        [ "request_tcp_reuseaddr (context)", "grprequestoperation.html#requesttcpreuseaddrcontext", null ]
-      ] ]
-    ] ],
-    [ "Response Operation Options", "grpresponseoperation.html", [
-      [ "Reference", "grpresponseoperation.html#responseoperationref", [
-        [ "response_session_maximum_buffer (context)", "grpresponseoperation.html#responsesessionmaximumbuffercontext", null ],
-        [ "response_session_sender_socket_buffer (context)", "grpresponseoperation.html#responsesessionsendersocketbuffercontext", null ],
-        [ "response_tcp_deletion_timeout (context)", "grpresponseoperation.html#responsetcpdeletiontimeoutcontext", null ],
-        [ "response_tcp_interface (context)", "grpresponseoperation.html#responsetcpinterfacecontext", null ],
-        [ "response_tcp_nodelay (context)", "grpresponseoperation.html#responsetcpnodelaycontext", null ]
+    [ "Unicast Immediate Messaging Operation Options", "grpunicastimmediatemessagingoperation.html", [
+      [ "Reference", "grpunicastimmediatemessagingoperation.html#requestoperationref", [
+        [ "request_tcp_exclusiveaddr (context)", "grpunicastimmediatemessagingoperation.html#requesttcpexclusiveaddrcontext", null ],
+        [ "request_tcp_listen_backlog (context)", "grpunicastimmediatemessagingoperation.html#requesttcplistenbacklogcontext", null ],
+        [ "request_tcp_reuseaddr (context)", "grpunicastimmediatemessagingoperation.html#requesttcpreuseaddrcontext", null ],
+        [ "response_session_maximum_buffer (context)", "grpunicastimmediatemessagingoperation.html#responsesessionmaximumbuffercontext", null ],
+        [ "response_session_sender_socket_buffer (context)", "grpunicastimmediatemessagingoperation.html#responsesessionsendersocketbuffercontext", null ],
+        [ "response_tcp_deletion_timeout (context)", "grpunicastimmediatemessagingoperation.html#responsetcpdeletiontimeoutcontext", null ],
+        [ "response_tcp_interface (context)", "grpunicastimmediatemessagingoperation.html#responsetcpinterfacecontext", null ],
+        [ "response_tcp_nodelay (context)", "grpunicastimmediatemessagingoperation.html#responsetcpnodelaycontext", null ]
       ] ]
     ] ],
     [ "Implicit Batching Options", "grpimplicitbatching.html", [
@@ -768,8 +763,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "accesstocurrentoperatingoptions.html",
-"grpmulticastresolvernetwork.html#resolvermulticastincomingaddresscontext",
-"grpultramessagingpersistence.html#umeconsensussequencenumberbehaviorsource"
+"grpmulticastresolvernetwork.html#resolvermulticastincomingportcontext",
+"grpultramessagingpersistence.html#umerepositoryackonreceptionsource"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

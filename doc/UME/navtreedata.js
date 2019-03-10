@@ -119,9 +119,9 @@ var NAVTREE =
         [ "Proactive Retransmissions", "persistencefaulttolerance.html#proactiveretransmissions", null ]
       ] ]
     ] ],
-    [ "Persistence Man Pages", "persistencemanpages.html", [
-      [ "umestored Man Page", "persistencemanpages.html#umestoredmanpage", null ],
-      [ "umestoreds Man Page", "persistencemanpages.html#umestoredsmanpage", null ]
+    [ "Man Pages for Store", "manpagesforstore.html", [
+      [ "Umestored Man Page", "manpagesforstore.html#umestoredmanpage", null ],
+      [ "Umestoreds Man Page", "manpagesforstore.html#umestoredsmanpage", null ]
     ] ],
     [ "Configuration Reference for Umestored", "configurationreferenceforumestored.html", [
       [ "Daemon Element", "configurationreferenceforumestored.html#daemonelement", [

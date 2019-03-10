@@ -142,6 +142,8 @@ var NAVTREEINDEX0 =
 "index.html#queuingfixedlimitationsfor6_9_1":[9,1,2],
 "index.html#queuingfixedlimitationsfor6_9_2":[8,1,2],
 "index.html#queuingknownlimitations":[2,2],
+"index.html#smartsourceheadersizechange":[1,2,0],
+"index.html#specialupgradeinsructionsfor6_12":[1,2],
 "index.html#streamingdeprecationsfor60":[18,2,0],
 "index.html#streamingdeprecationsfor610":[7,2,0],
 "index.html#streamingdeprecationsfor67":[15,2,0],

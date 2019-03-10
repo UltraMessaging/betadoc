@@ -56,7 +56,7 @@ $(document).ready(function(){initNavTree('grpmulticastimmediatemessagingoperatio
 <div class="contents">
 <div class="textblock"><p>For many MIM operation options, there is a corresponding LBT-RM operation option. For more information on how MIM operation options interact and for illustrations, see <a class="el" href="grptransportlbtrmoperation.html">Transport LBT-RM Operation Options</a>.</p>
 <p>Note that the LBT-RM rate controller also governs MIM transmission rates. Hence there is no separate option for setting MIM transmission rate.</p>
-<p>See also <em>Multicast Immediate Messaging</em> in the <em>Ultra Messaging Concepts Guide</em> for more information about this feature.</p>
+<p>See also <a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/design.tag:../Design/" href="../Design/umfeatures.html#multicastimmediatemessaging">Multicast Immediate Messaging</a> for general information on MIM.</p>
 <p><br />
  </p>
 <h1><a class="anchor" id="multicastimmediatemessagingoperationref"></a>
@@ -65,12 +65,15 @@ Reference&nbsp;&nbsp;<small><a href="#multicastimmediatemessagingoperationref">&
  </p>
 <h2><a class="anchor" id="immediatemessagereceiverfunctioncontext"></a>
 immediate_message_receiver_function (context)&nbsp;&nbsp;<small><a href="#immediatemessagereceiverfunctioncontext">&lt;-</a></small></h2>
-<dl class="section user"><dt></dt><dd>Callback function (and associated event queue and client data pointer) called when a topic-less immediate message is received. A value of NULL (the default) disables this feature.</dd></dl>
+<dl class="section user"><dt></dt><dd>Callback function (and associated event queue and client data pointer) called when a topicless immediate message is received. </dd></dl>
+<dl class="section user"><dt></dt><dd>A value of NULL (the default) disables this feature. </dd></dl>
+<dl class="section user"><dt></dt><dd>Alternatively, the API <a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a374f135dddf7794130509f97b1e96cf8">lbm_context_rcv_immediate_msgs()</a> can be used. </dd></dl>
+<dl class="section user"><dt></dt><dd>See <a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/design.tag:../Design/" href="../Design/fundamentalconcepts.html#immediatemessaging">Immediate Messaging</a> for general information on immediate messages.</dd></dl>
 <dl class="section user"><dt></dt><dd><table class="doxtable">
 <tr>
 <td><em>Scope:</em> </td><td>context </td></tr>
 <tr>
-<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#ab9916750784e7d597e8e19580b9a0fe1">lbm_context_rcv_immediate_msgs_func_t</a></b> </td></tr>
+<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#ab9916750784e7d597e8e19580b9a0fe1">lbm_context_rcv_immediate_msgs_func_t</a></b> </td></tr>
 <tr>
 <td><em>Default value:</em> </td><td>NULL </td></tr>
 <tr>
@@ -83,12 +86,15 @@ immediate_message_receiver_function (context)&nbsp;&nbsp;<small><a href="#immedi
  </p>
 <h2><a class="anchor" id="immediatemessagetopicreceiverfunctioncontext"></a>
 immediate_message_topic_receiver_function (context)&nbsp;&nbsp;<small><a href="#immediatemessagetopicreceiverfunctioncontext">&lt;-</a></small></h2>
-<dl class="section user"><dt></dt><dd>Callback function (and associated event queue and client data pointer) that is called when an immediate message is received for a topic for which there is no receiver. A value of NULL (the default) disables this feature.</dd></dl>
+<dl class="section user"><dt></dt><dd>Callback function (and associated event queue and client data pointer) that is called when an immediate message is received for a topic for which there is no receiver. </dd></dl>
+<dl class="section user"><dt></dt><dd>A value of NULL (the default) disables this feature. </dd></dl>
+<dl class="section user"><dt></dt><dd>Alternatively, the API <a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#abdefbb3bd3ff3a3b2ec6e20ca2f5dc19">lbm_context_rcv_immediate_topic_msgs()</a> can be used. </dd></dl>
+<dl class="section user"><dt></dt><dd>See <a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/design.tag:../Design/" href="../Design/fundamentalconcepts.html#immediatemessaging">Immediate Messaging</a> for general information on immediate messages.</dd></dl>
 <dl class="section user"><dt></dt><dd><table class="doxtable">
 <tr>
 <td><em>Scope:</em> </td><td>context </td></tr>
 <tr>
-<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#ab9916750784e7d597e8e19580b9a0fe1">lbm_context_rcv_immediate_msgs_func_t</a></b> </td></tr>
+<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#ab9916750784e7d597e8e19580b9a0fe1">lbm_context_rcv_immediate_msgs_func_t</a></b> </td></tr>
 <tr>
 <td><em>Default value:</em> </td><td>NULL </td></tr>
 <tr>
@@ -101,12 +107,13 @@ immediate_message_topic_receiver_function (context)&nbsp;&nbsp;<small><a href="#
  </p>
 <h2><a class="anchor" id="mimactivitytimeoutcontext"></a>
 mim_activity_timeout (context)&nbsp;&nbsp;<small><a href="#mimactivitytimeoutcontext">&lt;-</a></small></h2>
-<dl class="section user"><dt></dt><dd>For multicast immediate message receivers only. See <a class="el" href="grptransportlbtrmoperation.html#transportlbtrmactivitytimeoutreceiver">transport_lbtrm_activity_timeout (receiver)</a> for description. However, multicast immediate message channels do not deliver an EOS indication.</dd></dl>
+<dl class="section user"><dt></dt><dd>For multicast immediate message receivers only. See <a class="el" href="grptransportlbtrmoperation.html#transportlbtrmactivitytimeoutreceiver">transport_lbtrm_activity_timeout (receiver)</a> for description. However, multicast immediate message channels do not deliver an EOS indication. </dd></dl>
+<dl class="section user"><dt></dt><dd>See <a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/design.tag:../Design/" href="../Design/umfeatures.html#multicastimmediatemessaging">Multicast Immediate Messaging</a> for general information about MIM.</dd></dl>
 <dl class="section user"><dt></dt><dd><table class="doxtable">
 <tr>
 <td><em>Scope:</em> </td><td>context </td></tr>
 <tr>
-<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a72438fab15bf500af58d2a8a521e470d">lbm_ulong_t</a></b> </td></tr>
+<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a72438fab15bf500af58d2a8a521e470d">lbm_ulong_t</a></b> </td></tr>
 <tr>
 <td><em>Units:</em> </td><td>milliseconds </td></tr>
 <tr>
@@ -124,7 +131,7 @@ mim_delivery_control_activity_check_interval (context)&nbsp;&nbsp;<small><a href
 <tr>
 <td><em>Scope:</em> </td><td>context </td></tr>
 <tr>
-<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a72438fab15bf500af58d2a8a521e470d">lbm_ulong_t</a></b> </td></tr>
+<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a72438fab15bf500af58d2a8a521e470d">lbm_ulong_t</a></b> </td></tr>
 <tr>
 <td><em>Units:</em> </td><td>milliseconds </td></tr>
 <tr>
@@ -144,7 +151,7 @@ mim_delivery_control_activity_timeout (context)&nbsp;&nbsp;<small><a href="#mimd
 <tr>
 <td><em>Scope:</em> </td><td>context </td></tr>
 <tr>
-<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a72438fab15bf500af58d2a8a521e470d">lbm_ulong_t</a></b> </td></tr>
+<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a72438fab15bf500af58d2a8a521e470d">lbm_ulong_t</a></b> </td></tr>
 <tr>
 <td><em>Units:</em> </td><td>milliseconds </td></tr>
 <tr>
@@ -159,7 +166,8 @@ mim_delivery_control_activity_timeout (context)&nbsp;&nbsp;<small><a href="#mimd
  </p>
 <h2><a class="anchor" id="mimdeliverycontrolordertableszcontext"></a>
 mim_delivery_control_order_tablesz (context)&nbsp;&nbsp;<small><a href="#mimdeliverycontrolordertableszcontext">&lt;-</a></small></h2>
-<dl class="section user"><dt></dt><dd>For multicast immediate messages with ordered delivery, this controls the size of the hash table used to hold data.</dd></dl>
+<dl class="section user"><dt></dt><dd>For multicast immediate messages with ordered delivery, this controls the size of the hash table used to hold data. </dd></dl>
+<dl class="section user"><dt></dt><dd>See <a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/design.tag:../Design/" href="../Design/umfeatures.html#multicastimmediatemessaging">Multicast Immediate Messaging</a> for general information about MIM.</dd></dl>
 <dl class="section user"><dt></dt><dd><table class="doxtable">
 <tr>
 <td><em>Scope:</em> </td><td>context </td></tr>
@@ -178,12 +186,12 @@ mim_delivery_control_order_tablesz (context)&nbsp;&nbsp;<small><a href="#mimdeli
 <h2><a class="anchor" id="mimimplicitbatchingintervalcontext"></a>
 mim_implicit_batching_interval (context)&nbsp;&nbsp;<small><a href="#mimimplicitbatchingintervalcontext">&lt;-</a></small></h2>
 <dl class="section user"><dt></dt><dd>The maximum timeout between when the first message of an implicitly batched immediate message is queued until the batch is sent. A message will not stay in the queue longer than this value before being sent in the worst case. </dd></dl>
-<dl class="section user"><dt></dt><dd>See <a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Config/design.tag:../Design/" href="../Design/architecture.html#implicitbatching">Implicit Batching</a> for details.</dd></dl>
+<dl class="section user"><dt></dt><dd>See <a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/design.tag:../Design/" href="../Design/architecture.html#implicitbatching">Implicit Batching</a> for details. See <a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/design.tag:../Design/" href="../Design/umfeatures.html#multicastimmediatemessaging">Multicast Immediate Messaging</a> for general information about MIM.</dd></dl>
 <dl class="section user"><dt></dt><dd><table class="doxtable">
 <tr>
 <td><em>Scope:</em> </td><td>context </td></tr>
 <tr>
-<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a72438fab15bf500af58d2a8a521e470d">lbm_ulong_t</a></b> </td></tr>
+<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a72438fab15bf500af58d2a8a521e470d">lbm_ulong_t</a></b> </td></tr>
 <tr>
 <td><em>Units:</em> </td><td>milliseconds </td></tr>
 <tr>
@@ -197,7 +205,7 @@ mim_implicit_batching_interval (context)&nbsp;&nbsp;<small><a href="#mimimplicit
 <h2><a class="anchor" id="mimimplicitbatchingminimumlengthcontext"></a>
 mim_implicit_batching_minimum_length (context)&nbsp;&nbsp;<small><a href="#mimimplicitbatchingminimumlengthcontext">&lt;-</a></small></h2>
 <dl class="section user"><dt></dt><dd>The minimum length of an implicitly batched multicast immediate message. When the total length of the implicitly batched messages reaches or exceeds this value, the batch is sent. </dd></dl>
-<dl class="section user"><dt></dt><dd>See <a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Config/design.tag:../Design/" href="../Design/architecture.html#implicitbatching">Implicit Batching</a> for details.</dd></dl>
+<dl class="section user"><dt></dt><dd>See <a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/design.tag:../Design/" href="../Design/architecture.html#implicitbatching">Implicit Batching</a> for details. See <a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/design.tag:../Design/" href="../Design/umfeatures.html#multicastimmediatemessaging">Multicast Immediate Messaging</a> for general information about MIM.</dd></dl>
 <dl class="section user"><dt></dt><dd><table class="doxtable">
 <tr>
 <td><em>Scope:</em> </td><td>context </td></tr>
@@ -215,7 +223,9 @@ mim_implicit_batching_minimum_length (context)&nbsp;&nbsp;<small><a href="#mimim
  </p>
 <h2><a class="anchor" id="mimordereddeliverycontext"></a>
 mim_ordered_delivery (context)&nbsp;&nbsp;<small><a href="#mimordereddeliverycontext">&lt;-</a></small></h2>
-<dl class="section user"><dt></dt><dd>For multicast immediate messages only. Indicates whether or not the MIM source should have its data delivered in order. The default value also guarantees fragmentation and reassembly of large messages. Changing this option from the default value results in large messages being delivered as individual fragments of less than 8K each, requiring the application to reassemble them. See also <a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Config/design.tag:../Design/" href="../Design/architecture.html#ordereddelivery">Ordered Delivery</a> in the Ultra Messaging Concepts Guide for more information about large message fragmentation and reassembly.</dd></dl>
+<dl class="section user"><dt></dt><dd>For multicast immediate messages only. Indicates whether or not the MIM source should have its data delivered in order. </dd></dl>
+<dl class="section user"><dt></dt><dd>The default value also guarantees fragmentation and reassembly of large messages. Changing this option from the default value results in large messages being delivered as individual fragments of less than 8K each, requiring the application to reassemble them. See also <a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/design.tag:../Design/" href="../Design/architecture.html#ordereddelivery">Ordered Delivery</a> in the Ultra Messaging Concepts Guide for more information about large message fragmentation and reassembly. </dd></dl>
+<dl class="section user"><dt></dt><dd>See <a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/design.tag:../Design/" href="../Design/umfeatures.html#multicastimmediatemessaging">Multicast Immediate Messaging</a> for general information about MIM.</dd></dl>
 <dl class="section user"><dt></dt><dd><table class="doxtable">
 <tr>
 <td><em>Scope:</em> </td><td>context </td></tr>
@@ -241,12 +251,13 @@ mim_ordered_delivery (context)&nbsp;&nbsp;<small><a href="#mimordereddeliverycon
  </p>
 <h2><a class="anchor" id="mimsmmaximumintervalcontext"></a>
 mim_sm_maximum_interval (context)&nbsp;&nbsp;<small><a href="#mimsmmaximumintervalcontext">&lt;-</a></small></h2>
-<dl class="section user"><dt></dt><dd>For multicast immediate message senders only. See <a class="el" href="grptransportlbtrmoperation.html#transportlbtrmsmmaximumintervalsource">transport_lbtrm_sm_maximum_interval (source)</a> for description.</dd></dl>
+<dl class="section user"><dt></dt><dd>For multicast immediate message senders only. See <a class="el" href="grptransportlbtrmoperation.html#transportlbtrmsmmaximumintervalsource">transport_lbtrm_sm_maximum_interval (source)</a> for description. </dd></dl>
+<dl class="section user"><dt></dt><dd>See <a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/design.tag:../Design/" href="../Design/umfeatures.html#multicastimmediatemessaging">Multicast Immediate Messaging</a> for general information about MIM.</dd></dl>
 <dl class="section user"><dt></dt><dd><table class="doxtable">
 <tr>
 <td><em>Scope:</em> </td><td>context </td></tr>
 <tr>
-<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a72438fab15bf500af58d2a8a521e470d">lbm_ulong_t</a></b> </td></tr>
+<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a72438fab15bf500af58d2a8a521e470d">lbm_ulong_t</a></b> </td></tr>
 <tr>
 <td><em>Units:</em> </td><td>milliseconds </td></tr>
 <tr>
@@ -259,12 +270,13 @@ mim_sm_maximum_interval (context)&nbsp;&nbsp;<small><a href="#mimsmmaximuminterv
  </p>
 <h2><a class="anchor" id="mimsmminimumintervalcontext"></a>
 mim_sm_minimum_interval (context)&nbsp;&nbsp;<small><a href="#mimsmminimumintervalcontext">&lt;-</a></small></h2>
-<dl class="section user"><dt></dt><dd>For multicast immediate message senders only. See <a class="el" href="grptransportlbtrmoperation.html#transportlbtrmsmminimumintervalsource">transport_lbtrm_sm_minimum_interval (source)</a> for description.</dd></dl>
+<dl class="section user"><dt></dt><dd>For multicast immediate message senders only. See <a class="el" href="grptransportlbtrmoperation.html#transportlbtrmsmminimumintervalsource">transport_lbtrm_sm_minimum_interval (source)</a> for description. </dd></dl>
+<dl class="section user"><dt></dt><dd>See <a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/design.tag:../Design/" href="../Design/umfeatures.html#unicastimmediatemessaging">Unicast Immediate Messaging</a> for more information.</dd></dl>
 <dl class="section user"><dt></dt><dd><table class="doxtable">
 <tr>
 <td><em>Scope:</em> </td><td>context </td></tr>
 <tr>
-<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a72438fab15bf500af58d2a8a521e470d">lbm_ulong_t</a></b> </td></tr>
+<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a72438fab15bf500af58d2a8a521e470d">lbm_ulong_t</a></b> </td></tr>
 <tr>
 <td><em>Units:</em> </td><td>milliseconds </td></tr>
 <tr>
@@ -277,12 +289,13 @@ mim_sm_minimum_interval (context)&nbsp;&nbsp;<small><a href="#mimsmminimuminterv
  </p>
 <h2><a class="anchor" id="mimsqnwindowincrementcontext"></a>
 mim_sqn_window_increment (context)&nbsp;&nbsp;<small><a href="#mimsqnwindowincrementcontext">&lt;-</a></small></h2>
-<dl class="section user"><dt></dt><dd>For multicast immediate message receivers only. Determines the increment by which the sequence number window is moved when detecting the receipt of duplicate multicast immediate messages. Must be a multiple of 8 and an even divisor of <a class="el" href="grpmulticastimmediatemessagingoperation.html#mimsqnwindowsizecontext">mim_sqn_window_size (context)</a>.</dd></dl>
+<dl class="section user"><dt></dt><dd>For multicast immediate message receivers only. Determines the increment by which the sequence number window is moved when detecting the receipt of duplicate multicast immediate messages. Must be a multiple of 8 and an even divisor of <a class="el" href="grpmulticastimmediatemessagingoperation.html#mimsqnwindowsizecontext">mim_sqn_window_size (context)</a>. </dd></dl>
+<dl class="section user"><dt></dt><dd>See <a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/design.tag:../Design/" href="../Design/umfeatures.html#multicastimmediatemessaging">Multicast Immediate Messaging</a> for general information about MIM.</dd></dl>
 <dl class="section user"><dt></dt><dd><table class="doxtable">
 <tr>
 <td><em>Scope:</em> </td><td>context </td></tr>
 <tr>
-<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a72438fab15bf500af58d2a8a521e470d">lbm_ulong_t</a></b> </td></tr>
+<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a72438fab15bf500af58d2a8a521e470d">lbm_ulong_t</a></b> </td></tr>
 <tr>
 <td><em>Units:</em> </td><td>messages </td></tr>
 <tr>
@@ -297,12 +310,13 @@ mim_sqn_window_increment (context)&nbsp;&nbsp;<small><a href="#mimsqnwindowincre
  </p>
 <h2><a class="anchor" id="mimsqnwindowsizecontext"></a>
 mim_sqn_window_size (context)&nbsp;&nbsp;<small><a href="#mimsqnwindowsizecontext">&lt;-</a></small></h2>
-<dl class="section user"><dt></dt><dd>For multicast immediate message receivers only. Determines the window size used to detect the receipt of duplicate multicast immediate messages. Must be a multiple of 8.</dd></dl>
+<dl class="section user"><dt></dt><dd>For multicast immediate message receivers only. Determines the window size used to detect the receipt of duplicate multicast immediate messages. Must be a multiple of 8. </dd></dl>
+<dl class="section user"><dt></dt><dd>See <a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/design.tag:../Design/" href="../Design/umfeatures.html#multicastimmediatemessaging">Multicast Immediate Messaging</a> for general information about MIM.</dd></dl>
 <dl class="section user"><dt></dt><dd><table class="doxtable">
 <tr>
 <td><em>Scope:</em> </td><td>context </td></tr>
 <tr>
-<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a72438fab15bf500af58d2a8a521e470d">lbm_ulong_t</a></b> </td></tr>
+<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a72438fab15bf500af58d2a8a521e470d">lbm_ulong_t</a></b> </td></tr>
 <tr>
 <td><em>Units:</em> </td><td>messages </td></tr>
 <tr>
@@ -317,12 +331,13 @@ mim_sqn_window_size (context)&nbsp;&nbsp;<small><a href="#mimsqnwindowsizecontex
  </p>
 <h2><a class="anchor" id="mimsrcdeletiontimeoutcontext"></a>
 mim_src_deletion_timeout (context)&nbsp;&nbsp;<small><a href="#mimsrcdeletiontimeoutcontext">&lt;-</a></small></h2>
-<dl class="section user"><dt></dt><dd>The timeout after a multicast immediate message is sent before the internal source is deleted and cleaned up.</dd></dl>
+<dl class="section user"><dt></dt><dd>The timeout after a multicast immediate message is sent before the internal source is deleted and cleaned up. </dd></dl>
+<dl class="section user"><dt></dt><dd>See <a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/design.tag:../Design/" href="../Design/umfeatures.html#multicastimmediatemessaging">Multicast Immediate Messaging</a> for general information about MIM.</dd></dl>
 <dl class="section user"><dt></dt><dd><table class="doxtable">
 <tr>
 <td><em>Scope:</em> </td><td>context </td></tr>
 <tr>
-<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a72438fab15bf500af58d2a8a521e470d">lbm_ulong_t</a></b> </td></tr>
+<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a72438fab15bf500af58d2a8a521e470d">lbm_ulong_t</a></b> </td></tr>
 <tr>
 <td><em>Units:</em> </td><td>milliseconds </td></tr>
 <tr>
@@ -335,12 +350,13 @@ mim_src_deletion_timeout (context)&nbsp;&nbsp;<small><a href="#mimsrcdeletiontim
  </p>
 <h2><a class="anchor" id="mimtgszcontext"></a>
 mim_tgsz (context)&nbsp;&nbsp;<small><a href="#mimtgszcontext">&lt;-</a></small></h2>
-<dl class="section user"><dt></dt><dd>For multicast immediate message senders only. See <a class="el" href="grptransportlbtrmoperation.html#transportlbtrmtgszsource">transport_lbtrm_tgsz (source)</a> for description.</dd></dl>
+<dl class="section user"><dt></dt><dd>For multicast immediate message senders only. See <a class="el" href="grptransportlbtrmoperation.html#transportlbtrmtgszsource">transport_lbtrm_tgsz (source)</a> for description. </dd></dl>
+<dl class="section user"><dt></dt><dd>See <a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/design.tag:../Design/" href="../Design/umfeatures.html#unicastimmediatemessaging">Unicast Immediate Messaging</a> for more information.</dd></dl>
 <dl class="section user"><dt></dt><dd><table class="doxtable">
 <tr>
 <td><em>Scope:</em> </td><td>context </td></tr>
 <tr>
-<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a86897f2fdd66aa7021683a4e72a4537b">lbm_uint16_t</a></b> </td></tr>
+<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a86897f2fdd66aa7021683a4e72a4537b">lbm_uint16_t</a></b> </td></tr>
 <tr>
 <td><em>Units:</em> </td><td>packets </td></tr>
 <tr>
@@ -359,7 +375,7 @@ mim_unrecoverable_loss_function (context)&nbsp;&nbsp;<small><a href="#mimunrecov
 <tr>
 <td><em>Scope:</em> </td><td>context </td></tr>
 <tr>
-<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a5fdd36ef808e7589c75fa9e7406cf5bf">lbm_mim_unrecloss_func_t</a></b> </td></tr>
+<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a5fdd36ef808e7589c75fa9e7406cf5bf">lbm_mim_unrecloss_func_t</a></b> </td></tr>
 <tr>
 <td><em>Default value:</em> </td><td>NULL </td></tr>
 <tr>

@@ -1,6 +1,5 @@
 var NAVTREEINDEX12 =
 {
-"structlbmmon__format__func__t__stct.html#a3e399ce4f86ce57451f067c80d3ebc3b":[4,0,125,9],
 "structlbmmon__format__func__t__stct.html#a42a4d6a19f7d4dcbe0a0461c5816918d":[4,0,125,10],
 "structlbmmon__format__func__t__stct.html#a46d1a5109cb019d2b4525669443b87a5":[4,0,125,5],
 "structlbmmon__format__func__t__stct.html#a4fabdd06aaebb50abfdc9c5c03df3680":[4,0,125,7],
@@ -249,5 +248,6 @@ var NAVTREEINDEX12 =
 "structtnwg__dstat__peer__send__stats__t__stct.html#addb63088ed4587cd34ba98b59518c677":[4,0,143,21],
 "structtnwg__dstat__peer__send__stats__t__stct.html#ae0ae33f23db0d27b4ebd34b5ed849fe7":[4,0,143,16],
 "structtnwg__dstat__portalstats__msg__t__stct.html":[4,0,144],
-"structtnwg__dstat__portalstats__msg__t__stct.html#a48224a7bcafab7356df65e0aad891589":[4,0,144,2]
+"structtnwg__dstat__portalstats__msg__t__stct.html#a48224a7bcafab7356df65e0aad891589":[4,0,144,2],
+"structtnwg__dstat__portalstats__msg__t__stct.html#a9f1e4b48cd4261d4f60fef342097a9ac":[4,0,144,1]
 };

@@ -119,7 +119,7 @@ implicit_batching_type (source)&nbsp;&nbsp;<small><a href="#implicitbatchingtype
 <tr>
 <th>String value </th><th>Integer value </th><th>Description </th></tr>
 <tr>
-<td>"default" </td><td>LBM_SRC_TOPIC_ATTR_IMPLICIT_BATCH_TYPE_DEFAULT </td><td>Implicit batching is controlled entirely by the <a class="el" href="grpimplicitbatching.html#implicitbatchingminimumlengthsource">implicit_batching_minimum_length (source)</a> and <a class="el" href="grpimplicitbatching.html#implicitbatchingintervalsource">implicit_batching_interval (source)</a> options. Refer to <a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Config/design.tag:../Design/" href="../Design/architecture.html#messagebatching">Message Batching</a> for additional information. <b>Default for all.</b> </td></tr>
+<td>"default" </td><td>LBM_SRC_TOPIC_ATTR_IMPLICIT_BATCH_TYPE_DEFAULT </td><td>Implicit batching is controlled entirely by the <a class="el" href="grpimplicitbatching.html#implicitbatchingminimumlengthsource">implicit_batching_minimum_length (source)</a> and <a class="el" href="grpimplicitbatching.html#implicitbatchingintervalsource">implicit_batching_interval (source)</a> options. Refer to <a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/design.tag:../Design/" href="../Design/architecture.html#messagebatching">Message Batching</a> for additional information. <b>Default for all.</b> </td></tr>
 <tr>
 <td>"adaptive" </td><td>LBM_SRC_TOPIC_ATTR_IMPLICIT_BATCH_TYPE_ADAPTIVE </td><td>Source-paced batching method that attempts to adjust the amount of messages sent in each batch automatically. The options, <a class="el" href="grpimplicitbatching.html#implicitbatchingminimumlengthsource">implicit_batching_minimum_length (source)</a> and <a class="el" href="grpimplicitbatching.html#implicitbatchingintervalsource">implicit_batching_interval (source)</a>, limit batch sizes and intervals but sizes and intervals will usually be much smaller. Setting this option may have a negative impact on maximum throughput. </td></tr>
 </table>
@@ -153,7 +153,7 @@ otr_request_duration (receiver)&nbsp;&nbsp;<small><a href="#otrrequestdurationre
 <tr>
 <td><em>Scope:</em> </td><td>receiver </td></tr>
 <tr>
-<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a72438fab15bf500af58d2a8a521e470d">lbm_ulong_t</a></b> </td></tr>
+<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a72438fab15bf500af58d2a8a521e470d">lbm_ulong_t</a></b> </td></tr>
 <tr>
 <td><em>Units:</em> </td><td>milliseconds </td></tr>
 <tr>
@@ -179,7 +179,7 @@ pattern_callback (wildcard_receiver)&nbsp;&nbsp;<small><a href="#patterncallback
 <tr>
 <td><em>Scope:</em> </td><td>wildcard_receiver </td></tr>
 <tr>
-<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a7b6a386398e2006a07c3387d444f9ec1">lbm_wildcard_rcv_compare_func_t</a></b> </td></tr>
+<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a7b6a386398e2006a07c3387d444f9ec1">lbm_wildcard_rcv_compare_func_t</a></b> </td></tr>
 <tr>
 <td><em>Default value:</em> </td><td>NULL </td></tr>
 <tr>
@@ -219,7 +219,7 @@ rcv_sync_cache_timeout (receiver)&nbsp;&nbsp;<small><a href="#rcvsynccachetimeou
 <tr>
 <td><em>Scope:</em> </td><td>receiver </td></tr>
 <tr>
-<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a72438fab15bf500af58d2a8a521e470d">lbm_ulong_t</a></b> </td></tr>
+<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a72438fab15bf500af58d2a8a521e470d">lbm_ulong_t</a></b> </td></tr>
 <tr>
 <td><em>Units:</em> </td><td>milliseconds </td></tr>
 <tr>
@@ -239,8 +239,8 @@ rcv_sync_cache_timeout (receiver)&nbsp;&nbsp;<small><a href="#rcvsynccachetimeou
 <h2><a class="anchor" id="receivethreadpoolsizecontext"></a>
 receive_thread_pool_size (context)&nbsp;&nbsp;<small><a href="#receivethreadpoolsizecontext">&lt;-</a></small></h2>
 <dl class="section user"><dt></dt><dd>For LBT-RM, LBT-RU, or TCP-LB transport sessions only. Defines the maximum number of threads available for transports (excluding the context thread). </dd></dl>
-<dl class="section user"><dt></dt><dd>The MTT feature is replaced in 6.11 and beyond by <a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Config/design.tag:../Design/" href="../Design/umfeatures.html#transportservicesproviderxsp">Transport Services Provider (XSP)</a>. </dd></dl>
-<dl class="section user"><dt></dt><dd>For more information on the deprecated MTT feature, see <a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Config/design.tag:../Design/" href="../Design/fundamentalconcepts.html#multitransportthreads">Multi-Transport Threads</a>.</dd></dl>
+<dl class="section user"><dt></dt><dd>The MTT feature is replaced in 6.11 and beyond by <a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/design.tag:../Design/" href="../Design/umfeatures.html#transportservicesproviderxsp">Transport Services Provider (XSP)</a>. </dd></dl>
+<dl class="section user"><dt></dt><dd>For more information on the deprecated MTT feature, see <a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/design.tag:../Design/" href="../Design/fundamentalconcepts.html#multitransportthreads">Multi-Transport Threads</a>.</dd></dl>
 <dl class="section user"><dt></dt><dd><table class="doxtable">
 <tr>
 <td><em>Scope:</em> </td><td>context </td></tr>
@@ -316,7 +316,7 @@ resolver_context_advertisement_interval (context)&nbsp;&nbsp;<small><a href="#re
 <tr>
 <td><em>Scope:</em> </td><td>context </td></tr>
 <tr>
-<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a72438fab15bf500af58d2a8a521e470d">lbm_ulong_t</a></b> </td></tr>
+<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a72438fab15bf500af58d2a8a521e470d">lbm_ulong_t</a></b> </td></tr>
 <tr>
 <td><em>Units:</em> </td><td>milliseconds </td></tr>
 <tr>
@@ -453,7 +453,7 @@ resolver_unicast_destination_port (context)&nbsp;&nbsp;<small><a href="#resolver
 <tr>
 <td><em>Scope:</em> </td><td>context </td></tr>
 <tr>
-<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a86897f2fdd66aa7021683a4e72a4537b">lbm_uint16_t</a></b> </td></tr>
+<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a86897f2fdd66aa7021683a4e72a4537b">lbm_uint16_t</a></b> </td></tr>
 <tr>
 <td><em>Default value:</em> </td><td>15380 </td></tr>
 <tr>
@@ -474,7 +474,7 @@ resolver_unicast_port (context)&nbsp;&nbsp;<small><a href="#resolverunicastportc
 <tr>
 <td><em>Scope:</em> </td><td>context </td></tr>
 <tr>
-<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a86897f2fdd66aa7021683a4e72a4537b">lbm_uint16_t</a></b> </td></tr>
+<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a86897f2fdd66aa7021683a4e72a4537b">lbm_uint16_t</a></b> </td></tr>
 <tr>
 <td><em>Default value:</em> </td><td>0 (pick open port) </td></tr>
 <tr>
@@ -489,7 +489,7 @@ resolver_unicast_port (context)&nbsp;&nbsp;<small><a href="#resolverunicastportc
  </p>
 <h2><a class="anchor" id="retransmitmessagemaptableszsource"></a>
 retransmit_message_map_tablesz (source)&nbsp;&nbsp;<small><a href="#retransmitmessagemaptableszsource">&lt;-</a></small></h2>
-<dl class="section user"><dt></dt><dd>The size of the hash table that the source uses to store messages for the retention policy in effect. A larger table means more messages can be stored more efficiently, but takes up more memory. A smaller table uses less memory, but costs more CPU time as more messages are retained. See <a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Config/design.tag:../Design/" href="../Design/umfeatures.html#configuringlatejoinforlargenumbersofmessages">Configuring Late Join for Large Numbers of Messages</a> in the Ultra Messaging Concepts Guide for additional information about this option.</dd></dl>
+<dl class="section user"><dt></dt><dd>The size of the hash table that the source uses to store messages for the retention policy in effect. A larger table means more messages can be stored more efficiently, but takes up more memory. A smaller table uses less memory, but costs more CPU time as more messages are retained. See <a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/design.tag:../Design/" href="../Design/umfeatures.html#configuringlatejoinforlargenumbersofmessages">Configuring Late Join for Large Numbers of Messages</a> in the Ultra Messaging Concepts Guide for additional information about this option.</dd></dl>
 <dl class="section user"><dt></dt><dd><table class="doxtable">
 <tr>
 <td><em>Scope:</em> </td><td>source </td></tr>
@@ -507,13 +507,13 @@ retransmit_message_map_tablesz (source)&nbsp;&nbsp;<small><a href="#retransmitme
  </p>
 <h2><a class="anchor" id="retransmitrequestgenerationintervalreceiver"></a>
 retransmit_request_generation_interval (receiver)&nbsp;&nbsp;<small><a href="#retransmitrequestgenerationintervalreceiver">&lt;-</a></small></h2>
-<dl class="section user"><dt></dt><dd>The maximum interval between when a receiver first sends a retransmission request and when the receiver stops and reports loss on the remaining RXs not received. See <a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Config/design.tag:../Design/" href="../Design/umfeatures.html#configuringlatejoinforlargenumbersofmessages">Configuring Late Join for Large Numbers of Messages</a> in the Ultra Messaging Concepts Guide for additional information about this option. </dd></dl>
+<dl class="section user"><dt></dt><dd>The maximum interval between when a receiver first sends a retransmission request and when the receiver stops and reports loss on the remaining RXs not received. See <a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/design.tag:../Design/" href="../Design/umfeatures.html#configuringlatejoinforlargenumbersofmessages">Configuring Late Join for Large Numbers of Messages</a> in the Ultra Messaging Concepts Guide for additional information about this option. </dd></dl>
 <dl class="section user"><dt></dt><dd>This option is deprecated and has no effect. Use <a class="el" href="grplatejoin.html#retransmitrequestmessagetimeoutreceiver">retransmit_request_message_timeout (receiver)</a> instead.</dd></dl>
 <dl class="section user"><dt></dt><dd><table class="doxtable">
 <tr>
 <td><em>Scope:</em> </td><td>receiver </td></tr>
 <tr>
-<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a72438fab15bf500af58d2a8a521e470d">lbm_ulong_t</a></b> </td></tr>
+<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a72438fab15bf500af58d2a8a521e470d">lbm_ulong_t</a></b> </td></tr>
 <tr>
 <td><em>Units:</em> </td><td>milliseconds </td></tr>
 <tr>
@@ -530,12 +530,12 @@ retransmit_request_generation_interval (receiver)&nbsp;&nbsp;<small><a href="#re
 retransmit_retention_age_threshold (source)&nbsp;&nbsp;<small><a href="#retransmitretentionagethresholdsource">&lt;-</a></small></h2>
 <dl class="section user"><dt></dt><dd>Specifies the minimum age of messages in the retained message buffer before UM can delete them. UM cannot delete any messages younger than this value. </dd></dl>
 <dl class="section user"><dt></dt><dd>For UMS Late Joins, this and <a class="el" href="grplatejoin.html#retransmitretentionsizethresholdsource">retransmit_retention_size_threshold (source)</a> are the only options that affect the retention buffer size. For UMP, these two options combined with <a class="el" href="grplatejoin.html#retransmitretentionsizelimitsource">retransmit_retention_size_limit (source)</a> affect the retention buffer size. UM deletes a message when it meets all configured threshold criteria, i.e., the message is older than this option (if set), and the size of the retention buffer exceeds the <b><code>retransmit_retention_size_threshold</code></b> (if set). A value of 0 sets the age threshold to be always triggered, in which case deletion is determined by other threshold criteria. </dd></dl>
-<dl class="section user"><dt></dt><dd>With <a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Config/design.tag:../Design/" href="../Design/advancedoptimizations.html#smartsources">Smart Sources</a>, this option is ignored. Retention buffers are preallocated and are never deleted.</dd></dl>
+<dl class="section user"><dt></dt><dd>With <a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/design.tag:../Design/" href="../Design/advancedoptimizations.html#smartsources">Smart Sources</a>, this option is ignored. Retention buffers are preallocated and are never deleted.</dd></dl>
 <dl class="section user"><dt></dt><dd><table class="doxtable">
 <tr>
 <td><em>Scope:</em> </td><td>source </td></tr>
 <tr>
-<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a72438fab15bf500af58d2a8a521e470d">lbm_ulong_t</a></b> </td></tr>
+<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a72438fab15bf500af58d2a8a521e470d">lbm_ulong_t</a></b> </td></tr>
 <tr>
 <td><em>Units:</em> </td><td>seconds </td></tr>
 <tr>
@@ -550,12 +550,12 @@ retransmit_retention_age_threshold (source)&nbsp;&nbsp;<small><a href="#retransm
  </p>
 <h2><a class="anchor" id="sourcecostevaluationfunctioncontext"></a>
 source_cost_evaluation_function (context)&nbsp;&nbsp;<small><a href="#sourcecostevaluationfunctioncontext">&lt;-</a></small></h2>
-<dl class="section user"><dt></dt><dd>Callback function that you can use in the <code><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#aa64bebee6bbc028343e6464e4c72c637">lbm_src_cost_function_cb()</a></code> to evaluate or determine the cost of a message path. The UM Dynamic Router evaluates the cost of any new topic it detects. The callback supplied with this option can affect the cost of topics to bias the UM Dynamic Router toward certain message paths.</dd></dl>
+<dl class="section user"><dt></dt><dd>Callback function that you can use in the <code><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#aa64bebee6bbc028343e6464e4c72c637">lbm_src_cost_function_cb()</a></code> to evaluate or determine the cost of a message path. The UM Dynamic Router evaluates the cost of any new topic it detects. The callback supplied with this option can affect the cost of topics to bias the UM Dynamic Router toward certain message paths.</dd></dl>
 <dl class="section user"><dt></dt><dd><table class="doxtable">
 <tr>
 <td><em>Scope:</em> </td><td>context </td></tr>
 <tr>
-<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a193a404edca104c3852b6c44d8f04ce5">lbm_src_cost_func_t</a></b> </td></tr>
+<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a193a404edca104c3852b6c44d8f04ce5">lbm_src_cost_func_t</a></b> </td></tr>
 <tr>
 <td><em>Default value:</em> </td><td>NULL </td></tr>
 <tr>
@@ -641,14 +641,14 @@ transport_lbtipc_client_activity_timeout (source)&nbsp;&nbsp;<small><a href="#tr
 <h2><a class="anchor" id="transportlbtrdmadatagrammaxsizecontext"></a>
 transport_lbtrdma_datagram_max_size (context)&nbsp;&nbsp;<small><a href="#transportlbtrdmadatagrammaxsizecontext">&lt;-</a></small></h2>
 <dl class="section user"><dt></dt><dd>The maximum datagram size that can be generated for a LBT-RDMA transport session. The default value is 4096, the minimum is 500 bytes, and the maximum is 4096. </dd></dl>
-<dl class="section user"><dt></dt><dd>See <a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Config/design.tag:../Design/" href="../Design/architecture.html#messagefragmentationandreassembly">Message Fragmentation and Reassembly</a> for more information. </dd></dl>
+<dl class="section user"><dt></dt><dd>See <a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/design.tag:../Design/" href="../Design/architecture.html#messagefragmentationandreassembly">Message Fragmentation and Reassembly</a> for more information. </dd></dl>
 <dl class="section user"><dt></dt><dd></dd></dl>
-<dl class="section warning"><dt>Warning</dt><dd>When the DRO is in use, it is recommended that all UM applications and components (including the DRO and Persistent Store) share the same maximum datagram size setting. See <a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Config/gateway.tag:../Gateway/" href="../Gateway/umrouterconcepts.html#protocolconversion">Protocol Conversion</a>.</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>When the DRO is in use, it is recommended that all UM applications and components (including the DRO and Persistent Store) share the same maximum datagram size setting. See <a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/gateway.tag:../Gateway/" href="../Gateway/umrouterconcepts.html#protocolconversion">Protocol Conversion</a>.</dd></dl>
 <dl class="section user"><dt></dt><dd><table class="doxtable">
 <tr>
 <td><em>Scope:</em> </td><td>context </td></tr>
 <tr>
-<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#abdb96b55cc467a75e1f9ec0036dbc14b">lbm_uint_t</a></b> </td></tr>
+<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#abdb96b55cc467a75e1f9ec0036dbc14b">lbm_uint_t</a></b> </td></tr>
 <tr>
 <td><em>Units:</em> </td><td>bytes </td></tr>
 <tr>
@@ -672,7 +672,7 @@ transport_lbtrdma_interface (source)&nbsp;&nbsp;<small><a href="#transportlbtrdm
 <tr>
 <td><em>Scope:</em> </td><td>source </td></tr>
 <tr>
-<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a0b66a5b33839617b2a822e4a20a8d535">lbm_ipv4_address_mask_t</a></b> </td></tr>
+<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a0b66a5b33839617b2a822e4a20a8d535">lbm_ipv4_address_mask_t</a></b> </td></tr>
 <tr>
 <td><em>Default value:</em> </td><td>0.0.0.0 (INADDR_ANY) </td></tr>
 <tr>
@@ -695,7 +695,7 @@ transport_lbtrdma_maximum_ports (context)&nbsp;&nbsp;<small><a href="#transportl
 <tr>
 <td><em>Scope:</em> </td><td>context </td></tr>
 <tr>
-<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a86897f2fdd66aa7021683a4e72a4537b">lbm_uint16_t</a></b> </td></tr>
+<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a86897f2fdd66aa7021683a4e72a4537b">lbm_uint16_t</a></b> </td></tr>
 <tr>
 <td><em>Units:</em> </td><td>number of ports </td></tr>
 <tr>
@@ -720,7 +720,7 @@ transport_lbtrdma_port (source)&nbsp;&nbsp;<small><a href="#transportlbtrdmaport
 <tr>
 <td><em>Scope:</em> </td><td>source </td></tr>
 <tr>
-<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a86897f2fdd66aa7021683a4e72a4537b">lbm_uint16_t</a></b> </td></tr>
+<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a86897f2fdd66aa7021683a4e72a4537b">lbm_uint16_t</a></b> </td></tr>
 <tr>
 <td><em>Default value:</em> </td><td>0 (zero) </td></tr>
 <tr>
@@ -745,7 +745,7 @@ transport_lbtrdma_port_high (context)&nbsp;&nbsp;<small><a href="#transportlbtrd
 <tr>
 <td><em>Scope:</em> </td><td>context </td></tr>
 <tr>
-<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a86897f2fdd66aa7021683a4e72a4537b">lbm_uint16_t</a></b> </td></tr>
+<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a86897f2fdd66aa7021683a4e72a4537b">lbm_uint16_t</a></b> </td></tr>
 <tr>
 <td><em>Default value:</em> </td><td>20,020 </td></tr>
 <tr>
@@ -768,7 +768,7 @@ transport_lbtrdma_port_low (context)&nbsp;&nbsp;<small><a href="#transportlbtrdm
 <tr>
 <td><em>Scope:</em> </td><td>context </td></tr>
 <tr>
-<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a86897f2fdd66aa7021683a4e72a4537b">lbm_uint16_t</a></b> </td></tr>
+<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a86897f2fdd66aa7021683a4e72a4537b">lbm_uint16_t</a></b> </td></tr>
 <tr>
 <td><em>Default value:</em> </td><td>20,001 </td></tr>
 <tr>
@@ -817,7 +817,7 @@ transport_lbtrdma_receiver_thread_behavior (context)&nbsp;&nbsp;<small><a href="
  </p>
 <h2><a class="anchor" id="transportlbtrdmatransmissionwindowsizesource"></a>
 transport_lbtrdma_transmission_window_size (source)&nbsp;&nbsp;<small><a href="#transportlbtrdmatransmissionwindowsizesource">&lt;-</a></small></h2>
-<dl class="section user"><dt></dt><dd>Size of an LBT-RDMA transport's shared memory area. This value may vary across platforms. The actual size of the shared memory area equals the value you specify for this option plus about 64 KB for header information. The minimum value for this option is 65,536. Refer to <a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Config/design.tag:../Design/" href="../Design/umobjects.html#sourceobject">Source Object</a> in the Ultra Messaging Concepts Guide for additional information.</dd></dl>
+<dl class="section user"><dt></dt><dd>Size of an LBT-RDMA transport's shared memory area. This value may vary across platforms. The actual size of the shared memory area equals the value you specify for this option plus about 64 KB for header information. The minimum value for this option is 65,536. Refer to <a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/design.tag:../Design/" href="../Design/fundamentalconcepts.html#sourceobject">Source Object</a> in the Ultra Messaging Concepts Guide for additional information.</dd></dl>
 <dl class="section user"><dt></dt><dd><table class="doxtable">
 <tr>
 <td><em>Scope:</em> </td><td>source </td></tr>
@@ -883,7 +883,7 @@ ume_primary_store_port (source)&nbsp;&nbsp;<small><a href="#umeprimarystoreports
 <tr>
 <td><em>Scope:</em> </td><td>source </td></tr>
 <tr>
-<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a86897f2fdd66aa7021683a4e72a4537b">lbm_uint16_t</a></b> </td></tr>
+<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a86897f2fdd66aa7021683a4e72a4537b">lbm_uint16_t</a></b> </td></tr>
 <tr>
 <td><em>Default value:</em> </td><td>14567 </td></tr>
 <tr>
@@ -903,7 +903,7 @@ ume_registration_id (source)&nbsp;&nbsp;<small><a href="#umeregistrationidsource
 <tr>
 <td><em>Scope:</em> </td><td>source </td></tr>
 <tr>
-<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#abdb96b55cc467a75e1f9ec0036dbc14b">lbm_uint_t</a></b> </td></tr>
+<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#abdb96b55cc467a75e1f9ec0036dbc14b">lbm_uint_t</a></b> </td></tr>
 <tr>
 <td><em>Units:</em> </td><td>identifier </td></tr>
 <tr>
@@ -1014,7 +1014,7 @@ ume_secondary_store_port (source)&nbsp;&nbsp;<small><a href="#umesecondarystorep
 <tr>
 <td><em>Scope:</em> </td><td>source </td></tr>
 <tr>
-<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a86897f2fdd66aa7021683a4e72a4537b">lbm_uint16_t</a></b> </td></tr>
+<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a86897f2fdd66aa7021683a4e72a4537b">lbm_uint16_t</a></b> </td></tr>
 <tr>
 <td><em>Default value:</em> </td><td>14567 </td></tr>
 <tr>
@@ -1053,7 +1053,7 @@ ume_tertiary_store_port (source)&nbsp;&nbsp;<small><a href="#umetertiarystorepor
 <tr>
 <td><em>Scope:</em> </td><td>source </td></tr>
 <tr>
-<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a86897f2fdd66aa7021683a4e72a4537b">lbm_uint16_t</a></b> </td></tr>
+<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a86897f2fdd66aa7021683a4e72a4537b">lbm_uint16_t</a></b> </td></tr>
 <tr>
 <td><em>Default value:</em> </td><td>14567 </td></tr>
 <tr>
@@ -1185,7 +1185,7 @@ umq_message_retransmission_interval (context)&nbsp;&nbsp;<small><a href="#umqmes
 <tr>
 <td><em>Scope:</em> </td><td>context </td></tr>
 <tr>
-<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a72438fab15bf500af58d2a8a521e470d">lbm_ulong_t</a></b> </td></tr>
+<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a72438fab15bf500af58d2a8a521e470d">lbm_ulong_t</a></b> </td></tr>
 <tr>
 <td><em>Units:</em> </td><td>milliseconds </td></tr>
 <tr>
@@ -1237,12 +1237,12 @@ umq_message_stability_notification (context)&nbsp;&nbsp;<small><a href="#umqmess
 <h2><a class="anchor" id="umqmsgtotallifetimecontext"></a>
 umq_msg_total_lifetime (context)&nbsp;&nbsp;<small><a href="#umqmsgtotallifetimecontext">&lt;-</a></small></h2>
 <dl class="section user"><dt></dt><dd>Establishes the period of time from when a queue receives a message, or, for ULB, when a source sends a message, until the time the message cannot be assigned or reassigned to a receiver. The queue deletes the message upon expiration of the lifetime. You can also set UMQ umestored option message-total-lifetime for the source's topic on the queue. However, the message-total-lifetime option is overridden by any value assigned to umq_msg_total_lifetime (source). The default value of 0 (zero) disables this option. </dd></dl>
-<dl class="section user"><dt></dt><dd>Note: This option is overridden by any message lifetime value set using send call, <a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a091b5806bf18d10ebd0d9117e0c70229">lbm_src_send_ex()</a>.</dd></dl>
+<dl class="section user"><dt></dt><dd>Note: This option is overridden by any message lifetime value set using send call, <a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a091b5806bf18d10ebd0d9117e0c70229">lbm_src_send_ex()</a>.</dd></dl>
 <dl class="section user"><dt></dt><dd><table class="doxtable">
 <tr>
 <td><em>Scope:</em> </td><td>context </td></tr>
 <tr>
-<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a72438fab15bf500af58d2a8a521e470d">lbm_ulong_t</a></b> </td></tr>
+<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a72438fab15bf500af58d2a8a521e470d">lbm_ulong_t</a></b> </td></tr>
 <tr>
 <td><em>Units:</em> </td><td>milliseconds </td></tr>
 <tr>
@@ -1266,7 +1266,7 @@ umq_queue_check_interval (context)&nbsp;&nbsp;<small><a href="#umqqueuecheckinte
 <tr>
 <td><em>Scope:</em> </td><td>context </td></tr>
 <tr>
-<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a72438fab15bf500af58d2a8a521e470d">lbm_ulong_t</a></b> </td></tr>
+<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a72438fab15bf500af58d2a8a521e470d">lbm_ulong_t</a></b> </td></tr>
 <tr>
 <td><em>Units:</em> </td><td>milliseconds </td></tr>
 <tr>
@@ -1342,7 +1342,7 @@ umq_queue_query_interval (context)&nbsp;&nbsp;<small><a href="#umqqueuequeryinte
 <tr>
 <td><em>Scope:</em> </td><td>context </td></tr>
 <tr>
-<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a72438fab15bf500af58d2a8a521e470d">lbm_ulong_t</a></b> </td></tr>
+<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a72438fab15bf500af58d2a8a521e470d">lbm_ulong_t</a></b> </td></tr>
 <tr>
 <td><em>Units:</em> </td><td>milliseconds </td></tr>
 <tr>
@@ -1546,8 +1546,8 @@ umq_retention_intragroup_stability_behavior (source)&nbsp;&nbsp;<small><a href="
 <h2><a class="anchor" id="usetransportthreadreceiver"></a>
 use_transport_thread (receiver)&nbsp;&nbsp;<small><a href="#usetransportthreadreceiver">&lt;-</a></small></h2>
 <dl class="section user"><dt></dt><dd>For LBT-RM, LBT-RU, or TCP-LB transport sessions only. Determines whether UM uses a thread from the receiver thread pool to process message data or if it uses the context thread, which is the default. </dd></dl>
-<dl class="section user"><dt></dt><dd>The MTT feature is replaced in 6.11 and beyond by <a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Config/design.tag:../Design/" href="../Design/umfeatures.html#transportservicesproviderxsp">Transport Services Provider (XSP)</a>. </dd></dl>
-<dl class="section user"><dt></dt><dd>For more information on the deprecated MTT feature, see <a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Config/design.tag:../Design/" href="../Design/fundamentalconcepts.html#multitransportthreads">Multi-Transport Threads</a>.</dd></dl>
+<dl class="section user"><dt></dt><dd>The MTT feature is replaced in 6.11 and beyond by <a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/design.tag:../Design/" href="../Design/umfeatures.html#transportservicesproviderxsp">Transport Services Provider (XSP)</a>. </dd></dl>
+<dl class="section user"><dt></dt><dd>For more information on the deprecated MTT feature, see <a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/design.tag:../Design/" href="../Design/fundamentalconcepts.html#multitransportthreads">Multi-Transport Threads</a>.</dd></dl>
 <dl class="section user"><dt></dt><dd><table class="doxtable">
 <tr>
 <td><em>Scope:</em> </td><td>receiver </td></tr>

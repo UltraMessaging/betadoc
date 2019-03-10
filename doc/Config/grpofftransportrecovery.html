@@ -54,7 +54,7 @@ $(document).ready(function(){initNavTree('grpofftransportrecovery.html','');});
 <div class="title">Off-Transport Recovery Options </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>See also <em>Off-Transport Recovery (OTR)</em> in the <em>Ultra Messaging Concepts Guide</em> for more information about this feature.</p>
+<div class="textblock"><p>See also <a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/design.tag:../Design/" href="../Design/umfeatures.html#offtransportrecoveryotr">Off-Transport Recovery (OTR)</a> for general information on OTR.</p>
 <p><br />
  </p>
 <h1><a class="anchor" id="offtransportrecoveryref"></a>
@@ -69,7 +69,7 @@ otr_message_caching_threshold (receiver)&nbsp;&nbsp;<small><a href="#otrmessagec
 <tr>
 <td><em>Scope:</em> </td><td>receiver </td></tr>
 <tr>
-<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a72438fab15bf500af58d2a8a521e470d">lbm_ulong_t</a></b> </td></tr>
+<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a72438fab15bf500af58d2a8a521e470d">lbm_ulong_t</a></b> </td></tr>
 <tr>
 <td><em>Units:</em> </td><td>messages </td></tr>
 <tr>
@@ -89,7 +89,7 @@ otr_request_initial_delay (receiver)&nbsp;&nbsp;<small><a href="#otrrequestiniti
 <tr>
 <td><em>Scope:</em> </td><td>receiver </td></tr>
 <tr>
-<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a72438fab15bf500af58d2a8a521e470d">lbm_ulong_t</a></b> </td></tr>
+<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a72438fab15bf500af58d2a8a521e470d">lbm_ulong_t</a></b> </td></tr>
 <tr>
 <td><em>Units:</em> </td><td>milliseconds </td></tr>
 <tr>
@@ -109,7 +109,7 @@ otr_request_log_alert_cooldown (receiver)&nbsp;&nbsp;<small><a href="#otrrequest
 <tr>
 <td><em>Scope:</em> </td><td>receiver </td></tr>
 <tr>
-<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a72438fab15bf500af58d2a8a521e470d">lbm_ulong_t</a></b> </td></tr>
+<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a72438fab15bf500af58d2a8a521e470d">lbm_ulong_t</a></b> </td></tr>
 <tr>
 <td><em>Units:</em> </td><td>seconds </td></tr>
 <tr>
@@ -124,12 +124,12 @@ otr_request_log_alert_cooldown (receiver)&nbsp;&nbsp;<small><a href="#otrrequest
  </p>
 <h2><a class="anchor" id="otrrequestmaximumintervalreceiver"></a>
 otr_request_maximum_interval (receiver)&nbsp;&nbsp;<small><a href="#otrrequestmaximumintervalreceiver">&lt;-</a></small></h2>
-<dl class="section user"><dt></dt><dd>The maximum time interval between a receiver's OTR lost-message requests. After the receiver initiates OTR and is waiting to receive the retransmission, the initial interval (set by <a class="el" href="grpofftransportrecovery.html#otrrequestminimumintervalreceiver">otr_request_minimum_interval (receiver)</a>) doubles in length for each request until it reaches this option's value, then continues at this interval (until timeout or UM recovers messages). NOTE: When using TCP Request/Response, this value must be shorter than <a class="el" href="grpresponseoperation.html#responsetcpdeletiontimeoutcontext">response_tcp_deletion_timeout (context)</a>.</dd></dl>
+<dl class="section user"><dt></dt><dd>The maximum time interval between a receiver's OTR lost-message requests. After the receiver initiates OTR and is waiting to receive the retransmission, the initial interval (set by <a class="el" href="grpofftransportrecovery.html#otrrequestminimumintervalreceiver">otr_request_minimum_interval (receiver)</a>) doubles in length for each request until it reaches this option's value, then continues at this interval (until timeout or UM recovers messages). NOTE: When using TCP Request/Response, this value must be shorter than <a class="el" href="grpunicastimmediatemessagingoperation.html#responsetcpdeletiontimeoutcontext">response_tcp_deletion_timeout (context)</a>.</dd></dl>
 <dl class="section user"><dt></dt><dd><table class="doxtable">
 <tr>
 <td><em>Scope:</em> </td><td>receiver </td></tr>
 <tr>
-<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a72438fab15bf500af58d2a8a521e470d">lbm_ulong_t</a></b> </td></tr>
+<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a72438fab15bf500af58d2a8a521e470d">lbm_ulong_t</a></b> </td></tr>
 <tr>
 <td><em>Units:</em> </td><td>milliseconds </td></tr>
 <tr>
@@ -149,7 +149,7 @@ otr_request_message_timeout (receiver)&nbsp;&nbsp;<small><a href="#otrrequestmes
 <tr>
 <td><em>Scope:</em> </td><td>receiver </td></tr>
 <tr>
-<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a72438fab15bf500af58d2a8a521e470d">lbm_ulong_t</a></b> </td></tr>
+<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a72438fab15bf500af58d2a8a521e470d">lbm_ulong_t</a></b> </td></tr>
 <tr>
 <td><em>Units:</em> </td><td>milliseconds </td></tr>
 <tr>
@@ -169,7 +169,7 @@ otr_request_minimum_interval (receiver)&nbsp;&nbsp;<small><a href="#otrrequestmi
 <tr>
 <td><em>Scope:</em> </td><td>receiver </td></tr>
 <tr>
-<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a72438fab15bf500af58d2a8a521e470d">lbm_ulong_t</a></b> </td></tr>
+<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a72438fab15bf500af58d2a8a521e470d">lbm_ulong_t</a></b> </td></tr>
 <tr>
 <td><em>Units:</em> </td><td>milliseconds </td></tr>
 <tr>
@@ -189,7 +189,7 @@ otr_request_outstanding_maximum (receiver)&nbsp;&nbsp;<small><a href="#otrreques
 <tr>
 <td><em>Scope:</em> </td><td>receiver </td></tr>
 <tr>
-<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a72438fab15bf500af58d2a8a521e470d">lbm_ulong_t</a></b> </td></tr>
+<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a72438fab15bf500af58d2a8a521e470d">lbm_ulong_t</a></b> </td></tr>
 <tr>
 <td><em>Units:</em> </td><td>messages </td></tr>
 <tr>

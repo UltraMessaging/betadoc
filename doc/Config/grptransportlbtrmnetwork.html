@@ -75,12 +75,13 @@ Reference&nbsp;&nbsp;<small><a href="#transportlbtrmnetworkref">&lt;-</a></small
 <h2><a class="anchor" id="transportlbtrmdestinationportsource"></a>
 transport_lbtrm_destination_port (source)&nbsp;&nbsp;<small><a href="#transportlbtrmdestinationportsource">&lt;-</a></small></h2>
 <dl class="section user"><dt></dt><dd>The UDP destination port used for this Topic when the transport is LBT-RM. </dd></dl>
+<dl class="section user"><dt></dt><dd>See <a class="el" href="grptransportlbtrmnetwork.html#lbtrmtransportsessionmanagement">LBT-RM Transport Session Management</a> for how LBT-RM source transport sessions are managed. </dd></dl>
 <dl class="section user"><dt></dt><dd>See <a class="el" href="generalconfigurationguidelines.html#portassignments">Port Assignments</a> for more information about configuring ports.</dd></dl>
 <dl class="section user"><dt></dt><dd><table class="doxtable">
 <tr>
 <td><em>Scope:</em> </td><td>source </td></tr>
 <tr>
-<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a86897f2fdd66aa7021683a4e72a4537b">lbm_uint16_t</a></b> </td></tr>
+<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a86897f2fdd66aa7021683a4e72a4537b">lbm_uint16_t</a></b> </td></tr>
 <tr>
 <td><em>Default value:</em> </td><td>14400 </td></tr>
 <tr>
@@ -93,7 +94,10 @@ transport_lbtrm_destination_port (source)&nbsp;&nbsp;<small><a href="#transportl
  </p>
 <h2><a class="anchor" id="transportlbtrmmulticastaddresssource"></a>
 transport_lbtrm_multicast_address (source)&nbsp;&nbsp;<small><a href="#transportlbtrmmulticastaddresssource">&lt;-</a></small></h2>
-<dl class="section user"><dt></dt><dd>The preferred multicast address (or domain name of the multicast address) for this Topic when the transport is LBT-RM. If 0.0.0.0 (INADDR_ANY), the context will attempt to find one in the given multicast address range.</dd></dl>
+<dl class="section user"><dt></dt><dd>The preferred multicast address (or domain name of the multicast address) for this Topic when the transport is LBT-RM. </dd></dl>
+<dl class="section user"><dt></dt><dd>If 0.0.0.0 (INADDR_ANY), the default, the context will use a round-robin method to select an address in the configured multicast multicast address range: <a class="el" href="grptransportlbtrmnetwork.html#transportlbtrmmulticastaddresshighcontext">transport_lbtrm_multicast_address_high (context)</a> - <a class="el" href="grptransportlbtrmnetwork.html#transportlbtrmmulticastaddresslowcontext">transport_lbtrm_multicast_address_low (context)</a>. </dd></dl>
+<dl class="section user"><dt></dt><dd>See <a class="el" href="grptransportlbtrmnetwork.html#lbtrmtransportsessionmanagement">LBT-RM Transport Session Management</a> for how LBT-RM source transport sessions are managed. </dd></dl>
+<dl class="section user"><dt></dt><dd>See <a class="el" href="generalconfigurationguidelines.html#portassignments">Port Assignments</a> for more information about configuring ports.</dd></dl>
 <dl class="section user"><dt></dt><dd><table class="doxtable">
 <tr>
 <td><em>Scope:</em> </td><td>source </td></tr>
@@ -109,7 +113,8 @@ transport_lbtrm_multicast_address (source)&nbsp;&nbsp;<small><a href="#transport
  </p>
 <h2><a class="anchor" id="transportlbtrmmulticastaddresshighcontext"></a>
 transport_lbtrm_multicast_address_high (context)&nbsp;&nbsp;<small><a href="#transportlbtrmmulticastaddresshighcontext">&lt;-</a></small></h2>
-<dl class="section user"><dt></dt><dd>Multicast address (or domain name of the multicast address) used as the highest value to assign to LBT-RM sessions.</dd></dl>
+<dl class="section user"><dt></dt><dd>Multicast address (or domain name of the multicast address) used as the highest value to assign to LBT-RM sessions. </dd></dl>
+<dl class="section user"><dt></dt><dd>See <a class="el" href="grptransportlbtrmnetwork.html#lbtrmtransportsessionmanagement">LBT-RM Transport Session Management</a> for how LBT-RM source transport sessions are managed.</dd></dl>
 <dl class="section user"><dt></dt><dd><table class="doxtable">
 <tr>
 <td><em>Scope:</em> </td><td>context </td></tr>
@@ -125,7 +130,8 @@ transport_lbtrm_multicast_address_high (context)&nbsp;&nbsp;<small><a href="#tra
  </p>
 <h2><a class="anchor" id="transportlbtrmmulticastaddresslowcontext"></a>
 transport_lbtrm_multicast_address_low (context)&nbsp;&nbsp;<small><a href="#transportlbtrmmulticastaddresslowcontext">&lt;-</a></small></h2>
-<dl class="section user"><dt></dt><dd>Multicast address (or domain name of the multicast address) used as the lowest value to assign to LBT-RM sessions.</dd></dl>
+<dl class="section user"><dt></dt><dd>Multicast address (or domain name of the multicast address) used as the lowest value to assign to LBT-RM sessions. </dd></dl>
+<dl class="section user"><dt></dt><dd>See <a class="el" href="grptransportlbtrmnetwork.html#lbtrmtransportsessionmanagement">LBT-RM Transport Session Management</a> for how LBT-RM source transport sessions are managed.</dd></dl>
 <dl class="section user"><dt></dt><dd><table class="doxtable">
 <tr>
 <td><em>Scope:</em> </td><td>context </td></tr>
@@ -147,7 +153,7 @@ transport_lbtrm_source_port_high (context)&nbsp;&nbsp;<small><a href="#transport
 <tr>
 <td><em>Scope:</em> </td><td>context </td></tr>
 <tr>
-<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a86897f2fdd66aa7021683a4e72a4537b">lbm_uint16_t</a></b> </td></tr>
+<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a86897f2fdd66aa7021683a4e72a4537b">lbm_uint16_t</a></b> </td></tr>
 <tr>
 <td><em>Default value:</em> </td><td>14399 </td></tr>
 <tr>
@@ -166,7 +172,7 @@ transport_lbtrm_source_port_low (context)&nbsp;&nbsp;<small><a href="#transportl
 <tr>
 <td><em>Scope:</em> </td><td>context </td></tr>
 <tr>
-<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a86897f2fdd66aa7021683a4e72a4537b">lbm_uint16_t</a></b> </td></tr>
+<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a86897f2fdd66aa7021683a4e72a4537b">lbm_uint16_t</a></b> </td></tr>
 <tr>
 <td><em>Default value:</em> </td><td>14390 </td></tr>
 <tr>

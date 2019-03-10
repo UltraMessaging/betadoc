@@ -14,6 +14,9 @@ var NAVTREE =
         [ "Persistence Fixed Limitations for 6.12", "index.html#persistencefixedlimitationsfor6_12", null ],
         [ "Queuing Fixed Limitations for 6.12", "index.html#queuingfixedlimitationsfor6_12", null ],
         [ "Dynamic Router Fixed Limitations for 6.12", "index.html#dynamicrouterfixedlimitationsfor6_12", null ]
+      ] ],
+      [ "Special Upgrade Instructions for 6.12", "index.html#specialupgradeinsructionsfor6_12", [
+        [ "Smart Source Header Size Change", "index.html#smartsourceheadersizechange", null ]
       ] ]
     ] ],
     [ "Known Limitations", "index.html#knownlimitations", [

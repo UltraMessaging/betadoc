@@ -197,7 +197,7 @@ Timers and Intervals&nbsp;&nbsp;<small><a href="#timersandintervals">&lt;-</a></
  </p>
 <h2><a class="anchor" id="multicastimmediatemessagingconsiderations"></a>
 Multicast Immediate Messaging Considerations&nbsp;&nbsp;<small><a href="#multicastimmediatemessagingconsiderations">&lt;-</a></small></h2>
-<p>Multicast Immediate Messages (MIMs) may pass through the UM Router. You cannot filter MIMs with Access Control Lists (ACL)-MIMs are forwarded to all TRDs. Informatica does not recommend using MIM for messaging traffic across the UM Router. MIM is intended for short-lived topics and applications that cannot tolerate a delay between source creation and the sending of the first message. See also <a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Gateway/design.tag:../Design/" href="../Design/umfeatures.html#multicastimmediatemessaging">Multicast Immediate Messaging</a>.</p>
+<p>Multicast Immediate Messages (MIMs) may pass through the UM Router. You cannot filter MIMs with Access Control Lists (ACL)-MIMs are forwarded to all TRDs. Informatica does not recommend using MIM for messaging traffic across the UM Router. MIM is intended for short-lived topics and applications that cannot tolerate a delay between source creation and the sending of the first message. See also <a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Gateway/design.tag:../Design/" href="../Design/umfeatures.html#multicastimmediatemessaging">Multicast Immediate Messaging</a>.</p>
 <p><br />
  </p>
 <h2><a class="anchor" id="persistenceovertheumrouter"></a>
@@ -223,15 +223,25 @@ Topic Resolution Reliability&nbsp;&nbsp;<small><a href="#topicresolutionreliabil
 <p>Topic resolution can sometimes remain in a quiescent phase due to link interruption, preventing needed re-subscription topic resolution activity. Two ways you can address this are:</p>
 <ul>
 <li>
-For isolated incidents, call <a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Gateway/api.tag:../API/" href="../API/lbm_8h.html#ae6dd7c56acf916ef66658cc1ebc7a525">lbm_context_topic_resolution_request()</a> (see example lbmtrreq.c). This restarts the sustaining phase. </li>
+For isolated incidents, call <a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Gateway/api.tag:../API/" href="../API/lbm_8h.html#ae6dd7c56acf916ef66658cc1ebc7a525">lbm_context_topic_resolution_request()</a> (see example lbmtrreq.c). This restarts the sustaining phase. </li>
 <li>
-For more chronic problems, such as a UM Router link (especially an endpoint link) over a WAN of questionable reliability, consider configuring Topic resolution to stay in the sustaining phase (options <a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Gateway/config.tag:../Config/" href="../Config/grpudpbasedresolveroperation.html#resolveradvertisementminimumsustaindurationsource">resolver_advertisement_minimum_sustain_duration (source)</a> and <a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_DEV_MAIN/29West/lbm/doc/Gateway/config.tag:../Config/" href="../Config/grpudpbasedresolveroperation.html#resolverqueryminimumsustaindurationreceiver">resolver_query_minimum_sustain_duration (receiver)</a>). </li>
+For more chronic problems, such as a UM Router link (especially an endpoint link) over a WAN of questionable reliability, consider configuring Topic resolution to stay in the sustaining phase (options <a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Gateway/config.tag:../Config/" href="../Config/grpudpbasedresolveroperation.html#resolveradvertisementminimumsustaindurationsource">resolver_advertisement_minimum_sustain_duration (source)</a> and <a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Gateway/config.tag:../Config/" href="../Config/grpudpbasedresolveroperation.html#resolverqueryminimumsustaindurationreceiver">resolver_query_minimum_sustain_duration (receiver)</a>). </li>
 </ul>
 <p><br />
  </p>
 <h2><a class="anchor" id="bosandeosbehaviorovertheumrouter"></a>
 BOS and EOS Behavior Over the UM Router&nbsp;&nbsp;<small><a href="#bosandeosbehaviorovertheumrouter">&lt;-</a></small></h2>
 <p>Through a network of UM Routers, a topic traverses a separate session for each link along its path. Thus, the UM Router reports BOS/EOSs based on the activity between the proxy source transport and its associated receiver. There is no end-to-end, application-to-application reporting of the data path state. Also, in the case of multiple topics being assigned to multiple sessions, topics may find themselves with different session mates from hop to hop. Of course, this all influences when, and for which transport session, a topic's BOSs and EOSs are issued.</p>
+<p><br />
+ </p>
+<h2><a class="anchor" id="umrouterreliableloss"></a>
+UM Router Reliable Loss&nbsp;&nbsp;<small><a href="#umrouterreliableloss">&lt;-</a></small></h2>
+<p>The UM router can create a situation where a "reliable" transport (TCP or LBT-IPC) can experience out-of-order message delivery.</p>
+<p>The UM router can perform a "protocol conversion" function. I.e. an originating source can use a UDP-based protocol (LBT-RM or LBT-RU), but the proxy source for a remote receiver can use a "reliable" protocol (TCP or LBT-IPC). With a UDP-based protocol, messages can arrive to the UM Router network out of order, usually due to packet loss and recovery. However, when those out-of-order messages are forwarded across a "reliable" protocol (TCP or LBT-IPC), the receiver does not expect the sequence number gap, and immediately declares the out-of-order messages as unrecoverable loss. This, in spite of the fact that the missing message arrives shortly thereafter.</p>
+<p>Starting in UM version 6.12, there are two new configuration options: <a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Gateway/config.tag:../Config/" href="../Config/grptransporttcpoperation.html#transporttcpdrolossrecoverytimeoutreceiver">transport_tcp_dro_loss_recovery_timeout (receiver)</a> and <a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Gateway/config.tag:../Config/" href="../Config/grptransportlbtipcoperation.html#transportlbtipcdrolossrecoverytimeoutreceiver">transport_lbtipc_dro_loss_recovery_timeout (receiver)</a>, which modify the receiver's behavior. Instead of declaring a gap immediately unrecoverable, a delay is introduced which is similar to what a UDP-based receiver uses to wait for lost and retransmitted datagrams. If the missing message arrives within the delay time, the messages are delivered to application without loss.</p>
+<p>Be aware that this functionality is only used with "reliable" protocols published by a UM Router's proxy source. If this delay feature is enabled, it will <em>not</em> apply to a "reliable" protocol that is received directly from the originating source.</p>
+<p>Note however that you can get genuine gaps in the "reliable" data stream <em>without</em> recovery. For example, an overloaded UM Router can drop messages. Or a UM Router's proxy receiver can experience unrecoverable loss. In that case, the delay will have to expire before the missing messages are declared unrecoverable and subsequent data is delivered.</p>
+<dl class="section attention"><dt>Attention</dt><dd>The delay times default to 0, which retains the pre-6.12 behavior of immediately declaring sequence number gaps unrecoverable. If you want this new behavior, you must configure the appropriate option.</dd></dl>
 <p><br />
  </p>
 <h1><a class="anchor" id="topologyconfigurationexamples"></a>
@@ -1088,7 +1098,7 @@ Setting Individual Endpoint Options&nbsp;&nbsp;<small><a href="#settingindividua
   &lt;/endpoint&gt;
 &lt;/portals&gt;
 </pre><p>Then assign configuration templates to those contexts in the UM XML configuration file.</p>
-<pre class="fragment">&lt;application name="tnwgd" template="global"&gt;
+<pre class="fragment">&lt;application name="dro1" template="global"&gt;
   &lt;contexts&gt;
     &lt;context name="G1_E1" template="G1-E1-options"&gt;
       &lt;sources /&gt;
@@ -1112,7 +1122,7 @@ UM Router and UM XML Configuration Use Cases&nbsp;&nbsp;<small><a href="#umroute
   &lt;/options&gt;
 &lt;/template&gt;
 </pre><p>Then include this template in the <code>&lt;application&gt;</code> element associated with the UM Router.</p>
-<pre class="fragment">&lt;application name="tnwgd" template="global-options"&gt;
+<pre class="fragment">&lt;application name="dro1" template="global-options"&gt;
   &lt;contexts&gt;
     &lt;context&gt;
       &lt;sources template="source-options"&gt;
@@ -1122,7 +1132,7 @@ UM Router and UM XML Configuration Use Cases&nbsp;&nbsp;<small><a href="#umroute
   &lt;/contexts&gt;
 &lt;/application&gt;
 </pre><p>It is also possible to assign UM attributes directly in the <code>&lt;application&gt;</code> tag. For example, the following specifies that a particular topic should use an LBT-RU transport.</p>
-<pre class="fragment">&lt;application name="tnwgd" template="tnwgd-common"&gt;
+<pre class="fragment">&lt;application name="dro1" template="dro1-common"&gt;
   &lt;contexts&gt;
     &lt;context&gt;
       &lt;sources template="source-template"&gt;
@@ -1147,7 +1157,7 @@ XML UM Configuration File&nbsp;&nbsp;<small><a href="#xmlumconfigurationfile">&l
 <pre class="fragment">&lt;?xml version="1.0" encoding="UTF-8" ?&gt;
 &lt;um-configuration version="1.0"&gt;
   &lt;templates&gt;
-    &lt;template name="tnwgd-common"&gt;
+    &lt;template name="dro1-common"&gt;
       &lt;options type="source"&gt;
         &lt;option name="transport" default-value="tcp" /&gt;
       &lt;/options&gt;
@@ -1166,7 +1176,7 @@ XML UM Configuration File&nbsp;&nbsp;<small><a href="#xmlumconfigurationfile">&l
     &lt;/template&gt;
   &lt;/templates&gt;
   &lt;applications&gt;
-    &lt;application name="tnwgd" template="tnwgd-common"&gt;
+    &lt;application name="dro1" template="dro1-common"&gt;
      &lt;contexts&gt;
         &lt;context&gt;
           &lt;sources&gt;
@@ -1240,25 +1250,10 @@ The configuration file is error free. </li>
 </ul>
 <p>Typically, you run the UM Router with one configuration file argument, for example:</p>
 <pre class="fragment">tnwgd gw1-config.xml
-</pre><p>The UM Router logs version information on startup. The following is an example of this information:</p>
+</pre><p> (FYI: "tnwgd" stands for "Twenty Nine West Gateway Daemon", a historical name for the UM Router.)</p>
+<p>The UM Router logs version information on startup. The following is an example of this information:</p>
 <pre class="fragment">Version 6.0 Build: Sep 26 2012, 00:31:33 (UMS 6.0 [UMP-6.0] [UMQ-6.0] [64-bit] Build: Sep 26 2012, 00:27:17 ( DEBUG license LBT-RM LBT-RU LBT-IPC LBT-RDMA ) WC[PCRE 7.4 2007-09-21, regex, appcb] HRT[gettimeofday()])
-</pre><p><br />
- </p>
-<h2><a class="anchor" id="tnwgd"></a>
-tnwgd&nbsp;&nbsp;<small><a href="#tnwgd">&lt;-</a></small></h2>
-<p><b>Name</b> </p>
-<p>tnwgd - UM Router Daemon</p>
-<p><b>Synopsis</b> </p>
-<pre class="fragment">tnwgd [-d] [--dump-dtd] [-h] [--help] [-f] [--detach] [-v] [--validate] configfile
-</pre><p><b>Description</b> </p>
-<p>UM Router services are provided by tnwgd. A UM Router configuration file is required. The contents and format of the configuration file are documented separately.</p>
-<p>The DTD used to validate a configuration file is dumped to standard output with <code>-d</code> or <code>--dump-dtd</code>. After dumping the DTD, tnwgd exits instead of providing UM Router services as usual. See <a class="el" href="xmlconfigurationreference.html#umrouterconfigurationdtd">UM Router Configuration DTD</a> for the DTD with comments removed.</p>
-<p>To validate the configuration file, use either the <code>-v</code> or <code>--validate</code> options. After attempting validation, tnwgd exits instead of providing UM Router services as usual. The exit status will be 0 for a configuration file successfully validated by the DTD, and non-zero otherwise.</p>
-<p>tnwgd normally remains attached to the controlling terminal and runs until interrupted. If the <code>-f</code> or <code>--detach</code> options are given, tnwgd instead forks, detaches the child from the controlling terminal, and the parent exits immediately.</p>
-<p>Command line help is available with <code>-h</code> or <code>--help</code>.</p>
-<p><b>Exit</b> <b>Status</b> </p>
-<p>The exit status from tnwgd is 0 for success and some non-zero value for failure. </p>
-</div></div><!-- contents -->
+</pre> </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.8.11-->
 </body>

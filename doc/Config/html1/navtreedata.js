@@ -123,7 +123,6 @@ var NAVTREE =
         [ "default_interface (context)", "index.html#defaultinterfacecontext", null ],
         [ "fd_management_type (context)", "index.html#fdmanagementtypecontext", null ],
         [ "message_selector (receiver)", "index.html#messageselectorreceiver", null ],
-        [ "min_win_event_log_level (context)", "index.html#minwineventloglevelcontext", null ],
         [ "multiple_receive_maximum_datagrams (context)", "index.html#multiplereceivemaximumdatagramscontext", null ],
         [ "operational_mode (context)", "index.html#operationalmodecontext", null ],
         [ "operational_mode (xsp)", "index.html#operationalmodexsp", null ],
@@ -487,7 +486,7 @@ var NAVTREE =
         [ "use_otr (receiver)", "index.html#useotrreceiver", null ]
       ] ]
     ] ],
-    [ "Request Network Options", "index.html#grprequestnetwork", [
+    [ "Unicast Immediate Messaging Network Options", "index.html#grpunicastimmediatemessagingnetwork", [
       [ "Reference", "index.html#requestnetworkref", [
         [ "request_tcp_bind_request_port (context)", "index.html#requesttcpbindrequestportcontext", null ],
         [ "request_tcp_interface (context)", "index.html#requesttcpinterfacecontext", null ],
@@ -496,15 +495,11 @@ var NAVTREE =
         [ "request_tcp_port_low (context)", "index.html#requesttcpportlowcontext", null ]
       ] ]
     ] ],
-    [ "Request Operation Options", "index.html#grprequestoperation", [
+    [ "Unicast Immediate Messaging Operation Options", "index.html#grpunicastimmediatemessagingoperation", [
       [ "Reference", "index.html#requestoperationref", [
         [ "request_tcp_exclusiveaddr (context)", "index.html#requesttcpexclusiveaddrcontext", null ],
         [ "request_tcp_listen_backlog (context)", "index.html#requesttcplistenbacklogcontext", null ],
-        [ "request_tcp_reuseaddr (context)", "index.html#requesttcpreuseaddrcontext", null ]
-      ] ]
-    ] ],
-    [ "Response Operation Options", "index.html#grpresponseoperation", [
-      [ "Reference", "index.html#responseoperationref", [
+        [ "request_tcp_reuseaddr (context)", "index.html#requesttcpreuseaddrcontext", null ],
         [ "response_session_maximum_buffer (context)", "index.html#responsesessionmaximumbuffercontext", null ],
         [ "response_session_sender_socket_buffer (context)", "index.html#responsesessionsendersocketbuffercontext", null ],
         [ "response_tcp_deletion_timeout (context)", "index.html#responsetcpdeletiontimeoutcontext", null ],
@@ -768,8 +763,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "index.html",
-"index.html#requesttcpinterfacecontext",
-"index.html#transporttcpdrolossrecoverytimeoutreceiver"
+"index.html#requesttcpportcontext",
+"index.html#transporttcpinterfacesource"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
