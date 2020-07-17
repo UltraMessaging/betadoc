@@ -1,5 +1,5 @@
 /*
- Copyright (c) 2005-2019 Informatica Corporation  Permission is granted to licensees to use
+ Copyright (c) 2005-2020 Informatica Corporation  Permission is granted to licensees to use
  or alter this software for any purpose, including commercial applications,
  according to the terms laid out in the Software License Agreement.
  
@@ -100,6 +100,7 @@ int lbm_log_msg(int level, const char *message, void *clientd) {
 }
  
 int rcv_handle_msg(lbm_rcv_t *rcv, lbm_msg_t *msg, void *clientd) {
+    char *msg_data_buffer = NULL;
     struct Options *opts = &options;
     
     if (exit_on_eos) {
@@ -108,7 +109,17 @@ int rcv_handle_msg(lbm_rcv_t *rcv, lbm_msg_t *msg, void *clientd) {
     
     switch (msg->type) {
         case LBM_MSG_DATA:
-			printf("%s\n", msg->data);
+            /* + 1 for the null character */
+            msg_data_buffer = (char *)malloc(msg->len + 1);
+            if (msg_data_buffer != NULL) {
+                memset(msg_data_buffer, 0, msg->len + 1);
+                memcpy(msg_data_buffer, msg->data, msg->len);
+                printf("%s\n", msg_data_buffer);
+                free(msg_data_buffer);
+            } else {
+                printf("Failed to allocate memory for an LBM message received from %s\n", msg->source);
+            }
+
             break;
         case LBM_MSG_BOS:
             printf("[%s][%s], Beginning of Transport Session\n", msg->topic_name, msg->source);

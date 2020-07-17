@@ -66,13 +66,13 @@ broker (context)&nbsp;&nbsp;<small><a href="#brokercontext">&lt;-</a></small></h
 <dl class="section user"><dt></dt><dd>Add a broker specification to the list of brokers. Unlike most other UM settings, every time this setting is called, it adds one or more service specifications to the list, and does NOT overwrite previous specifications. </dd></dl>
 <dl class="section user"><dt></dt><dd>For the configuration file as well as string API method of setting this option, you can specify multiple brokers with a comma or semicolon-separated list on a single line. Each entry contains the broker IP address (or domain name of the IP address) and destination port in the format <code>IP:Dest_Port[,IP:Dest_Port]</code>. </dd></dl>
 <dl class="section user"><dt></dt><dd>An entry or string with the IP address of 0.0.0.0 and port 0 removes all previous broker specifications. </dd></dl>
-<dl class="section user"><dt></dt><dd>When the binary form of option setting is used, UM does NOT expect an array of structures. Instead, only one broker specification can be supplied for each call to <a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#ab67f641d5a0ad1a9fe53d415da58d961">lbm_context_attr_setopt()</a>. However, when the binary form of option retrieval <a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a0e578b4f0005589f6558d15e55be8483">lbm_context_attr_getopt()</a> is used, the list of brokers is returned as an array, and the <b><code>optlen</code></b> parameter should be set as: <pre class="fragment">optlen = (max_num_brokers * sizeof(lbm_transport_broker_entry_t));
+<dl class="section user"><dt></dt><dd>When the binary form of option setting is used, UM does NOT expect an array of structures. Instead, only one broker specification can be supplied for each call to <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#ab67f641d5a0ad1a9fe53d415da58d961">lbm_context_attr_setopt()</a>. However, when the binary form of option retrieval <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a0e578b4f0005589f6558d15e55be8483">lbm_context_attr_getopt()</a> is used, the list of brokers is returned as an array, and the <b><code>optlen</code></b> parameter should be set as: <pre class="fragment">optlen = (max_num_brokers * sizeof(lbm_transport_broker_entry_t));
 </pre></dd></dl>
 <dl class="section user"><dt></dt><dd><table class="doxtable">
 <tr>
 <td><em>Scope:</em> </td><td>context </td></tr>
 <tr>
-<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a75ce20a96b97620fb7f6fcecdbed4b8a">lbm_transport_broker_entry_t</a></b> </td></tr>
+<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a75ce20a96b97620fb7f6fcecdbed4b8a">lbm_transport_broker_entry_t</a></b> </td></tr>
 <tr>
 <td><em>When to Set:</em> </td><td>Can only be set during object initialization.</td></tr>
 <tr>
@@ -83,7 +83,8 @@ broker (context)&nbsp;&nbsp;<small><a href="#brokercontext">&lt;-</a></small></h
  </p>
 <h2><a class="anchor" id="compatibilityincludepreum60behaviorcontext"></a>
 compatibility_include_pre_um_6_0_behavior (context)&nbsp;&nbsp;<small><a href="#compatibilityincludepreum60behaviorcontext">&lt;-</a></small></h2>
-<dl class="section user"><dt></dt><dd>Enable Ultra Messaging 6.x applications to inter-operate with pre-6.0 applications. Enabling this option increases overhead data on the wire and slightly changes some operational behaviors of UMP sources.</dd></dl>
+<dl class="section user"><dt></dt><dd>Enable Ultra Messaging 6.x applications to inter-operate with pre-6.0 applications. </dd></dl>
+<dl class="section user"><dt></dt><dd>Enabling this option increases overhead data on the wire and slightly changes some operational behaviors of persistent sources.</dd></dl>
 <dl class="section user"><dt></dt><dd><table class="doxtable">
 <tr>
 <td><em>Scope:</em> </td><td>context </td></tr>
@@ -111,12 +112,13 @@ compatibility_include_pre_um_6_0_behavior (context)&nbsp;&nbsp;<small><a href="#
  </p>
 <h2><a class="anchor" id="contexteventfunctioncontext"></a>
 context_event_function (context)&nbsp;&nbsp;<small><a href="#contexteventfunctioncontext">&lt;-</a></small></h2>
-<dl class="section user"><dt></dt><dd>Callback function (and associated client data pointer) that is called when a context event occurs. This callback may be called inline or from an event queue, if one is given. If called inline, the callback function used should not block or it will block the context thread processing. See <a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a39c06705a1144ec9d2fc1af6bd033bac">lbm_context_event_cb_proc</a>.</dd></dl>
+<dl class="section user"><dt></dt><dd>Callback function (and associated client data pointer) that is called when a context event occurs. This callback may be called inline or from an event queue, if one is given. </dd></dl>
+<dl class="section user"><dt></dt><dd>If called inline, the callback function used should not block or it will block the context thread processing. See <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a39c06705a1144ec9d2fc1af6bd033bac">lbm_context_event_cb_proc</a>.</dd></dl>
 <dl class="section user"><dt></dt><dd><table class="doxtable">
 <tr>
 <td><em>Scope:</em> </td><td>context </td></tr>
 <tr>
-<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a2ad9c4d58e9129102d7d780b611c58b4">lbm_context_event_func_t</a></b> </td></tr>
+<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a2ad9c4d58e9129102d7d780b611c58b4">lbm_context_event_func_t</a></b> </td></tr>
 <tr>
 <td><em>When to Set:</em> </td><td>Can only be set during object initialization.</td></tr>
 <tr>
@@ -127,7 +129,8 @@ context_event_function (context)&nbsp;&nbsp;<small><a href="#contexteventfunctio
  </p>
 <h2><a class="anchor" id="contextnamecontext"></a>
 context_name (context)&nbsp;&nbsp;<small><a href="#contextnamecontext">&lt;-</a></small></h2>
-<dl class="section user"><dt></dt><dd>The name of the context, limited to 128 alphanumeric characters, hyphens or underscores.</dd></dl>
+<dl class="section user"><dt></dt><dd>The name of the context, limited to 128 alphanumeric characters, hyphens or underscores. </dd></dl>
+<dl class="section user"><dt></dt><dd>This is only used for <a class="el" href="xmlconfigurationfiles.html">XML Configuration Files</a>.</dd></dl>
 <dl class="section user"><dt></dt><dd><table class="doxtable">
 <tr>
 <td><em>Scope:</em> </td><td>context </td></tr>
@@ -136,48 +139,55 @@ context_name (context)&nbsp;&nbsp;<small><a href="#contextnamecontext">&lt;-</a>
 <tr>
 <td><em>When to Set:</em> </td><td>Can only be set during object initialization.</td></tr>
 <tr>
-<td><em>Version:</em> </td><td>This option was implemented in LBM 4.3/UMP 3.3/UMQ 2.3. </td></tr>
+<td><em>Version:</em> </td><td>This option was implemented in LBM 4.3/UME 3.3/UMQ 2.3. </td></tr>
 </table>
 </dd></dl>
 <p><br />
  </p>
 <h2><a class="anchor" id="datagramaccelerationfunctionscontext"></a>
 datagram_acceleration_functions (context)&nbsp;&nbsp;<small><a href="#datagramaccelerationfunctionscontext">&lt;-</a></small></h2>
-<dl class="section user"><dt></dt><dd>Specifies the callback functions that implement Datagram Acceleration. Refer to the description of <a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#ad81d75746b1054f6466a2bececae1c64">lbm_datagram_acceleration_func_t</a> for the callback definitions.</dd></dl>
+<dl class="section user"><dt></dt><dd>Specifies the callback functions that implement Datagram Acceleration. </dd></dl>
+<dl class="section user"><dt></dt><dd>Refer to the description of <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#ad81d75746b1054f6466a2bececae1c64">lbm_datagram_acceleration_func_t</a> for the callback definitions.</dd></dl>
 <dl class="section user"><dt></dt><dd><table class="doxtable">
 <tr>
 <td><em>Scope:</em> </td><td>context </td></tr>
 <tr>
-<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#ad81d75746b1054f6466a2bececae1c64">lbm_datagram_acceleration_func_t</a></b> </td></tr>
+<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#ad81d75746b1054f6466a2bececae1c64">lbm_datagram_acceleration_func_t</a></b> </td></tr>
 <tr>
 <td><em>Default value:</em> </td><td>NULL </td></tr>
 <tr>
 <td><em>When to Set:</em> </td><td>Can only be set during object initialization.</td></tr>
 <tr>
 <td><em>Config File:</em> </td><td>Cannot be set from an UM configuration file. </td></tr>
+<tr>
+<td><em>Version:</em> </td><td>This option was implemented in UM 6.10 </td></tr>
 </table>
 </dd></dl>
 <p><br />
  </p>
 <h2><a class="anchor" id="defaultinterfacecontext"></a>
 default_interface (context)&nbsp;&nbsp;<small><a href="#defaultinterfacecontext">&lt;-</a></small></h2>
-<dl class="section user"><dt></dt><dd>Specifies the network interface to be used as the default setting for all other interface configuration options. You can specify the full IP address of an interface, or just the network part (see <a class="el" href="generalconfigurationguidelines.html#specifyinginterfaces">Specifying Interfaces</a> for details). Default is set to INADDR_ANY, meaning that it will not bind to a specific interface.</dd></dl>
+<dl class="section user"><dt></dt><dd>Specifies the network interface to be used as the default setting for all other interface configuration options. </dd></dl>
+<dl class="section user"><dt></dt><dd>You can specify the full IP address of an interface, or just the network part (see <a class="el" href="generalconfigurationguidelines.html#specifyinginterfaces">Specifying Interfaces</a> for details). Default is set to INADDR_ANY, meaning that it will not bind to a specific interface.</dd></dl>
 <dl class="section user"><dt></dt><dd><table class="doxtable">
 <tr>
 <td><em>Scope:</em> </td><td>context </td></tr>
 <tr>
-<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a0b66a5b33839617b2a822e4a20a8d535">lbm_ipv4_address_mask_t</a></b> </td></tr>
+<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a0b66a5b33839617b2a822e4a20a8d535">lbm_ipv4_address_mask_t</a></b> </td></tr>
 <tr>
 <td><em>Default value:</em> </td><td>0.0.0.0 (INADDR_ANY) </td></tr>
 <tr>
 <td><em>When to Set:</em> </td><td>Can only be set during object initialization.</td></tr>
+<tr>
+<td><em>Version:</em> </td><td>This option was implemented in LBM 6.10 </td></tr>
 </table>
 </dd></dl>
 <p><br />
  </p>
 <h2><a class="anchor" id="fdmanagementtypecontext"></a>
 fd_management_type (context)&nbsp;&nbsp;<small><a href="#fdmanagementtypecontext">&lt;-</a></small></h2>
-<dl class="section user"><dt></dt><dd>Define the mechanism UM uses for socket file descriptor (FD) management. For more information, search on "file descriptors" in the Informatica Knowledge Base.</dd></dl>
+<dl class="section user"><dt></dt><dd>Define the mechanism UM uses for socket file descriptor (FD) management. </dd></dl>
+<dl class="section user"><dt></dt><dd>For more information, search on "file descriptors" in the Informatica Knowledge Base.</dd></dl>
 <dl class="section user"><dt></dt><dd><table class="doxtable">
 <tr>
 <td><em>Scope:</em> </td><td>context </td></tr>
@@ -200,8 +210,6 @@ fd_management_type (context)&nbsp;&nbsp;<small><a href="#fdmanagementtypecontext
 <tr>
 <td>"devpoll" </td><td>LBM_CTX_ATTR_FDTYPE_DEVPOLL </td><td>FD management uses the /dev/poll driver. <em>Solaris 8 or later only.</em> </td></tr>
 <tr>
-<td>"kqueue" </td><td>LBM_CTX_ATTR_FDTYPE_KQUEUE </td><td>FD management uses the BSD kqueue notification system. <em>Mac OS X only.</em> </td></tr>
-<tr>
 <td>"wsaeventselect" </td><td>LBM_CTX_ATTR_FDTYPE_WSAEV </td><td>FD management uses WSAEventSelect() and WaitForMultipleObjects(), which imposes a limit of 64 file descriptors. <em>Windows only.</em> </td></tr>
 <tr>
 <td>"wincompport" </td><td>LBM_CTX_ATTR_FDTYPE_WINCPORT </td><td>FD management uses Windows completion ports and completion routines. Avoids the 64 file descriptor limit set by WSAEventSelect(). <em>Windows XP or later only.</em> <b>Default for Windows.</b> </td></tr>
@@ -209,9 +217,41 @@ fd_management_type (context)&nbsp;&nbsp;<small><a href="#fdmanagementtypecontext
 </dd></dl>
 <p><br />
  </p>
+<h2><a class="anchor" id="filedescriptormanagementbehaviorcontext"></a>
+file_descriptor_management_behavior (context)&nbsp;&nbsp;<small><a href="#filedescriptormanagementbehaviorcontext">&lt;-</a></small></h2>
+<dl class="section user"><dt></dt><dd>Set how the context monitors file descriptors (sockets) for events. </dd></dl>
+<dl class="section user"><dt></dt><dd>The "busy_wait" selection can reduce latency and especially latency outliers (jitter), at the expense of the thread consuming 100% CPU. </dd></dl>
+<dl class="section user"><dt></dt><dd>Only use "busy_wait" if there are enough cores to allocate a core exclusively to each receive thread. If there are too few cores, enabling "busy_wait" can actually increase latencies due to threads time-sharing CPU resources. Also, pinning threads to cores is highly recommended to prevent thread migration across cores. </dd></dl>
+<dl class="section user"><dt></dt><dd>See <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_DEV_MAIN/29West/lbm/doc/Config/design.tag:../Design/" href="../Design/advancedoptimizations.html#receivethreadbusywaiting">Receive Thread Busy Waiting</a> for more information.</dd></dl>
+<dl class="section user"><dt></dt><dd><table class="doxtable">
+<tr>
+<td><em>Scope:</em> </td><td>context </td></tr>
+<tr>
+<td><em>Type:</em> </td><td><b>int</b> </td></tr>
+<tr>
+<td><em>When to Set:</em> </td><td>Can only be set during object initialization.</td></tr>
+<tr>
+<td><em>Version:</em> </td><td>This option was implemented in UM 6.12.1 </td></tr>
+</table>
+<br />
+</dd></dl>
+<dl class="section user"><dt></dt><dd><table class="doxtable">
+<tr>
+<th>String value </th><th>Integer value </th><th>Description </th></tr>
+<tr>
+<td>"pend" </td><td>LBM_CTX_ATTR_FD_MANAGEMENT_BEHAVIOR_PEND </td><td>Causes the context or <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_DEV_MAIN/29West/lbm/doc/Config/design.tag:../Design/" href="../Design/umfeatures.html#transportservicesproviderxsp">XSP thread</a> to go to sleep waiting for socket events to happen. <b>Default for all.</b> </td></tr>
+<tr>
+<td>"busy_wait" </td><td>LBM_CTX_ATTR_FD_MANAGEMENT_BEHAVIOR_BUSY_WAIT </td><td><p class="starttd">The context or XSP thread will check repeatedly in a tight loop (busy waiting) for socket events to happen.</p>
+<p class="endtd"></p>
+</td></tr>
+</table>
+</dd></dl>
+<p><br />
+ </p>
 <h2><a class="anchor" id="messageselectorreceiver"></a>
 message_selector (receiver)&nbsp;&nbsp;<small><a href="#messageselectorreceiver">&lt;-</a></small></h2>
-<dl class="section user"><dt></dt><dd>Enables UM to pass a message selector string to any receiver. The value must be an expression that conforms to JMS message selector syntax as defined in the Oracle JMS specification. For a UM receiver used with UMP, please see the Native Applications section in UM JMS Guide.</dd></dl>
+<dl class="section user"><dt></dt><dd>Enables UM to pass a message selector string to any receiver. </dd></dl>
+<dl class="section user"><dt></dt><dd>The value must be an expression that conforms to JMS message selector syntax as defined in the Oracle JMS specification.</dd></dl>
 <dl class="section user"><dt></dt><dd><table class="doxtable">
 <tr>
 <td><em>Scope:</em> </td><td>receiver </td></tr>
@@ -229,12 +269,17 @@ message_selector (receiver)&nbsp;&nbsp;<small><a href="#messageselectorreceiver"
  </p>
 <h2><a class="anchor" id="multiplereceivemaximumdatagramscontext"></a>
 multiple_receive_maximum_datagrams (context)&nbsp;&nbsp;<small><a href="#multiplereceivemaximumdatagramscontext">&lt;-</a></small></h2>
-<dl class="section user"><dt></dt><dd>The number of datagrams requested to be read per call to recvmmsg(). Values greater than 1 improve efficiency and reduce latency. Value of 0 means do NOT use recvmmsg(). Only supported for UDP reception: LBT-RM, LBT-RU, MIM, and multicast topic resolution. Only available for Linux 2.6.32 and later. Requires glibc 2.12 or later. This option is ignored for non-Linux platforms.</dd></dl>
+<dl class="section user"><dt></dt><dd>The number of datagrams requested to be read at a time from a UDP-based transport socket. </dd></dl>
+<dl class="section user"><dt></dt><dd>Normally, UM reads one datagram at a time from each socket that has data. This option allows the reading of multiple datagrams in a single read (using recvmmsg()), and processing them in a tight loop. This improves efficiency and can reduce average latency. </dd></dl>
+<dl class="section user"><dt></dt><dd>Value of 0 means do NOT use recvmmsg(). </dd></dl>
+<dl class="section user"><dt></dt><dd>Only supported for LBT-RM and LBT-RU transport types. The multiple_receive_maximum_datagrams option does not apply to <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_DEV_MAIN/29West/lbm/doc/Config/design.tag:../Design/" href="../Design/umfeatures.html#multicastimmediatemessaging">MIM</a> or Topic Resolution. </dd></dl>
+<dl class="section user"><dt></dt><dd>Requires glibc 2.12 or later. This option is ignored for non-Linux platforms. </dd></dl>
+<dl class="section user"><dt></dt><dd>See <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_DEV_MAIN/29West/lbm/doc/Config/design.tag:../Design/" href="../Design/advancedoptimizations.html#receivemultipledatagrams">Receive Multiple Datagrams</a> for more information.</dd></dl>
 <dl class="section user"><dt></dt><dd><table class="doxtable">
 <tr>
 <td><em>Scope:</em> </td><td>context </td></tr>
 <tr>
-<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a5dfd61ade99cd24213125c293b15ef4a">lbm_uint32_t</a></b> </td></tr>
+<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a5dfd61ade99cd24213125c293b15ef4a">lbm_uint32_t</a></b> </td></tr>
 <tr>
 <td><em>Units:</em> </td><td>datagrams </td></tr>
 <tr>
@@ -242,14 +287,15 @@ multiple_receive_maximum_datagrams (context)&nbsp;&nbsp;<small><a href="#multipl
 <tr>
 <td><em>When to Set:</em> </td><td>Can only be set during object initialization.</td></tr>
 <tr>
-<td><em>Version:</em> </td><td>This option was implemented in UM 6.8 </td></tr>
+<td><em>Version:</em> </td><td>This option was implemented in UM 6.8. However, it did not work correctly until UM 6.9. </td></tr>
 </table>
 </dd></dl>
 <p><br />
  </p>
 <h2><a class="anchor" id="operationalmodecontext"></a>
 operational_mode (context)&nbsp;&nbsp;<small><a href="#operationalmodecontext">&lt;-</a></small></h2>
-<dl class="section user"><dt></dt><dd>The mode in which UM operates to process events. Refer to <a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/design.tag:../Design/" href="../Design/architecture.html#embeddedmode">Embedded Mode</a> in the Ultra Messaging Concepts Guide for additional information.</dd></dl>
+<dl class="section user"><dt></dt><dd>The mode in which UM's context thread operates to process events. </dd></dl>
+<dl class="section user"><dt></dt><dd>See <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_DEV_MAIN/29West/lbm/doc/Config/design.tag:../Design/" href="../Design/architecture.html#embeddedmode">Embedded Mode</a> and <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_DEV_MAIN/29West/lbm/doc/Config/design.tag:../Design/" href="../Design/architecture.html#sequentialmode">Sequential Mode</a> for more information.</dd></dl>
 <dl class="section user"><dt></dt><dd><table class="doxtable">
 <tr>
 <td><em>Scope:</em> </td><td>context </td></tr>
@@ -266,14 +312,15 @@ operational_mode (context)&nbsp;&nbsp;<small><a href="#operationalmodecontext">&
 <tr>
 <td>"embedded" </td><td>LBM_CTX_ATTR_OP_EMBEDDED </td><td>A thread is spawned within UM to handle processing of events (timers and socket events). <b>Default for all.</b> </td></tr>
 <tr>
-<td>"sequential" </td><td>LBM_CTX_ATTR_OP_SEQUENTIAL </td><td>The application is responsible for calling <a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#ad9416b1f0b474b5d4c4f39bb3c4bda77">lbm_context_process_events()</a> to process events. Sequential mode does not support Multi-Transport Threads. </td></tr>
+<td>"sequential" </td><td>LBM_CTX_ATTR_OP_SEQUENTIAL </td><td>The application is responsible for calling <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#ad9416b1f0b474b5d4c4f39bb3c4bda77">lbm_context_process_events()</a> to process events. Sequential mode does not support Multi-Transport Threads. </td></tr>
 </table>
 </dd></dl>
 <p><br />
  </p>
 <h2><a class="anchor" id="operationalmodexsp"></a>
 operational_mode (xsp)&nbsp;&nbsp;<small><a href="#operationalmodexsp">&lt;-</a></small></h2>
-<dl class="section user"><dt></dt><dd>The mode in which UM operates to process events. Refer to <a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/design.tag:../Design/" href="../Design/architecture.html#embeddedmode">Embedded Mode</a> in the Ultra Messaging Concepts Guide for additional information.</dd></dl>
+<dl class="section user"><dt></dt><dd>The mode in which UM operates to process events. </dd></dl>
+<dl class="section user"><dt></dt><dd>Refer to <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_DEV_MAIN/29West/lbm/doc/Config/design.tag:../Design/" href="../Design/architecture.html#embeddedmode">Embedded Mode</a> for additional information.</dd></dl>
 <dl class="section user"><dt></dt><dd><table class="doxtable">
 <tr>
 <td><em>Scope:</em> </td><td>xsp </td></tr>
@@ -281,6 +328,8 @@ operational_mode (xsp)&nbsp;&nbsp;<small><a href="#operationalmodexsp">&lt;-</a>
 <td><em>Type:</em> </td><td><b>int</b> </td></tr>
 <tr>
 <td><em>When to Set:</em> </td><td>Can only be set during object initialization.</td></tr>
+<tr>
+<td><em>Version:</em> </td><td>This option was implemented in UM 6.11 </td></tr>
 </table>
 <br />
 </dd></dl>
@@ -290,7 +339,7 @@ operational_mode (xsp)&nbsp;&nbsp;<small><a href="#operationalmodexsp">&lt;-</a>
 <tr>
 <td>"embedded" </td><td>LBM_CTX_ATTR_OP_EMBEDDED </td><td>A thread is spawned within UM to handle processing of events (timers and socket events). <b>Default for all.</b> </td></tr>
 <tr>
-<td>"sequential" </td><td>LBM_CTX_ATTR_OP_SEQUENTIAL </td><td><p class="starttd">The application is responsible for calling <a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a6bd865fcdeee4e0ec2bb31748ee76164">lbm_xsp_process_events()</a> to process events.</p>
+<td>"sequential" </td><td>LBM_CTX_ATTR_OP_SEQUENTIAL </td><td><p class="starttd">The application is responsible for calling <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a6bd865fcdeee4e0ec2bb31748ee76164">lbm_xsp_process_events()</a> to process events.</p>
 <p class="endtd"></p>
 </td></tr>
 </table>
@@ -299,8 +348,11 @@ operational_mode (xsp)&nbsp;&nbsp;<small><a href="#operationalmodexsp">&lt;-</a>
  </p>
 <h2><a class="anchor" id="ordereddeliveryreceiver"></a>
 ordered_delivery (receiver)&nbsp;&nbsp;<small><a href="#ordereddeliveryreceiver">&lt;-</a></small></h2>
-<dl class="section user"><dt></dt><dd>For LBT-RM, LBT-RU, TCP-LB or LBT-IPC transport sessions only. (This option also applies to TCP when using Late Join because the Late Join messages are not part of the TCP message stream.) Indicates whether or not the topic should have its data delivered in order and reassembled. The default value guarantees ordering and reassembly of large messages. Reassembly of large messages is optional. Changing this option from the default value to a value of 0 (zero) results in messages being delivered as soon as they arrive. Value -1 allows arrival order delivery after the reassembly of large messages. See also <a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/design.tag:../Design/" href="../Design/architecture.html#ordereddelivery">Ordered Delivery</a> in the Ultra Messaging Concepts Guide for more information about large message fragmentation and reassembly. </dd></dl>
-<dl class="section user"><dt></dt><dd>Note that ordering only applies to a specific topic from a single publisher. UM does not ensure ordering across topics, or on a single topic across different publishers. See <a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/design.tag:../Design/" href="../Design/fundamentalconcepts.html#messageordering">Message Ordering</a> for more information.</dd></dl>
+<dl class="section user"><dt></dt><dd>Indicates whether or not the topic should have its data delivered in order and reassembled. </dd></dl>
+<dl class="section user"><dt></dt><dd>For LBT-RM, LBT-RU, TCP-LB or LBT-IPC transport sessions only. (This option also applies to TCP when using Late Join because the Late Join messages are not part of the TCP message stream.) </dd></dl>
+<dl class="section user"><dt></dt><dd>Changing this option from the default value to a value of 0 (zero) results in message fragments being delivered as soon as they fully arrive. Value -1 allows arrival order delivery after the reassembly of large messages. </dd></dl>
+<dl class="section user"><dt></dt><dd>Note that ordering only applies to a specific topic from a single publisher. UM does not ensure ordering across topics, or on a single topic across different publishers. </dd></dl>
+<dl class="section user"><dt></dt><dd>See <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_DEV_MAIN/29West/lbm/doc/Config/design.tag:../Design/" href="../Design/fundamentalconcepts.html#messageordering">Message Ordering</a> and <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_DEV_MAIN/29West/lbm/doc/Config/design.tag:../Design/" href="../Design/architecture.html#messagefragmentationandreassembly">Message Fragmentation and Reassembly</a> for more information.</dd></dl>
 <dl class="section user"><dt></dt><dd><table class="doxtable">
 <tr>
 <td><em>Scope:</em> </td><td>receiver </td></tr>
@@ -317,11 +369,13 @@ ordered_delivery (receiver)&nbsp;&nbsp;<small><a href="#ordereddeliveryreceiver"
 <tr>
 <td>"1" </td><td>1 </td><td>UM delivers topic messages to a receiver in-order and reassembles large messages. <b>Default for all.</b> </td></tr>
 <tr>
-<td>"0" </td><td>0 </td><td><p class="starttd">UM delivers topic messages to a receiver as they arrive and may be out of order. Duplicate delivery is possible. UM delivers large messages as individual fragments of less than the maximum datagram size for the transport in use.</p>
+<td>"-1" </td><td>-1 </td><td><p class="starttd">UM delivers topic messages to a receiver as they arrive and may be out of order. Duplicate delivery is possible. However, UM reassembles large messages. Your application can use the <b><code>sequence_number</code></b> field of <b><code>lbm_msg_t</code></b> objects to order or discard messages.</p>
 <p class="endtd"></p>
 </td></tr>
 <tr>
-<td>"-1" </td><td>-1 </td><td><p class="starttd">UM delivers topic messages to a receiver as they arrive and may be out of order. Duplicate delivery is possible. However, UM reassembles large messages. Your application can use the <b><code>sequence_number</code></b> field of <b><code>lbm_msg_t</code></b> objects to order or discard messages.</p>
+<td>"0" </td><td>0 </td><td><p class="starttd">UM delivers topic messages to a receiver as they arrive and may be out of order.</p>
+<p>WARNING: This mode of operation is deprecated and may be removed in a future UM version. The user is advised to use mode -1.</p>
+<p>UM delivers large messages as individual fragments of less than the maximum datagram size for the transport in use. Duplicate delivery is possible. This mode is incompatible with <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_DEV_MAIN/29West/lbm/doc/Config/design.tag:../Design/" href="../Design/umfeatures.html#messageproperties">Message Properties</a>.</p>
 <p class="endtd"></p>
 </td></tr>
 </table>
@@ -330,7 +384,8 @@ ordered_delivery (receiver)&nbsp;&nbsp;<small><a href="#ordereddeliveryreceiver"
  </p>
 <h2><a class="anchor" id="receivercallbackservicetimeenabledcontext"></a>
 receiver_callback_service_time_enabled (context)&nbsp;&nbsp;<small><a href="#receivercallbackservicetimeenabledcontext">&lt;-</a></small></h2>
-<dl class="section user"><dt></dt><dd>Indicates if UM collects receiver callback statistics, which provide the maximum, mean and minimum time in microseconds required to complete wildcard, hot-failover, and regular receiver callbacks.</dd></dl>
+<dl class="section user"><dt></dt><dd>Indicates if UM collects receiver callback statistics, which provide the maximum, mean and minimum time in microseconds required to complete wildcard, hot-failover, and regular receiver callbacks. </dd></dl>
+<dl class="section user"><dt></dt><dd>Enabling this function slightly decreases the efficiency of the receive code path, but provides operators with greater visibility of application behavior.</dd></dl>
 <dl class="section user"><dt></dt><dd><table class="doxtable">
 <tr>
 <td><em>Scope:</em> </td><td>context </td></tr>
@@ -353,7 +408,7 @@ receiver_callback_service_time_enabled (context)&nbsp;&nbsp;<small><a href="#rec
 <p class="endtd"></p>
 </td></tr>
 <tr>
-<td>0 </td><td>UM collects receiver callback statistics. <b>Default for all.</b> </td></tr>
+<td>0 </td><td>UM does NOT collects receiver callback statistics. <b>Default for all.</b> </td></tr>
 </table>
 </dd></dl>
 <p><br />
@@ -362,12 +417,13 @@ receiver_callback_service_time_enabled (context)&nbsp;&nbsp;<small><a href="#rec
 resolver_source_notification_function (context)&nbsp;&nbsp;<small><a href="#resolversourcenotificationfunctioncontext">&lt;-</a></small></h2>
 <dl class="section user"><dt></dt><dd>Application callback function (and associated client data pointer) that is called when a new source is discovered for any topic, even if the application does not have a matching receiver. </dd></dl>
 <dl class="section user"><dt></dt><dd>Contrast this with <a class="el" href="grpdeliverycontrol.html#sourcenotificationfunctionreceiver">source_notification_function (receiver)</a>. </dd></dl>
-<dl class="section user"><dt></dt><dd>This callback is called by the context thread and can not use an event queue. Therefore the callback function used should not block or it will delay reception of latency-sensitive messages.</dd></dl>
+<dl class="section user"><dt></dt><dd>This callback is called by the context thread and can not use an event queue. Therefore the callback function used should not block or it will delay reception of latency-sensitive messages. </dd></dl>
+<dl class="section user"><dt></dt><dd>If this feature is used with a context that is connected to an SRS for Topic Resolution, <a class="el" href="grptcpbasedresolveroperation.html#resolverserviceinterestmodecontext">resolver_service_interest_mode (context)</a> may need to be set to "flood". See <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_DEV_MAIN/29West/lbm/doc/Config/design.tag:../Design/" href="../Design/topicresolutiondescription.html#tcpbasedtrinterest">TCP-Based TR Interest</a>.</dd></dl>
 <dl class="section user"><dt></dt><dd><table class="doxtable">
 <tr>
 <td><em>Scope:</em> </td><td>context </td></tr>
 <tr>
-<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a6fd5cb88fa3780abcb236951d236ffce">lbm_src_notify_func_t</a></b> </td></tr>
+<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a6fd5cb88fa3780abcb236951d236ffce">lbm_src_notify_func_t</a></b> </td></tr>
 <tr>
 <td><em>Default value:</em> </td><td>NULL </td></tr>
 <tr>
@@ -380,12 +436,13 @@ resolver_source_notification_function (context)&nbsp;&nbsp;<small><a href="#reso
  </p>
 <h2><a class="anchor" id="sourceeventfunctioncontext"></a>
 source_event_function (context)&nbsp;&nbsp;<small><a href="#sourceeventfunctioncontext">&lt;-</a></small></h2>
-<dl class="section user"><dt></dt><dd>Callback function (and associated client data pointer) that is called when a context source event (such as a multicast immediate mode source wakeup event) occurs. This callback may be called inline or from an event queue, if one is given. If called inline, the callback function used should not block or it will block the context thread processing.</dd></dl>
+<dl class="section user"><dt></dt><dd>Callback function (and associated client data pointer) that is called when a context source event (such as a multicast immediate mode source wakeup event) occurs. </dd></dl>
+<dl class="section user"><dt></dt><dd>This callback may be called inline or from an event queue, if one is given. If called inline, the callback function used should not block or it will block the context thread processing.</dd></dl>
 <dl class="section user"><dt></dt><dd><table class="doxtable">
 <tr>
 <td><em>Scope:</em> </td><td>context </td></tr>
 <tr>
-<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a9b7832bd627106205ba58ac151917b18">lbm_context_src_event_func_t</a></b> </td></tr>
+<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a9b7832bd627106205ba58ac151917b18">lbm_context_src_event_func_t</a></b> </td></tr>
 <tr>
 <td><em>Default value:</em> </td><td>NULL </td></tr>
 <tr>
@@ -400,7 +457,8 @@ source_event_function (context)&nbsp;&nbsp;<small><a href="#sourceeventfunctionc
  </p>
 <h2><a class="anchor" id="sourceincludestopicindexcontext"></a>
 source_includes_topic_index (context)&nbsp;&nbsp;<small><a href="#sourceincludestopicindexcontext">&lt;-</a></small></h2>
-<dl class="section user"><dt></dt><dd>Determines whether the topic index is included in the source string generated for messages and new source notifications.</dd></dl>
+<dl class="section user"><dt></dt><dd>Determines whether the topic index is included in the source string generated for messages and new source notifications. </dd></dl>
+<dl class="section user"><dt></dt><dd>Users should not disable this.</dd></dl>
 <dl class="section user"><dt></dt><dd><table class="doxtable">
 <tr>
 <td><em>Scope:</em> </td><td>context </td></tr>
@@ -430,9 +488,9 @@ source_includes_topic_index (context)&nbsp;&nbsp;<small><a href="#sourceincludes
 transport (source)&nbsp;&nbsp;<small><a href="#transportsource">&lt;-</a></small></h2>
 <dl class="section user"><dt></dt><dd>The transport type to be used for created sources. </dd></dl>
 <dl class="section user"><dt></dt><dd></dd></dl>
-<dl class="section note"><dt>Note</dt><dd>With <a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/design.tag:../Design/" href="../Design/advancedoptimizations.html#smartsources">Smart Sources</a>, only LBT-RM and LBT-RU are supported. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>With <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_DEV_MAIN/29West/lbm/doc/Config/design.tag:../Design/" href="../Design/advancedoptimizations.html#smartsources">Smart Sources</a>, only LBT-RM and LBT-RU are supported. </dd></dl>
 <dl class="section user"><dt></dt><dd></dd></dl>
-<dl class="section note"><dt>Note</dt><dd>With <a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/design.tag:../Design/" href="../Design/umfeatures.html#transportservicesproviderxsp">Transport Services Provider (XSP)</a>, only LBT-RM, LBT-RU, and TCP are supported.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>With <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_DEV_MAIN/29West/lbm/doc/Config/design.tag:../Design/" href="../Design/umfeatures.html#transportservicesproviderxsp">Transport Services Provider (XSP)</a>, only LBT-RM, LBT-RU, and TCP are supported.</dd></dl>
 <dl class="section user"><dt></dt><dd><table class="doxtable">
 <tr>
 <td><em>Scope:</em> </td><td>source </td></tr>
@@ -455,7 +513,7 @@ transport (source)&nbsp;&nbsp;<small><a href="#transportsource">&lt;-</a></small
 <tr>
 <td>"lbtipc", "lbt-ipc" </td><td>LBM_SRC_TOPIC_ATTR_TRANSPORT_LBTIPC </td><td>Inter-Process Communication between processes on the same host using a shared memory area. </td></tr>
 <tr>
-<td>"lbtsmx", "lbt-smx" </td><td>LBM_SRC_TOPIC_ATTR_TRANSPORT_LBTSMX </td><td><p class="starttd">Shared Memory Acceleration. Ultra-low-latency Inter-Process Communication transport between processes on the same host using a shared memory area. Restrictions apply. See Concepts Guide for details.</p>
+<td>"lbtsmx", "lbt-smx" </td><td>LBM_SRC_TOPIC_ATTR_TRANSPORT_LBTSMX </td><td><p class="starttd">Shared Memory Acceleration. Ultra-low-latency Inter-Process Communication transport between processes on the same host using a shared memory area. Restrictions apply.</p>
 <p class="endtd"></p>
 </td></tr>
 <tr>
@@ -468,7 +526,9 @@ transport (source)&nbsp;&nbsp;<small><a href="#transportsource">&lt;-</a></small
  </p>
 <h2><a class="anchor" id="transportdemuxtableszreceiver"></a>
 transport_demux_tablesz (receiver)&nbsp;&nbsp;<small><a href="#transportdemuxtableszreceiver">&lt;-</a></small></h2>
-<dl class="section user"><dt></dt><dd>Specifies the size of the table used for storing receiver delivery controllers used by UM for message delivery. Must be a power of two (1, 2, 4, 8, 16, etc.). If not a power of two, UM generates a log warning and uses the next highest power of two. For most use cases with low to moderate numbers of topics per transport session, the default suffices. For large numbers of topics and in cases where the lowest latency is desired, set the option to the next highest power of two for the number of topics expected on the transport session.</dd></dl>
+<dl class="section user"><dt></dt><dd>Specifies the size of the table used for storing receiver delivery controllers used by UM for message delivery. </dd></dl>
+<dl class="section user"><dt></dt><dd>Must be a power of two (1, 2, 4, 8, 16, etc.). If not a power of two, UM generates a log warning and uses the next highest power of two. For most use cases with low to moderate numbers of topics per transport session, the default suffices. For large numbers of topics and in cases where the lowest latency is desired, set the option to the next higher power of two than the number of topics expected on the transport session. </dd></dl>
+<dl class="section user"><dt></dt><dd>See <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_DEV_MAIN/29West/lbm/doc/Config/design.tag:../Design/" href="../Design/advancedoptimizations.html#transportdemultiplexertablesize">Transport Demultiplexer Table Size</a> for more information.</dd></dl>
 <dl class="section user"><dt></dt><dd><table class="doxtable">
 <tr>
 <td><em>Scope:</em> </td><td>receiver </td></tr>
@@ -493,20 +553,24 @@ transport_mapping_function (context)&nbsp;&nbsp;<small><a href="#transportmappin
 <tr>
 <td><em>Scope:</em> </td><td>context </td></tr>
 <tr>
-<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a90dde1ea00f12038cff7195c76d47a46">lbm_transport_mapping_func_t</a></b> </td></tr>
+<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a90dde1ea00f12038cff7195c76d47a46">lbm_transport_mapping_func_t</a></b> </td></tr>
 <tr>
 <td><em>Default value:</em> </td><td>NULL </td></tr>
 <tr>
 <td><em>When to Set:</em> </td><td>Can only be set during object initialization.</td></tr>
 <tr>
 <td><em>Config File:</em> </td><td>Cannot be set from an UM configuration file. </td></tr>
+<tr>
+<td><em>Version:</em> </td><td>This option was implemented in UM 6.11 </td></tr>
 </table>
 </dd></dl>
 <p><br />
  </p>
 <h2><a class="anchor" id="transportsessionmultiplesendingthreadscontext"></a>
 transport_session_multiple_sending_threads (context)&nbsp;&nbsp;<small><a href="#transportsessionmultiplesendingthreadscontext">&lt;-</a></small></h2>
-<dl class="section user"><dt></dt><dd>Flag that indicates the application intends to use multiple sending threads per transport session.</dd></dl>
+<dl class="section user"><dt></dt><dd>Flag that indicates the application intends to use multiple sending threads per transport session. </dd></dl>
+<dl class="section user"><dt></dt><dd>Disabling this flag can improve send efficiency but renders the send functions thread-unsafe. </dd></dl>
+<dl class="section user"><dt></dt><dd>For the most-efficient sending method, see <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_DEV_MAIN/29West/lbm/doc/Config/design.tag:../Design/" href="../Design/advancedoptimizations.html#smartsources">Smart Sources</a>.</dd></dl>
 <dl class="section user"><dt></dt><dd><table class="doxtable">
 <tr>
 <td><em>Scope:</em> </td><td>context </td></tr>
@@ -534,7 +598,7 @@ transport_session_multiple_sending_threads (context)&nbsp;&nbsp;<small><a href="
 transport_session_single_receiving_thread (context)&nbsp;&nbsp;<small><a href="#transportsessionsinglereceivingthreadcontext">&lt;-</a></small></h2>
 <dl class="section user"><dt></dt><dd>Flag that indicates the application intends to use only a single thread for receiving. </dd></dl>
 <dl class="section user"><dt></dt><dd>This improves message reception latency and outliers by converting certain thread-safe operations to more-efficient thread-unsafe operations. For example, certain bus-locked operations (e.g. atomic increment) are replaced by non-bus-locked equivalents (e.g. non-atomic increment). </dd></dl>
-<dl class="section user"><dt></dt><dd>See <a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/design.tag:../Design/" href="../Design/advancedoptimizations.html#singlereceivingthread">Single Receiving Thread</a> for more information and restrictions.</dd></dl>
+<dl class="section user"><dt></dt><dd>See <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_DEV_MAIN/29West/lbm/doc/Config/design.tag:../Design/" href="../Design/advancedoptimizations.html#singlereceivingthread">Single Receiving Thread</a> for more information and restrictions.</dd></dl>
 <dl class="section user"><dt></dt><dd><table class="doxtable">
 <tr>
 <td><em>Scope:</em> </td><td>context </td></tr>
@@ -542,6 +606,8 @@ transport_session_single_receiving_thread (context)&nbsp;&nbsp;<small><a href="#
 <td><em>Type:</em> </td><td><b>int</b> </td></tr>
 <tr>
 <td><em>When to Set:</em> </td><td>Can only be set during object initialization.</td></tr>
+<tr>
+<td><em>Version:</em> </td><td>This option was implemented in UM 6.12 </td></tr>
 </table>
 <br />
 </dd></dl>
@@ -560,7 +626,9 @@ transport_session_single_receiving_thread (context)&nbsp;&nbsp;<small><a href="#
  </p>
 <h2><a class="anchor" id="transportsourcesidefilteringbehaviorsource"></a>
 transport_source_side_filtering_behavior (source)&nbsp;&nbsp;<small><a href="#transportsourcesidefilteringbehaviorsource">&lt;-</a></small></h2>
-<dl class="section user"><dt></dt><dd>The filtering behavior desired when TCP and LBT-RU clients are connected. Any other value besides none requires that the clients send unicast messages to the source. These control messages are sent to the TCP UIM port (also known as the "request port") of the senders context and processed internally. This option affects the transport session underlying the source rather than the source itself. Refer to <a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/design.tag:../Design/" href="../Design/fundamentalconcepts.html#sourceobject">Source Object</a> in the Ultra Messaging Concepts Guide for additional information.</dd></dl>
+<dl class="section user"><dt></dt><dd>Enable and set the behavior for UM sources to filter out topics prior to sending to clients. </dd></dl>
+<dl class="section user"><dt></dt><dd>This option is not applicable for multicast-based sources (LBT-RM). These control messages are sent to the TCP UIM port (also known as the "request port") of the senders context and processed internally. </dd></dl>
+<dl class="section user"><dt></dt><dd>This option affects the transport session underlying the source rather than the source itself. See <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_DEV_MAIN/29West/lbm/doc/Config/design.tag:../Design/" href="../Design/umobjects.html#sourceobject">Source Object</a> for additional information.</dd></dl>
 <dl class="section user"><dt></dt><dd><table class="doxtable">
 <tr>
 <td><em>Scope:</em> </td><td>source </td></tr>
@@ -579,7 +647,7 @@ transport_source_side_filtering_behavior (source)&nbsp;&nbsp;<small><a href="#tr
 <tr>
 <td>"inclusion" </td><td>LBM_SRC_TOPIC_ATTR_SSF_INCLUSION </td><td>The source sends only that data to a client that the client specifically requests. </td></tr>
 <tr>
-<td>"ulb" </td><td>LBM_SRC_TOPIC_ATTR_SSF_ULB </td><td><p class="starttd">The ULB source sends control and data only to the ULB client that the source has specifically assigned for a given message. See <a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/umq.tag:../UMQ/" href="../UMQ/ultraloadbalancingulb.html#ulbperformance">ULB Performance</a> for more information.</p>
+<td>"ulb" </td><td>LBM_SRC_TOPIC_ATTR_SSF_ULB </td><td><p class="starttd">The ULB source sends control and data only to the ULB client that the source has specifically assigned for a given message. See <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_DEV_MAIN/29West/lbm/doc/Config/umq.tag:../UMQ/" href="../UMQ/ultraloadbalancingulb.html#ulbperformance">ULB Performance</a> for more information.</p>
 <p class="endtd"></p>
 </td></tr>
 </table>
@@ -588,12 +656,15 @@ transport_source_side_filtering_behavior (source)&nbsp;&nbsp;<small><a href="#tr
  </p>
 <h2><a class="anchor" id="transporttopicsequencenumberinfoactivethresholdsource"></a>
 transport_topic_sequence_number_info_active_threshold (source)&nbsp;&nbsp;<small><a href="#transporttopicsequencenumberinfoactivethresholdsource">&lt;-</a></small></h2>
-<dl class="section user"><dt></dt><dd>Duration in seconds that an inactive source sends contiguous Topic Sequence Number Info (TSNI) messages. (Those TSNIs are sent at an interval defined by <a class="el" href="grpmajoroptions.html#transporttopicsequencenumberinfointervalsource">transport_topic_sequence_number_info_interval (source)</a>.) A value of 0 indicates that sources continue sending TSNIs until data messages resume, with no timeout. See also <a class="el" href="interrelatedconfigurationoptions.html">Interrelated Configuration Options</a>.</dd></dl>
+<dl class="section user"><dt></dt><dd>Duration in seconds that an inactive source sends contiguous Topic Sequence Number Info (TSNI) messages. </dd></dl>
+<dl class="section user"><dt></dt><dd>A value of 0 indicates that sources continue sending TSNIs until data messages resume, with no timeout. </dd></dl>
+<dl class="section user"><dt></dt><dd>TSNIs are sent at an interval defined by <a class="el" href="grpmajoroptions.html#transporttopicsequencenumberinfointervalsource">transport_topic_sequence_number_info_interval (source)</a>. </dd></dl>
+<dl class="section user"><dt></dt><dd>See also <a class="el" href="interrelatedconfigurationoptions.html">Interrelated Configuration Options</a>.</dd></dl>
 <dl class="section user"><dt></dt><dd><table class="doxtable">
 <tr>
 <td><em>Scope:</em> </td><td>source </td></tr>
 <tr>
-<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a72438fab15bf500af58d2a8a521e470d">lbm_ulong_t</a></b> </td></tr>
+<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a72438fab15bf500af58d2a8a521e470d">lbm_ulong_t</a></b> </td></tr>
 <tr>
 <td><em>Units:</em> </td><td>seconds </td></tr>
 <tr>
@@ -608,12 +679,14 @@ transport_topic_sequence_number_info_active_threshold (source)&nbsp;&nbsp;<small
  </p>
 <h2><a class="anchor" id="transporttopicsequencenumberinfointervalsource"></a>
 transport_topic_sequence_number_info_interval (source)&nbsp;&nbsp;<small><a href="#transporttopicsequencenumberinfointervalsource">&lt;-</a></small></h2>
-<dl class="section user"><dt></dt><dd>The interval between Topic Sequence Number Info (TSNI) messages that a source sends. TSNI messages are enabled on all transports except LBT-SMX, and they carry the topic sequence number of the latest message sent by the source. The interval is also a source inactivity threshold. In other words, a source does not send TSNIs during normal data transmission, but once the source is inactive for as long as this interval, it starts sending TSNI messages. A value of 0 turns off TSNI messages for the source. See also <a class="el" href="interrelatedconfigurationoptions.html">Interrelated Configuration Options</a>.</dd></dl>
+<dl class="section user"><dt></dt><dd>The interval between Topic Sequence Number Info (TSNI) messages that a source sends. </dd></dl>
+<dl class="section user"><dt></dt><dd>TSNI messages are enabled on all transports except LBT-SMX, and they carry the topic sequence number of the latest message sent by the source. The interval is also a source inactivity threshold. In other words, a source does not send TSNIs during normal data transmission, but once the source is inactive for as long as this interval, it starts sending TSNI messages. A value of 0 turns off TSNI messages for the source. </dd></dl>
+<dl class="section user"><dt></dt><dd>See also <a class="el" href="interrelatedconfigurationoptions.html">Interrelated Configuration Options</a>.</dd></dl>
 <dl class="section user"><dt></dt><dd><table class="doxtable">
 <tr>
 <td><em>Scope:</em> </td><td>source </td></tr>
 <tr>
-<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a72438fab15bf500af58d2a8a521e470d">lbm_ulong_t</a></b> </td></tr>
+<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a72438fab15bf500af58d2a8a521e470d">lbm_ulong_t</a></b> </td></tr>
 <tr>
 <td><em>Units:</em> </td><td>milliseconds </td></tr>
 <tr>
@@ -628,12 +701,13 @@ transport_topic_sequence_number_info_interval (source)&nbsp;&nbsp;<small><a href
  </p>
 <h2><a class="anchor" id="transporttopicsequencenumberinforequestintervalreceiver"></a>
 transport_topic_sequence_number_info_request_interval (receiver)&nbsp;&nbsp;<small><a href="#transporttopicsequencenumberinforequestintervalreceiver">&lt;-</a></small></h2>
-<dl class="section user"><dt></dt><dd>The interval at which the receiver requests a Topic Sequence Number Information Record (TSNI) from the source. Controlling these requests helps reduce receiver start-up traffic on your network.</dd></dl>
+<dl class="section user"><dt></dt><dd>The interval at which the receiver requests a Topic Sequence Number Information Record (TSNI) from the source. </dd></dl>
+<dl class="section user"><dt></dt><dd>Controlling these requests helps reduce receiver start-up traffic on your network.</dd></dl>
 <dl class="section user"><dt></dt><dd><table class="doxtable">
 <tr>
 <td><em>Scope:</em> </td><td>receiver </td></tr>
 <tr>
-<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a72438fab15bf500af58d2a8a521e470d">lbm_ulong_t</a></b> </td></tr>
+<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a72438fab15bf500af58d2a8a521e470d">lbm_ulong_t</a></b> </td></tr>
 <tr>
 <td><em>Units:</em> </td><td>milliseconds </td></tr>
 <tr>
@@ -648,12 +722,13 @@ transport_topic_sequence_number_info_request_interval (receiver)&nbsp;&nbsp;<sma
  </p>
 <h2><a class="anchor" id="transporttopicsequencenumberinforequestmaximumreceiver"></a>
 transport_topic_sequence_number_info_request_maximum (receiver)&nbsp;&nbsp;<small><a href="#transporttopicsequencenumberinforequestmaximumreceiver">&lt;-</a></small></h2>
-<dl class="section user"><dt></dt><dd>The maximum number of requests the receiver issues for a Topic Sequence Number Information Record (TSNI) from the source. If the receiver has not received an TSNI after this number of requests, it stops requesting.</dd></dl>
+<dl class="section user"><dt></dt><dd>The maximum number of requests the receiver issues for a Topic Sequence Number Information Record (TSNI) from the source. </dd></dl>
+<dl class="section user"><dt></dt><dd>If the receiver has not received an TSNI after this number of requests, it stops requesting.</dd></dl>
 <dl class="section user"><dt></dt><dd><table class="doxtable">
 <tr>
 <td><em>Scope:</em> </td><td>receiver </td></tr>
 <tr>
-<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a72438fab15bf500af58d2a8a521e470d">lbm_ulong_t</a></b> </td></tr>
+<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a72438fab15bf500af58d2a8a521e470d">lbm_ulong_t</a></b> </td></tr>
 <tr>
 <td><em>Default value:</em> </td><td>60 </td></tr>
 <tr>
@@ -666,7 +741,8 @@ transport_topic_sequence_number_info_request_maximum (receiver)&nbsp;&nbsp;<smal
  </p>
 <h2><a class="anchor" id="useextendedreclaimnotificationssource"></a>
 use_extended_reclaim_notifications (source)&nbsp;&nbsp;<small><a href="#useextendedreclaimnotificationssource">&lt;-</a></small></h2>
-<dl class="section user"><dt></dt><dd>Specifies which reclaim notification your application receives. The expanded notification, LBM_SRC_EVENT_UME_MESSAGE_RECLAIMED_EX, contains a flag, LBM_SRC_EVENT_UME_MESSAGE_RECLAIMED_EX_FLAG_FORCED that UMP sets if the reclamation is a forced reclaim.</dd></dl>
+<dl class="section user"><dt></dt><dd>Specifies which reclaim notification your application receives. </dd></dl>
+<dl class="section user"><dt></dt><dd>The older <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#ad1821a408b0feaf8c28893ee79816dab">LBM_SRC_EVENT_UME_MESSAGE_RECLAIMED</a> source event delivered the structure <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#acedfa758947867f55085a48150f9a17d">lbm_src_event_ume_ack_info_t</a>. The newer <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a91689d8826be0160f64358ccfcff2877">LBM_SRC_EVENT_UME_MESSAGE_RECLAIMED_EX</a> source event delivers the structure <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a7b945939b994bf1e7163d55b2256f3fb">lbm_src_event_ume_ack_ex_info_t</a>, which contains additional information.</dd></dl>
 <dl class="section user"><dt></dt><dd><table class="doxtable">
 <tr>
 <td><em>Scope:</em> </td><td>source </td></tr>
@@ -685,7 +761,7 @@ use_extended_reclaim_notifications (source)&nbsp;&nbsp;<small><a href="#useexten
 <tr>
 <td>1 </td><td>Indicates your application receives the expanded reclaim notification. <b>Default for all.</b> </td></tr>
 <tr>
-<td>0 </td><td><p class="starttd">Indicates your application receives the standard reclaim notification that is identical to the expanded notification but without the "Forced" flag.</p>
+<td>0 </td><td><p class="starttd">Indicates your application receives the older reclaim notification.</p>
 <p class="endtd"></p>
 </td></tr>
 </table>
@@ -701,13 +777,15 @@ zero_transports_function (xsp)&nbsp;&nbsp;<small><a href="#zerotransportsfunctio
 <tr>
 <td><em>Scope:</em> </td><td>xsp </td></tr>
 <tr>
-<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a746a181601f6c1c81895dcdf67de3da9">lbm_xsp_zero_transports_func_t</a></b> </td></tr>
+<td><em>Type:</em> </td><td><b><a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_DEV_MAIN/29West/lbm/doc/Config/api.tag:../API/" href="../API/lbm_8h.html#a746a181601f6c1c81895dcdf67de3da9">lbm_xsp_zero_transports_func_t</a></b> </td></tr>
 <tr>
 <td><em>Default value:</em> </td><td>NULL </td></tr>
 <tr>
 <td><em>When to Set:</em> </td><td>Can only be set during object initialization.</td></tr>
 <tr>
 <td><em>Config File:</em> </td><td>Cannot be set from an UM configuration file. </td></tr>
+<tr>
+<td><em>Version:</em> </td><td>This option was implemented in UM 6.11 </td></tr>
 </table>
 </dd></dl>
 </div></div><!-- contents -->

@@ -6,14 +6,38 @@
 <div class="contents">
 <div class="textblock">
 <img src="infa_logo.png" width="400" height="138" alt="Informatica"/><br/><br/>
-<big><b>Ultra Messaging</b></big> <small>(Version 6.12)</small><br/>
+<big><b>Ultra Messaging</b></big> <small>(Version 6.14)</small><br/>
 <br/><br/><br/>
 <center class="mytitle">C Ultra Messaging Examples</center>
-<center>Copyright (C) 2004-2019, Informatica Corporation.  All Rights Reserved.</center>
 <br/><br/><br/>
-<p>The files in this directory are the source for the performance measurement
-binaries.  If you haven't done so already, please start with the example
-programs found in the UM Quick Start Guide.
+<b>&copy; Copyright (C) 2004-2020, Informatica LLC. All Rights Reserved.</b>
+<p>This software and documentation are provided only under a separate license
+agreement containing restrictions on use and disclosure.
+No part of this document may be reproduced or transmitted in any form,
+by any means (electronic, photocopying, recording or otherwise)
+without prior consent of Informatica LLC.
+
+<p>A current list of Informatica trademarks is available on the web at
+<a href="https://www.informatica.com/trademarks.html">https://www.informatica.com/trademarks.html</a>.
+
+<p>Portions of this software and/or documentation are subject to copyright
+held by third parties.
+Required third party notices are included with the product.
+
+<p>This software is protected by patents as detailed at
+<a href="https://www.informatica.com/legal/patents.html">https://www.informatica.com/legal/patents.html</a>.
+
+<p>The information in this documentation is subject to change without notice.
+If you find any problems in this documentation, please report them to us in
+writing at Informatica LLC 2100 Seaport Blvd. Redwood City, CA 94063.
+
+<p>Informatica products are warranted according to the terms and conditions
+of the agreements under which they are provided.
+<br>INFORMATICA LLC PROVIDES THE INFORMATION IN THIS DOCUMENT "AS IS" WITHOUT
+WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING WITHOUT ANY WARRANTIES
+OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND ANY WARRANTY OR
+CONDITION OF NON-INFRINGEMENT.
+<hr><h3>Usage</h3>
 
 <p>Most users are not interested in compiling these sources in their current
 form, but instead use them for "spare parts", extracting fragments of code
@@ -38,8 +62,7 @@ Valid values for PRODUCT are UMQ, UMP, UMS.
 <br>For example:
 <br><code>&nbsp;&nbsp;&nbsp;&nbsp;make -f Makefile.unix TARGET_PLATFORM=Linux-glibc-2.17-x86_64.sh</code>
 
-<hr>
-<h3>Support Files</h3>
+<hr><h3>Support Files</h3>
 <hr>
 
 <p><a href="getopt.c"><b><code>getopt.c</code></b></a> -
@@ -81,8 +104,9 @@ see contents for instructions of setting up make variables.
 
 <p><a href="lbmmondiag.pl"><b><code>lbmmondiag.pl</code></b></a> -
 Reads UDP packets and process statistics. See <a href="../Operations/monitoringumwiththelbmmonapi.html#lbmmonudpcandlbmmondiagpl">lbmmonudp.c and lbmmondiag.pl</a> in the UM Operations Guide.
+
 <hr>
-<h3>UMP Tutorial Files</h3>
+<h3>Persistence Tutorial Files</h3>
 <hr>
 
 <p> Refer to Chapter 5, Enabling Persistence and Chapter 6, Demonstrating Persistence
@@ -110,7 +134,7 @@ Modified receiver application used to demonstrate persistence.
 Elementary persistent store configuration file used for the tutorial.
 
 <hr>
-<h3>UMQ Tutorial Files</h3>
+<h3>Queuing Tutorial Files</h3>
 <hr>
 
 <p> Refer to Chapter 5, Enabling Queuing in the UM Guide for Queuing for the use of these files.
@@ -123,7 +147,6 @@ Initial receiver application used in the tutorial.
 
 <p><a href="q-example-config.xml"><b><code>q-example-config.xml</code></b></a> -
 Elementary queue configuration file used for the tutorial.
-
 <hr>
 <h3>Example Programs</h3>
 <hr>
@@ -835,21 +858,6 @@ Alternate&nbsp;usage:&nbsp;lbmprice&nbsp;[-h]&nbsp;[-c&nbsp;filename]<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-o&nbsp;mode&nbsp;=&nbsp;set&nbsp;ordered&nbsp;delivery&nbsp;mode&nbsp;(1=ordered,&nbsp;0=arrival&nbsp;order)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-t&nbsp;ttl&nbsp;=&nbsp;set&nbsp;resolver&nbsp;(and&nbsp;multicast&nbsp;source)&nbsp;ttl&nbsp;to&nbsp;ttl<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-v&nbsp;=&nbsp;be&nbsp;verbose<br>
-</code>
-
-<hr>
-<p><a href=lbmpwdgen.c><b><code>lbmpwdgen.c</code></b></a> - 
-Purpose:&nbsp;application&nbsp;that&nbsp;generates&nbsp;password&nbsp;files&nbsp;for&nbsp;SRP&nbsp;authentication.<br>
-<code>Usage:&nbsp;lbmpwdgen<br>
-&nbsp;&nbsp;After&nbsp;the&nbsp;prompt,&nbsp;'pg&gt;',&nbsp;enter&nbsp;one&nbsp;of&nbsp;the&nbsp;following&nbsp;subcommands:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;open&nbsp;file&nbsp;&nbsp;&nbsp;open&nbsp;password&nbsp;file,&nbsp;e.g.&nbsp;open&nbsp;file&nbsp;temp.xml.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;close&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;close&nbsp;password&nbsp;file,&nbsp;e.g.&nbsp;close.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;add&nbsp;user&nbsp;&nbsp;&nbsp;&nbsp;add&nbsp;a&nbsp;user&nbsp;with&nbsp;its&nbsp;name,&nbsp;password&nbsp;and&nbsp;role,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e.g.&nbsp;add&nbsp;user&nbsp;userAbc&nbsp;pass1234&nbsp;admin.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;del&nbsp;user&nbsp;&nbsp;&nbsp;&nbsp;delete&nbsp;the&nbsp;user&nbsp;entry&nbsp;in&nbsp;the&nbsp;password&nbsp;file,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e.g.&nbsp;del&nbsp;user&nbsp;userAbc.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;del&nbsp;urole&nbsp;&nbsp;&nbsp;delete&nbsp;the&nbsp;role&nbsp;from&nbsp;the&nbsp;user's&nbsp;role&nbsp;list,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e.g.&nbsp;del&nbsp;urole&nbsp;user&nbsp;admin.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;add&nbsp;role&nbsp;&nbsp;&nbsp;&nbsp;add&nbsp;a&nbsp;role&nbsp;with&nbsp;its&nbsp;permitted&nbsp;action,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e.g.&nbsp;add&nbsp;role&nbsp;admin&nbsp;MSG_LIST.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;help&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;display&nbsp;the&nbsp;usage.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;quit&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;quit&nbsp;the&nbsp;command&nbsp;shell.<br>
 </code>
 
 <hr>
@@ -1626,28 +1634,7 @@ See&nbsp;Persistence&nbsp;Guide&nbsp;document.<br>
 
 <hr>
 <p><a href=umedcmd.c><b><code>umedcmd.c</code></b></a> - 
-Purpose:&nbsp;application&nbsp;sends&nbsp;unicast&nbsp;immediate&nbsp;command&nbsp;messages&nbsp;to&nbsp;an&nbsp;umestore&nbsp;publishing&nbsp;daemon.<br>
-<code>Usage:&nbsp;umedcmd&nbsp;-T&nbsp;target_string&nbsp;-c&nbsp;config_file&nbsp;[command_string]<br>
-Available&nbsp;options:<br>
-&nbsp;&nbsp;-c&nbsp;filename&nbsp;=&nbsp;Use&nbsp;LBM&nbsp;configuration&nbsp;file&nbsp;filename.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Multiple&nbsp;config&nbsp;files&nbsp;are&nbsp;allowed.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Example:&nbsp;&nbsp;'-c&nbsp;file1.cfg&nbsp;-c&nbsp;file2.cfg'<br>
-&nbsp;&nbsp;-h&nbsp;=&nbsp;help<br>
-&nbsp;&nbsp;-L&nbsp;linger&nbsp;=&nbsp;linger&nbsp;for&nbsp;linger&nbsp;seconds&nbsp;before&nbsp;closing&nbsp;context<br>
-&nbsp;&nbsp;-T&nbsp;target&nbsp;=&nbsp;target&nbsp;for&nbsp;unicast&nbsp;immediate&nbsp;messages&nbsp;(mandatory)<br>
-***********************************************************************************<br>
-*&nbsp;help&nbsp;(print&nbsp;this&nbsp;message):&nbsp;h&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*<br>
-*&nbsp;&nbsp;&nbsp;quit&nbsp;(exit&nbsp;application):&nbsp;q&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*<br>
-*&nbsp;report&nbsp;store&nbsp;dmon&nbsp;version:&nbsp;version&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*<br>
-*&nbsp;&nbsp;&nbsp;set&nbsp;publishing&nbsp;interval:&nbsp;memory&nbsp;0-N&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*<br>
-*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;["store&nbsp;name"]&nbsp;src&nbsp;0-N&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*<br>
-*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;["store&nbsp;name"]&nbsp;rcv&nbsp;0-N&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*<br>
-*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;["store&nbsp;name"]&nbsp;disk&nbsp;0-N&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*<br>
-*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;["store&nbsp;name"]&nbsp;store&nbsp;0-N&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*<br>
-*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;["store&nbsp;name"]&nbsp;config&nbsp;0-N&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*<br>
-*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;snapshot&nbsp;all&nbsp;groups:&nbsp;["store&nbsp;name"]&nbsp;snap&nbsp;memory|src|rcv|disk|store|config&nbsp;*<br>
-***********************************************************************************<br>
-</code>
+See <a href="../UME/storedaemonstatistics.html#umedcmdmanpage">umedcmd documentation</a> for usage information.
 
 <hr>
 <p><a href=umedmon.c><b><code>umedmon.c</code></b></a> - 
@@ -1735,6 +1722,10 @@ CSV&nbsp;format&nbsp;options:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;defaults&nbsp;to&nbsp;`,'<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Don't&nbsp;use&nbsp;a&nbsp;semicolon!<br>
 </code>
+
+<hr>
+<p><a href=umesnaprepo.c><b><code>umesnaprepo.c</code></b></a> - 
+See <a href="../UME/storedaemonstatistics.html#storesnapshotrepository">umesnaprepo documentation</a> for usage information.
 
 <hr>
 <p><a href=umesrc.c><b><code>umesrc.c</code></b></a> - 

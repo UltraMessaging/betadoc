@@ -6,7 +6,7 @@ import java.nio.ByteBuffer;
 import org.openmdx.uses.gnu.getopt.*;
 
 /*
-  Copyright (c) 2005-2019 Informatica Corporation  Permission is granted to licensees to use
+  Copyright (c) 2005-2020 Informatica Corporation  Permission is granted to licensees to use
   or alter this software for any purpose, including commercial applications,
   according to the terms laid out in the Software License Agreement.
 
@@ -985,7 +985,6 @@ class PongSrcCB implements LBMSourceEventCallback
 		case LBM.SRC_EVENT_WAKEUP:
 			blocked = false;
 			break;
-		case LBM.SRC_EVENT_UME_MESSAGE_STABLE_EX:
 		case LBM.SRC_EVENT_UME_REGISTRATION_SUCCESS_EX:
 		case LBM.SRC_EVENT_UME_REGISTRATION_COMPLETE_EX:
 		case LBM.SRC_EVENT_UME_DELIVERY_CONFIRMATION_EX:

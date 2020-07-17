@@ -54,8 +54,7 @@ $(document).ready(function(){initNavTree('lbmrdconfigurationfile.html','');});
 <div class="title">lbmrd Configuration File </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>The lbmrd configuration file must start with this line: </p><pre class="fragment">&lt;?xml version="1.0" encoding="UTF-8" ?&gt;
-</pre><p>After that, the '<b>&lt;lbmrd&gt;</b>' element contains the rest of the configuration.</p>
+<div class="textblock"><p>The lbmrd configuration file must start with this line: </p><div class="fragment"><div class="line">&lt;?xml version=<span class="stringliteral">&quot;1.0&quot;</span> encoding=<span class="stringliteral">&quot;UTF-8&quot;</span> ?&gt;</div></div><!-- fragment --><p>After that, the '<b>&lt;lbmrd&gt;</b>' element contains the rest of the configuration.</p>
 <dl class="section note"><dt>Note</dt><dd>The configuration file must contain a '<b>&lt;domains&gt;</b>' element and a '<b>&lt;transformations&gt;</b>' element (and their contents), even if there is no NAT. See <a class="el" href="lbmrdconfigurationfile.html#dummylbmrdconfigurationfile">Dummy lbmrd Configuration File</a>. The '<b>&lt;daemon&gt;</b>' element and its contents are optional.</dd></dl>
 <p><br />
  </p>
@@ -75,15 +74,9 @@ LBMRD Element "&lt;lbmrd&gt;"&nbsp;&nbsp;<small><a href="#lbmrdelementlbmrd">&lt
 <tr>
 <th>Attribute </th><th>Description </th><th>Valid Values </th><th>Default Value </th></tr>
 <tr>
-<td><b>version</b> </td><td>Version number of user's configuration file. </td><td><b>1.0</b> - Initial version </td><td><p class="starttd"><b>1.0</b> </p>
-<p class="endtd"></p>
-</td></tr>
+<td><b>version</b> </td><td>Version number of user's configuration file. </td><td><b><code>"1.0"</code></b> - Initial version </td><td><b><code>"1.0"</code></b> </td></tr>
 </table>
-<p><b>Example:</b> </p><pre class="fragment">&lt;?xml version="1.0" encoding="UTF-8" ?&gt;
-&lt;lbmrd version="1.0"&gt;
-  ...
-&lt;/lbmrd&gt;
-</pre><hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line">&lt;?xml version=<span class="stringliteral">&quot;1.0&quot;</span> encoding=<span class="stringliteral">&quot;UTF-8&quot;</span> ?&gt;</div><div class="line">&lt;lbmrd version=<span class="stringliteral">&quot;1.0&quot;</span>&gt;</div><div class="line">  ...</div><div class="line">&lt;/lbmrd&gt;</div></div><!-- fragment --><hr/>
 <p> <br />
  </p>
 <h2><a class="anchor" id="lbmrdelementtransformations"></a>
@@ -96,14 +89,7 @@ LBMRD Element "&lt;transformations&gt;"&nbsp;&nbsp;<small><a href="#lbmrdelement
 <li>
 <b>Children:</b> <a class="el" href="lbmrdconfigurationfile.html#lbmrdelementtransform">&lt;transform&gt;</a> </li>
 </ul>
-<p><b>Example:</b> </p><pre class="fragment">&lt;?xml version="1.0" encoding="UTF-8" ?&gt;
-&lt;lbmrd version="1.0"&gt;
-  &lt;transformations&gt;
-    ...
-  &lt;/transformations&gt;
-  ...
-&lt;/lbmrd&gt;
-</pre><p>For a full example of an lbmrd NAT configuration, see <a class="el" href="topicresolutiondescription.html#examplenatconfiguration">Example NAT Configuration</a>.</p>
+<p><b>Example:</b> </p><div class="fragment"><div class="line">&lt;?xml version=<span class="stringliteral">&quot;1.0&quot;</span> encoding=<span class="stringliteral">&quot;UTF-8&quot;</span> ?&gt;</div><div class="line">&lt;lbmrd version=<span class="stringliteral">&quot;1.0&quot;</span>&gt;</div><div class="line">  &lt;transformations&gt;</div><div class="line">    ...</div><div class="line">  &lt;/transformations&gt;</div><div class="line">  ...</div><div class="line">&lt;/lbmrd&gt;</div></div><!-- fragment --><p>For a full example of an lbmrd NAT configuration, see <a class="el" href="topicresolutiondescription.html#examplenatconfiguration">Example NAT Configuration</a>.</p>
 <hr/>
 <p> <br />
  </p>
@@ -121,25 +107,11 @@ LBMRD Element "&lt;transform&gt;"&nbsp;&nbsp;<small><a href="#lbmrdelementtransf
 <tr>
 <th>Attribute </th><th>Description </th><th>Valid Values </th><th>Default Value </th></tr>
 <tr>
-<td><b>source</b> </td><td>Name of source network domain, defined in <a class="el" href="lbmrdconfigurationfile.html#lbmrdelementdomain">&lt;domain&gt;</a>. </td><td>IDREF </td><td><p class="starttd">(no default; must be specified)</p>
-<p class="endtd"></p>
-</td></tr>
+<td><b>source</b> </td><td>Name of source network domain, defined in <a class="el" href="lbmrdconfigurationfile.html#lbmrdelementdomain">&lt;domain&gt;</a>. </td><td>IDREF </td><td>(no default; must be specified) </td></tr>
 <tr>
-<td><b>destination</b> </td><td>Name of receiver network domain, defined in <a class="el" href="lbmrdconfigurationfile.html#lbmrdelementdomain">&lt;domain&gt;</a>. </td><td>IDREF </td><td><p class="starttd">(no default; must be specified)</p>
-<p class="endtd"></p>
-</td></tr>
+<td><b>destination</b> </td><td>Name of receiver network domain, defined in <a class="el" href="lbmrdconfigurationfile.html#lbmrdelementdomain">&lt;domain&gt;</a>. </td><td>IDREF </td><td>(no default; must be specified) </td></tr>
 </table>
-<p><b>Example:</b> </p><pre class="fragment">&lt;?xml version="1.0" encoding="UTF-8" ?&gt;
-&lt;lbmrd version="1.0"&gt;
-  &lt;transformations&gt;
-    &lt;transform source="Net-NYC" destination="Net-NJC"&gt;
-      ...
-    &lt;/transform&gt;
-    ...
-  &lt;/transformations&gt;
-  ...
-&lt;/lbmrd&gt;
-</pre><p>For a full example of an lbmrd NAT configuration, see <a class="el" href="topicresolutiondescription.html#examplenatconfiguration">Example NAT Configuration</a>.</p>
+<p><b>Example:</b> </p><div class="fragment"><div class="line">&lt;?xml version=<span class="stringliteral">&quot;1.0&quot;</span> encoding=<span class="stringliteral">&quot;UTF-8&quot;</span> ?&gt;</div><div class="line">&lt;lbmrd version=<span class="stringliteral">&quot;1.0&quot;</span>&gt;</div><div class="line">  &lt;transformations&gt;</div><div class="line">    &lt;transform source=<span class="stringliteral">&quot;Net-NYC&quot;</span> destination=<span class="stringliteral">&quot;Net-NJC&quot;</span>&gt;</div><div class="line">      ...</div><div class="line">    &lt;/transform&gt;</div><div class="line">    ...</div><div class="line">  &lt;/transformations&gt;</div><div class="line">  ...</div><div class="line">&lt;/lbmrd&gt;</div></div><!-- fragment --><p>For a full example of an lbmrd NAT configuration, see <a class="el" href="topicresolutiondescription.html#examplenatconfiguration">Example NAT Configuration</a>.</p>
 <hr/>
 <p> <br />
  </p>
@@ -153,20 +125,7 @@ LBMRD Element "&lt;rule&gt;"&nbsp;&nbsp;<small><a href="#lbmrdelementrule">&lt;-
 <li>
 <b>Children:</b> <a class="el" href="lbmrdconfigurationfile.html#lbmrdelementmatch">&lt;match&gt;</a>, <a class="el" href="lbmrdconfigurationfile.html#lbmrdelementreplace">&lt;replace&gt;</a> </li>
 </ul>
-<p><b>Example:</b> </p><pre class="fragment">&lt;?xml version="1.0" encoding="UTF-8" ?&gt;
-&lt;lbmrd version="1.0"&gt;
-  &lt;transformations&gt;
-    &lt;transform source="Net-NYC" destination="Net-NJC"&gt;
-      &lt;rule&gt;
-        ...
-      &lt;/rule&gt;
-      ...
-    &lt;/transform&gt;
-    ...
-  &lt;/transformations&gt;
-  ...
-&lt;/lbmrd&gt;
-</pre><p>For a full example of an lbmrd NAT configuration, see <a class="el" href="topicresolutiondescription.html#examplenatconfiguration">Example NAT Configuration</a>.</p>
+<p><b>Example:</b> </p><div class="fragment"><div class="line">&lt;?xml version=<span class="stringliteral">&quot;1.0&quot;</span> encoding=<span class="stringliteral">&quot;UTF-8&quot;</span> ?&gt;</div><div class="line">&lt;lbmrd version=<span class="stringliteral">&quot;1.0&quot;</span>&gt;</div><div class="line">  &lt;transformations&gt;</div><div class="line">    &lt;transform source=<span class="stringliteral">&quot;Net-NYC&quot;</span> destination=<span class="stringliteral">&quot;Net-NJC&quot;</span>&gt;</div><div class="line">      &lt;rule&gt;</div><div class="line">        ...</div><div class="line">      &lt;/rule&gt;</div><div class="line">      ...</div><div class="line">    &lt;/transform&gt;</div><div class="line">    ...</div><div class="line">  &lt;/transformations&gt;</div><div class="line">  ...</div><div class="line">&lt;/lbmrd&gt;</div></div><!-- fragment --><p>For a full example of an lbmrd NAT configuration, see <a class="el" href="topicresolutiondescription.html#examplenatconfiguration">Example NAT Configuration</a>.</p>
 <hr/>
 <p> <br />
  </p>
@@ -181,30 +140,11 @@ LBMRD Element "&lt;replace&gt;"&nbsp;&nbsp;<small><a href="#lbmrdelementreplace"
 <tr>
 <th>Attribute </th><th>Description </th><th>Valid Values </th><th>Default Value </th></tr>
 <tr>
-<td><b>address</b> </td><td>IP address within a TIR. Address must be specified only in dotted-decimal and refer to a specific host. For <a class="el" href="lbmrdconfigurationfile.html#lbmrdelementmatch">LBMRD Element "&lt;match&gt;"</a>, the IP address should be within the network specified by <a class="el" href="lbmrdconfigurationfile.html#lbmrdelementtransform">&lt;transform&gt;</a> <code>source</code> attribute. For <a class="el" href="lbmrdconfigurationfile.html#lbmrdelementreplace">LBMRD Element "&lt;replace&gt;"</a>, the IP address should be within the network specified by <a class="el" href="lbmrdconfigurationfile.html#lbmrdelementtransform">&lt;transform&gt;</a> <code>destination</code> attribute. </td><td>string </td><td><p class="starttd">(no default; must be specified)</p>
-<p class="endtd"></p>
-</td></tr>
+<td><b>address</b> </td><td>IP address within a TIR. Address must be specified only in dotted-decimal and refer to a specific host. For <a class="el" href="lbmrdconfigurationfile.html#lbmrdelementmatch">LBMRD Element "&lt;match&gt;"</a>, the IP address should be within the network specified by <a class="el" href="lbmrdconfigurationfile.html#lbmrdelementtransform">&lt;transform&gt;</a> <code>source</code> attribute. For <a class="el" href="lbmrdconfigurationfile.html#lbmrdelementreplace">LBMRD Element "&lt;replace&gt;"</a>, the IP address should be within the network specified by <a class="el" href="lbmrdconfigurationfile.html#lbmrdelementtransform">&lt;transform&gt;</a> <code>destination</code> attribute. </td><td>string </td><td>(no default; must be specified) </td></tr>
 <tr>
-<td><b>port</b> </td><td>Port number to match or replace. To match any port, use value <code>*</code>. To replace with same port as matched, use value <code>*</code>. </td><td>string </td><td><p class="starttd">*</p>
-<p class="endtd"></p>
-</td></tr>
+<td><b>port</b> </td><td>Port number to match or replace. To match any port, use value <b><code>"*"</code></b>. To replace with same port as matched, use value <b><code>"*"</code></b>. </td><td>string </td><td><b><code>"*"</code></b> </td></tr>
 </table>
-<p><b>Example:</b> </p><pre class="fragment">&lt;?xml version="1.0" encoding="UTF-8" ?&gt;
-&lt;lbmrd version="1.0"&gt;
-  &lt;transformations&gt;
-    &lt;transform source="Net-NYC" destination="Net-NJC"&gt;
-      &lt;rule&gt;
-        &lt;match address="10.1.1.50" port="*"/&gt;
-        &lt;replace address="192.168.1.1" port="*"/&gt;
-        ...
-      &lt;/rule&gt;
-      ...
-    &lt;/transform&gt;
-    ...
-  &lt;/transformations&gt;
-  ...
-&lt;/lbmrd&gt;
-</pre><p>For a full example of an lbmrd NAT configuration, see <a class="el" href="topicresolutiondescription.html#examplenatconfiguration">Example NAT Configuration</a>.</p>
+<p><b>Example:</b> </p><div class="fragment"><div class="line">&lt;?xml version=<span class="stringliteral">&quot;1.0&quot;</span> encoding=<span class="stringliteral">&quot;UTF-8&quot;</span> ?&gt;</div><div class="line">&lt;lbmrd version=<span class="stringliteral">&quot;1.0&quot;</span>&gt;</div><div class="line">  &lt;transformations&gt;</div><div class="line">    &lt;transform source=<span class="stringliteral">&quot;Net-NYC&quot;</span> destination=<span class="stringliteral">&quot;Net-NJC&quot;</span>&gt;</div><div class="line">      &lt;rule&gt;</div><div class="line">        &lt;match address=<span class="stringliteral">&quot;10.1.1.50&quot;</span> port=<span class="stringliteral">&quot;*&quot;</span>/&gt;</div><div class="line">        &lt;replace address=<span class="stringliteral">&quot;192.168.1.1&quot;</span> port=<span class="stringliteral">&quot;*&quot;</span>/&gt;</div><div class="line">        ...</div><div class="line">      &lt;/rule&gt;</div><div class="line">      ...</div><div class="line">    &lt;/transform&gt;</div><div class="line">    ...</div><div class="line">  &lt;/transformations&gt;</div><div class="line">  ...</div><div class="line">&lt;/lbmrd&gt;</div></div><!-- fragment --><p>For a full example of an lbmrd NAT configuration, see <a class="el" href="topicresolutiondescription.html#examplenatconfiguration">Example NAT Configuration</a>.</p>
 <hr/>
 <p> <br />
  </p>
@@ -219,30 +159,11 @@ LBMRD Element "&lt;match&gt;"&nbsp;&nbsp;<small><a href="#lbmrdelementmatch">&lt
 <tr>
 <th>Attribute </th><th>Description </th><th>Valid Values </th><th>Default Value </th></tr>
 <tr>
-<td><b>address</b> </td><td>IP address within a TIR. Address must be specified only in dotted-decimal and refer to a specific host. For <a class="el" href="lbmrdconfigurationfile.html#lbmrdelementmatch">LBMRD Element "&lt;match&gt;"</a>, the IP address should be within the network specified by <a class="el" href="lbmrdconfigurationfile.html#lbmrdelementtransform">&lt;transform&gt;</a> <code>source</code> attribute. For <a class="el" href="lbmrdconfigurationfile.html#lbmrdelementreplace">LBMRD Element "&lt;replace&gt;"</a>, the IP address should be within the network specified by <a class="el" href="lbmrdconfigurationfile.html#lbmrdelementtransform">&lt;transform&gt;</a> <code>destination</code> attribute. </td><td>string </td><td><p class="starttd">(no default; must be specified)</p>
-<p class="endtd"></p>
-</td></tr>
+<td><b>address</b> </td><td>IP address within a TIR. Address must be specified only in dotted-decimal and refer to a specific host. For <a class="el" href="lbmrdconfigurationfile.html#lbmrdelementmatch">LBMRD Element "&lt;match&gt;"</a>, the IP address should be within the network specified by <a class="el" href="lbmrdconfigurationfile.html#lbmrdelementtransform">&lt;transform&gt;</a> <code>source</code> attribute. For <a class="el" href="lbmrdconfigurationfile.html#lbmrdelementreplace">LBMRD Element "&lt;replace&gt;"</a>, the IP address should be within the network specified by <a class="el" href="lbmrdconfigurationfile.html#lbmrdelementtransform">&lt;transform&gt;</a> <code>destination</code> attribute. </td><td>string </td><td>(no default; must be specified) </td></tr>
 <tr>
-<td><b>port</b> </td><td>Port number to match or replace. To match any port, use value <code>*</code>. To replace with same port as matched, use value <code>*</code>. </td><td>string </td><td><p class="starttd">*</p>
-<p class="endtd"></p>
-</td></tr>
+<td><b>port</b> </td><td>Port number to match or replace. To match any port, use value <b><code>"*"</code></b>. To replace with same port as matched, use value <b><code>"*"</code></b>. </td><td>string </td><td><b><code>"*"</code></b> </td></tr>
 </table>
-<p><b>Example:</b> </p><pre class="fragment">&lt;?xml version="1.0" encoding="UTF-8" ?&gt;
-&lt;lbmrd version="1.0"&gt;
-  &lt;transformations&gt;
-    &lt;transform source="Net-NYC" destination="Net-NJC"&gt;
-      &lt;rule&gt;
-        &lt;match address="10.1.1.50" port="*"/&gt;
-        &lt;replace address="192.168.1.1" port="*"/&gt;
-        ...
-      &lt;/rule&gt;
-      ...
-    &lt;/transform&gt;
-    ...
-  &lt;/transformations&gt;
-  ...
-&lt;/lbmrd&gt;
-</pre><p>For a full example of an lbmrd NAT configuration, see <a class="el" href="topicresolutiondescription.html#examplenatconfiguration">Example NAT Configuration</a>.</p>
+<p><b>Example:</b> </p><div class="fragment"><div class="line">&lt;?xml version=<span class="stringliteral">&quot;1.0&quot;</span> encoding=<span class="stringliteral">&quot;UTF-8&quot;</span> ?&gt;</div><div class="line">&lt;lbmrd version=<span class="stringliteral">&quot;1.0&quot;</span>&gt;</div><div class="line">  &lt;transformations&gt;</div><div class="line">    &lt;transform source=<span class="stringliteral">&quot;Net-NYC&quot;</span> destination=<span class="stringliteral">&quot;Net-NJC&quot;</span>&gt;</div><div class="line">      &lt;rule&gt;</div><div class="line">        &lt;match address=<span class="stringliteral">&quot;10.1.1.50&quot;</span> port=<span class="stringliteral">&quot;*&quot;</span>/&gt;</div><div class="line">        &lt;replace address=<span class="stringliteral">&quot;192.168.1.1&quot;</span> port=<span class="stringliteral">&quot;*&quot;</span>/&gt;</div><div class="line">        ...</div><div class="line">      &lt;/rule&gt;</div><div class="line">      ...</div><div class="line">    &lt;/transform&gt;</div><div class="line">    ...</div><div class="line">  &lt;/transformations&gt;</div><div class="line">  ...</div><div class="line">&lt;/lbmrd&gt;</div></div><!-- fragment --><p>For a full example of an lbmrd NAT configuration, see <a class="el" href="topicresolutiondescription.html#examplenatconfiguration">Example NAT Configuration</a>.</p>
 <hr/>
 <p> <br />
  </p>
@@ -256,14 +177,7 @@ LBMRD Element "&lt;domains&gt;"&nbsp;&nbsp;<small><a href="#lbmrdelementdomains"
 <li>
 <b>Children:</b> <a class="el" href="lbmrdconfigurationfile.html#lbmrdelementdomain">&lt;domain&gt;</a> </li>
 </ul>
-<p><b>Example:</b> </p><pre class="fragment">&lt;?xml version="1.0" encoding="UTF-8" ?&gt;
-&lt;lbmrd version="1.0"&gt;
-  &lt;domains&gt;
-    ...
-  &lt;/domains&gt;
-  ...
-&lt;/lbmrd&gt;
-</pre><p>For a full example of an lbmrd NAT configuration, see <a class="el" href="topicresolutiondescription.html#examplenatconfiguration">Example NAT Configuration</a>.</p>
+<p><b>Example:</b> </p><div class="fragment"><div class="line">&lt;?xml version=<span class="stringliteral">&quot;1.0&quot;</span> encoding=<span class="stringliteral">&quot;UTF-8&quot;</span> ?&gt;</div><div class="line">&lt;lbmrd version=<span class="stringliteral">&quot;1.0&quot;</span>&gt;</div><div class="line">  &lt;domains&gt;</div><div class="line">    ...</div><div class="line">  &lt;/domains&gt;</div><div class="line">  ...</div><div class="line">&lt;/lbmrd&gt;</div></div><!-- fragment --><p>For a full example of an lbmrd NAT configuration, see <a class="el" href="topicresolutiondescription.html#examplenatconfiguration">Example NAT Configuration</a>.</p>
 <hr/>
 <p> <br />
  </p>
@@ -281,24 +195,9 @@ LBMRD Element "&lt;domain&gt;"&nbsp;&nbsp;<small><a href="#lbmrdelementdomain">&
 <tr>
 <th>Attribute </th><th>Description </th><th>Valid Values </th><th>Default Value </th></tr>
 <tr>
-<td><b>name</b> </td><td>Unique name assigned to the defined network. </td><td>ID </td><td><p class="starttd">(no default; must be specified)</p>
-<p class="endtd"></p>
-</td></tr>
+<td><b>name</b> </td><td>Unique name assigned to the defined network. </td><td>ID </td><td>(no default; must be specified) </td></tr>
 </table>
-<p><b>Example:</b> </p><pre class="fragment">&lt;?xml version="1.0" encoding="UTF-8" ?&gt;
-&lt;lbmrd version="1.0"&gt;
-  &lt;domains&gt;
-    &lt;domain name="Net-NYC"&gt;
-      ...
-    &lt;/domain&gt;
-    &lt;domain name="Net-NJC"&gt;
-      ...
-    &lt;/domain&gt;
-    ...
-  &lt;/domains&gt;
-  ...
-&lt;/lbmrd&gt;
-</pre><p>For a full example of an lbmrd NAT configuration, see <a class="el" href="topicresolutiondescription.html#examplenatconfiguration">Example NAT Configuration</a>.</p>
+<p><b>Example:</b> </p><div class="fragment"><div class="line">&lt;?xml version=<span class="stringliteral">&quot;1.0&quot;</span> encoding=<span class="stringliteral">&quot;UTF-8&quot;</span> ?&gt;</div><div class="line">&lt;lbmrd version=<span class="stringliteral">&quot;1.0&quot;</span>&gt;</div><div class="line">  &lt;domains&gt;</div><div class="line">    &lt;domain name=<span class="stringliteral">&quot;Net-NYC&quot;</span>&gt;</div><div class="line">      ...</div><div class="line">    &lt;/domain&gt;</div><div class="line">    &lt;domain name=<span class="stringliteral">&quot;Net-NJC&quot;</span>&gt;</div><div class="line">      ...</div><div class="line">    &lt;/domain&gt;</div><div class="line">    ...</div><div class="line">  &lt;/domains&gt;</div><div class="line">  ...</div><div class="line">&lt;/lbmrd&gt;</div></div><!-- fragment --><p>For a full example of an lbmrd NAT configuration, see <a class="el" href="topicresolutiondescription.html#examplenatconfiguration">Example NAT Configuration</a>.</p>
 <hr/>
 <p> <br />
  </p>
@@ -310,22 +209,7 @@ LBMRD Element "&lt;network&gt;"&nbsp;&nbsp;<small><a href="#lbmrdelementnetwork"
 <li>
 <b>Parent:</b> <a class="el" href="lbmrdconfigurationfile.html#lbmrdelementdomain">&lt;domain&gt;</a> </li>
 </ul>
-<p><b>Example:</b> </p><pre class="fragment">&lt;?xml version="1.0" encoding="UTF-8" ?&gt;
-&lt;lbmrd version="1.0"&gt;
-  &lt;domains&gt;
-    &lt;domain name="Net-NYC"&gt;
-      &lt;network&gt;10.1.0.0/16&lt;/network&gt;
-      ...
-    &lt;/domain&gt;
-    &lt;domain name="Net-NJC"&gt;
-      &lt;network&gt;192.168.1/24&lt;/network&gt;
-      ...
-    &lt;/domain&gt;
-    ...
-  &lt;/domains&gt;
-  ...
-&lt;/lbmrd&gt;
-</pre><p>For a full example of an lbmrd NAT configuration, see <a class="el" href="topicresolutiondescription.html#examplenatconfiguration">Example NAT Configuration</a>.</p>
+<p><b>Example:</b> </p><div class="fragment"><div class="line">&lt;?xml version=<span class="stringliteral">&quot;1.0&quot;</span> encoding=<span class="stringliteral">&quot;UTF-8&quot;</span> ?&gt;</div><div class="line">&lt;lbmrd version=<span class="stringliteral">&quot;1.0&quot;</span>&gt;</div><div class="line">  &lt;domains&gt;</div><div class="line">    &lt;domain name=<span class="stringliteral">&quot;Net-NYC&quot;</span>&gt;</div><div class="line">      &lt;network&gt;10.1.0.0/16&lt;/network&gt;</div><div class="line">      ...</div><div class="line">    &lt;/domain&gt;</div><div class="line">    &lt;domain name=<span class="stringliteral">&quot;Net-NJC&quot;</span>&gt;</div><div class="line">      &lt;network&gt;192.168.1/24&lt;/network&gt;</div><div class="line">      ...</div><div class="line">    &lt;/domain&gt;</div><div class="line">    ...</div><div class="line">  &lt;/domains&gt;</div><div class="line">  ...</div><div class="line">&lt;/lbmrd&gt;</div></div><!-- fragment --><p>For a full example of an lbmrd NAT configuration, see <a class="el" href="topicresolutiondescription.html#examplenatconfiguration">Example NAT Configuration</a>.</p>
 <hr/>
 <p> <br />
  </p>
@@ -340,14 +224,7 @@ LBMRD Element "&lt;daemon&gt;"&nbsp;&nbsp;<small><a href="#lbmrdelementdaemon">&
 <li>
 <b>Children:</b> <a class="el" href="lbmrdconfigurationfile.html#lbmrdelementactivity">&lt;activity&gt;</a>, <a class="el" href="lbmrdconfigurationfile.html#lbmrdelementinterface">&lt;interface&gt;</a>, <a class="el" href="lbmrdconfigurationfile.html#lbmrdelementport">&lt;port&gt;</a>, <a class="el" href="lbmrdconfigurationfile.html#lbmrdelementttl">&lt;ttl&gt;</a>, <a class="el" href="lbmrdconfigurationfile.html#lbmrdelementlog">&lt;log&gt;</a>, <a class="el" href="lbmrdconfigurationfile.html#lbmrdelementresolver_unicast_receiver_socket_buffer">&lt;resolver_unicast_receiver_socket_buffer&gt;</a>, <a class="el" href="lbmrdconfigurationfile.html#lbmrdelementresolver_unicast_send_socket_buffer">&lt;resolver_unicast_send_socket_buffer&gt;</a> </li>
 </ul>
-<p><b>Example:</b> </p><pre class="fragment">&lt;?xml version="1.0" encoding="UTF-8" ?&gt;
-&lt;lbmrd version="1.0"&gt;
-  &lt;daemon&gt;
-    ...
-  &lt;/daemon&gt;
-  ...
-&lt;/lbmrd&gt;
-</pre><hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line">&lt;?xml version=<span class="stringliteral">&quot;1.0&quot;</span> encoding=<span class="stringliteral">&quot;UTF-8&quot;</span> ?&gt;</div><div class="line">&lt;lbmrd version=<span class="stringliteral">&quot;1.0&quot;</span>&gt;</div><div class="line">  &lt;daemon&gt;</div><div class="line">    ...</div><div class="line">  &lt;/daemon&gt;</div><div class="line">  ...</div><div class="line">&lt;/lbmrd&gt;</div></div><!-- fragment --><hr/>
 <p> <br />
  </p>
 <h2><a class="anchor" id="lbmrdelementresolver_unicast_send_socket_buffer"></a>
@@ -357,21 +234,9 @@ LBMRD Element "&lt;resolver_unicast_send_socket_buffer&gt;"&nbsp;&nbsp;<small><a
 <li>
 <b>Parent:</b> <a class="el" href="lbmrdconfigurationfile.html#lbmrdelementdaemon">&lt;daemon&gt;</a> </li>
 <li>
-<p class="startli"><b>Default</b> <b>Value:</b> 1048576</p>
-<p class="endli"></p>
-</li>
+<b>Default</b> <b>Value:</b> 1048576 </li>
 </ul>
-<p><b>Example:</b> </p><pre class="fragment">&lt;?xml version="1.0" encoding="UTF-8" ?&gt;
-&lt;lbmrd version="1.0"&gt;
-  &lt;daemon&gt;
-    &lt;resolver_unicast_send_socket_buffer&gt;
-      1048576
-    &lt;/resolver_unicast_send_socket_buffer&gt;
-    ...
-  &lt;/daemon&gt;
-  ...
-&lt;/lbmrd&gt;
-</pre><hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line">&lt;?xml version=<span class="stringliteral">&quot;1.0&quot;</span> encoding=<span class="stringliteral">&quot;UTF-8&quot;</span> ?&gt;</div><div class="line">&lt;lbmrd version=<span class="stringliteral">&quot;1.0&quot;</span>&gt;</div><div class="line">  &lt;daemon&gt;</div><div class="line">    &lt;resolver_unicast_send_socket_buffer&gt;</div><div class="line">      1048576</div><div class="line">    &lt;/resolver_unicast_send_socket_buffer&gt;</div><div class="line">    ...</div><div class="line">  &lt;/daemon&gt;</div><div class="line">  ...</div><div class="line">&lt;/lbmrd&gt;</div></div><!-- fragment --><hr/>
 <p> <br />
  </p>
 <h2><a class="anchor" id="lbmrdelementresolver_unicast_receiver_socket_buffer"></a>
@@ -381,21 +246,9 @@ LBMRD Element "&lt;resolver_unicast_receiver_socket_buffer&gt;"&nbsp;&nbsp;<smal
 <li>
 <b>Parent:</b> <a class="el" href="lbmrdconfigurationfile.html#lbmrdelementdaemon">&lt;daemon&gt;</a> </li>
 <li>
-<p class="startli"><b>Default</b> <b>Value:</b> 1048576</p>
-<p class="endli"></p>
-</li>
+<b>Default</b> <b>Value:</b> 1048576 </li>
 </ul>
-<p><b>Example:</b> </p><pre class="fragment">&lt;?xml version="1.0" encoding="UTF-8" ?&gt;
-&lt;lbmrd version="1.0"&gt;
-  &lt;daemon&gt;
-    &lt;resolver_unicast_receiver_socket_buffer&gt;
-      1048576
-    &lt;/resolver_unicast_receiver_socket_buffer&gt;
-    ...
-  &lt;/daemon&gt;
-  ...
-&lt;/lbmrd&gt;
-</pre><hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line">&lt;?xml version=<span class="stringliteral">&quot;1.0&quot;</span> encoding=<span class="stringliteral">&quot;UTF-8&quot;</span> ?&gt;</div><div class="line">&lt;lbmrd version=<span class="stringliteral">&quot;1.0&quot;</span>&gt;</div><div class="line">  &lt;daemon&gt;</div><div class="line">    &lt;resolver_unicast_receiver_socket_buffer&gt;</div><div class="line">      1048576</div><div class="line">    &lt;/resolver_unicast_receiver_socket_buffer&gt;</div><div class="line">    ...</div><div class="line">  &lt;/daemon&gt;</div><div class="line">  ...</div><div class="line">&lt;/lbmrd&gt;</div></div><!-- fragment --><hr/>
 <p> <br />
  </p>
 <h2><a class="anchor" id="lbmrdelementlog"></a>
@@ -405,15 +258,7 @@ LBMRD Element "&lt;log&gt;"&nbsp;&nbsp;<small><a href="#lbmrdelementlog">&lt;-</
 <li>
 <b>Parent:</b> <a class="el" href="lbmrdconfigurationfile.html#lbmrdelementdaemon">&lt;daemon&gt;</a> </li>
 </ul>
-<p><b>Example:</b> </p><pre class="fragment">&lt;?xml version="1.0" encoding="UTF-8" ?&gt;
-&lt;lbmrd version="1.0"&gt;
-  &lt;daemon&gt;
-    &lt;log&gt;lbmrd.log&lt;/log&gt;
-    ...
-  &lt;/daemon&gt;
-  ...
-&lt;/lbmrd&gt;
-</pre><hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line">&lt;?xml version=<span class="stringliteral">&quot;1.0&quot;</span> encoding=<span class="stringliteral">&quot;UTF-8&quot;</span> ?&gt;</div><div class="line">&lt;lbmrd version=<span class="stringliteral">&quot;1.0&quot;</span>&gt;</div><div class="line">  &lt;daemon&gt;</div><div class="line">    &lt;log&gt;lbmrd.log&lt;/log&gt;</div><div class="line">    ...</div><div class="line">  &lt;/daemon&gt;</div><div class="line">  ...</div><div class="line">&lt;/lbmrd&gt;</div></div><!-- fragment --><hr/>
 <p> <br />
  </p>
 <h2><a class="anchor" id="lbmrdelementttl"></a>
@@ -423,59 +268,33 @@ LBMRD Element "&lt;ttl&gt;"&nbsp;&nbsp;<small><a href="#lbmrdelementttl">&lt;-</
 <li>
 <b>Parent:</b> <a class="el" href="lbmrdconfigurationfile.html#lbmrdelementdaemon">&lt;daemon&gt;</a> </li>
 <li>
-<p class="startli"><b>Default</b> <b>Value:</b> 60000</p>
-<p class="endli"></p>
-</li>
+<b>Default</b> <b>Value:</b> 60000 </li>
 </ul>
-<p><b>Example:</b> </p><pre class="fragment">&lt;?xml version="1.0" encoding="UTF-8" ?&gt;
-&lt;lbmrd version="1.0"&gt;
-  &lt;daemon&gt;
-    &lt;ttl&gt;60000&lt;/ttl&gt;
-    ...
-  &lt;/daemon&gt;
-  ...
-&lt;/lbmrd&gt;
-</pre><hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line">&lt;?xml version=<span class="stringliteral">&quot;1.0&quot;</span> encoding=<span class="stringliteral">&quot;UTF-8&quot;</span> ?&gt;</div><div class="line">&lt;lbmrd version=<span class="stringliteral">&quot;1.0&quot;</span>&gt;</div><div class="line">  &lt;daemon&gt;</div><div class="line">    &lt;ttl&gt;60000&lt;/ttl&gt;</div><div class="line">    ...</div><div class="line">  &lt;/daemon&gt;</div><div class="line">  ...</div><div class="line">&lt;/lbmrd&gt;</div></div><!-- fragment --><hr/>
 <p> <br />
  </p>
 <h2><a class="anchor" id="lbmrdelementport"></a>
 LBMRD Element "&lt;port&gt;"&nbsp;&nbsp;<small><a href="#lbmrdelementport">&lt;-</a></small></h2>
-<p>Supplies network port to bind the socket for receiving TR traffic from UM contexts. This is the port that a UM context should use when TCP-based TR is configured with the option <a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Design/config.tag:../Config/" href="../Config/grpunicastresolvernetwork.html#resolverunicastdaemoncontext">resolver_unicast_daemon (context)</a>. The value contained within the <code>&lt;port&gt;...&lt;/port&gt;</code> is an integer between 1 and 65535.</p>
+<p>Supplies network port to bind the socket for receiving TR traffic from UM contexts. This is the port that a UM context should use when TCP-based TR is configured with the option <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_DEV_MAIN/29West/lbm/doc/Design/config.tag:../Config/" href="../Config/grpunicastresolvernetwork.html#resolverunicastdaemoncontext">resolver_unicast_daemon (context)</a>. The value contained within the <code>&lt;port&gt;...&lt;/port&gt;</code> is an integer between 1 and 65535.</p>
 <ul>
 <li>
 <b>Parent:</b> <a class="el" href="lbmrdconfigurationfile.html#lbmrdelementdaemon">&lt;daemon&gt;</a> </li>
 <li>
-<p class="startli"><b>Default</b> <b>Value:</b> 15380</p>
-<p class="endli"></p>
-</li>
+<b>Default</b> <b>Value:</b> 15380 </li>
 </ul>
-<p><b>Example:</b> </p><pre class="fragment">&lt;?xml version="1.0" encoding="UTF-8" ?&gt;
-&lt;lbmrd version="1.0"&gt;
-  &lt;daemon&gt; 
-    &lt;port&gt;15380&lt;/interface&gt;
-    ...
-  &lt;/daemon&gt;
-  ...
-&lt;/lbmrd&gt;
-</pre><hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line">&lt;?xml version=<span class="stringliteral">&quot;1.0&quot;</span> encoding=<span class="stringliteral">&quot;UTF-8&quot;</span> ?&gt;</div><div class="line">&lt;lbmrd version=<span class="stringliteral">&quot;1.0&quot;</span>&gt;</div><div class="line">  &lt;daemon&gt; </div><div class="line">    &lt;port&gt;15380&lt;/port&gt;</div><div class="line">    ...</div><div class="line">  &lt;/daemon&gt;</div><div class="line">  ...</div><div class="line">&lt;/lbmrd&gt;</div></div><!-- fragment --><hr/>
 <p> <br />
  </p>
 <h2><a class="anchor" id="lbmrdelementinterface"></a>
 LBMRD Element "&lt;interface&gt;"&nbsp;&nbsp;<small><a href="#lbmrdelementinterface">&lt;-</a></small></h2>
-<p>Specifies the network interface to bind the socket for receiving TR traffic from UM contexts. This is the IP address that a UM context should use when Unicast UDP-based TR is configured with the option <a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Design/config.tag:../Config/" href="../Config/grpunicastresolvernetwork.html#resolverunicastdaemoncontext">resolver_unicast_daemon (context)</a>. See <a class="elRef" doxygen="/29W/Amun/home/sford/sfordmac_REL_6_12/29West/lbm/doc/Design/config.tag:../Config/" href="../Config/generalconfigurationguidelines.html#specifyinginterfaces">Specifying Interfaces</a> for methods of specifying the interface within <code>&lt;interface&gt;...&lt;/interface&gt;</code>.</p>
+<p>Specifies the network interface to bind the socket for receiving TR traffic from UM contexts. This is the IP address that a UM context should use when Unicast UDP-based TR is configured with the option <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_DEV_MAIN/29West/lbm/doc/Design/config.tag:../Config/" href="../Config/grpunicastresolvernetwork.html#resolverunicastdaemoncontext">resolver_unicast_daemon (context)</a>. See <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_DEV_MAIN/29West/lbm/doc/Design/config.tag:../Config/" href="../Config/generalconfigurationguidelines.html#specifyinginterfaces">Specifying Interfaces</a> for methods of specifying the interface within <code>&lt;interface&gt;...&lt;/interface&gt;</code>.</p>
+<p>If not specified, UM chooses the first interface it finds.</p>
+<p><b>WARNING</b>: It is strongly recommended to specify an interface when running lbmrd, either via the "-i" <a class="el" href="manpagesforlbmrd.html#lbmrdmanpage">command-line option</a>, or the <code>&lt;interface&gt;</code> XML tag. Otherwise, UM will select the first interface it finds, potentially 127.0.0.1 (loopback), which is rarely a good choice. Note that CIDR notation can make it easier. For example, "10.0.0.0/8" will match any interface on the 10 network.</p>
 <ul>
 <li>
 <b>Parent:</b> <a class="el" href="lbmrdconfigurationfile.html#lbmrdelementdaemon">&lt;daemon&gt;</a> </li>
 </ul>
-<p><b>Example:</b> </p><pre class="fragment">&lt;?xml version="1.0" encoding="UTF-8" ?&gt;
-&lt;lbmrd version="1.0"&gt;
-  &lt;daemon&gt;
-    &lt;interface&gt;10.1.1.50&lt;/interface&gt;
-    ...
-  &lt;/daemon&gt;
-  ...
-&lt;/lbmrd&gt;
-</pre><hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line">&lt;?xml version=<span class="stringliteral">&quot;1.0&quot;</span> encoding=<span class="stringliteral">&quot;UTF-8&quot;</span> ?&gt;</div><div class="line">&lt;lbmrd version=<span class="stringliteral">&quot;1.0&quot;</span>&gt;</div><div class="line">  &lt;daemon&gt;</div><div class="line">    &lt;interface&gt;10.1.1.50&lt;/interface&gt;</div><div class="line">    ...</div><div class="line">  &lt;/daemon&gt;</div><div class="line">  ...</div><div class="line">&lt;/lbmrd&gt;</div></div><!-- fragment --><hr/>
 <p> <br />
  </p>
 <h2><a class="anchor" id="lbmrdelementactivity"></a>
@@ -485,80 +304,19 @@ LBMRD Element "&lt;activity&gt;"&nbsp;&nbsp;<small><a href="#lbmrdelementactivit
 <li>
 <b>Parent:</b> <a class="el" href="lbmrdconfigurationfile.html#lbmrdelementdaemon">&lt;daemon&gt;</a> </li>
 <li>
-<p class="startli"><b>Default</b> <b>Value:</b> 60000</p>
-<p class="endli"></p>
-</li>
+<b>Default</b> <b>Value:</b> 60000 </li>
 </ul>
-<p><b>Example:</b> </p><pre class="fragment">&lt;?xml version="1.0" encoding="UTF-8" ?&gt;
-&lt;lbmrd version="1.0"&gt;
-  &lt;daemon&gt;
-    &lt;activity&gt;60000&lt;/activity&gt;
-    ...
-  &lt;/daemon&gt;
-  ...
-&lt;/lbmrd&gt;
-</pre><p><br />
+<p><b>Example:</b> </p><div class="fragment"><div class="line">&lt;?xml version=<span class="stringliteral">&quot;1.0&quot;</span> encoding=<span class="stringliteral">&quot;UTF-8&quot;</span> ?&gt;</div><div class="line">&lt;lbmrd version=<span class="stringliteral">&quot;1.0&quot;</span>&gt;</div><div class="line">  &lt;daemon&gt;</div><div class="line">    &lt;activity&gt;60000&lt;/activity&gt;</div><div class="line">    ...</div><div class="line">  &lt;/daemon&gt;</div><div class="line">  ...</div><div class="line">&lt;/lbmrd&gt;</div></div><!-- fragment --><p><br />
  </p>
 <h1><a class="anchor" id="dummylbmrdconfigurationfile"></a>
 Dummy lbmrd Configuration File&nbsp;&nbsp;<small><a href="#dummylbmrdconfigurationfile">&lt;-</a></small></h1>
 <p>If no NAT is present, and it is desired to use the XML configuration file for it's '<b>&lt;daemon&gt;</b>' contents, a "dummy" NAT configuration should be used.</p>
-<pre class="fragment">&lt;?xml version="1.0" encoding="UTF-8" ?&gt;
-&lt;lbmrd version="1.0"&gt;
-  &lt;daemon&gt;
-    ...
-  &lt;/daemon&gt;
-  &lt;domains&gt;
-    &lt;domain name="dummy"&gt;
-      &lt;network&gt;0.0.0.0/32&lt;/network&gt;
-    &lt;/domain&gt;
-  &lt;/domains&gt;
-  &lt;transformations&gt;
-    &lt;transform source="dummy" destination="dummy"&gt;
-      &lt;rule&gt;
-        &lt;match address="0.0.0.0" port="0"/&gt;
-        &lt;replace address="0.0.0.0" port="0"/&gt;
-      &lt;/rule&gt;
-    &lt;/transform&gt;
-  &lt;/transformations&gt;
-&lt;/lbmrd&gt;
-</pre><p><br />
+<div class="fragment"><div class="line">&lt;?xml version=<span class="stringliteral">&quot;1.0&quot;</span> encoding=<span class="stringliteral">&quot;UTF-8&quot;</span> ?&gt;</div><div class="line">&lt;lbmrd version=<span class="stringliteral">&quot;1.0&quot;</span>&gt;</div><div class="line">  &lt;daemon&gt;</div><div class="line">    ...</div><div class="line">  &lt;/daemon&gt;</div><div class="line">  &lt;domains&gt;</div><div class="line">    &lt;domain name=<span class="stringliteral">&quot;dummy&quot;</span>&gt;</div><div class="line">      &lt;network&gt;0.0.0.0/32&lt;/network&gt;</div><div class="line">    &lt;/domain&gt;</div><div class="line">  &lt;/domains&gt;</div><div class="line">  &lt;transformations&gt;</div><div class="line">    &lt;transform source=<span class="stringliteral">&quot;dummy&quot;</span> destination=<span class="stringliteral">&quot;dummy&quot;</span>&gt;</div><div class="line">      &lt;rule&gt;</div><div class="line">        &lt;match address=<span class="stringliteral">&quot;0.0.0.0&quot;</span> port=<span class="stringliteral">&quot;0&quot;</span>/&gt;</div><div class="line">        &lt;replace address=<span class="stringliteral">&quot;0.0.0.0&quot;</span> port=<span class="stringliteral">&quot;0&quot;</span>/&gt;</div><div class="line">      &lt;/rule&gt;</div><div class="line">    &lt;/transform&gt;</div><div class="line">  &lt;/transformations&gt;</div><div class="line">&lt;/lbmrd&gt;</div></div><!-- fragment --><p><br />
  </p>
 <h1><a class="anchor" id="lbmrddtdfile"></a>
 Lbmrd DTD file&nbsp;&nbsp;<small><a href="#lbmrddtdfile">&lt;-</a></small></h1>
 <p>The DTD file is used to validate the user's configuration file.</p>
-<pre class="fragment">&lt;!ELEMENT lbmrd (daemon?, domains, transformations)&gt;
-&lt;!ATTLIST lbmrd
-          version (1.0) #REQUIRED
-&gt;
-&lt;!ELEMENT daemon (activity|interface|port|ttl|log|resolver_unicast_receiver_socket_buffer|resolver_unicast_send_socket_buffer)*&gt;
-&lt;!ELEMENT activity (#PCDATA) &gt;
-&lt;!ELEMENT interface (#PCDATA) &gt;
-&lt;!ELEMENT port (#PCDATA) &gt;
-&lt;!ELEMENT ttl (#PCDATA) &gt;
-&lt;!ELEMENT log (#PCDATA) &gt;
-&lt;!ELEMENT resolver_unicast_receiver_socket_buffer (#PCDATA) &gt;
-&lt;!ELEMENT resolver_unicast_send_socket_buffer (#PCDATA) &gt;
-&lt;!ELEMENT domains (domain+)&gt;
-&lt;!ELEMENT domain (network+)&gt;
-&lt;!ATTLIST domain name ID #REQUIRED&gt;
-&lt;!ELEMENT network ( #PCDATA )&gt;
-&lt;!ELEMENT transformations ( transform+ )&gt;
-&lt;!ELEMENT transform ( rule+ )&gt;
-&lt;!ATTLIST transform
-          source IDREF #REQUIRED
-          destination IDREF #REQUIRED
-&gt;
-&lt;!ELEMENT rule ( match, replace )&gt;
-&lt;!ELEMENT match EMPTY&gt;
-&lt;!ATTLIST match
-          address CDATA #REQUIRED
-          port CDATA "*"
-&gt;
-&lt;!ELEMENT replace EMPTY&gt;
-&lt;!ATTLIST replace
-          address CDATA #REQUIRED
-          port CDATA "*"
-&gt;</pre> </div></div><!-- contents -->
+<div class="fragment"><div class="line">&lt;!ELEMENT lbmrd (daemon?, domains, transformations)&gt;</div><div class="line">&lt;!ATTLIST lbmrd</div><div class="line">          version (1.0) <span class="preprocessor">#REQUIRED</span></div><div class="line">&gt;</div><div class="line">&lt;!ELEMENT daemon (activity|interface|port|ttl|log|resolver_unicast_receiver_socket_buffer|resolver_unicast_send_socket_buffer)*&gt;</div><div class="line">&lt;!ELEMENT activity (#PCDATA) &gt;</div><div class="line">&lt;!ELEMENT interface (#PCDATA) &gt;</div><div class="line">&lt;!ELEMENT port (#PCDATA) &gt;</div><div class="line">&lt;!ELEMENT ttl (#PCDATA) &gt;</div><div class="line">&lt;!ELEMENT log (#PCDATA) &gt;</div><div class="line">&lt;!ELEMENT resolver_unicast_receiver_socket_buffer (#PCDATA) &gt;</div><div class="line">&lt;!ELEMENT resolver_unicast_send_socket_buffer (#PCDATA) &gt;</div><div class="line">&lt;!ELEMENT domains (domain+)&gt;</div><div class="line">&lt;!ELEMENT domain (network+)&gt;</div><div class="line">&lt;!ATTLIST domain name ID #REQUIRED&gt;</div><div class="line">&lt;!ELEMENT network ( #PCDATA )&gt;</div><div class="line">&lt;!ELEMENT transformations ( transform+ )&gt;</div><div class="line">&lt;!ELEMENT transform ( rule+ )&gt;</div><div class="line">&lt;!ATTLIST transform</div><div class="line">          source IDREF #REQUIRED</div><div class="line">          destination IDREF #REQUIRED</div><div class="line">&gt;</div><div class="line">&lt;!ELEMENT rule ( match, replace )&gt;</div><div class="line">&lt;!ELEMENT match EMPTY&gt;</div><div class="line">&lt;!ATTLIST match</div><div class="line">          address CDATA #REQUIRED</div><div class="line">          port CDATA <span class="stringliteral">&quot;*&quot;</span></div><div class="line">&gt;</div><div class="line">&lt;!ELEMENT replace EMPTY&gt;</div><div class="line">&lt;!ATTLIST replace</div><div class="line">          address CDATA #REQUIRED</div><div class="line">          port CDATA <span class="stringliteral">&quot;*&quot;</span></div><div class="line">&gt;</div></div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.8.11-->
 </body>

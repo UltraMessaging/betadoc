@@ -26,7 +26,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">UM .NET API
-   &#160;<span id="projectnumber">6.12</span>
+   &#160;<span id="projectnumber">6.14</span>
    </div>
   </td>
  </tr>
@@ -245,17 +245,16 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memdesc:ae0f560b27b0eb707870f2ff52242749b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dispose of this message immediately. <br /></td></tr>
 <tr class="separator:ae0f560b27b0eb707870f2ff52242749b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a963d0f07751ed176a97f3eff84740fb9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1latencybusters_1_1lbm_1_1LBMMessage.html#a963d0f07751ed176a97f3eff84740fb9">dispose</a> ()</td></tr>
-<tr class="memdesc:a963d0f07751ed176a97f3eff84740fb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dispose of this message immediately (same as <a class="el" href="classcom_1_1latencybusters_1_1lbm_1_1LBMMessage.html#ae0f560b27b0eb707870f2ff52242749b" title="Dispose of this message immediately. ">Dispose()</a>)  <a href="#a963d0f07751ed176a97f3eff84740fb9">More...</a><br /></td></tr>
 <tr class="separator:a963d0f07751ed176a97f3eff84740fb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2cda69ee0b33fe294d46761401e451ca"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1latencybusters_1_1lbm_1_1LBMMessage.html">LBMMessage</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcom_1_1latencybusters_1_1lbm_1_1LBMMessage.html#a2cda69ee0b33fe294d46761401e451ca">promote</a> ()</td></tr>
-<tr class="memdesc:a2cda69ee0b33fe294d46761401e451ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use to continue processing the message on another thread, or after the callback returns. (Note: If the application does not call promote or dispose, UM promotes the object by default. However, for valid coding, you must call one or the other.)  <a href="#a2cda69ee0b33fe294d46761401e451ca">More...</a><br /></td></tr>
 <tr class="separator:a2cda69ee0b33fe294d46761401e451ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Encapsulates all <a class="el" href="classcom_1_1latencybusters_1_1lbm_1_1LBM.html" title="LBM Utility class. ">LBM</a> messages. </p>
-<p>Call <a class="el" href="classcom_1_1latencybusters_1_1lbm_1_1LBMMessage.html#a963d0f07751ed176a97f3eff84740fb9" title="Dispose of this message immediately (same as Dispose()) ">dispose()</a> to utilize Zero Object Delivery (ZOD), or <a class="el" href="classcom_1_1latencybusters_1_1lbm_1_1LBMMessage.html#a2cda69ee0b33fe294d46761401e451ca" title="Use to continue processing the message on another thread, or after the callback returns. (Note: If the application does not call promote or dispose, UM promotes the object by default. However, for valid coding, you must call one or the other.) ">promote()</a> to retain message object after callback. You must call either one or the other. </p>
-<p>When using ZOD (Zero Object Delivery), access message data via <a class="el" href="classcom_1_1latencybusters_1_1lbm_1_1LBMMessage.html#a98f034f21af3ac96cc48cd90df73b48b" title="Pointer to the beginning of the unmanaged data buffer for this message. For ZOD, use in conjunction w...">dataPointer()</a> and <a class="el" href="classcom_1_1latencybusters_1_1lbm_1_1LBMMessage.html#a26ee9e9a8fa76302a91bcf77a60a9d26" title="Message data length. For ZOD, use this in conjunction with dataPointer(). ">length()</a>. (For more information on ZOD, see <a href="../Design/lbm-objects.html#ZOD-RECEIVER">Zero Object Delivery (ZOD)</a> and <a href="../JavaAPI/html/index.html">Java API Overview</a>.) </p>
-<p>For object-based delivery (non-ZOD), access message data with <a class="el" href="classcom_1_1latencybusters_1_1lbm_1_1LBMMessage.html#a1b8ece5390b7345ef052752281712426" title="Message data. Calling this method causes the data to be copied to a new byte array. For better performance, use the dataPointer() method to access the data directly. ">data()</a>, which creates a byte array object that contains the message data. </p>
+<p>Messages are delivered via the receiver callback. It is possible to retain a message for further processing after the receiver callback returns by calling <a class="el" href="classcom_1_1latencybusters_1_1lbm_1_1LBMMessage.html#a2cda69ee0b33fe294d46761401e451ca">promote()</a> and saving the message. The application must call <a class="el" href="classcom_1_1latencybusters_1_1lbm_1_1LBMMessage.html#a963d0f07751ed176a97f3eff84740fb9">dispose()</a> for each and every message when processing is completed. See <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_DEV_MAIN/29West/lbm/doc/DotNetAPI/design.tag:../Design/" href="../Design/applicationdesignprinciples.html#netmessagereception">.NET Message Reception</a>. </p>
+<p>Access message data via dataBuffer() and dataLength() to preserve "Zero
+Object Delivery" (ZOD). See <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_DEV_MAIN/29West/lbm/doc/DotNetAPI/design.tag:../Design/" href="../Design/umobjects.html#zeroobjectdelivery">Zero Object Delivery</a>. </p>
+<p>For older, object-based delivery (non-ZOD), you may access message data via <a class="el" href="classcom_1_1latencybusters_1_1lbm_1_1LBMMessage.html#a1b8ece5390b7345ef052752281712426" title="Message data. Calling this method causes the data to be copied to a new byte array. For better performance, use the dataPointer() method to access the data directly. ">data()</a>, which creates a byte array object that contains the message data. This method has lower performance. </p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname"><a class="el" href="classcom_1_1latencybusters_1_1lbm_1_1LBMException.html" title="Base LBM Exception class. ">com.latencybusters.lbm.LBMException</a></td><td>Invalid argument or unexpected operational behavior has been encountered by unmanaged <a class="el" href="classcom_1_1latencybusters_1_1lbm_1_1LBM.html" title="LBM Utility class. ">LBM</a> C layer function. </td></tr>
@@ -403,9 +402,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Dispose of this message immediately (same as <a class="el" href="classcom_1_1latencybusters_1_1lbm_1_1LBMMessage.html#ae0f560b27b0eb707870f2ff52242749b" title="Dispose of this message immediately. ">Dispose()</a>) </p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classcom_1_1latencybusters_1_1lbm_1_1LBMMessage.html#ae0f560b27b0eb707870f2ff52242749b" title="Dispose of this message immediately. ">Dispose</a> </dd></dl>
+<p>Dispose of memory associated with this message, and send UME implicit ACK for UME receivers. Every received message must be disposed after processing is complete. Note: the <a class="el" href="classcom_1_1latencybusters_1_1lbm_1_1LBMMessage.html#a963d0f07751ed176a97f3eff84740fb9">dispose()</a> method simply calls <a class="el" href="classcom_1_1latencybusters_1_1lbm_1_1LBMMessage.html#ae0f560b27b0eb707870f2ff52242749b" title="Dispose of this message immediately. ">Dispose()</a>. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="classcom_1_1latencybusters_1_1lbm_1_1LBMMessage.html#ae0f560b27b0eb707870f2ff52242749b" title="Dispose of this message immediately. ">Dispose</a> </dd></dl>
 
 </div>
 </div>
@@ -664,8 +661,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Use to continue processing the message on another thread, or after the callback returns. (Note: If the application does not call promote or dispose, UM promotes the object by default. However, for valid coding, you must call one or the other.) </p>
+<p>Promotes the current <a class="el" href="classcom_1_1latencybusters_1_1lbm_1_1LBMMessage.html">LBMMessage</a> to a full-fledged <a class="el" href="classcom_1_1latencybusters_1_1lbm_1_1LBMMessage.html">LBMMessage</a> object that can be referenced and used past the end of the receiver callback. Note that this creates a new object, so delivery is no longer "zero object". See <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_DEV_MAIN/29West/lbm/doc/DotNetAPI/design.tag:../Design/" href="../Design/applicationdesignprinciples.html#netmessagereception">.NET Message Reception</a>. </p>
+<p>Calling <a class="el" href="classcom_1_1latencybusters_1_1lbm_1_1LBMMessage.html#a2cda69ee0b33fe294d46761401e451ca">promote()</a> multiple times beyond the first call has no effect. I.e. you don't need to match the number of promotes with an equal number of disposes. </p>
+<p>CAUTION: <a class="el" href="classcom_1_1latencybusters_1_1lbm_1_1LBMMessage.html#a2cda69ee0b33fe294d46761401e451ca">promote()</a> is NOT thread safe; do not call it on the same message from multiple threads at the same time. Note that there should never be any reason to do so. </p>
 <dl class="section return"><dt>Returns</dt><dd>The promoted message. This is not guaranteed to be the same message that the method was called on. </dd></dl>
 
 </div>

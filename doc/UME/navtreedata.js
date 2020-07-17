@@ -13,6 +13,7 @@ var NAVTREE =
     ] ],
     [ "Persistence Architecture", "persistencearchitecture.html", [
       [ "Persistent Store Architecture", "persistencearchitecture.html#persistentstorearchitecture", [
+        [ "Store Processes and Instances", "persistencearchitecture.html#storeprocessesandinstances", null ],
         [ "Source Repositories", "persistencearchitecture.html#sourcerepositories", null ],
         [ "Repository Thresholds and Limits", "persistencearchitecture.html#repositorythresholdsandlimits", null ],
         [ "Tolerance Persistent Store Fault Tolerance", "persistencearchitecture.html#persistentstorefault", null ],
@@ -28,7 +29,8 @@ var NAVTREE =
         [ "Receiver Registration Process", "operationalview.html#receiverregistrationprocess", null ],
         [ "Persistence Normal Operation", "operationalview.html#persistencenormaloperation", null ],
         [ "Persistence Flight Size", "operationalview.html#persistenceflightsize", null ],
-        [ "Receiver Recovery", "operationalview.html#receiverrecovery", null ]
+        [ "Receiver Recovery", "operationalview.html#receiverrecovery", null ],
+        [ "Registration Limitations", "operationalview.html#registrationlimitations", null ]
       ] ],
       [ "Receiver-paced Persistence Operations", "operationalview.html#receiverpacedpersistenceoperations", [
         [ "RPP Registration", "operationalview.html#rppregistration", null ],
@@ -44,6 +46,10 @@ var NAVTREE =
         [ "Persistence Receiver Events", "operationalview.html#persistencereceiverevents", null ],
         [ "Persistence Context Events", "operationalview.html#persistencecontextevents", null ]
       ] ]
+    ] ],
+    [ "Store Repository Profiling (SRP)", "storerepositoryprofilingsrp.html", [
+      [ "Using the SRP API", "storerepositoryprofilingsrp.html#usingthesrpapi", null ],
+      [ "umesnaprepo Man Page", "storerepositoryprofilingsrp.html#umesnaprepomanpage", null ]
     ] ],
     [ "Enabling Persistence", "enablingpersistence.html", [
       [ "Starting Configuration", "enablingpersistence.html#startingconfiguration", null ],
@@ -102,7 +108,8 @@ var NAVTREE =
         [ "Persistent Source Recovery", "designingpersistenceapplications.html#persistentsourcerecovery", null ],
         [ "Persistent Receiver Recovery", "designingpersistenceapplications.html#persistentreceiverrecovery", null ]
       ] ],
-      [ "Callable Store", "designingpersistenceapplications.html#callablestore", null ]
+      [ "Callable Store", "designingpersistenceapplications.html#callablestore", null ],
+      [ "Store Thread Affinity", "designingpersistenceapplications.html#storethreadaffinity", null ]
     ] ],
     [ "Persistence Fault Tolerance", "persistencefaulttolerance.html", [
       [ "Message Loss Recovery", "persistencefaulttolerance.html#messagelossrecovery", null ],
@@ -124,17 +131,34 @@ var NAVTREE =
       [ "Umestoreds Man Page", "manpagesforstore.html#umestoredsmanpage", null ]
     ] ],
     [ "Configuration Reference for Umestored", "configurationreferenceforumestored.html", [
-      [ "Daemon Element", "configurationreferenceforumestored.html#daemonelement", [
-        [ "Log Element", "configurationreferenceforumestored.html#logelement", null ],
-        [ "Daemon-monitor Element", "configurationreferenceforumestored.html#daemonmonitorelement", null ],
-        [ "Publishing-interval Element", "configurationreferenceforumestored.html#publishingintervalelement", null ],
-        [ "Group Element", "configurationreferenceforumestored.html#groupelement", null ]
+      [ "Store XML Configuration File Elements", "configurationreferenceforumestored.html#storexmlconfigurationfileelements", [
+        [ "UMP Element \"<ume-store>\"", "configurationreferenceforumestored.html#umeelementumestore", null ],
+        [ "UMP Element \"<stores>\"", "configurationreferenceforumestored.html#umeelementstores", null ],
+        [ "UMP Element \"<store>\"", "configurationreferenceforumestored.html#umeelementstore", null ],
+        [ "UMP Element \"<topics>\"", "configurationreferenceforumestored.html#umeelementtopics", null ],
+        [ "UMP Element \"<topic>\"", "configurationreferenceforumestored.html#umeelementtopic", null ],
+        [ "UMP Element \"<ume-attributes>\"", "configurationreferenceforumestored.html#umeelementumeattributes", null ],
+        [ "UMP Element \"<option>\"", "configurationreferenceforumestored.html#umeelementoption", null ],
+        [ "UMP Element \"<publishing-interval>\"", "configurationreferenceforumestored.html#umeelementpublishinginterval", null ],
+        [ "UMP Element \"<group>\"", "configurationreferenceforumestored.html#umeelementgroup", null ],
+        [ "UMP Element \"<daemon>\"", "configurationreferenceforumestored.html#umeelementdaemon", null ],
+        [ "UMP Element \"<daemon-monitor>\"", "configurationreferenceforumestored.html#umeelementdaemonmonitor", null ],
+        [ "UMP Element \"<remote-config-changes-request>\"", "configurationreferenceforumestored.html#umeelementremoteconfigchangesrequest", null ],
+        [ "UMP Element \"<remote-snapshot-request>\"", "configurationreferenceforumestored.html#umeelementremotesnapshotrequest", null ],
+        [ "UMP Element \"<lbm-config>\"", "configurationreferenceforumestored.html#umeelementlbmconfig", null ],
+        [ "UMP Element \"<web-monitor>\"", "configurationreferenceforumestored.html#umeelementwebmonitor", null ],
+        [ "UMP Element \"<lbm-license-file>\"", "configurationreferenceforumestored.html#umeelementlbmlicensefile", null ],
+        [ "UMP Element \"<xml-config>\"", "configurationreferenceforumestored.html#umeelementxmlconfig", null ],
+        [ "UMP Element \"<gid>\"", "configurationreferenceforumestored.html#umeelementgid", null ],
+        [ "UMP Element \"<pidfile>\"", "configurationreferenceforumestored.html#umeelementpidfile", null ],
+        [ "UMP Element \"<uid>\"", "configurationreferenceforumestored.html#umeelementuid", null ],
+        [ "UMP Element \"<log>\"", "configurationreferenceforumestored.html#umeelementlog", null ]
       ] ],
-      [ "Stores Element", "configurationreferenceforumestored.html#storeselement", [
-        [ "Store Element", "configurationreferenceforumestored.html#storeelement", null ],
-        [ "Topics Element", "configurationreferenceforumestored.html#topicselement", null ],
-        [ "Topic Element", "configurationreferenceforumestored.html#topicelement", null ]
+      [ "Options for a Store's ume-attributes Element", "configurationreferenceforumestored.html#optionsforastoresumeattributeselement", [
+        [ "Options for UM", "configurationreferenceforumestored.html#optionsforum", null ],
+        [ "Store Options", "configurationreferenceforumestored.html#storeoptions", null ]
       ] ],
+      [ "Options for a Topic's ume-attributes Element", "configurationreferenceforumestored.html#optionsforatopicsume-attributeselement", null ],
       [ "Option Types for ume-attributes Elements", "configurationreferenceforumestored.html#optiontypesforumeattributeselements", null ],
       [ "umestored Configuration DTD", "configurationreferenceforumestored.html#umestoredconfigurationdtd", null ],
       [ "Store Configuration Example", "configurationreferenceforumestored.html#storeconfigurationexample", [
@@ -148,7 +172,17 @@ var NAVTREE =
         [ "Store Daemon Statistics Retx Counts", "storedaemonstatistics.html#storedaemonstatisticsstructuresretxcounts", null ]
       ] ],
       [ "Store Daemon Statistics Configuration", "storedaemonstatistics.html#storedaemonstatisticsconfiguration", null ],
-      [ "Store Daemon Statistics Requests", "storedaemonstatistics.html#storedaemonstatisticsrequests", null ]
+      [ "Store Daemon Control Requests", "storedaemonstatistics.html#storedaemoncontrolrequests", [
+        [ "Store Daemon Control Request Addressing", "storedaemonstatistics.html#storedaemoncontrolrequestaddressing", null ],
+        [ "Store Daemon Control Request Types", "storedaemonstatistics.html#storedaemoncontrolrequesttypes", null ],
+        [ "Request: Mark Stored Message Invalid", "storedaemonstatistics.html#requestmarkstoredmessageinvalid", null ],
+        [ "Request: Deregister Receiver", "storedaemonstatistics.html#requestderegisterreceiver", null ]
+      ] ],
+      [ "umedcmd Man Page", "storedaemonstatistics.html#umedcmdmanpage", [
+        [ "umedcmd Publish Mode", "storedaemonstatistics.html#umedcmdpublishmode", null ],
+        [ "umedcmd Mark Mode", "storedaemonstatistics.html#umedcmdmarkmode", null ],
+        [ "umedcmd Deregister Mode", "storedaemonstatistics.html#umedcmdderegistermode", null ]
+      ] ]
     ] ],
     [ "Store Web Monitor", "storewebmonitor.html", [
       [ "Store Web Monitor Index Page", "storewebmonitor.html#storewebmonitorindexpage", null ],

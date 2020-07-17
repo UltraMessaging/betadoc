@@ -1,6 +1,6 @@
 
 /*
-  Copyright (c) 2005-2019 Informatica Corporation  Permission is granted to licensees to use
+  Copyright (c) 2005-2020 Informatica Corporation  Permission is granted to licensees to use
   or alter this software for any purpose, including commercial applications,
   according to the terms laid out in the Software License Agreement.
 
@@ -977,9 +977,6 @@ namespace LBMApplication
                     break;
                 case LBM.MSG_UME_REGISTRATION_ERROR:
                     System.Console.Error.WriteLine("[" + msg.topicName() + "][" + msg.source() + "] UME registration error: " + msg.dataString());
-                    break;
-                case LBM.MSG_UME_REGISTRATION_SUCCESS:
-                    System.Console.Error.WriteLine("[" + msg.topicName() + "][" + msg.source() + "] UME registration successful. Src RegID " + msg.sourceRegistrationId() + " RegID " + msg.receiverRegistrationId());
                     break;
                 case LBM.MSG_UME_DEREGISTRATION_SUCCESS_EX:
 					System.Console.Out.Write("Received MSG_UME_DEREGISTRATION_SUCCESS_EX\n");

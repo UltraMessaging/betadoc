@@ -1,7 +1,21 @@
 var NAVTREE =
 [
   [ "UM C API", "index.html", [
-    [ "Introduction", "index.html", null ],
+    [ "Introduction", "index.html", [
+      [ "UM C API", "index.html#umcapi", [
+        [ "Using UM C on Windows", "index.html#usingumconwindows", null ],
+        [ "Using UM C on Unix", "index.html#usingumconunix", null ]
+      ] ]
+    ] ],
+    [ "C Structure Usage Patterns", "cstructureusagepatterns.html", [
+      [ "UM Object Handles (Pointers)", "cstructureusagepatterns.html#umobjecthandlespointers", null ],
+      [ "Application-Visible UM Structures", "cstructureusagepatterns.html#applicationvisibleumstructures", null ],
+      [ "Application Calling UM API", "cstructureusagepatterns.html#applicationcallingumapi", [
+        [ "Statistics Retrieval", "cstructureusagepatterns.html#statisticsretrieval", null ],
+        [ "Configuration Option Structures", "cstructureusagepatterns.html#configurationoptionstructures", null ]
+      ] ],
+      [ "UM Calling Application Callback", "cstructureusagepatterns.html#umcallingapplicationcallback", null ]
+    ] ],
     [ "LBMMON Example source code", "lbmmon_examples.html", "lbmmon_examples" ],
     [ "Deprecated List", "deprecated.html", null ],
     [ "Modules", "modules.html", "modules" ],
@@ -18,6 +32,7 @@ var NAVTREE =
         [ "All", "globals.html", "globals_dup" ],
         [ "Functions", "globals_func.html", "globals_func" ],
         [ "Typedefs", "globals_type.html", "globals_type" ],
+        [ "Enumerations", "globals_enum.html", null ],
         [ "Enumerator", "globals_eval.html", null ],
         [ "Macros", "globals_defs.html", "globals_defs" ]
       ] ]
@@ -28,20 +43,20 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"group__get__elem__idx.html#ga325ed9448f8df35879aca7dbaa3cd834",
-"group__set__array__iter.html#ga6999be8dfd520b5ba7fc90f30083a43a",
-"group__set__name.html#gaa414f35a772978cd1a8710d17b8b452b",
-"lbm_8h.html#a3784fa44333db035f6ddfc73dbe50621",
-"lbm_8h.html#a73f1869f043a6c06bca5d31d71344ae1",
-"lbm_8h.html#aaf6cf9c76605c27795e6fac32e0fda17",
-"lbm_8h.html#ae764ea8abf227789ef8d44c6dee9625f",
-"lbmpdm_8h.html#a031a7d889e693f08abe1306a21006fe1",
-"lbmsdm_8h.html#ae32f13c82810de71c2a038376f8ad16f",
-"structlbm__msg__ume__registration__ex__t__stct.html#ad929f9de34db02929bb4fd36c844c683",
-"structlbm__src__event__umq__ulb__message__info__ex__t__stct.html#af8bca65babd05493db5d8d98ae20d950",
-"structlbmmon__format__func__t__stct.html#a42a4d6a19f7d4dcbe0a0461c5816918d",
-"structtnwg__dstat__portalstats__msg__t__stct.html#ab6a1548883d5e3ea8b3e2158a45cce10",
-"tnwgdmonmsgs_8h.html#aeac81f470a988e915602acbb57be5793"
+"group__get__elem__idx.html",
+"group__set__array__iter.html#ga3917de920ca8f3a118109a253a746b42",
+"group__set__name.html#ga37f383af72f07473fbc253fc37ec0d03",
+"lbm_8h.html#a33de981e32d17806f4488a572e53d8c2",
+"lbm_8h.html#a703353b0cf30dbe1977c3770b6e404f5",
+"lbm_8h.html#aabc1d9bd5b2978ae7d2f6e93ecc4b487",
+"lbm_8h.html#ae28c5fac3f27e3d4ee50c0cbd02d1180",
+"lbmmon_8h.html#aec702c07918485584dbf3f1c837a0945",
+"lbmsdm_8h.html#abed82baf7f470b522273a3e37c24c600a806c4ee6911475aa8bb5bc4edbab169a",
+"structlbm__msg__t__stct.html#ae1619e3a9382792e15704ce8a1b730c1",
+"structlbm__src__event__umq__registration__complete__ex__t__stct.html",
+"structlbm__ume__store__entry__t__stct.html",
+"structtnwg__dstat__peer__receive__stats__t__stct.html#a02d8f6903686d2c43b41b84c23279577",
+"structumestore__repo__dmon__config__msg__t__stct.html#adb3c421023777daf30f5edb344be3900"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -99,7 +99,8 @@ Reference&nbsp;&nbsp;<small><a href="#transportaccelerationmyricomref">&lt;-</a>
  </p>
 <h2><a class="anchor" id="dbllbtrmaccelerationcontext"></a>
 dbl_lbtrm_acceleration (context)&nbsp;&nbsp;<small><a href="#dbllbtrmaccelerationcontext">&lt;-</a></small></h2>
-<dl class="section user"><dt></dt><dd>Flag indicating if DBL acceleration is enabled for LBT-RM transports.</dd></dl>
+<dl class="section user"><dt></dt><dd>Flag indicating if DBL acceleration is enabled for LBT-RM transports. </dd></dl>
+<dl class="section user"><dt></dt><dd>See <a class="el" href="grptransportacceleration.html#myricomdatagrambypasslayerdbl">Myricom® Datagram Bypass Layer (DBL™)</a>.</dd></dl>
 <dl class="section user"><dt></dt><dd><table class="doxtable">
 <tr>
 <td><em>Scope:</em> </td><td>context </td></tr>
@@ -127,7 +128,8 @@ dbl_lbtrm_acceleration (context)&nbsp;&nbsp;<small><a href="#dbllbtrmacceleratio
  </p>
 <h2><a class="anchor" id="dbllbtruaccelerationcontext"></a>
 dbl_lbtru_acceleration (context)&nbsp;&nbsp;<small><a href="#dbllbtruaccelerationcontext">&lt;-</a></small></h2>
-<dl class="section user"><dt></dt><dd>Flag indicating if DBL acceleration is enabled for LBT-RU transports.</dd></dl>
+<dl class="section user"><dt></dt><dd>Flag indicating if DBL acceleration is enabled for LBT-RU transports. </dd></dl>
+<dl class="section user"><dt></dt><dd>See <a class="el" href="grptransportacceleration.html#myricomdatagrambypasslayerdbl">Myricom® Datagram Bypass Layer (DBL™)</a>.</dd></dl>
 <dl class="section user"><dt></dt><dd><table class="doxtable">
 <tr>
 <td><em>Scope:</em> </td><td>context </td></tr>
@@ -155,7 +157,9 @@ dbl_lbtru_acceleration (context)&nbsp;&nbsp;<small><a href="#dbllbtruacceleratio
  </p>
 <h2><a class="anchor" id="dblmimaccelerationcontext"></a>
 dbl_mim_acceleration (context)&nbsp;&nbsp;<small><a href="#dblmimaccelerationcontext">&lt;-</a></small></h2>
-<dl class="section user"><dt></dt><dd>Flag indicating if DBL acceleration is enabled for multicast immediate messaging (MIM).</dd></dl>
+<dl class="section user"><dt></dt><dd>Flag indicating if DBL acceleration is enabled for MIM. </dd></dl>
+<dl class="section user"><dt></dt><dd>See <a class="el" href="grptransportacceleration.html#myricomdatagrambypasslayerdbl">Myricom® Datagram Bypass Layer (DBL™)</a>. </dd></dl>
+<dl class="section user"><dt></dt><dd>See <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_DEV_MAIN/29West/lbm/doc/Config/design.tag:../Design/" href="../Design/umfeatures.html#multicastimmediatemessaging">Multicast Immediate Messaging</a> for general information about MIM.</dd></dl>
 <dl class="section user"><dt></dt><dd><table class="doxtable">
 <tr>
 <td><em>Scope:</em> </td><td>context </td></tr>
@@ -183,7 +187,8 @@ dbl_mim_acceleration (context)&nbsp;&nbsp;<small><a href="#dblmimaccelerationcon
  </p>
 <h2><a class="anchor" id="dblresolveraccelerationcontext"></a>
 dbl_resolver_acceleration (context)&nbsp;&nbsp;<small><a href="#dblresolveraccelerationcontext">&lt;-</a></small></h2>
-<dl class="section user"><dt></dt><dd>Flag indicating if DBL acceleration is enabled for topic resolution.</dd></dl>
+<dl class="section user"><dt></dt><dd>Flag indicating if DBL acceleration is enabled for topic resolution. </dd></dl>
+<dl class="section user"><dt></dt><dd>See <a class="el" href="grptransportacceleration.html#myricomdatagrambypasslayerdbl">Myricom® Datagram Bypass Layer (DBL™)</a>.</dd></dl>
 <dl class="section user"><dt></dt><dd><table class="doxtable">
 <tr>
 <td><em>Scope:</em> </td><td>context </td></tr>
@@ -269,7 +274,8 @@ Reference&nbsp;&nbsp;<small><a href="#transportaccelerationsolarflareref">&lt;-<
  </p>
 <h2><a class="anchor" id="onloadaccelerationstacknamereceiver"></a>
 onload_acceleration_stack_name (receiver)&nbsp;&nbsp;<small><a href="#onloadaccelerationstacknamereceiver">&lt;-</a></small></h2>
-<dl class="section user"><dt></dt><dd>The stackname to use when creating an OpenOnload transport data socket. The stackname must be eight characters or less. Because this is a transport setting, the first receiver applies its configuration option setting, and other receivers that join the transport inherit the setting of the first source. To disable the stackname, set this option to NULL, which must be all uppercase. </dd></dl>
+<dl class="section user"><dt></dt><dd>The stackname to use when creating an OpenOnload transport data socket. </dd></dl>
+<dl class="section user"><dt></dt><dd>The stackname must be eight characters or less. Because this is a transport setting, the first receiver applies its configuration option setting, and other receivers that join the transport inherit the setting of the first source. To disable the stackname, set this option to NULL, which must be all uppercase. </dd></dl>
 <dl class="section user"><dt></dt><dd>Note: Use of this option requires Solarflare OpenOnload and applies to LBT-RM, LBT-RU, and TCP transports.</dd></dl>
 <dl class="section user"><dt></dt><dd><table class="doxtable">
 <tr>
@@ -288,7 +294,8 @@ onload_acceleration_stack_name (receiver)&nbsp;&nbsp;<small><a href="#onloadacce
  </p>
 <h2><a class="anchor" id="onloadaccelerationstacknamesource"></a>
 onload_acceleration_stack_name (source)&nbsp;&nbsp;<small><a href="#onloadaccelerationstacknamesource">&lt;-</a></small></h2>
-<dl class="section user"><dt></dt><dd>The stackname to use when creating an OpenOnload transport data socket. The stackname must be eight characters or less. Because this is a transport setting, the first source applies its configuration option setting, and other sources that join the transport inherit the setting of the first source. To disable the stackname, set this option to NULL, which must be all uppercase. </dd></dl>
+<dl class="section user"><dt></dt><dd>The stackname to use when creating an OpenOnload transport data socket. </dd></dl>
+<dl class="section user"><dt></dt><dd>The stackname must be eight characters or less. Because this is a transport setting, the first source applies its configuration option setting, and other sources that join the transport inherit the setting of the first source. To disable the stackname, set this option to NULL, which must be all uppercase. </dd></dl>
 <dl class="section user"><dt></dt><dd>Note: Use of this option requires Solarflare OpenOnload and applies to LBT-RM, LBT-RU, and TCP transports.</dd></dl>
 <dl class="section user"><dt></dt><dd><table class="doxtable">
 <tr>
@@ -339,7 +346,8 @@ Reference&nbsp;&nbsp;<small><a href="#transportaccelerationmellanoxref">&lt;-</a
  </p>
 <h2><a class="anchor" id="resolverudaccelerationcontext"></a>
 resolver_ud_acceleration (context)&nbsp;&nbsp;<small><a href="#resolverudaccelerationcontext">&lt;-</a></small></h2>
-<dl class="section user"><dt></dt><dd>Flag indicating if Accelerated Multicast is enabled for Topic Resolution. Accelerated Multicast requires Mellanox InfiniBand or 10 Gigabit Ethernet hardware. UD Acceleration of topic resolution relies on hardware-supported loopback, which InfiniBand provides, but which the 10 Gigabit Ethernet ConnectX hardware does not. </dd></dl>
+<dl class="section user"><dt></dt><dd>Flag indicating if Accelerated Multicast is enabled for Topic Resolution. Accelerated Multicast requires Mellanox InfiniBand or 10 Gigabit Ethernet hardware. </dd></dl>
+<dl class="section user"><dt></dt><dd>UD Acceleration of topic resolution relies on hardware-supported loopback, which InfiniBand provides, but which the 10 Gigabit Ethernet ConnectX hardware does not. </dd></dl>
 <dl class="section user"><dt></dt><dd>Note: If 10 Gigabit Ethernet ConnectX hardware is used and multiple UM contexts are desired on the host, this option must be disabled.</dd></dl>
 <dl class="section user"><dt></dt><dd><table class="doxtable">
 <tr>
@@ -368,7 +376,8 @@ resolver_ud_acceleration (context)&nbsp;&nbsp;<small><a href="#resolverudacceler
  </p>
 <h2><a class="anchor" id="udaccelerationcontext"></a>
 ud_acceleration (context)&nbsp;&nbsp;<small><a href="#udaccelerationcontext">&lt;-</a></small></h2>
-<dl class="section user"><dt></dt><dd>Flag indicating if Accelerated Multicast is enabled for LBT-RM. Accelerated Multicast requires InfiniBand or 10 Gigabit Ethernet hardware and the purchase and installation of the Ultra Messaging Accelerated Multicast Module. See your Ultra Messaging representative for licensing specifics.</dd></dl>
+<dl class="section user"><dt></dt><dd>Flag indicating if Accelerated Multicast is enabled for LBT-RM. </dd></dl>
+<dl class="section user"><dt></dt><dd>Accelerated Multicast requires InfiniBand or 10 Gigabit Ethernet hardware and the purchase and installation of the Ultra Messaging Accelerated Multicast Module. See your Ultra Messaging representative for licensing specifics.</dd></dl>
 <dl class="section user"><dt></dt><dd><table class="doxtable">
 <tr>
 <td><em>Scope:</em> </td><td>context </td></tr>

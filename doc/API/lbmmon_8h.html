@@ -26,7 +26,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">UM C API
-   &#160;<span id="projectnumber">6.12</span>
+   &#160;<span id="projectnumber">6.14</span>
    </div>
   </td>
  </tr>
@@ -76,7 +76,7 @@ $(document).ready(function(){initNavTree('lbmmon_8h.html','');});
 </div><!--header-->
 <div class="contents">
 
-<p>Ultra Messaging (UM) Monitoring API.  
+<p>Ultra Messaging (UM) Monitoring API. The "lbmmon.h" header file defines APIs for UM application monitoring, both the send side (application being monitored) and the receive side (application doing the monitoring). The binary code is contained in the "lbm" library (dynamic on Unix: "liblbm.so", static on Unix: "liblbm.a", dynamic only on Windows: "lbm.dll"). See <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_DEV_MAIN/29West/lbm/doc/API/operations.tag:../Operations/" href="../Operations/monitoringumwiththelbmmonapi.html">Monitoring UM with the lbmmon API</a> for general information on UM monitoring. See <a class="el" href="index.html#umcapi">UM C API</a> for general information on the C API. See <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_DEV_MAIN/29West/lbm/doc/API/design.tag:../Design/" href="../Design/fundamentalconcepts.html">Fundamental Concepts</a> for an introduction to Ultra Messaging.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;stdlib.h&gt;</code><br />
 <code>#include &lt;lbm/lbm.h&gt;</code><br />
@@ -428,16 +428,7 @@ Functions</h2></td></tr>
 <tr class="separator:ad10ac6fdaa7ba17b8efceca176c36070"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Ultra Messaging (UM) Monitoring API. </p>
-<dl class="section author"><dt>Author</dt><dd>David K. Ameiss - Informatica Corporation </dd></dl>
-<dl class="section version"><dt>Version</dt><dd></dd></dl>
-<dl class="section rcs"><dt>Id</dt><dd>//UMprod/REL_6_12/29West/lbm/src/mon/lbm/lbmmon.h#1 </dd></dl>
-<p>The Ultra Messaging (UM) Monitoring API Description. Included are types, constants, and functions related to the API. Contents are subject to change.</p>
-<p>All of the documentation and software included in this and any other Informatica Corporation Ultra Messaging Releases Copyright (C) Informatica Corporation. All rights reserved.</p>
-<p>Redistribution and use in source and binary forms, with or without modification, are permitted only as covered by the terms of a valid software license agreement with Informatica Corporation.</p>
-<p>Copyright (C) 2006-2019, Informatica Corporation. All Rights Reserved.</p>
-<p>THE SOFTWARE IS PROVIDED "AS IS" AND INFORMATICA DISCLAIMS ALL WARRANTIES EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION, ANY IMPLIED WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE. INFORMATICA DOES NOT WARRANT THAT USE OF THE SOFTWARE WILL BE UNINTERRUPTED OR ERROR-FREE. INFORMATICA SHALL NOT, UNDER ANY CIRCUMSTANCES, BE LIABLE TO LICENSEE FOR LOST PROFITS, CONSEQUENTIAL, INCIDENTAL, SPECIAL OR INDIRECT DAMAGES ARISING OUT OF OR RELATED TO THIS AGREEMENT OR THE TRANSACTIONS CONTEMPLATED HEREUNDER, EVEN IF INFORMATICA HAS BEEN APPRISED OF THE LIKELIHOOD OF SUCH DAMAGES.</p>
-<p>The LBM Monitoring API provides a framework to allow the convenient gathering of LBM statistics. </p>
+<div class="textblock"><p>Ultra Messaging (UM) Monitoring API. The "lbmmon.h" header file defines APIs for UM application monitoring, both the send side (application being monitored) and the receive side (application doing the monitoring). The binary code is contained in the "lbm" library (dynamic on Unix: "liblbm.so", static on Unix: "liblbm.a", dynamic only on Windows: "lbm.dll"). See <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_DEV_MAIN/29West/lbm/doc/API/operations.tag:../Operations/" href="../Operations/monitoringumwiththelbmmonapi.html">Monitoring UM with the lbmmon API</a> for general information on UM monitoring. See <a class="el" href="index.html#umcapi">UM C API</a> for general information on the C API. See <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_DEV_MAIN/29West/lbm/doc/API/design.tag:../Design/" href="../Design/fundamentalconcepts.html">Fundamental Concepts</a> for an introduction to Ultra Messaging. </p>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
 <a class="anchor" id="a7e199ec349fa476cac44840e97e9d126"></a>
 <div class="memitem">
@@ -461,7 +452,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Attribute block entry contains the context ID. </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000003">Deprecated:</a></b></dt><dd>Use <a class="el" href="lbmmon_8h.html#a415bf9dc16ddefe1f9f5d38b83cc48e6">LBMMON_ATTR_OBJECTID</a> instead. </dd></dl>
+<p>Attribute block entry contains the context ID. </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000035">Deprecated:</a></b></dt><dd>Use <a class="el" href="lbmmon_8h.html#a415bf9dc16ddefe1f9f5d38b83cc48e6">LBMMON_ATTR_OBJECTID</a> instead. </dd></dl>
 
 </div>
 </div>
@@ -1734,7 +1725,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 if successful, -1 if the attribute does not exist. </dd></dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000004">Deprecated:</a></b></dt><dd>Use <a class="el" href="lbmmon_8h.html#aa8669b8acf25d0d81ef78f8c4fced6ea" title="Retrieve the object ID attribute from the statistics attribute block. ">lbmmon_attr_get_objectid</a> instead. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000036">Deprecated:</a></b></dt><dd>Use <a class="el" href="lbmmon_8h.html#aa8669b8acf25d0d81ef78f8c4fced6ea" title="Retrieve the object ID attribute from the statistics attribute block. ">lbmmon_attr_get_objectid</a> instead. </dd></dl>
 
 </div>
 </div>

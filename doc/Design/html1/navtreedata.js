@@ -3,6 +3,10 @@ var NAVTREE =
   [ "Concepts Guide", "index.html", [
     [ "Introduction", "index.html#firstsect", null ],
     [ "Fundamental Concepts", "index.html#fundamentalconcepts", [
+      [ "Messages", "index.html#messages", [
+        [ "Message Integrity", "index.html#messageintegrity", null ],
+        [ "Message Metadata", "index.html#messagemetadata", null ]
+      ] ],
       [ "Topic Structure and Management", "index.html#topicstructureandmanagement", [
         [ "Message Ordering", "index.html#messageordering", null ],
         [ "Topic Resolution Overview", "index.html#topicresolutionoverview", null ],
@@ -15,24 +19,29 @@ var NAVTREE =
       ] ],
       [ "Persistence", "index.html#persistence", null ],
       [ "Queuing", "index.html#queuing", null ],
-      [ "UM Router", "index.html#umrouter", null ],
+      [ "DRO", "index.html#umrouter", null ],
       [ "Late Join", "index.html#latejoin", null ],
       [ "Request/Response", "index.html#requestresponse", null ],
       [ "UM Transports", "index.html#umtransports", [
-        [ "Transport Sessions", "index.html#transportsessions", null ],
-        [ "Multi-Transport Threads", "index.html#multitransportthreads", null ]
+        [ "Transport Sessions", "index.html#transportsessions", null ]
       ] ],
-      [ "Event Delivery", "index.html#eventdelivery", null ],
+      [ "Event Delivery", "index.html#eventdelivery", [
+        [ "Receiver BOS and EOS Events", "index.html#receiverbosandeosevents", null ],
+        [ "Source Connect and Disconnect Events", "index.html#sourceconnectanddisconnectevents", null ]
+      ] ],
       [ "Rate Controls", "index.html#ratecontrols", [
         [ "Transport Rate Control", "index.html#transportratecontrol", null ],
         [ "Topic Resolution Rate Control", "index.html#topicresolutionratecontrol", null ]
       ] ],
       [ "Operational Statistics", "index.html#operationalstatistics", null ],
-      [ "Immediate Messaging", "index.html#immediatemessaging", null ],
+      [ "Immediate Messaging", "index.html#immediatemessaging", null ]
+    ] ],
+    [ "UM Objects", "index.html#umobjects", [
       [ "Context Object", "index.html#contextobject", null ],
       [ "Topic Object", "index.html#topicobject", null ],
       [ "Source Object", "index.html#sourceobject", [
         [ "Source String", "index.html#sourcestring", null ],
+        [ "Source Strings in a Routed Network", "index.html#sourcestringsinaroutednetwork", null ],
         [ "Source Configuration and Transport Sessions", "index.html#sourceconfigurationandtransportsessions", null ],
         [ "Zero Object Delivery (Source)", "index.html#zeroobjectdeliverysource", null ]
       ] ],
@@ -43,21 +52,30 @@ var NAVTREE =
         [ "UM Hot Failover Across Contexts Objects", "index.html#umhotfailoveracrosscontextsobjects", null ],
         [ "Zero Object Delivery", "index.html#zeroobjectdelivery", null ]
       ] ],
-      [ "Event Queue Object", "index.html#eventqueueobject", null ],
+      [ "Event Queue Object", "index.html#eventqueueobject", [
+        [ "Using an Event Queue", "index.html#usinganeventqueue", null ],
+        [ "Event Queue Timeout", "index.html#eventqueuetimeout", null ]
+      ] ],
       [ "Message Object", "index.html#messageobject", [
         [ "Message Object Deletion", "index.html#messageobjectdeletion", null ],
         [ "Message Object Retention", "index.html#messageobjectretention", null ]
       ] ],
+      [ "Attributes Object", "index.html#attributesobject", null ],
       [ "Security Considerations", "index.html#securityconsiderations", [
         [ "Webmon Security", "index.html#webmonsecurity", null ]
+      ] ],
+      [ "Configuration Introduction", "index.html#configurationintroduction", [
+        [ "xml:space Attribute", "index.html#xmlspaceattribute", null ]
       ] ]
     ] ],
     [ "Transport Types", "index.html#transporttypes", [
       [ "Transport TCP", "index.html#transporttcp", null ],
       [ "Transport LBT-RU", "index.html#transportlbtru", null ],
-      [ "Transport LBT-RM", "index.html#transportlbtrm", null ],
+      [ "Transport LBT-RM", "index.html#transportlbtrm", [
+        [ "NAK Suppression", "index.html#naksuppression", null ],
+        [ "Comparing LBT-RM and PGM", "index.html#comparinglbtrmndpgm", null ]
+      ] ],
       [ "Transport LBT-IPC", "index.html#transportlbtipc", [
-        [ "LBT-IPC Shared Memory Area", "index.html#lbtipcsharedmemoryarea", null ],
         [ "Sources and LBT-IPC", "index.html#sourcesandlbtipc", null ],
         [ "Receivers and LBT-IPC", "index.html#receiversandlbtipc", null ],
         [ "Similarities with Other UM Transports", "index.html#similaritieswithotherumtransports", null ],
@@ -83,6 +101,10 @@ var NAVTREE =
       [ "Transport Broker", "index.html#transportbroker", null ]
     ] ],
     [ "Topic Resolution Description", "index.html#topicresolutiondescription", [
+      [ "Resolver Caches", "index.html#resolvercaches", [
+        [ "Source Resolver Cache", "index.html#sourceresolvercache", null ],
+        [ "Receiver Resolver Cache", "index.html#receiverresolvercache", null ]
+      ] ],
       [ "TR Protocol Comparison", "index.html#trprotocolcomparison", [
         [ "Multicast UDP TR", "index.html#multicastudptr", null ],
         [ "Unicast UDP TR", "index.html#unicastudptr", null ],
@@ -109,6 +131,7 @@ var NAVTREE =
       ] ],
       [ "TCP-Based Topic Resolution Details", "index.html#tcpbasedtopicresolutiondetails", [
         [ "TCP-Based TR and Fault Tolerance", "index.html#tcpbasedtrandfaulttolerance", null ],
+        [ "TCP-Based TR Interest", "index.html#tcpbasedtrinterest", null ],
         [ "TCP-Based TR Version Interoperability", "index.html#tcpbasedtrversioninteroperability", null ],
         [ "TCP-Based TR Configuration", "index.html#tcpbasedtrconfiguration", null ],
         [ "SRS Service", "index.html#srsservice", null ]
@@ -147,6 +170,13 @@ var NAVTREE =
         [ "Example: Transport Deletion", "index.html#exampletransportdeletion", null ]
       ] ]
     ] ],
+    [ "Application Design Principles", "index.html#applicationdesignprinciples", [
+      [ "Message Reception", "index.html#messagereception", [
+        [ "C Message Reception", "index.html#cmessagereception", null ],
+        [ "Java Message Reception", "index.html#javamessagereception", null ],
+        [ ".NET Message Reception", "index.html#netmessagereception", null ]
+      ] ]
+    ] ],
     [ "UM Features", "index.html#umfeatures", [
       [ "Transport Services Provider (XSP)", "index.html#transportservicesproviderxsp", [
         [ "XSP Handles Transport Sessions, Not Topics", "index.html#xsphandlestransportsessionsnottopics", null ],
@@ -176,14 +206,15 @@ var NAVTREE =
         [ "TLS Options Summary", "index.html#tlsoptionssummary", null ],
         [ "TLS and Persistence", "index.html#tlsandpersistence", null ],
         [ "TLS and Queuing", "index.html#tlsandqueuing", null ],
-        [ "TLS and the Dynamic Routing Option (DRO)", "index.html#tlsandthedynamicroutingoptiondro", null ],
-        [ "TLS and Compression", "index.html#tlsandcompression", null ]
+        [ "TLS and the DRO", "index.html#tlsandthedynamicroutingoptiondro", null ],
+        [ "TLS and Compression", "index.html#tlsandcompression", null ],
+        [ "OpenSSL Dependency", "index.html#openssldependency", null ]
       ] ],
       [ "Compressed TCP", "index.html#compressedtcp", [
         [ "Compression Configuration", "index.html#compressionconfiguration", null ],
         [ "Compression and Persistence", "index.html#compressionandpersistence", null ],
         [ "Compression and Queuing", "index.html#compressionandqueuing", null ],
-        [ "Compression and the Dynamic Routing Option (DRO)", "index.html#compressionandthedynamicroutingoptiondro", null ],
+        [ "Compression and the DRO", "index.html#compressionandthedynamicroutingoptiondro", null ],
         [ "Compression and Encryption", "index.html#compressionandencryption", null ],
         [ "Version Interoperability", "index.html#versioninteroperability", null ]
       ] ],
@@ -192,6 +223,7 @@ var NAVTREE =
         [ "Timestamp Configuration Summary", "index.html#timestampconfigurationsummary", null ]
       ] ],
       [ "Unicast Immediate Messaging", "index.html#unicastimmediatemessaging", [
+        [ "UIM Reliability", "index.html#uimreliability", null ],
         [ "UIM Addressing", "index.html#uimaddressing", null ],
         [ "Receiving a UIM", "index.html#receivingauim", null ],
         [ "Sending a UIM", "index.html#sendingauim", null ],
@@ -205,10 +237,14 @@ var NAVTREE =
         [ "MIM Loss Handling", "index.html#mimlosshandling", null ],
         [ "MIM Configuration", "index.html#mimconfiguration", null ],
         [ "MIM Example Applications", "index.html#mimexampleapplications", null ]
-      ] ]
-    ] ],
-    [ "UM Objects", "index.html#umobjects", [
+      ] ],
+      [ "HyperTopics", "index.html#hypertopics", null ],
+      [ "Application Headers", "index.html#applicationheaders", [
+        [ "Application Headers Usage", "index.html#applicationheadersusage", null ]
+      ] ],
       [ "Message Properties", "index.html#messageproperties", [
+        [ "Message Properties Usage", "index.html#messagepropertiesusage", null ],
+        [ "Message Properties Data Types", "index.html#messagepropertiesdatatypes", null ],
         [ "Message Properties Performance Considerations", "index.html#messagepropertiesperformanceconsiderations", null ],
         [ "Smart Sources and Message Properties", "index.html#smartsourcesandmessageproperties", null ],
         [ "Smart Source Message Properties Usage", "index.html#smartsourcemessagepropertiesusage", null ]
@@ -249,14 +285,21 @@ var NAVTREE =
         [ "Hot Failover Across Multiple Contexts", "index.html#hotfailoveracrossmultiplecontexts", null ]
       ] ],
       [ "Daemon Statistics", "index.html#daemonstatistics", [
+        [ "Daemon Controller", "index.html#daemoncontroller", null ],
         [ "Daemon Statistics Structures", "index.html#daemonstatisticsstructures", null ],
         [ "Daemon Statistics Binary Data", "index.html#daemonstatisticsbinarydata", null ],
         [ "Daemon Statistics Versioning", "index.html#daemonstatisticsversioning", null ],
-        [ "Daemon Statistics Requests", "index.html#daemonstatisticsrequests", null ],
+        [ "Daemon Control Requests", "index.html#daemoncontrolrequests", null ],
+        [ "Securing Daemon Control Requests", "index.html#securingdaemoncontrolrequests", null ],
         [ "Daemon Statistics Details", "index.html#daemonstatisticsdetails", null ]
       ] ]
     ] ],
     [ "Advanced Optimizations", "index.html#advancedoptimizations", [
+      [ "Receive Thread Busy Waiting", "index.html#receivethreadbusywaiting", [
+        [ "Network Socket Busy Waiting", "index.html#networksocketbusywaiting", null ],
+        [ "IPC Transport Busy Waiting", "index.html#ipctransportbusywaiting", null ],
+        [ "SMX Transport Busy Waiting", "index.html#smxtransportbusywaiting", null ]
+      ] ],
       [ "Receive Buffer Recycling", "index.html#receivebufferrecycling", [
         [ "Receive Buffer Recycling Restrictions", "index.html#receivebufferrecyclingrestrictions", null ]
       ] ],
@@ -273,6 +316,7 @@ var NAVTREE =
         [ "Receive Multiple Datagrams Compatibility", "index.html#receivemultipledatagramscompatibility", null ],
         [ "Receive Multiple Datagrams Restrictions", "index.html#receivemultipledatagramsrestrictions", null ]
       ] ],
+      [ "Transport Demultiplexer Table Size", "index.html#transportdemultiplexertablesize", null ],
       [ "Smart Sources", "index.html#smartsources", [
         [ "Smart Source Message Buffers", "index.html#smartsourcemessagebuffers", null ],
         [ "Smart Sources and Memory Management", "index.html#smartsourcesandmemorymanagement", null ],
@@ -317,11 +361,15 @@ var NAVTREE =
         [ "SRS Element \"<clientactor>\"", "index.html#srselementclientactor", null ],
         [ "SRS Element \"<batch-frame-max-datagram-size>\"", "index.html#srselementbatchframemaxdatagramsize", null ],
         [ "SRS Element \"<batch-frame-max-record-count>\"", "index.html#srselementbatchframemaxrecordcount", null ],
-        [ "SRS Element \"<source-info-queue-service-interval>\"", "index.html#srselementsourceinfoqueueserviceinterval", null ],
+        [ "SRS Element \"<record-queue-service-interval>\"", "index.html#srselementrecordqueueserviceinterval", null ],
         [ "SRS Element \"<request-stream-max-msg-count>\"", "index.html#srselementrequeststreammaxmsgcount", null ],
-        [ "SRS Element \"<otidmap>\"", "index.html#srselementotidmap", null ],
-        [ "SRS Element \"<async-receiver-distribution>\"", "index.html#srselementasyncreceiverdistribution", null ],
+        [ "SRS Element \"<routemap>\"", "index.html#srselementroutemap", null ],
         [ "SRS Element \"<shards>\"", "index.html#srselementshards", null ],
+        [ "SRS Element \"<topicmap>\"", "index.html#srselementtopicmap", null ],
+        [ "SRS Element \"<otidmap>\"", "index.html#srselementotidmap", null ],
+        [ "SRS Element \"<source-leave-backoff>\"", "index.html#srselementsourceleavebackoff", null ],
+        [ "SRS Element \"<interest-state-lifetime>\"", "index.html#srselementintereststatelifetime", null ],
+        [ "SRS Element \"<source-state-lifetime>\"", "index.html#srselementsourcestatelifetime", null ],
         [ "SRS Element \"<state-lifetime>\"", "index.html#srselementstatelifetime", null ],
         [ "SRS Element \"<daemon>\"", "index.html#srselementdaemon", null ],
         [ "SRS Element \"<pid-file>\"", "index.html#srselementpidfile", null ],
@@ -398,8 +446,8 @@ var NAVTREE =
       [ "Glossary H", "index.html#glossaryh", null ],
       [ "Glossary I", "index.html#glossaryi", null ],
       [ "Glossary J", "index.html#glossaryj", null ],
-      [ "Glossary L", "index.html#glossaryl", null ],
       [ "Glossary K", "index.html#glossaryk", null ],
+      [ "Glossary L", "index.html#glossaryl", null ],
       [ "Glossary M", "index.html#glossarym", null ],
       [ "Glossary N", "index.html#glossaryn", null ],
       [ "Glossary O", "index.html#glossaryo", null ],
@@ -419,7 +467,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "index.html",
-"index.html#srselementinterface"
+"index.html#sourceconnectanddisconnectevents"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

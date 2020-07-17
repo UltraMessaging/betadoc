@@ -85,8 +85,7 @@ source implicit_batching_minimum_length 1
 #
 # Latency can be kept to a minimum with UM by writing receiving
 # applications that can accept messages in the order they arrive.
-# See https://communities.informatica.com/infakb/faq/5/Pages/80043.aspx and
-# http://www.29West.Com/docs/THPM/tcp-latency.html#TCP-RECEIVER-SIDE-LATENCY
+# See https://communities.informatica.com/infakb/faq/5/Pages/80043.aspx
 # for more information. Here's how to use arrival-order delivery:
 #
 receiver ordered_delivery 0
@@ -262,7 +261,7 @@ source  transport_lbtrm_destination_port 14400
 context transport_lbtrm_source_port_high 14399
 context transport_lbtrm_source_port_low  14390
 context transport_lbtru_port_high 14389
-context transport_lbtru_port_high 14380
+context transport_lbtru_port_low 14380
 receiver transport_lbtru_port_high 14379
 receiver transport_lbtru_port_low  14360
 context request_tcp_port_high 14395

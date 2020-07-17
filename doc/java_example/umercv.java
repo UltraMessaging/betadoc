@@ -6,7 +6,7 @@ import java.util.*;
 import org.openmdx.uses.gnu.getopt.*;
 
 /*
- Copyright (c) 2005-2019 Informatica Corporation  Permission is granted to licensees to use
+ Copyright (c) 2005-2020 Informatica Corporation  Permission is granted to licensees to use
  or alter this software for any purpose, including commercial applications,
  according to the terms laid out in the Software License Agreement.
 
@@ -957,12 +957,6 @@ class UMERcvReceiver implements LBMReceiverCallback,
 			case LBM.MSG_UME_REGISTRATION_ERROR:
 				System.out.println("[" + msg.topicName() + "][" + msg.source()
 						+ "] UME registration error: " + msg.dataString());
-				break;
-			case LBM.MSG_UME_REGISTRATION_SUCCESS:
-				System.out.println("[" + msg.topicName() + "][" + msg.source()
-						+ "] UME registration successful. Src RegID "
-						+ msg.sourceRegistrationId() + " RegID "
-						+ msg.receiverRegistrationId());
 				break;
 			case LBM.MSG_UME_REGISTRATION_SUCCESS_EX:
 				UMERegistrationSuccessInfo reg = msg.registrationSuccessInfo();
