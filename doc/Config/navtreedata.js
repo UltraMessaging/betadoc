@@ -97,14 +97,14 @@ var NAVTREE =
     [ "Interrelated Configuration Options", "interrelatedconfigurationoptions.html", [
       [ "Preventing NAK Storms with NAK Intervals", "interrelatedconfigurationoptions.html#preventingnakstormswithnakintervals", null ],
       [ "Preventing Tail Loss With TSNI and NAK Interval Options", "interrelatedconfigurationoptions.html#preventingtaillosswithtsniandnakintervaloptions", null ],
+      [ "Preventing Undetected Unrecoverable Loss", "interrelatedconfigurationoptions.html#preventingundetectedloss", null ],
+      [ "Preventing Undetected Late Join Loss", "interrelatedconfigurationoptions.html#preventingundetectedlatejoinloss", null ],
       [ "Preventing IPC Receiver Deafness With Keepalive Options", "interrelatedconfigurationoptions.html#preventingipcreceiverdeafnesswithkeepaliveoptions", null ],
       [ "Preventing Erroneous LBT-RM/LBT-RU Session Timeouts", "interrelatedconfigurationoptions.html#preventingerroneouslbtrmlbtrusessiontimeouts", null ],
       [ "Preventing Errors Due to Bad Multicast Address Ranges", "interrelatedconfigurationoptions.html#preventingerrorsduetobadmulticastaddressranges", null ],
       [ "Preventing Store Timeouts", "interrelatedconfigurationoptions.html#preventingstoretimeouts", null ],
       [ "Preventing ULB Timeouts", "interrelatedconfigurationoptions.html#preventingulbtimeouts", null ],
       [ "Preventing Unicast Resolver Daemon Timeouts", "interrelatedconfigurationoptions.html#preventingunicastresolverdaemontimeouts", null ],
-      [ "Preventing Undetected Late Join Loss", "interrelatedconfigurationoptions.html#preventingundetectedlatejoinloss", null ],
-      [ "Preventing Undetected Loss", "interrelatedconfigurationoptions.html#preventingundetectedloss", null ],
       [ "Preventing Store Registration Hangs", "interrelatedconfigurationoptions.html#preventingstoreregistrationhangs", null ]
     ] ],
     [ "General Configuration Guidelines", "generalconfigurationguidelines.html", [
@@ -129,8 +129,8 @@ var NAVTREE =
         [ "compatibility_include_pre_um_6_0_behavior (context)", "grpmajoroptions.html#compatibilityincludepreum60behaviorcontext", null ],
         [ "context_event_function (context)", "grpmajoroptions.html#contexteventfunctioncontext", null ],
         [ "context_name (context)", "grpmajoroptions.html#contextnamecontext", null ],
-        [ "datagram_acceleration_functions (context)", "grpmajoroptions.html#datagramaccelerationfunctionscontext", null ],
         [ "default_interface (context)", "grpmajoroptions.html#defaultinterfacecontext", null ],
+        [ "dynamic_fragmentation_reduction (context)", "grpmajoroptions.html#dynamicfragmentationreductioncontext", null ],
         [ "fd_management_type (context)", "grpmajoroptions.html#fdmanagementtypecontext", null ],
         [ "file_descriptor_management_behavior (context)", "grpmajoroptions.html#filedescriptormanagementbehaviorcontext", null ],
         [ "message_selector (receiver)", "grpmajoroptions.html#messageselectorreceiver", null ],
@@ -174,6 +174,7 @@ var NAVTREE =
         [ "resolver_context_name_query_maximum_interval (context)", "grpudpbasedresolveroperation.html#resolvercontextnamequerymaximumintervalcontext", null ],
         [ "resolver_context_name_query_minimum_interval (context)", "grpudpbasedresolveroperation.html#resolvercontextnamequeryminimumintervalcontext", null ],
         [ "resolver_datagram_max_size (context)", "grpudpbasedresolveroperation.html#resolverdatagrammaxsizecontext", null ],
+        [ "resolver_disable_udp_topic_resolution (context)", "grpudpbasedresolveroperation.html#resolverdisableudptopicresolutioncontext", null ],
         [ "resolver_domain_id_active_propagation_timeout (context)", "grpudpbasedresolveroperation.html#resolverdomainidactivepropagationtimeoutcontext", null ],
         [ "resolver_initial_advertisement_bps (context)", "grpudpbasedresolveroperation.html#resolverinitialadvertisementbpscontext", null ],
         [ "resolver_initial_advertisements_per_second (context)", "grpudpbasedresolveroperation.html#resolverinitialadvertisementspersecondcontext", null ],
@@ -385,19 +386,19 @@ var NAVTREE =
       ] ]
     ] ],
     [ "Transport Acceleration Options", "grptransportacceleration.html", [
-      [ "Myricom® Datagram Bypass Layer (DBL™)", "grptransportacceleration.html#myricomdatagrambypasslayerdbl", null ],
+      [ "Myricom Datagram Bypass Layer (DBL)", "grptransportacceleration.html#myricomdatagrambypasslayerdbl", null ],
       [ "Reference", "grptransportacceleration.html#transportaccelerationmyricomref", [
         [ "dbl_lbtrm_acceleration (context)", "grptransportacceleration.html#dbllbtrmaccelerationcontext", null ],
         [ "dbl_lbtru_acceleration (context)", "grptransportacceleration.html#dbllbtruaccelerationcontext", null ],
         [ "dbl_mim_acceleration (context)", "grptransportacceleration.html#dblmimaccelerationcontext", null ],
         [ "dbl_resolver_acceleration (context)", "grptransportacceleration.html#dblresolveraccelerationcontext", null ]
       ] ],
-      [ "Solarflare® Onload", "grptransportacceleration.html#solarflareonload", null ],
+      [ "Solarflare Onload", "grptransportacceleration.html#solarflareonload", null ],
       [ "Reference", "grptransportacceleration.html#transportaccelerationsolarflareref", [
         [ "onload_acceleration_stack_name (receiver)", "grptransportacceleration.html#onloadaccelerationstacknamereceiver", null ],
         [ "onload_acceleration_stack_name (source)", "grptransportacceleration.html#onloadaccelerationstacknamesource", null ]
       ] ],
-      [ "UD Acceleration for Mellanox® Hardware Interfaces", "grptransportacceleration.html#mellanoxudacceleration", null ],
+      [ "UD Acceleration for Mellanox Hardware Interfaces", "grptransportacceleration.html#mellanoxudacceleration", null ],
       [ "Reference", "grptransportacceleration.html#transportaccelerationmellanoxref", [
         [ "resolver_ud_acceleration (context)", "grptransportacceleration.html#resolverudaccelerationcontext", null ],
         [ "ud_acceleration (context)", "grptransportacceleration.html#udaccelerationcontext", null ]
@@ -688,6 +689,10 @@ var NAVTREE =
       [ "Reference", "grpautomaticmonitoring.html#automaticmonitoringref", [
         [ "monitor_appid (context)", "grpautomaticmonitoring.html#monitorappidcontext", null ],
         [ "monitor_appid (event_queue)", "grpautomaticmonitoring.html#monitorappideventqueue", null ],
+        [ "monitor_format (context)", "grpautomaticmonitoring.html#monitorformatcontext", null ],
+        [ "monitor_format (event_queue)", "grpautomaticmonitoring.html#monitorformateventqueue", null ],
+        [ "monitor_format_opts (context)", "grpautomaticmonitoring.html#monitorformatoptscontext", null ],
+        [ "monitor_format_opts (event_queue)", "grpautomaticmonitoring.html#monitorformatoptseventqueue", null ],
         [ "monitor_interval (context)", "grpautomaticmonitoring.html#monitorintervalcontext", null ],
         [ "monitor_interval (event_queue)", "grpautomaticmonitoring.html#monitorintervaleventqueue", null ],
         [ "monitor_interval (receiver)", "grpautomaticmonitoring.html#monitorintervalreceiver", null ],
@@ -700,6 +705,7 @@ var NAVTREE =
     ] ],
     [ "Deprecated Options", "grpdeprecated.html", [
       [ "Reference", "grpdeprecated.html#deprecatedref", [
+        [ "datagram_acceleration_functions (context)", "grpdeprecated.html#datagramaccelerationfunctionscontext", null ],
         [ "delivery_control_loss_tablesz (receiver)", "grpdeprecated.html#deliverycontrollosstableszreceiver", null ],
         [ "delivery_control_order_tablesz (receiver)", "grpdeprecated.html#deliverycontrolordertableszreceiver", null ],
         [ "implicit_batching_type (source)", "grpdeprecated.html#implicitbatchingtypesource", null ],
@@ -764,14 +770,6 @@ var NAVTREE =
         [ "umq_retention_intragroup_stability_behavior (source)", "grpdeprecated.html#umqretentionintragroupstabilitybehaviorsource", null ],
         [ "use_transport_thread (receiver)", "grpdeprecated.html#usetransportthreadreceiver", null ]
       ] ]
-    ] ],
-    [ "Option Categories", "optioncategories.html", [
-      [ "UM UDP Port Values", "optioncategories.html#umudpportvalues", null ],
-      [ "UM TCP Port Values", "optioncategories.html#umtcpportvalues", null ],
-      [ "UM Multicast Group Values", "optioncategories.html#ummulticastgroupvalues", null ],
-      [ "UM Timer Interval Values", "optioncategories.html#umtimerintervalvalues", null ],
-      [ "Options That May Be Set During Operation", "optioncategories.html#optionsthatmaybesetduringoperation", null ],
-      [ "Options that Cannot Be Set Via Configuration Files", "optioncategories.html#optionsthatcannotbesetviaconfigurationfiles", null ]
     ] ]
   ] ]
 ];
@@ -779,8 +777,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "accesstocurrentoperatingoptions.html",
-"grpmulticastresolvernetwork.html#resolvermulticastincomingaddresscontext",
-"grpultramessagingpersistence.html#umeregistrationextendedfunctionreceiver"
+"grpmulticastimmediatemessagingreliability.html#mimtransmissionwindowsizecontext",
+"grpultramessagingpersistence.html#umeproactivekeepaliveintervalcontext"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

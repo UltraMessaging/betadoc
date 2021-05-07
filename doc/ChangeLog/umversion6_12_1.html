@@ -54,7 +54,7 @@ $(document).ready(function(){initNavTree('umversion6_12_1.html','');});
 <div class="title">UM Version 6.12.1 </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>The most-significant updates to UM version 6.12.1 are the introduction of .NET on Linux, and a "busy wait" option for context threads.</p>
+<div class="textblock"><p>The most significant updates to UM version 6.12.1 are the introduction of .NET on Linux, and a "busy wait" option for context threads.</p>
 <dl class="section attention"><dt>Attention</dt><dd>There are some special upgrade instructions for UM versions 6.12 and beyond that will affect a small percentage of users upgrading from pre-6.12 versions of UM. See <a class="el" href="umversion6_12.html#specialupgradeinstructionsfor6_12">Special Upgrade Instructions for 6.12</a>. For general upgrade instructions, see <a class="el" href="upgradeprocedure.html">Upgrade Procedure</a>. You are also advised to inspect the full list of <a class="el" href="deprecations.html">Deprecations</a>.</dd></dl>
 <p><br />
  </p>
@@ -71,11 +71,11 @@ Streaming Enhancements for 6.12.1&nbsp;&nbsp;<small><a href="#streamingenhanceme
 <p class="endli"></p>
 </li>
 <li>
-<p class="startli">The <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_DEV_MAIN/29West/lbm/doc/ChangeLog/design.tag:../Design/" href="../Design/advancedoptimizations.html#networksocketbusywaiting">Network Socket Busy Waiting</a> feature can be used to prevent a context or XSP thread from sleeping while waiting for network events, such as received packets. This can reduce latency and especially latency outliers (jitter).</p>
+<p class="startli">The <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_REL_6_14/29West/lbm/doc/ChangeLog/design.tag:../Design/" href="../Design/advancedoptimizations.html#networksocketbusywaiting">Network Socket Busy Waiting</a> feature can be used to prevent a context or XSP thread from sleeping while waiting for network events, such as received packets. This can reduce latency and especially latency outliers (jitter).</p>
 <p class="endli"></p>
 </li>
 <li>
-The dependency between UM and the OpenSSL libraries is now optional. If the libraries are not used, then they do not need to be present on the system. See <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_DEV_MAIN/29West/lbm/doc/ChangeLog/design.tag:../Design/" href="../Design/umfeatures.html#openssldependency">OpenSSL Dependency</a> for more information. </li>
+The dependency between UM and the OpenSSL libraries is now optional. If the libraries are not used, then they do not need to be present on the system. See <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_REL_6_14/29West/lbm/doc/ChangeLog/design.tag:../Design/" href="../Design/umfeatures.html#openssldependency">OpenSSL Dependency</a> for more information. </li>
 </ul>
 <p><br />
  </p>
@@ -120,7 +120,7 @@ Streaming Fixed Problems and Limitations for 6.12.1&nbsp;&nbsp;<small><a href="#
 </th></tr>
 <tr>
 <td>10702, 10713, 10741</td><td><p class="starttd"><b>FIXED:</b> <em>UM has a load-time dependency on a specific version of OpenSSL. If the expected version is not present, the application can be unable to load and run, or it can write warning messages to the log file (Core-9565-109 and Core-9728-14), even if encryption services are not configured for use.</em></p>
-<p>For more information, see <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_DEV_MAIN/29West/lbm/doc/ChangeLog/design.tag:../Design/" href="../Design/umfeatures.html#openssldependency">OpenSSL Dependency</a>.</p>
+<p>For more information, see <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_REL_6_14/29West/lbm/doc/ChangeLog/design.tag:../Design/" href="../Design/umfeatures.html#openssldependency">OpenSSL Dependency</a>.</p>
 <p class="endtd"></p>
 </td></tr>
 <tr>
@@ -150,10 +150,6 @@ Persistence Fixed Problems and Limitations for 6.12.1&nbsp;&nbsp;<small><a href=
 <p class="endtd"></p>
 </td></tr>
 <tr>
-<td>10676, 10735 </td><td><p class="starttd"><b>FIXED:</b> <em>Loss of packets into Store Daemon blocks stability ACKs. This increases the likelihood of a source blocking on flight size.</em></p>
-<p class="endtd"></p>
-</td></tr>
-<tr>
 <td>10765, 10788 </td><td><p class="starttd"><b>FIXED:</b> <em>Store log always contains "[WARNING]: Core-5688-28: context config variable receive_thread_pool_size
 is deprecated. Has no effect."</em></p>
 <p class="endtd"></p>
@@ -177,6 +173,48 @@ Dynamic Router Fixed Problems and Limitations for 6.12.1&nbsp;&nbsp;<small><a hr
 <li>
 None. </li>
 </ul>
+<p><br />
+<br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+</p>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.8.11-->

@@ -3,6 +3,11 @@ var NAVTREE =
   [ "Concepts Guide", "index.html", [
     [ "Introduction", "index.html#firstsect", null ],
     [ "Fundamental Concepts", "index.html#fundamentalconcepts", [
+      [ "Messaging Paradigms", "index.html#messagingparadigms", [
+        [ "Streaming", "index.html#streaming", null ],
+        [ "Persistence", "index.html#persistence", null ]
+      ] ],
+      [ "Queuing", "index.html#queuing", null ],
       [ "Messages", "index.html#messages", [
         [ "Message Integrity", "index.html#messageintegrity", null ],
         [ "Message Metadata", "index.html#messagemetadata", null ]
@@ -13,17 +18,17 @@ var NAVTREE =
         [ "Topic Resolution Domain", "index.html#topicresolutiondomain", null ]
       ] ],
       [ "Messaging Reliability", "index.html#messagingreliability", [
+        [ "Unrecoverable Loss", "index.html#unrecoverableloss1", null ],
         [ "Head Loss", "index.html#headloss", null ],
         [ "Leading Loss", "index.html#leadingloss", null ],
         [ "Tail Loss", "index.html#tailloss", null ]
       ] ],
-      [ "Persistence", "index.html#persistence", null ],
-      [ "Queuing", "index.html#queuing", null ],
       [ "DRO", "index.html#umrouter", null ],
       [ "Late Join", "index.html#latejoin", null ],
       [ "Request/Response", "index.html#requestresponse", null ],
       [ "UM Transports", "index.html#umtransports", [
-        [ "Transport Sessions", "index.html#transportsessions", null ]
+        [ "Transport Sessions", "index.html#transportsessions", null ],
+        [ "Transport Pacing", "index.html#transportpacing", null ]
       ] ],
       [ "Event Delivery", "index.html#eventdelivery", [
         [ "Receiver BOS and EOS Events", "index.html#receiverbosandeosevents", null ],
@@ -88,14 +93,14 @@ var NAVTREE =
       ] ],
       [ "Transport LBT-SMX", "index.html#transportlbtsmx", [
         [ "Sources and LBT-SMX", "index.html#sourcesandlbtsmx", null ],
-        [ "Sending over LBT-SMX with Native APIs", "index.html#sendingoverlbtsmxwithnativeapis", null ],
-        [ "Sending over LBT-SMX with Existing APIs", "index.html#sendingoverlbtsmxwithexistingapis", null ],
+        [ "Sending with SMX-specific APIs", "index.html#sendingoverlbtsmxwithnativeapis", null ],
+        [ "Sending over LBT-SMX with General APIs", "index.html#sendingoverlbtsmxwithexistingapis", null ],
         [ "Receivers and LBT-SMX", "index.html#receiversandlbtsmx", null ],
         [ "Similarities Between LBT-SMX and Other UM Transports", "index.html#similaritiesbetweenlbtsmxandotherumtransports", null ],
         [ "Differences Between LBT-SMX and Other UM Transports", "index.html#differencesbetweenlbtsmxandotherumtransports", null ],
         [ "LBT-SMX Configuration Example", "index.html#lbtsmxconfigurationexample", null ],
-        [ "Java Code Examples for LBT-SMX", "index.html#javacodeexamplesforlbtsmx", null ],
-        [ ".NET Code Examples for LBT-SMX", "index.html#netcodeexamplesforlbtsmx", null ],
+        [ "Java Coding for LBT-SMX", "index.html#javacodeexamplesforlbtsmx", null ],
+        [ ".NET Coding for LBT-SMX", "index.html#netcodeexamplesforlbtsmx", null ],
         [ "LBT-SMX Resource Manager", "index.html#lbtsmxresourcemanager", null ]
       ] ],
       [ "Transport Broker", "index.html#transportbroker", null ]
@@ -152,7 +157,8 @@ var NAVTREE =
       ] ],
       [ "Message Fragmentation and Reassembly", "index.html#messagefragmentationandreassembly", [
         [ "Datagram Max Size and Network MTU", "index.html#datagrammaxsizeandnetworkmtu", null ],
-        [ "Datagrams and Kernel Bypass Network Drivers", "index.html#datagramsandkernelbypassnetworkdrivers", null ]
+        [ "Datagrams and Kernel Bypass Network Drivers", "index.html#datagramsandkernelbypassnetworkdrivers", null ],
+        [ "Dynamic Fragmentation Reduction", "index.html#dynamicfragmentationreduction", null ]
       ] ],
       [ "Ordered Delivery", "index.html#ordereddelivery", [
         [ "Sequence Number Order, Fragments Reassembled (Default Mode)", "index.html#sequencenumberorderfragmentsreassembleddefaultmode", null ],
@@ -271,6 +277,7 @@ var NAVTREE =
       [ "Spectrum", "index.html#spectrum", [
         [ "Spectrum Performance Advantages", "index.html#spectrumperformanceadvantages", null ],
         [ "Spectrum Configuration Options", "index.html#spectrumconfigurationoptions", null ],
+        [ "Spectrum Receiver Callback", "index.html#spectrumreceivercallback", null ],
         [ "Smart Sources and Spectrum", "index.html#smartsourcesandspectrum", null ]
       ] ],
       [ "Hot Failover (HF)", "index.html#hotfailoverhf", [
@@ -282,7 +289,7 @@ var NAVTREE =
         [ "Hot Failover Intentional Gap Support", "index.html#hotfailoverintentionalgapsupport", null ],
         [ "Hot Failover Optional Messages", "index.html#hotfailoveroptionalmessages", null ],
         [ "Using Hot Failover with Ordered Delivery", "index.html#usinghotfailoverwithordereddelivery", null ],
-        [ "Hot Failover Across Multiple Contexts", "index.html#hotfailoveracrossmultiplecontexts", null ]
+        [ "Hot Failover Across Multiple Contexts (HFX)", "index.html#hotfailoveracrossmultiplecontexts", null ]
       ] ],
       [ "Daemon Statistics", "index.html#daemonstatistics", [
         [ "Daemon Controller", "index.html#daemoncontroller", null ],
@@ -328,7 +335,10 @@ var NAVTREE =
         [ "Zero-Copy Send Compatibility", "index.html#zerocopysendcompatibility", null ],
         [ "Zero-Copy Restrictions", "index.html#zerocopyrestrictions", null ]
       ] ],
-      [ "Comparison of Zero Copy and Smart Sources", "index.html#comparisonofzerocopyandsmartsources", null ]
+      [ "Comparison of Zero Copy and Smart Sources", "index.html#comparisonofzerocopyandsmartsources", null ],
+      [ "XSP Latency Reduction", "index.html#xsplatencyreduction", null ],
+      [ "Core Pinning", "index.html#corepinning", null ],
+      [ "Memory Latency Reduction", "index.html#memorylatencyreduction", null ]
     ] ],
     [ "Man Pages for SRS", "index.html#manpagesforsrs", [
       [ "SRS Man Page", "index.html#srsmanpage", null ],
@@ -363,11 +373,14 @@ var NAVTREE =
         [ "SRS Element \"<batch-frame-max-record-count>\"", "index.html#srselementbatchframemaxrecordcount", null ],
         [ "SRS Element \"<record-queue-service-interval>\"", "index.html#srselementrecordqueueserviceinterval", null ],
         [ "SRS Element \"<request-stream-max-msg-count>\"", "index.html#srselementrequeststreammaxmsgcount", null ],
-        [ "SRS Element \"<routemap>\"", "index.html#srselementroutemap", null ],
+        [ "SRS Element \"<namemap>\"", "index.html#srselementnamemap", null ],
         [ "SRS Element \"<shards>\"", "index.html#srselementshards", null ],
+        [ "SRS Element \"<routemap>\"", "index.html#srselementroutemap", null ],
         [ "SRS Element \"<topicmap>\"", "index.html#srselementtopicmap", null ],
         [ "SRS Element \"<otidmap>\"", "index.html#srselementotidmap", null ],
         [ "SRS Element \"<source-leave-backoff>\"", "index.html#srselementsourceleavebackoff", null ],
+        [ "SRS Element \"<context-name-state-lifetime>\"", "index.html#srselementcontextnamestatelifetime", null ],
+        [ "SRS Element \"<route-state-lifetime>\"", "index.html#srselementroutestatelifetime", null ],
         [ "SRS Element \"<interest-state-lifetime>\"", "index.html#srselementintereststatelifetime", null ],
         [ "SRS Element \"<source-state-lifetime>\"", "index.html#srselementsourcestatelifetime", null ],
         [ "SRS Element \"<state-lifetime>\"", "index.html#srselementstatelifetime", null ],
@@ -452,6 +465,7 @@ var NAVTREE =
       [ "Glossary N", "index.html#glossaryn", null ],
       [ "Glossary O", "index.html#glossaryo", null ],
       [ "Glossary P", "index.html#glossaryp", null ],
+      [ "Glossary Q", "index.html#glossaryq", null ],
       [ "Glossary R", "index.html#glossaryr", null ],
       [ "Glossary S", "index.html#glossarys", null ],
       [ "Glossary T", "index.html#glossaryt", null ],
@@ -467,7 +481,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "index.html",
-"index.html#sourceconnectanddisconnectevents"
+"index.html#smartsourcesandmemorymanagement"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

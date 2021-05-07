@@ -97,14 +97,14 @@ var NAVTREE =
     [ "Interrelated Configuration Options", "index.html#interrelatedconfigurationoptions", [
       [ "Preventing NAK Storms with NAK Intervals", "index.html#preventingnakstormswithnakintervals", null ],
       [ "Preventing Tail Loss With TSNI and NAK Interval Options", "index.html#preventingtaillosswithtsniandnakintervaloptions", null ],
+      [ "Preventing Undetected Unrecoverable Loss", "index.html#preventingundetectedloss", null ],
+      [ "Preventing Undetected Late Join Loss", "index.html#preventingundetectedlatejoinloss", null ],
       [ "Preventing IPC Receiver Deafness With Keepalive Options", "index.html#preventingipcreceiverdeafnesswithkeepaliveoptions", null ],
       [ "Preventing Erroneous LBT-RM/LBT-RU Session Timeouts", "index.html#preventingerroneouslbtrmlbtrusessiontimeouts", null ],
       [ "Preventing Errors Due to Bad Multicast Address Ranges", "index.html#preventingerrorsduetobadmulticastaddressranges", null ],
       [ "Preventing Store Timeouts", "index.html#preventingstoretimeouts", null ],
       [ "Preventing ULB Timeouts", "index.html#preventingulbtimeouts", null ],
       [ "Preventing Unicast Resolver Daemon Timeouts", "index.html#preventingunicastresolverdaemontimeouts", null ],
-      [ "Preventing Undetected Late Join Loss", "index.html#preventingundetectedlatejoinloss", null ],
-      [ "Preventing Undetected Loss", "index.html#preventingundetectedloss", null ],
       [ "Preventing Store Registration Hangs", "index.html#preventingstoreregistrationhangs", null ]
     ] ],
     [ "General Configuration Guidelines", "index.html#generalconfigurationguidelines", [
@@ -129,8 +129,8 @@ var NAVTREE =
         [ "compatibility_include_pre_um_6_0_behavior (context)", "index.html#compatibilityincludepreum60behaviorcontext", null ],
         [ "context_event_function (context)", "index.html#contexteventfunctioncontext", null ],
         [ "context_name (context)", "index.html#contextnamecontext", null ],
-        [ "datagram_acceleration_functions (context)", "index.html#datagramaccelerationfunctionscontext", null ],
         [ "default_interface (context)", "index.html#defaultinterfacecontext", null ],
+        [ "dynamic_fragmentation_reduction (context)", "index.html#dynamicfragmentationreductioncontext", null ],
         [ "fd_management_type (context)", "index.html#fdmanagementtypecontext", null ],
         [ "file_descriptor_management_behavior (context)", "index.html#filedescriptormanagementbehaviorcontext", null ],
         [ "message_selector (receiver)", "index.html#messageselectorreceiver", null ],
@@ -174,6 +174,7 @@ var NAVTREE =
         [ "resolver_context_name_query_maximum_interval (context)", "index.html#resolvercontextnamequerymaximumintervalcontext", null ],
         [ "resolver_context_name_query_minimum_interval (context)", "index.html#resolvercontextnamequeryminimumintervalcontext", null ],
         [ "resolver_datagram_max_size (context)", "index.html#resolverdatagrammaxsizecontext", null ],
+        [ "resolver_disable_udp_topic_resolution (context)", "index.html#resolverdisableudptopicresolutioncontext", null ],
         [ "resolver_domain_id_active_propagation_timeout (context)", "index.html#resolverdomainidactivepropagationtimeoutcontext", null ],
         [ "resolver_initial_advertisement_bps (context)", "index.html#resolverinitialadvertisementbpscontext", null ],
         [ "resolver_initial_advertisements_per_second (context)", "index.html#resolverinitialadvertisementspersecondcontext", null ],
@@ -385,19 +386,19 @@ var NAVTREE =
       ] ]
     ] ],
     [ "Transport Acceleration Options", "index.html#grptransportacceleration", [
-      [ "Myricom® Datagram Bypass Layer (DBL™)", "index.html#myricomdatagrambypasslayerdbl", null ],
+      [ "Myricom Datagram Bypass Layer (DBL)", "index.html#myricomdatagrambypasslayerdbl", null ],
       [ "Reference", "index.html#transportaccelerationmyricomref", [
         [ "dbl_lbtrm_acceleration (context)", "index.html#dbllbtrmaccelerationcontext", null ],
         [ "dbl_lbtru_acceleration (context)", "index.html#dbllbtruaccelerationcontext", null ],
         [ "dbl_mim_acceleration (context)", "index.html#dblmimaccelerationcontext", null ],
         [ "dbl_resolver_acceleration (context)", "index.html#dblresolveraccelerationcontext", null ]
       ] ],
-      [ "Solarflare® Onload", "index.html#solarflareonload", null ],
+      [ "Solarflare Onload", "index.html#solarflareonload", null ],
       [ "Reference", "index.html#transportaccelerationsolarflareref", [
         [ "onload_acceleration_stack_name (receiver)", "index.html#onloadaccelerationstacknamereceiver", null ],
         [ "onload_acceleration_stack_name (source)", "index.html#onloadaccelerationstacknamesource", null ]
       ] ],
-      [ "UD Acceleration for Mellanox® Hardware Interfaces", "index.html#mellanoxudacceleration", null ],
+      [ "UD Acceleration for Mellanox Hardware Interfaces", "index.html#mellanoxudacceleration", null ],
       [ "Reference", "index.html#transportaccelerationmellanoxref", [
         [ "resolver_ud_acceleration (context)", "index.html#resolverudaccelerationcontext", null ],
         [ "ud_acceleration (context)", "index.html#udaccelerationcontext", null ]
@@ -688,6 +689,10 @@ var NAVTREE =
       [ "Reference", "index.html#automaticmonitoringref", [
         [ "monitor_appid (context)", "index.html#monitorappidcontext", null ],
         [ "monitor_appid (event_queue)", "index.html#monitorappideventqueue", null ],
+        [ "monitor_format (context)", "index.html#monitorformatcontext", null ],
+        [ "monitor_format (event_queue)", "index.html#monitorformateventqueue", null ],
+        [ "monitor_format_opts (context)", "index.html#monitorformatoptscontext", null ],
+        [ "monitor_format_opts (event_queue)", "index.html#monitorformatoptseventqueue", null ],
         [ "monitor_interval (context)", "index.html#monitorintervalcontext", null ],
         [ "monitor_interval (event_queue)", "index.html#monitorintervaleventqueue", null ],
         [ "monitor_interval (receiver)", "index.html#monitorintervalreceiver", null ],
@@ -700,6 +705,7 @@ var NAVTREE =
     ] ],
     [ "Deprecated Options", "index.html#grpdeprecated", [
       [ "Reference", "index.html#deprecatedref", [
+        [ "datagram_acceleration_functions (context)", "index.html#datagramaccelerationfunctionscontext", null ],
         [ "delivery_control_loss_tablesz (receiver)", "index.html#deliverycontrollosstableszreceiver", null ],
         [ "delivery_control_order_tablesz (receiver)", "index.html#deliverycontrolordertableszreceiver", null ],
         [ "implicit_batching_type (source)", "index.html#implicitbatchingtypesource", null ],
@@ -764,14 +770,6 @@ var NAVTREE =
         [ "umq_retention_intragroup_stability_behavior (source)", "index.html#umqretentionintragroupstabilitybehaviorsource", null ],
         [ "use_transport_thread (receiver)", "index.html#usetransportthreadreceiver", null ]
       ] ]
-    ] ],
-    [ "Option Categories", "index.html#optioncategories", [
-      [ "UM UDP Port Values", "index.html#umudpportvalues", null ],
-      [ "UM TCP Port Values", "index.html#umtcpportvalues", null ],
-      [ "UM Multicast Group Values", "index.html#ummulticastgroupvalues", null ],
-      [ "UM Timer Interval Values", "index.html#umtimerintervalvalues", null ],
-      [ "Options That May Be Set During Operation", "index.html#optionsthatmaybesetduringoperation", null ],
-      [ "Options that Cannot Be Set Via Configuration Files", "index.html#optionsthatcannotbesetviaconfigurationfiles", null ]
     ] ]
   ] ]
 ];
@@ -779,8 +777,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "index.html",
-"index.html#resolveradvertisementmaximuminitialintervalsource",
-"index.html#transporttcpportlowcontext"
+"index.html#resolveractivesourceintervalcontext",
+"index.html#transporttcpnodelaysource"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

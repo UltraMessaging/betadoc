@@ -15,6 +15,11 @@ var NAVTREE =
       [ "Application Installer", "index.html#applicationinstaller", null ]
     ] ],
     [ "Monitoring", "index.html#monitoring", [
+      [ "Centralized Collector", "index.html#centralizedcollector", [
+        [ "Monitoring Collector Service (MCS)", "index.html#monitoringcollectorservicemcs", null ],
+        [ "User-Developed Collector", "index.html#userdevelopedcollector", null ]
+      ] ],
+      [ "Self-Monitoring Applications", "index.html#selfmonitoringapplications", null ],
       [ "Monitoring Transport Statistics", "index.html#monitoringtransportstatistics", [
         [ "LBT-RM and LBT-RU Receiver Statistics", "index.html#lbtrmandlbtrureceiverstatistics", null ],
         [ "LBT-RM and LBT-RU Source Statistics", "index.html#lbtrmandlbtrusourcestatistics", null ],
@@ -73,20 +78,20 @@ var NAVTREE =
         [ "UM Debug Flags", "index.html#umdebugflags", null ]
       ] ]
     ] ],
-    [ "Monitoring UM with the lbmmon API", "index.html#monitoringumwiththelbmmonapi", [
+    [ "Monitoring UM Applications", "index.html#monitoringumwiththelbmmonapi", [
       [ "Monitoring Introduction", "index.html#monitoringintroduction", [
-        [ "Why Monitor?", "index.html#whymonitor", null ],
         [ "What to Monitor", "index.html#whattomonitor", null ]
       ] ],
       [ "Monitoring Methods", "index.html#monitoringmethods", [
-        [ "Monitoring Context", "index.html#monitoringcontext", null ]
+        [ "Monitoring Field Sizes", "index.html#monitoringfieldsizes", null ],
+        [ "Application Monitoring Context", "index.html#monitoringcontext", null ]
       ] ],
       [ "UM API Functions and Data Structures", "index.html#umsapifunctionsanddatastructures", [
         [ "Context Statistics", "index.html#contextstatistics", null ],
         [ "Event Queue Statistics", "index.html#eventqueuestatistics", null ],
         [ "Source or Receiver Transport Statistics", "index.html#sourceorreceivertransportstatistics", null ]
       ] ],
-      [ "\"lbmmon\" API", "index.html#lbmmonapi", [
+      [ "\"lbmmon\" Client API", "index.html#lbmmonapi", [
         [ "Monitoring Process Flow", "index.html#monitoringprocessflow", null ],
         [ "API Framework Flexibility", "index.html#apiframeworkflexibility", null ],
         [ "Initial Monitoring Questions", "index.html#initialmonitoringquestions", null ],
@@ -114,6 +119,25 @@ var NAVTREE =
       [ "Monitoring Sending Statistics", "index.html#monitoringsendingstatistics", null ],
       [ "Monitoring Context Statistics", "index.html#monitoringcontextstatistics", null ],
       [ "Monitoring Event Queue Statistics", "index.html#monitoringeventqueuestatistics", null ]
+    ] ],
+    [ "Man Pages for MCS", "index.html#manpagesformcs", [
+      [ "MCS Man Page", "index.html#mcsmanpage", null ],
+      [ "Mcsds Man Page", "index.html#mcsdsmanpage", null ]
+    ] ],
+    [ "MCS Configuration File", "index.html#mcsconfigurationfile", [
+      [ "MCS Configuration Elements", "index.html#mcsconfigurationelements", [
+        [ "MCS Element \"<um-mcs>\"", "index.html#mcselementummcs", null ],
+        [ "MCS Element \"<receiver-transport-opts>\"", "index.html#mcselementreceivertransportopts", null ],
+        [ "MCS Element \"<config-file>\"", "index.html#mcselementconfigfile", null ],
+        [ "MCS Element \"<wildcard-topic>\"", "index.html#mcselementwildcardtopic", null ],
+        [ "MCS Element \"<topic>\"", "index.html#mcselementtopic", null ],
+        [ "MCS Element \"<connector>\"", "index.html#mcselementconnector", null ],
+        [ "MCS Element \"<properties-file>\"", "index.html#mcselementpropertiesfile", null ],
+        [ "MCS Element \"<type>\"", "index.html#mcselementtype", null ],
+        [ "MCS Element \"<daemon>\"", "index.html#mcselementdaemon", null ],
+        [ "MCS Element \"<pid-file>\"", "index.html#mcselementpidfile", null ],
+        [ "MCS Element \"<log>\"", "index.html#mcselementlog", null ]
+      ] ]
     ] ],
     [ "Troubleshooting UM Applications", "index.html#troubleshootingumapplications", [
       [ "Application Crashes", "index.html#applicationcrashes", [
@@ -143,7 +167,8 @@ var NAVTREE =
       [ "UM SRS Log Messages", "index.html#umsrslogmessages", null ],
       [ "UM Dynamic Routing Log Messages", "index.html#umdynamicroutinglogmessages", null ],
       [ "UM Lbmrd Log Messages", "index.html#umlbmrdlogmessages", null ],
-      [ "UM Persistent Store Log Messages", "index.html#umpersistentstorelogmessages", null ]
+      [ "UM Persistent Store Log Messages", "index.html#umpersistentstorelogmessages", null ],
+      [ "UM MCS Log Messages", "index.html#ummcslogmessages", null ]
     ] ]
   ] ]
 ];
