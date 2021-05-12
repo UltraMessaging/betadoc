@@ -85,6 +85,18 @@ C Examples Introduction&nbsp;&nbsp;<small><a href="#cexamplesintroduction">&lt;-
 <p>The example C programs listed here are provided in both source form and in binary executable form.</p>
 <p><br />
  </p>
+<h2><a class="anchor" id="configuringcexamples"></a>
+Configuring C Examples&nbsp;&nbsp;<small><a href="#configuringcexamples">&lt;-</a></small></h2>
+<p>The example programs universally provide the "-c filename" command-line option. Using that option, the example application calls the <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_REL_6_14/29West/lbm/doc/example/api.tag:../../API/" href="../../API/lbm_8h.html#aecac05969bba0d6057589ca03dfe60a2">lbm_config()</a> API. However, note that this API is not recommended for use with XML-format LBM configuration files, largely because you are not able to specify an application name.</p>
+<p>To use an XML configuration file with a UM example application, set the environment variables: </p><ul>
+<li>
+LBM_XML_CONFIG_APPNAME - Desired name of application. </li>
+<li>
+LBM_XML_CONFIG_FILENAME - Path name of XML configuration file. </li>
+</ul>
+<p>In this way, UM will correctly set the example application's name and will properly load the XML configuration file.</p>
+<p><br />
+ </p>
 <h2><a class="anchor" id="buildingcexamples"></a>
 Building C Examples&nbsp;&nbsp;<small><a href="#buildingcexamples">&lt;-</a></small></h2>
 <p>Most users are not interested in compiling these sources in their current form, but instead use them for "spare parts", extracting fragments of code as appropriate. For users who wish to build the tools, and especially for users who may want to modify the tools, we recommend creating a new directory and copying all of the doc/example directory contents into that new directory.</p>
@@ -154,7 +166,7 @@ C Examples&nbsp;&nbsp;<small><a href="#cexamples">&lt;-</a></small></h2>
  </p>
 <h3><a class="anchor" id="examplelbmhfrcv_c"></a>
 Example lbmhfrcv.c&nbsp;&nbsp;<small><a href="#examplelbmhfrcv_c">&lt;-</a></small></h3>
-<p>Source code: <a href="../../example/lbmhfrcv.c">lbmhfrcv.c</a>: </p><pre>
+<p>Source code: <a href="../../example/lbmhfrcv.c">lbmhfrcv.c</a> </p><pre>
 Purpose: application that receives messages from a given topic using a single
     hot-failover receiver.
 Usage: lbmhfrcv [-AEhsvV] [-c filename] [-r msgs] [-U losslev] topic
@@ -174,7 +186,7 @@ Usage: lbmhfrcv [-AEhsvV] [-c filename] [-r msgs] [-U losslev] topic
  </p>
 <h3><a class="anchor" id="examplelbmhfrcvq_c"></a>
 Example lbmhfrcvq.c&nbsp;&nbsp;<small><a href="#examplelbmhfrcvq_c">&lt;-</a></small></h3>
-<p>Source code: <a href="../../example/lbmhfrcvq.c">lbmhfrcvq.c</a>: </p><pre>
+<p>Source code: <a href="../../example/lbmhfrcvq.c">lbmhfrcvq.c</a> </p><pre>
 Purpose: lbmhfrcv.c: application that receives messages from a given topic
     using a single hot-failover receiver and an event queue.
 Usage: lbmhfrcvq [-EhsvV] [-c filename] [-r msgs] [-U losslev] topic
@@ -193,7 +205,7 @@ Usage: lbmhfrcvq [-EhsvV] [-c filename] [-r msgs] [-U losslev] topic
  </p>
 <h3><a class="anchor" id="examplelbmhfsrc_c"></a>
 Example lbmhfsrc.c&nbsp;&nbsp;<small><a href="#examplelbmhfsrc_c">&lt;-</a></small></h3>
-<p>Source code: <a href="../../example/lbmhfsrc.c">lbmhfsrc.c</a>: </p><pre>
+<p>Source code: <a href="../../example/lbmhfsrc.c">lbmhfsrc.c</a> </p><pre>
 Purpose: application that sends to a given topic using a single hot-failover
     source.
 Usage: lbmhfsrc [options] topic
@@ -222,7 +234,7 @@ Available options:
  </p>
 <h3><a class="anchor" id="examplelbmhfxrcv_c"></a>
 Example lbmhfxrcv.c&nbsp;&nbsp;<small><a href="#examplelbmhfxrcv_c">&lt;-</a></small></h3>
-<p>Source code: <a href="../../example/lbmhfxrcv.c">lbmhfxrcv.c</a>: </p><pre>
+<p>Source code: <a href="../../example/lbmhfxrcv.c">lbmhfxrcv.c</a> </p><pre>
 Purpose: application that receives messages from a given topic using a single
     hot-failover receiver across contexts (HFX).
 Usage: lbmhfxrcv [-aACdEfhqsSvV] [-I interface] [-c filename] [-r msgs] [-U losslev] topic
@@ -289,7 +301,7 @@ The vertical bar (pipe symbol) is required when specifying individual LBM option
  </p>
 <h3><a class="anchor" id="examplelbmhtrcv_c"></a>
 Example lbmhtrcv.c&nbsp;&nbsp;<small><a href="#examplelbmhtrcv_c">&lt;-</a></small></h3>
-<p>Source code: <a href="../../example/lbmhtrcv.c">lbmhtrcv.c</a>: </p><pre>
+<p>Source code: <a href="../../example/lbmhtrcv.c">lbmhtrcv.c</a> </p><pre>
 Purpose: application that receives from a collection of HyperTopic patterns.
 Usage: lbmhtrcv [options] &lt;patterns_file
 Where 'patterns_file' is a simple text file, supplied as standard input,
@@ -306,7 +318,7 @@ Available options:
  </p>
 <h3><a class="anchor" id="examplelbmimsg_c"></a>
 Example lbmimsg.c&nbsp;&nbsp;<small><a href="#examplelbmimsg_c">&lt;-</a></small></h3>
-<p>Source code: <a href="../../example/lbmimsg.c">lbmimsg.c</a>: </p><pre>
+<p>Source code: <a href="../../example/lbmimsg.c">lbmimsg.c</a> </p><pre>
 Purpose: application that sends immediate messages (either unicast or multicsat)
     as fast as possible, either to a topic, or send topicless.
 Usage: lbmimsg [options] topic
@@ -333,7 +345,7 @@ Available options:
  </p>
 <h3><a class="anchor" id="examplelbmireq_c"></a>
 Example lbmireq.c&nbsp;&nbsp;<small><a href="#examplelbmireq_c">&lt;-</a></small></h3>
-<p>Source code: <a href="../../example/lbmireq.c">lbmireq.c</a>: </p><pre>
+<p>Source code: <a href="../../example/lbmireq.c">lbmireq.c</a> </p><pre>
 Purpose: application that sends immediate message requests (multicast or unicast)
     to a given topic and waits for responses.
 Usage: lbmireq [-hv] [-c filename] [-l len] [-L linger] [-P sec] [-r rate/pct]
@@ -357,7 +369,7 @@ Usage: lbmireq [-hv] [-c filename] [-l len] [-L linger] [-P sec] [-r rate/pct]
  </p>
 <h3><a class="anchor" id="examplelbmlatping_c"></a>
 Example lbmlatping.c&nbsp;&nbsp;<small><a href="#examplelbmlatping_c">&lt;-</a></small></h3>
-<p>Source code: <a href="../../example/lbmlatping.c">lbmlatping.c</a>: </p><pre>
+<p>Source code: <a href="../../example/lbmlatping.c">lbmlatping.c</a> </p><pre>
 Purpose: application to measure round-trip latency of SMX.  Use with lbmlatpong.
 Usage: lbmlatping [-h] [-c filename] [-l len] [-P msec] 
        -c filename = Use LBM configuration file filename.
@@ -371,7 +383,7 @@ Usage: lbmlatping [-h] [-c filename] [-l len] [-P msec]
  </p>
 <h3><a class="anchor" id="examplelbmlatpong_c"></a>
 Example lbmlatpong.c&nbsp;&nbsp;<small><a href="#examplelbmlatpong_c">&lt;-</a></small></h3>
-<p>Source code: <a href="../../example/lbmlatpong.c">lbmlatpong.c</a>: </p><pre>
+<p>Source code: <a href="../../example/lbmlatpong.c">lbmlatpong.c</a> </p><pre>
 Purpose: application to measure round-trip latency of SMX.  Use with lbmlatping.
 Usage: lbmlatpong [-h] [-c filename] 
        -c filename = Use LBM configuration file filename.
@@ -382,7 +394,7 @@ Usage: lbmlatpong [-h] [-c filename]
  </p>
 <h3><a class="anchor" id="examplelbmmon_c"></a>
 Example lbmmon.c&nbsp;&nbsp;<small><a href="#examplelbmmon_c">&lt;-</a></small></h3>
-<p>Source code: <a href="../../example/lbmmon.c">lbmmon.c</a>: </p><pre>
+<p>Source code: <a href="../../example/lbmmon.c">lbmmon.c</a> </p><pre>
 Purpose: example LBM statistics monitoring application.
 Usage: lbmmon [options]
 Available options:
@@ -437,13 +449,13 @@ The vertical bar (pipe symbol) is required when specifying individual LBM option
  </p>
 <h3><a class="anchor" id="examplelbmmon_cmd_c"></a>
 Example lbmmon_cmd.c&nbsp;&nbsp;<small><a href="#examplelbmmon_cmd_c">&lt;-</a></small></h3>
-<p>Source code: <a href="../../example/lbmmon_cmd.c">lbmmon_cmd.c</a>: </p><pre></pre><pre>Purpose: send unicast immediate control requests to an LBMMON publisher.
+<p>Source code: <a href="../../example/lbmmon_cmd.c">lbmmon_cmd.c</a> </p><pre></pre><pre>Purpose: send unicast immediate control requests to an LBMMON publisher.
 Usage: lbmmon_cmd -T target_string -C command [options]
 </pre><p><br />
  </p>
 <h3><a class="anchor" id="examplelbmmoncache_c"></a>
 Example lbmmoncache.c&nbsp;&nbsp;<small><a href="#examplelbmmoncache_c">&lt;-</a></small></h3>
-<p>Source code: <a href="../../example/lbmmoncache.c">lbmmoncache.c</a>: </p><pre>
+<p>Source code: <a href="../../example/lbmmoncache.c">lbmmoncache.c</a> </p><pre>
 Purpose: example LBM statistics monitoring application.
 Usage: lbmmoncache [options]
 Available options:
@@ -497,7 +509,7 @@ The vertical bar (pipe symbol) is required when specifying individual LBM option
  </p>
 <h3><a class="anchor" id="examplelbmmondata_c"></a>
 Example lbmmondata.c&nbsp;&nbsp;<small><a href="#examplelbmmondata_c">&lt;-</a></small></h3>
-<p>Source code: <a href="../../example/lbmmondata.c">lbmmondata.c</a>: </p><pre>
+<p>Source code: <a href="../../example/lbmmondata.c">lbmmondata.c</a> </p><pre>
 Purpose: example LBM statistics monitoring application.
 Usage: lbmmondata [-c filename] [-t topicname]
        -c filename = Use LBM configuration file filename.
@@ -508,7 +520,7 @@ Usage: lbmmondata [-c filename] [-t topicname]
  </p>
 <h3><a class="anchor" id="examplelbmmonudp_c"></a>
 Example lbmmonudp.c&nbsp;&nbsp;<small><a href="#examplelbmmonudp_c">&lt;-</a></small></h3>
-<p>Source code: <a href="../../example/lbmmonudp.c">lbmmonudp.c</a>: </p><pre>
+<p>Source code: <a href="../../example/lbmmonudp.c">lbmmonudp.c</a> </p><pre>
 Purpose: application that receives LBM statistics and forwards as CSV over UDP.
 Usage: lbmmonudp [options]
 Available options:
@@ -569,7 +581,7 @@ The vertical bar (pipe symbol) is required when specifying individual LBM option
  </p>
 <h3><a class="anchor" id="examplelbmmrcv_c"></a>
 Example lbmmrcv.c&nbsp;&nbsp;<small><a href="#examplelbmmrcv_c">&lt;-</a></small></h3>
-<p>Source code: <a href="../../example/lbmmrcv.c">lbmmrcv.c</a>: </p><pre>
+<p>Source code: <a href="../../example/lbmmrcv.c">lbmmrcv.c</a> </p><pre>
 Purpose: application that receives messages from a set of one or more topics.
 Usage: lbmmrcv [options]
   -B, --bufsize=#          Set receive socket buffer size to # (in MB)
@@ -631,7 +643,7 @@ The vertical bar (pipe symbol) is required when specifying individual LBM option
  </p>
 <h3><a class="anchor" id="examplelbmmrcvq_c"></a>
 Example lbmmrcvq.c&nbsp;&nbsp;<small><a href="#examplelbmmrcvq_c">&lt;-</a></small></h3>
-<p>Source code: <a href="../../example/lbmmrcvq.c">lbmmrcvq.c</a>: </p><pre>
+<p>Source code: <a href="../../example/lbmmrcvq.c">lbmmrcvq.c</a> </p><pre>
 Purpose: application that receives messages from a set of one or more topics
     using event queues.
 Usage: lbmmrcvq [options]
@@ -689,7 +701,7 @@ The vertical bar (pipe symbol) is required when specifying individual LBM option
  </p>
 <h3><a class="anchor" id="examplelbmmreq_c"></a>
 Example lbmmreq.c&nbsp;&nbsp;<small><a href="#examplelbmmreq_c">&lt;-</a></small></h3>
-<p>Source code: <a href="../../example/lbmmreq.c">lbmmreq.c</a>: </p><pre>
+<p>Source code: <a href="../../example/lbmmreq.c">lbmmreq.c</a> </p><pre>
 Purpose: application that sends request messages to a single topic
     and processes responses.
 Usage: lbmmreq [options] topic
@@ -707,7 +719,7 @@ Available options:
  </p>
 <h3><a class="anchor" id="examplelbmmsrc_c"></a>
 Example lbmmsrc.c&nbsp;&nbsp;<small><a href="#examplelbmmsrc_c">&lt;-</a></small></h3>
-<p>Source code: <a href="../../example/lbmmsrc.c">lbmmsrc.c</a>: </p><pre>
+<p>Source code: <a href="../../example/lbmmsrc.c">lbmmsrc.c</a> </p><pre>
 Purpose: send messages on multiple topics, optionally by multiple threads.
     Topic names generated as a root, a dot, and by an integer.
     By default, the first topic created will be '29west.example.multi.0'
@@ -777,7 +789,7 @@ The vertical bar (pipe symbol) is required when specifying individual LBM option
  </p>
 <h3><a class="anchor" id="examplelbmpong_c"></a>
 Example lbmpong.c&nbsp;&nbsp;<small><a href="#examplelbmpong_c">&lt;-</a></small></h3>
-<p>Source code: <a href="../../example/lbmpong.c">lbmpong.c</a>: </p><pre>
+<p>Source code: <a href="../../example/lbmpong.c">lbmpong.c</a> </p><pre>
 Purpose: application that measures round trip message latency.
 Usage: lbmpong [-ChIqRv] [-c filename] [-i msgs] [-l len] [-M msgs] [-P msec] [-r rate/pct] [-s seed] [-t secs] [-T topic] id
        -c filename = Use LBM configuration file filename.
@@ -809,7 +821,7 @@ Usage: lbmpong [-ChIqRv] [-c filename] [-i msgs] [-l len] [-M msgs] [-P msec] [-
  </p>
 <h3><a class="anchor" id="examplelbmprice_c"></a>
 Example lbmprice.c&nbsp;&nbsp;<small><a href="#examplelbmprice_c">&lt;-</a></small></h3>
-<p>Source code: <a href="../../example/lbmprice.c">lbmprice.c</a>: </p><pre>
+<p>Source code: <a href="../../example/lbmprice.c">lbmprice.c</a> </p><pre>
 Purpose: simulated price source and receiver for demonstration.
 Usage: lbmprice -s [-h] [-c filename]
        -c filename = Use LBM configuration file filename.
@@ -834,7 +846,7 @@ Usage: lbmprice -s [-h] [-c filename]
  </p>
 <h3><a class="anchor" id="examplelbmrcv_c"></a>
 Example lbmrcv.c&nbsp;&nbsp;<small><a href="#examplelbmrcv_c">&lt;-</a></small></h3>
-<p>Source code: <a href="../../example/lbmrcv.c">lbmrcv.c</a>: </p><pre>
+<p>Source code: <a href="../../example/lbmrcv.c">lbmrcv.c</a> </p><pre>
 Purpose: application that receives messages from a given topic.
 Usage: lbmrcv [-ACEfhqsSvV] [-c filename] [-r msgs] [-U losslev] topic
 Available options:
@@ -897,7 +909,7 @@ The vertical bar (pipe symbol) is required when specifying individual LBM option
  </p>
 <h3><a class="anchor" id="examplelbmrcvq_c"></a>
 Example lbmrcvq.c&nbsp;&nbsp;<small><a href="#examplelbmrcvq_c">&lt;-</a></small></h3>
-<p>Source code: <a href="../../example/lbmrcvq.c">lbmrcvq.c</a>: </p><pre>
+<p>Source code: <a href="../../example/lbmrcvq.c">lbmrcvq.c</a> </p><pre>
 Purpose: application that receives messages from a given topic using an event
     queue.
 Usage: lbmrcvq [options] topic
@@ -955,7 +967,7 @@ The vertical bar (pipe symbol) is required when specifying individual LBM option
  </p>
 <h3><a class="anchor" id="examplelbmrcvxsp_c"></a>
 Example lbmrcvxsp.c&nbsp;&nbsp;<small><a href="#examplelbmrcvxsp_c">&lt;-</a></small></h3>
-<p>Source code: <a href="../../example/lbmrcvxsp.c">lbmrcvxsp.c</a>: </p><pre>
+<p>Source code: <a href="../../example/lbmrcvxsp.c">lbmrcvxsp.c</a> </p><pre>
 Purpose: application that receives messages from a given topic, mapping transports to various XSPs.
 Usage: lbmrcv [-ACdDEhPrRsSv] [-c filename] [-r msgs] topic
 Available options:
@@ -981,7 +993,7 @@ Available options:
  </p>
 <h3><a class="anchor" id="examplelbmreq_c"></a>
 Example lbmreq.c&nbsp;&nbsp;<small><a href="#examplelbmreq_c">&lt;-</a></small></h3>
-<p>Source code: <a href="../../example/lbmreq.c">lbmreq.c</a>: </p><pre>
+<p>Source code: <a href="../../example/lbmreq.c">lbmreq.c</a> </p><pre>
 Purpose: application that sends requests on a single topic and waits for
     responses.
 Usage: lbmreq [options] topic
@@ -1006,7 +1018,7 @@ Available options:
  </p>
 <h3><a class="anchor" id="examplelbmresp_c"></a>
 Example lbmresp.c&nbsp;&nbsp;<small><a href="#examplelbmresp_c">&lt;-</a></small></h3>
-<p>Source code: <a href="../../example/lbmresp.c">lbmresp.c</a>: </p><pre>
+<p>Source code: <a href="../../example/lbmresp.c">lbmresp.c</a> </p><pre>
 Purpose: application that receives request messages on a single topic and
     and sends responses back
 Usage: lbmresp [-Ehsv] [-c filename] [-l len] [-r responses] [-f topic] topic
@@ -1024,7 +1036,7 @@ Usage: lbmresp [-Ehsv] [-c filename] [-l len] [-r responses] [-f topic] topic
  </p>
 <h3><a class="anchor" id="examplelbmresping_c"></a>
 Example lbmresping.c&nbsp;&nbsp;<small><a href="#examplelbmresping_c">&lt;-</a></small></h3>
-<p>Source code: <a href="../../example/lbmresping.c">lbmresping.c</a>: </p><pre>
+<p>Source code: <a href="../../example/lbmresping.c">lbmresping.c</a> </p><pre>
 Purpose: Application that tests the operation of lbm topic resolution by creating
     a source and reporting time required for it to resolve and join the
     source.
@@ -1037,7 +1049,7 @@ Usage: lbmresping [-h] [-c filename] [unicast_resolver_host]
  </p>
 <h3><a class="anchor" id="examplelbmrespq_c"></a>
 Example lbmrespq.c&nbsp;&nbsp;<small><a href="#examplelbmrespq_c">&lt;-</a></small></h3>
-<p>Source code: <a href="../../example/lbmrespq.c">lbmrespq.c</a>: </p><pre>
+<p>Source code: <a href="../../example/lbmrespq.c">lbmrespq.c</a> </p><pre>
 Purpose: application that receives request messages on a single topic and
     and sends responses back, using an event queue.
 Usage: lbmrespq [-hs] [-c filename] [-r msgs] topic
@@ -1053,7 +1065,7 @@ Usage: lbmrespq [-hs] [-c filename] [-r msgs] topic
  </p>
 <h3><a class="anchor" id="examplelbmspike_c"></a>
 Example lbmspike.c&nbsp;&nbsp;<small><a href="#examplelbmspike_c">&lt;-</a></small></h3>
-<p>Source code: <a href="../../example/lbmspike.c">lbmspike.c</a>: </p><pre>
+<p>Source code: <a href="../../example/lbmspike.c">lbmspike.c</a> </p><pre>
 Purpose: application that generates &amp; receives message spikes for
     performance testing.
 Usage: lbmspike -R [-dhq] [-c filename] [-o ord] [-u bufsiz] [topic]
@@ -1084,7 +1096,7 @@ Usage: lbmspike -R [-dhq] [-c filename] [-o ord] [-u bufsiz] [topic]
  </p>
 <h3><a class="anchor" id="examplelbmsrc_c"></a>
 Example lbmsrc.c&nbsp;&nbsp;<small><a href="#examplelbmsrc_c">&lt;-</a></small></h3>
-<p>Source code: <a href="../../example/lbmsrc.c">lbmsrc.c</a>: </p><pre>
+<p>Source code: <a href="../../example/lbmsrc.c">lbmsrc.c</a> </p><pre>
 Purpose: application that sends to a single topic as fast possible.
 Usage: lbmsrc [options] topic
 Available options:
@@ -1149,7 +1161,7 @@ The vertical bar (pipe symbol) is required when specifying individual LBM option
  </p>
 <h3><a class="anchor" id="examplelbmssrc_c"></a>
 Example lbmssrc.c&nbsp;&nbsp;<small><a href="#examplelbmssrc_c">&lt;-</a></small></h3>
-<p>Source code: <a href="../../example/lbmssrc.c">lbmssrc.c</a>: </p><pre>
+<p>Source code: <a href="../../example/lbmssrc.c">lbmssrc.c</a> </p><pre>
 Purpose: application that uses Smart Source to send to a single topic.
 Usage: lbmssrc [options] topic
 Available options:
@@ -1213,7 +1225,7 @@ The vertical bar (pipe symbol) is required when specifying individual LBM option
  </p>
 <h3><a class="anchor" id="examplelbmssrcreq_c"></a>
 Example lbmssrcreq.c&nbsp;&nbsp;<small><a href="#examplelbmssrcreq_c">&lt;-</a></small></h3>
-<p>Source code: <a href="../../example/lbmssrcreq.c">lbmssrcreq.c</a>: </p><pre>
+<p>Source code: <a href="../../example/lbmssrcreq.c">lbmssrcreq.c</a> </p><pre>
 Purpose: application that sends requests on a single topic and waits for
     responses.
 Usage: lbmssrcreq [options] topic
@@ -1239,7 +1251,7 @@ Available options:
  </p>
 <h3><a class="anchor" id="examplelbmstrm_c"></a>
 Example lbmstrm.c&nbsp;&nbsp;<small><a href="#examplelbmstrm_c">&lt;-</a></small></h3>
-<p>Source code: <a href="../../example/lbmstrm.c">lbmstrm.c</a>: </p><pre>
+<p>Source code: <a href="../../example/lbmstrm.c">lbmstrm.c</a> </p><pre>
 Purpose: application that sends messages to one or more topics at a
     specified rate.
 Usage: lbmstrm [options]
@@ -1271,7 +1283,7 @@ Available options:
  </p>
 <h3><a class="anchor" id="examplelbmtrreq_c"></a>
 Example lbmtrreq.c&nbsp;&nbsp;<small><a href="#examplelbmtrreq_c">&lt;-</a></small></h3>
-<p>Source code: <a href="../../example/lbmtrreq.c">lbmtrreq.c</a>: </p><pre>
+<p>Source code: <a href="../../example/lbmtrreq.c">lbmtrreq.c</a> </p><pre>
 Purpose: application that invokes the Topic Resolution Request API.
 Usage: lbmtrreq [options]
 Available options:
@@ -1291,7 +1303,7 @@ Available options:
  </p>
 <h3><a class="anchor" id="examplelbmwrcv_c"></a>
 Example lbmwrcv.c&nbsp;&nbsp;<small><a href="#examplelbmwrcv_c">&lt;-</a></small></h3>
-<p>Source code: <a href="../../example/lbmwrcv.c">lbmwrcv.c</a>: </p><pre>
+<p>Source code: <a href="../../example/lbmwrcv.c">lbmwrcv.c</a> </p><pre>
 Purpose: application that receives messages from a wildcard receiver.
 Usage: lbmwrcv [options] pattern
 Available options:
@@ -1346,7 +1358,7 @@ The vertical bar (pipe symbol) is required when specifying individual LBM option
  </p>
 <h3><a class="anchor" id="examplelbmwrcvq_c"></a>
 Example lbmwrcvq.c&nbsp;&nbsp;<small><a href="#examplelbmwrcvq_c">&lt;-</a></small></h3>
-<p>Source code: <a href="../../example/lbmwrcvq.c">lbmwrcvq.c</a>: </p><pre>
+<p>Source code: <a href="../../example/lbmwrcvq.c">lbmwrcvq.c</a> </p><pre>
 Purpose: application that receives messages from a wildcard receiver, using an
     event queue.
 Usage: lbmwrcvq [options] pattern
@@ -1400,25 +1412,25 @@ The vertical bar (pipe symbol) is required when specifying individual LBM option
  </p>
 <h3><a class="anchor" id="exampleminrcv_c"></a>
 Example minrcv.c&nbsp;&nbsp;<small><a href="#exampleminrcv_c">&lt;-</a></small></h3>
-<p>Source code: <a href="../../example/minrcv.c">minrcv.c</a>: </p><pre>
+<p>Source code: <a href="../../example/minrcv.c">minrcv.c</a> </p><pre>
 minrcv.c: minimal application that receives messages from a given topic.
 </pre><p><br />
  </p>
 <h3><a class="anchor" id="exampleminrcv_cpp"></a>
 Example minrcv.cpp&nbsp;&nbsp;<small><a href="#exampleminrcv_cpp">&lt;-</a></small></h3>
-<p>Source code: <a href="../../example/minrcv.cpp">minrcv.cpp</a>: </p><pre>
+<p>Source code: <a href="../../example/minrcv.cpp">minrcv.cpp</a> </p><pre>
  minimal C++ application that receives messages from a given topic.
 </pre><p><br />
  </p>
 <h3><a class="anchor" id="exampleminsrc_c"></a>
 Example minsrc.c&nbsp;&nbsp;<small><a href="#exampleminsrc_c">&lt;-</a></small></h3>
-<p>Source code: <a href="../../example/minsrc.c">minsrc.c</a>: </p><pre>
+<p>Source code: <a href="../../example/minsrc.c">minsrc.c</a> </p><pre>
 minsrc.c: minimal application that sends to a given topic.
 </pre><p><br />
  </p>
 <h3><a class="anchor" id="examplesrs_cmd_c"></a>
 Example srs_cmd.c&nbsp;&nbsp;<small><a href="#examplesrs_cmd_c">&lt;-</a></small></h3>
-<p>Source code: <a href="../../example/srs_cmd.c">srs_cmd.c</a>: </p><pre>
+<p>Source code: <a href="../../example/srs_cmd.c">srs_cmd.c</a> </p><pre>
 Purpose: send unicast immediate command messages to an SRS daemon.
 Usage: srs_cmd [options] [command_string]
 Available options:
@@ -1446,7 +1458,7 @@ Available options:
  </p>
 <h3><a class="anchor" id="examplesrs_monitor_info_receiver_c"></a>
 Example srs_monitor_info_receiver.c&nbsp;&nbsp;<small><a href="#examplesrs_monitor_info_receiver_c">&lt;-</a></small></h3>
-<p>Source code: <a href="../../example/srs_monitor_info_receiver.c">srs_monitor_info_receiver.c</a>: </p><pre>
+<p>Source code: <a href="../../example/srs_monitor_info_receiver.c">srs_monitor_info_receiver.c</a> </p><pre>
 Purpose: receive SRS monitor info messages on the specified topic.
 Usage: srs_monitor_info_receiver [options] topic
 Available options:
@@ -1460,7 +1472,7 @@ Available options:
  </p>
 <h3><a class="anchor" id="examplesrs_monitor_info_receiver_json_c"></a>
 Example srs_monitor_info_receiver_json.c&nbsp;&nbsp;<small><a href="#examplesrs_monitor_info_receiver_json_c">&lt;-</a></small></h3>
-<p>Source code: <a href="../../example/srs_monitor_info_receiver_json.c">srs_monitor_info_receiver_json.c</a>: </p><pre>
+<p>Source code: <a href="../../example/srs_monitor_info_receiver_json.c">srs_monitor_info_receiver_json.c</a> </p><pre>
 Purpose: receive SRS monitor info messages on the specified topic.
 Usage: srs_monitor_info_receiver [options] topic
 Available options:
@@ -1474,7 +1486,7 @@ Available options:
  </p>
 <h3><a class="anchor" id="exampletnwgdcmd_c"></a>
 Example tnwgdcmd.c&nbsp;&nbsp;<small><a href="#exampletnwgdcmd_c">&lt;-</a></small></h3>
-<p>Source code: <a href="../../example/tnwgdcmd.c">tnwgdcmd.c</a>: </p><pre>
+<p>Source code: <a href="../../example/tnwgdcmd.c">tnwgdcmd.c</a> </p><pre>
 Purpose: application sends unicast immediate command messages to a tnwgd publishing daemon.
 Usage: tnwgdcmd -T target_string -c config_file [command_string]
 Available options:
@@ -1499,7 +1511,7 @@ Available options:
  </p>
 <h3><a class="anchor" id="exampletnwgdmon_c"></a>
 Example tnwgdmon.c&nbsp;&nbsp;<small><a href="#exampletnwgdmon_c">&lt;-</a></small></h3>
-<p>Source code: <a href="../../example/tnwgdmon.c">tnwgdmon.c</a>: </p><pre>
+<p>Source code: <a href="../../example/tnwgdmon.c">tnwgdmon.c</a> </p><pre>
 Purpose: application that receives DRO daemon messages on the specified publishing topic.
 Usage: tnwgdmon [-Ehv] [-c filename] publishing_topic
 Available options:
@@ -1513,54 +1525,54 @@ Available options:
  </p>
 <h3><a class="anchor" id="exampleume-example-rcv-2_c"></a>
 Example ume-example-rcv-2.c&nbsp;&nbsp;<small><a href="#exampleume-example-rcv-2_c">&lt;-</a></small></h3>
-<p>Source code: <a href="../../example/ume-example-rcv-2.c">ume-example-rcv-2.c</a>: </p><pre>
+<p>Source code: <a href="../../example/ume-example-rcv-2.c">ume-example-rcv-2.c</a> </p><pre>
 ume-example-rcv-2.c: - Persistent example receiver program.
 See Persistence Guide document.
 </pre><p><br />
  </p>
 <h3><a class="anchor" id="exampleume-example-rcv-3_c"></a>
 Example ume-example-rcv-3.c&nbsp;&nbsp;<small><a href="#exampleume-example-rcv-3_c">&lt;-</a></small></h3>
-<p>Source code: <a href="../../example/ume-example-rcv-3.c">ume-example-rcv-3.c</a>: </p><pre>
+<p>Source code: <a href="../../example/ume-example-rcv-3.c">ume-example-rcv-3.c</a> </p><pre>
 ume-example-rcv-3.c: - Persistent example receiver program.
 See Persistence Guide document.
 </pre><p><br />
  </p>
 <h3><a class="anchor" id="exampleume-example-rcv_c"></a>
 Example ume-example-rcv.c&nbsp;&nbsp;<small><a href="#exampleume-example-rcv_c">&lt;-</a></small></h3>
-<p>Source code: <a href="../../example/ume-example-rcv.c">ume-example-rcv.c</a>: </p><pre>
+<p>Source code: <a href="../../example/ume-example-rcv.c">ume-example-rcv.c</a> </p><pre>
 ume-example-rcv.c: - Persistent example receiver program.
 See Persistence Guide document.
 </pre><p><br />
  </p>
 <h3><a class="anchor" id="exampleume-example-src-2_c"></a>
 Example ume-example-src-2.c&nbsp;&nbsp;<small><a href="#exampleume-example-src-2_c">&lt;-</a></small></h3>
-<p>Source code: <a href="../../example/ume-example-src-2.c">ume-example-src-2.c</a>: </p><pre>
+<p>Source code: <a href="../../example/ume-example-src-2.c">ume-example-src-2.c</a> </p><pre>
 ume-example-src-2.c: - Persistent example source program.
 See Persistence Guide document.
 </pre><p><br />
  </p>
 <h3><a class="anchor" id="exampleume-example-src-3_c"></a>
 Example ume-example-src-3.c&nbsp;&nbsp;<small><a href="#exampleume-example-src-3_c">&lt;-</a></small></h3>
-<p>Source code: <a href="../../example/ume-example-src-3.c">ume-example-src-3.c</a>: </p><pre>
+<p>Source code: <a href="../../example/ume-example-src-3.c">ume-example-src-3.c</a> </p><pre>
 ume-example-src-3.c: - Persistent example source program.
 See Persistence Guide document.
 </pre><p><br />
  </p>
 <h3><a class="anchor" id="exampleume-example-src_c"></a>
 Example ume-example-src.c&nbsp;&nbsp;<small><a href="#exampleume-example-src_c">&lt;-</a></small></h3>
-<p>Source code: <a href="../../example/ume-example-src.c">ume-example-src.c</a>: </p><pre>
+<p>Source code: <a href="../../example/ume-example-src.c">ume-example-src.c</a> </p><pre>
 ume-example-src.c: - Persistent example receiver program.
 See Persistence Guide document.
 </pre><p><br />
  </p>
 <h3><a class="anchor" id="exampleumedcmd_c"></a>
 Example umedcmd.c&nbsp;&nbsp;<small><a href="#exampleumedcmd_c">&lt;-</a></small></h3>
-<p>Source code: <a href="../../example/umedcmd.c">umedcmd.c</a>: See <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_REL_6_14/29West/lbm/doc/example/ume.tag:../../UME/" href="../../UME/storedaemonstatistics.html#umedcmdmanpage">umedcmd Man Page</a> for usage information.</p>
+<p>Source code: <a href="../../example/umedcmd.c">umedcmd.c</a> See <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_REL_6_14/29West/lbm/doc/example/ume.tag:../../UME/" href="../../UME/storedaemonstatistics.html#umedcmdmanpage">umedcmd Man Page</a> for usage information.</p>
 <p><br />
  </p>
 <h3><a class="anchor" id="exampleumedmon_c"></a>
 Example umedmon.c&nbsp;&nbsp;<small><a href="#exampleumedmon_c">&lt;-</a></small></h3>
-<p>Source code: <a href="../../example/umedmon.c">umedmon.c</a>: </p><pre>
+<p>Source code: <a href="../../example/umedmon.c">umedmon.c</a> </p><pre>
 Purpose: application that receives umestore daemon messages on the specified publishing topic.
 Usage: umedmon [-Ehv] [-c filename] publishing_topic
 Available options:
@@ -1574,7 +1586,7 @@ Available options:
  </p>
 <h3><a class="anchor" id="exampleumercv_c"></a>
 Example umercv.c&nbsp;&nbsp;<small><a href="#exampleumercv_c">&lt;-</a></small></h3>
-<p>Source code: <a href="../../example/umercv.c">umercv.c</a>: </p><pre>
+<p>Source code: <a href="../../example/umercv.c">umercv.c</a> </p><pre>
 Purpose: application that receives persisted messages from a given topic.
 Usage: umercv [options] topic
 Available options:
@@ -1604,12 +1616,12 @@ Available options:
  </p>
 <h3><a class="anchor" id="exampleumesnaprepo_c"></a>
 Example umesnaprepo.c&nbsp;&nbsp;<small><a href="#exampleumesnaprepo_c">&lt;-</a></small></h3>
-<p>Source code: <a href="../../example/umesnaprepo.c">umesnaprepo.c</a>: See <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_REL_6_14/29West/lbm/doc/example/ume.tag:../../UME/" href="../../UME/storerepositoryprofilingsrp.html#umesnaprepomanpage">umesnaprepo Man Page</a> for usage information.</p>
+<p>Source code: <a href="../../example/umesnaprepo.c">umesnaprepo.c</a> See <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_REL_6_14/29West/lbm/doc/example/ume.tag:../../UME/" href="../../UME/storerepositoryprofilingsrp.html#umesnaprepomanpage">umesnaprepo Man Page</a> for usage information.</p>
 <p><br />
  </p>
 <h3><a class="anchor" id="exampleumesrc_c"></a>
 Example umesrc.c&nbsp;&nbsp;<small><a href="#exampleumesrc_c">&lt;-</a></small></h3>
-<p>Source code: <a href="../../example/umesrc.c">umesrc.c</a>: </p><pre>
+<p>Source code: <a href="../../example/umesrc.c">umesrc.c</a> </p><pre>
 Purpose: application that sends persisted messages to a given topic at a
     specified rate.
 Usage: umesrc [options] topic
@@ -1642,7 +1654,7 @@ Available options:
  </p>
 <h3><a class="anchor" id="exampleumessrc_c"></a>
 Example umessrc.c&nbsp;&nbsp;<small><a href="#exampleumessrc_c">&lt;-</a></small></h3>
-<p>Source code: <a href="../../example/umessrc.c">umessrc.c</a>: </p><pre>
+<p>Source code: <a href="../../example/umessrc.c">umessrc.c</a> </p><pre>
 Purpose: application that uses Smart Source sends to a given topic. Understands persistence.
 Usage: umessrc [options] topic
 Available options:
@@ -1711,14 +1723,14 @@ The vertical bar (pipe symbol) is required when specifying individual LBM option
  </p>
 <h3><a class="anchor" id="exampleumestored_example_c"></a>
 Example umestored_example.c&nbsp;&nbsp;<small><a href="#exampleumestored_example_c">&lt;-</a></small></h3>
-<p>Source code: <a href="../../example/umestored_example.c">umestored_example.c</a>: </p><pre>
+<p>Source code: <a href="../../example/umestored_example.c">umestored_example.c</a> </p><pre>
 umestored_example.c: application that shows how to call the
   umestored_main API to start a UMP store daemon.
 </pre><p><br />
  </p>
 <h3><a class="anchor" id="exampleumqrcv_c"></a>
 Example umqrcv.c&nbsp;&nbsp;<small><a href="#exampleumqrcv_c">&lt;-</a></small></h3>
-<p>Source code: <a href="../../example/umqrcv.c">umqrcv.c</a>: </p><pre>
+<p>Source code: <a href="../../example/umqrcv.c">umqrcv.c</a> </p><pre>
 Purpose: application that receives brokered queuing messages from a single topic.
 Usage: umqrcv [options] topic
 Available options:
@@ -1779,35 +1791,60 @@ The vertical bar (pipe symbol) is required when specifying individual LBM option
  </p>
 <h3><a class="anchor" id="exampleumqsrc_c"></a>
 Example umqsrc.c&nbsp;&nbsp;<small><a href="#exampleumqsrc_c">&lt;-</a></small></h3>
-<p>Source code: <a href="../../example/umqsrc.c">umqsrc.c</a>: </p><pre>
+<p>Source code: <a href="../../example/umqsrc.c">umqsrc.c</a> </p><pre>
 Purpose: umqsrc.c: application that sends brokered queuing messages to a single
     topic at a specified rate.
 Usage: umqsrc [options] topic
 Available options:
-  -A, &ndash;appsets=CFG         use ULB Application Sets given by CFG
-  -B, &ndash;broker=address      use broker given by address
-  -c, &ndash;config=FILE         use LBM configuration file FILE
-  -d, &ndash;delay=NUM           delay sending for NUM seconds after source creation
-  -h, &ndash;help                display this help and exit
-  -f, &ndash;flight-size=NUM     allow NUM unstabilized messages in flight (determines message rate)
-  -i, &ndash;ids                 display Message IDs for sent message
-  -l, &ndash;length=NUM          send messages of NUM bytes
-  -L, &ndash;linger=NUM          linger for NUM seconds before closing context
-  -M, &ndash;messages=NUM        send NUM messages
-  -m, &ndash;message-rate=NUM    send at NUM messages per second
-  -N, &ndash;seq-num             display sequence number information
-  -n, &ndash;non-block           use non-blocking I/O
-  -P, &ndash;pause=NUM           pause NUM milliseconds after each send
-  -R, &ndash;rate=[UM]DATA/RETR  Set transport type to LBT-R[UM], set data rate limit to
+  -A, --appsets=CFG         use ULB Application Sets given by CFG
+  -B, --broker=address      use broker given by address
+  -c, --config=FILE         use LBM configuration file FILE
+  -d, --delay=NUM           delay sending for NUM seconds after source creation
+  -h, --help                display this help and exit
+  -f, --flight-size=NUM     allow NUM unstabilized messages in flight (determines message rate)
+  -i, --ids                 display Message IDs for sent message
+  -l, --length=NUM          send messages of NUM bytes
+  -L, --linger=NUM          linger for NUM seconds before closing context
+  -M, --messages=NUM        send NUM messages
+  -m, --message-rate=NUM    send at NUM messages per second
+  -N, --seq-num             display sequence number information
+  -n, --non-block           use non-blocking I/O
+  -P, --pause=NUM           pause NUM milliseconds after each send
+  -R, --rate=[UM]DATA/RETR  Set transport type to LBT-R[UM], set data rate limit to
                             DATA bits per second, and set retransmit rate limit to
                             RETR bits per second.  For both limits, the optional
                             k, m, and g suffixes may be used.  For example,
                             '-R 1m/500k' is the same as '-R 1000000/500000'
-  -s, &ndash;statistics=NUM      print statistics every NUM seconds
-  -v, &ndash;verbose             print additional info in verbose form
-  -V, &ndash;verifiable          construct verifiable messages
-  -X, &ndash;index               Send messages on specified index for ULB sources
-  -Y, &ndash;broker-index         Send messages on specified named index for broker sources</pre> </div></div><!-- contents -->
+  -s, --statistics=NUM      print statistics every NUM seconds
+  -v, --verbose             print additional info in verbose form
+  -V, --verifiable          construct verifiable messages
+  -X, --index               Send messages on specified index for ULB sources
+  -Y, --broker-index         Send messages on specified named index for broker sources</pre><p><br />
+ </p>
+<h2><a class="anchor" id="exampleprotocolfiles"></a>
+Example Protocol Files&nbsp;&nbsp;<small><a href="#exampleprotocolfiles">&lt;-</a></small></h2>
+<p>Google protocol buffer definition files. See <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_REL_6_14/29West/lbm/doc/example/operations.tag:../../Operations/" href="../../Operations/monitoring.html#monitoringformats">Monitoring Formats</a>. <br />
+ </p>
+<h3><a class="anchor" id="exampledro_mon_proto"></a>
+Example dro_mon.proto&nbsp;&nbsp;<small><a href="#exampledro_mon_proto">&lt;-</a></small></h3>
+<p>Source code: <a href="../../example/dro_mon.proto">dro_mon.proto</a> <br />
+ </p>
+<h3><a class="anchor" id="exampleum_mon_attributes_proto"></a>
+Example um_mon_attributes.proto&nbsp;&nbsp;<small><a href="#exampleum_mon_attributes_proto">&lt;-</a></small></h3>
+<p>Source code: <a href="../../example/um_mon_attributes.proto">um_mon_attributes.proto</a> <br />
+ </p>
+<h3><a class="anchor" id="exampleum_mon_control_proto"></a>
+Example um_mon_control.proto&nbsp;&nbsp;<small><a href="#exampleum_mon_control_proto">&lt;-</a></small></h3>
+<p>Source code: <a href="../../example/um_mon_control.proto">um_mon_control.proto</a> <br />
+ </p>
+<h3><a class="anchor" id="exampleump_mon_proto"></a>
+Example ump_mon.proto&nbsp;&nbsp;<small><a href="#exampleump_mon_proto">&lt;-</a></small></h3>
+<p>Source code: <a href="../../example/ump_mon.proto">ump_mon.proto</a> <br />
+ </p>
+<h3><a class="anchor" id="exampleums_mon_proto"></a>
+Example ums_mon.proto&nbsp;&nbsp;<small><a href="#exampleums_mon_proto">&lt;-</a></small></h3>
+<p>Source code: <a href="../../example/ums_mon.proto">ums_mon.proto</a> </p>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.8.11-->
 </body>

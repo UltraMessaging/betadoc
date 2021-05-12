@@ -208,7 +208,8 @@ UMP Element "&lt;option&gt;"&nbsp;&nbsp;<small><a href="#umeelementoption">&lt;-
  </p>
 <h2><a class="anchor" id="umeelementpublishinginterval"></a>
 UMP Element "&lt;publishing-interval&gt;"&nbsp;&nbsp;<small><a href="#umeelementpublishinginterval">&lt;-</a></small></h2>
-<p>Set how often the Store publishes its Daemon Stats. See <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_REL_6_14/29West/lbm/doc/UME/design.tag:../Design/" href="../Design/umfeatures.html#daemonstatistics">Daemon Statistics</a> for general information on Daemon Statistics.</p>
+<p>DEPRECATED: Set how often the Store publishes its Daemon Stats. See <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_REL_6_14/29West/lbm/doc/UME/design.tag:../Design/" href="../Design/umfeatures.html#daemonstatistics">Daemon Statistics</a> for general information on Daemon Statistics.</p>
+<p>Informatica requests users to migrate to using the UM configuration file to enable automatic monitoring with Protocol Buffer monitoring format for Store and DRO by setting <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_REL_6_14/29West/lbm/doc/UME/config.tag:../Config/" href="../Config/grpautomaticmonitoring.html#monitorformatcontext">monitor_format (context)</a> to "pb". See <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_REL_6_14/29West/lbm/doc/UME/operations.tag:../Operations/" href="../Operations/monitoringumwiththelbmmonapi.html#automaticmonitoring">Automatic Monitoring</a>.</p>
 <ul>
 <li>
 <b>Parent:</b> <a class="el" href="configurationreferenceforumestored.html#umeelementstore">&lt;store&gt;</a>, <a class="el" href="configurationreferenceforumestored.html#umeelementdaemonmonitor">&lt;daemon-monitor&gt;</a> </li>
@@ -258,7 +259,8 @@ UMP Element "&lt;daemon&gt;"&nbsp;&nbsp;<small><a href="#umeelementdaemon">&lt;-
  </p>
 <h2><a class="anchor" id="umeelementdaemonmonitor"></a>
 UMP Element "&lt;daemon-monitor&gt;"&nbsp;&nbsp;<small><a href="#umeelementdaemonmonitor">&lt;-</a></small></h2>
-<p>The daemon-monitor element configures the Store Process for <a class="el" href="storedaemonstatistics.html">Store Daemon Statistics</a>.</p>
+<p>DEPRECATED: The daemon-monitor element configures the Store Process for <a class="el" href="storedaemonstatistics.html">Store Daemon Statistics</a>.</p>
+<p>Informatica requests users to migrate to using the UM configuration file to enable automatic monitoring with Protocol Buffer monitoring format for Store and DRO by setting <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_REL_6_14/29West/lbm/doc/UME/config.tag:../Config/" href="../Config/grpautomaticmonitoring.html#monitorformatcontext">monitor_format (context)</a> to "pb". See <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_REL_6_14/29West/lbm/doc/UME/operations.tag:../Operations/" href="../Operations/monitoringumwiththelbmmonapi.html#automaticmonitoring">Automatic Monitoring</a>.</p>
 <ul>
 <li>
 <b>Parent:</b> <a class="el" href="configurationreferenceforumestored.html#umeelementdaemon">&lt;daemon&gt;</a> </li>

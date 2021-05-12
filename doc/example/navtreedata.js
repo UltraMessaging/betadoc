@@ -3,6 +3,7 @@ var NAVTREE =
   [ "C Examples", "index.html", [
     [ "Introduction", "index.html", [
       [ "C Examples Introduction", "index.html#cexamplesintroduction", null ],
+      [ "Configuring C Examples", "index.html#configuringcexamples", null ],
       [ "Building C Examples", "index.html#buildingcexamples", null ],
       [ "Unhandled C Events", "index.html#unhandledcevents", null ],
       [ "C Example Support Files", "index.html#cexamplesupportfiles", null ],
@@ -66,6 +67,13 @@ var NAVTREE =
         [ "Example umestored_example.c", "index.html#exampleumestored_example_c", null ],
         [ "Example umqrcv.c", "index.html#exampleumqrcv_c", null ],
         [ "Example umqsrc.c", "index.html#exampleumqsrc_c", null ]
+      ] ],
+      [ "Example Protocol Files", "index.html#exampleprotocolfiles", [
+        [ "Example dro_mon.proto", "index.html#exampledro_mon_proto", null ],
+        [ "Example um_mon_attributes.proto", "index.html#exampleum_mon_attributes_proto", null ],
+        [ "Example um_mon_control.proto", "index.html#exampleum_mon_control_proto", null ],
+        [ "Example ump_mon.proto", "index.html#exampleump_mon_proto", null ],
+        [ "Example ums_mon.proto", "index.html#exampleums_mon_proto", null ]
       ] ]
     ] ]
   ] ]

@@ -5207,9 +5207,9 @@ SRS Element "&lt;source-leave-backoff&gt;"&nbsp;&nbsp;<small><a href="#srselemen
  </p>
 <h3><a class="anchor" id="srselementcontextnamestatelifetime"></a>
 SRS Element "&lt;context-name-state-lifetime&gt;"&nbsp;&nbsp;<small><a href="#srselementcontextnamestatelifetime">&lt;-</a></small></h3>
-<p>Sets the value (in seconds) of a DRO's context name information lifetime.</p>
-<p>If a Store loses connection with SRS, the Context Name Information Record (CNIR) will be remembered by the SRS for a limited amount of time: the <em>context name state lifetime</em>. After that time expires, the SRS deletes the DNIR associated with that lost endpoint connection.</p>
-<p>Zero is a special value which disables the timing of routing information of disconnected Stores. I.e. with zero, the DNIR of the lost Store are never deleted. This is generally not recommended as it can lead to unlimited memory growth in both the SRS and in client contexts.</p>
+<p>Sets the value (in seconds) of a Store's context name information lifetime.</p>
+<p>If a Store loses connection with SRS, the Context Name Information Record (CNIR) will be remembered by the SRS for a limited amount of time: the <em>context name state lifetime</em>. After that time expires, the SRS deletes the CNIR associated with that lost endpoint connection.</p>
+<p>Zero is a special value which disables the timing of context name information of disconnected Stores. I.e. with zero, the CNIR of a lost Store is never deleted. This is generally not recommended as it can lead to unlimited memory growth in both the SRS and client contexts.</p>
 <p>Note that <a class="el" href="index.html#srselementstatelifetime">SRS Element "&lt;state-lifetime&gt;"</a> has no effect on this option.</p>
 <p>See <a class="el" href="index.html#srsstatelifetime">SRS State Lifetime</a> for more information.</p>
 <p>Valid range: 0 .. 20736000</p>
@@ -5219,16 +5219,16 @@ SRS Element "&lt;context-name-state-lifetime&gt;"&nbsp;&nbsp;<small><a href="#sr
 <li>
 <b>Parent:</b> <a class="el" href="index.html#srselementsrs">&lt;srs&gt;</a> </li>
 <li>
-<b>Default</b> <b>Value:</b> 30 (seconds) </li>
+<b>Default</b> <b>Value:</b> 86400 (24 hours) </li>
 </ul>
-<p><b>Example:</b> </p><div class="fragment"><div class="line">&lt;?xml version=<span class="stringliteral">&quot;1.0&quot;</span> encoding=<span class="stringliteral">&quot;UTF-8&quot;</span> ?&gt;</div><div class="line">&lt;um-srs version=<span class="stringliteral">&quot;1.0&quot;</span>&gt;</div><div class="line">  &lt;srs&gt;</div><div class="line">    &lt;context-name-state-lifetime&gt;120&lt;/route-state-lifetime&gt;</div><div class="line">    ...</div><div class="line">  &lt;/srs&gt;</div><div class="line">  ...</div><div class="line">&lt;/um-srs&gt;</div></div><!-- fragment --><hr/>
+<p><b>Example:</b> </p><div class="fragment"><div class="line">&lt;?xml version=<span class="stringliteral">&quot;1.0&quot;</span> encoding=<span class="stringliteral">&quot;UTF-8&quot;</span> ?&gt;</div><div class="line">&lt;um-srs version=<span class="stringliteral">&quot;1.0&quot;</span>&gt;</div><div class="line">  &lt;srs&gt;</div><div class="line">    &lt;context-name-state-lifetime&gt;120&lt;/context-name-state-lifetime&gt;</div><div class="line">    ...</div><div class="line">  &lt;/srs&gt;</div><div class="line">  ...</div><div class="line">&lt;/um-srs&gt;</div></div><!-- fragment --><hr/>
 <p> <br />
  </p>
 <h3><a class="anchor" id="srselementroutestatelifetime"></a>
 SRS Element "&lt;route-state-lifetime&gt;"&nbsp;&nbsp;<small><a href="#srselementroutestatelifetime">&lt;-</a></small></h3>
 <p>Sets the value (in seconds) of a DRO's routing information lifetime.</p>
 <p>If a DRO endpoint loses connection with SRS, the Domain Information Record (DIR) and the Route Information Record (RTIR) will be remembered by the SRS for a limited amount of time: the <em>route state lifetime</em>. After that time expires, the SRS deletes the DIR and RTIR associated with that lost endpoint connection.</p>
-<p>Zero is a special value which disables the timing of routing information of disconnected DROs. I.e. with zero, the DIR and RTIR of the lost DRO are never deleted. This is generally not recommended as it can lead to unlimited memory growth in both the SRS and in client contexts.</p>
+<p>Zero is a special value which disables the timing of routing information of disconnected DROs. I.e. with zero, the DIR and RTIR of a lost DRO are never deleted. This is generally not recommended as it can lead to unlimited memory growth in both the SRS and client contexts.</p>
 <p>Note that <a class="el" href="index.html#srselementstatelifetime">SRS Element "&lt;state-lifetime&gt;"</a> has no effect on this option.</p>
 <p>See <a class="el" href="index.html#srsstatelifetime">SRS State Lifetime</a> for more information.</p>
 <p>Valid range: 0 .. 20736000</p>
@@ -5247,7 +5247,7 @@ SRS Element "&lt;route-state-lifetime&gt;"&nbsp;&nbsp;<small><a href="#srselemen
 SRS Element "&lt;interest-state-lifetime&gt;"&nbsp;&nbsp;<small><a href="#srselementintereststatelifetime">&lt;-</a></small></h3>
 <p>Sets the value (in seconds) of the client interest state lifetime.</p>
 <p>If a client context loses connection with SRS, the topic interest of that context will be remembered by the SRS for a limited amount of time: the <em>interest state lifetime</em>. If the context does not re-connect within that time, the SRS deletes all of the topic interest owned by that lost context.</p>
-<p>Zero is a special value which disables the timing of interest of disconnected contexts. I.e. with zero, the interest of a lost context is never deleted. This is generally not recommended as it can lead to unlimited memory growth in both the SRS and in client contexts.</p>
+<p>Zero is a special value which disables the timing of interest of disconnected contexts. I.e. with zero, the interest of a lost context is never deleted. This is generally not recommended as it can lead to unlimited memory growth in both the SRS and client contexts.</p>
 <p>If this element is not supplied, the interest state lifetime defaults to the current value for <a class="el" href="index.html#srselementstatelifetime">SRS Element "&lt;state-lifetime&gt;"</a>.</p>
 <p>See <a class="el" href="index.html#srsstatelifetime">SRS State Lifetime</a> for more information.</p>
 <p>Valid range: 0 .. 20736000</p>
@@ -5266,7 +5266,7 @@ SRS Element "&lt;interest-state-lifetime&gt;"&nbsp;&nbsp;<small><a href="#srsele
 SRS Element "&lt;source-state-lifetime&gt;"&nbsp;&nbsp;<small><a href="#srselementsourcestatelifetime">&lt;-</a></small></h3>
 <p>Sets the value (in seconds) of the client source state lifetime.</p>
 <p>If a client context loses connection with SRS, the sources contained by that context will be remembered by the SRS for a limited amount of time: the <em>source state lifetime</em>. If the context does not re-connect within that time, the SRS deletes all of the sources owned by that lost context. Those deletions will be shared with all connected client contexts.</p>
-<p>Zero is a special value which disables the timing of sources of disconnected contexts. I.e. with zero, the sources from a lost context are never deleted. This is generally not recommended as it can lead to unlimited memory growth in both the SRS and in client contexts.</p>
+<p>Zero is a special value which disables the timing of sources of disconnected contexts. I.e. with zero, the sources from a lost context are never deleted. This is generally not recommended as it can lead to unlimited memory growth in both the SRS and client contexts.</p>
 <p>If this element is not supplied, the source state lifetime defaults to the current value for <a class="el" href="index.html#srselementstatelifetime">SRS Element "&lt;state-lifetime&gt;"</a></p>
 <p>See <a class="el" href="index.html#srsstatelifetime">SRS State Lifetime</a> for more information.</p>
 <p>Valid range: 0 .. 20736000</p>

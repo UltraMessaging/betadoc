@@ -3,10 +3,12 @@ var NAVTREE =
   [ "Java Examples", "index.html", [
     [ "Introduction", "index.html#firstsect", [
       [ "Java Examples Introduction", "index.html#javaexamplesintroduction", null ],
+      [ "Configuring Java Examples", "index.html#configuringjavaexamples", null ],
       [ "Unhandled Java Events", "index.html#unhandledjavaevents", null ],
       [ "Java Examples", "index.html#javaexamples", [
         [ "Example MinRcv.java", "index.html#exampleMinRcv_java", null ],
         [ "Example MinSrc.java", "index.html#exampleMinSrc_java", null ],
+        [ "Example displayString.java", "index.html#exampledisplayString_java", null ],
         [ "Example lbmExampleUtil.java", "index.html#examplelbmExampleUtil_java", null ],
         [ "Example lbmdump.java", "index.html#examplelbmdump_java", null ],
         [ "Example lbmhfxrcv.java", "index.html#examplelbmhfxrcv_java", null ],

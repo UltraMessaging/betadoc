@@ -84,6 +84,18 @@ INFORMATICA LLC PROVIDES THE INFORMATION IN THIS DOCUMENT "AS IS" WITHOUT WARRAN
 <p>The example C# programs listed here are provided in both source form and in binary executable form.</p>
 <p><br />
  </p>
+<h1><a class="anchor" id="configuringdotnetexamples"></a>
+Configuring .NET Examples&nbsp;&nbsp;<small><a href="#configuringdotnetexamples">&lt;-</a></small></h1>
+<p>The example programs universally provide the "-c filename" command-line option. Using that option, the example application calls the <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_REL_6_14/29West/lbm/doc/dotnet_example/dotnetapi.tag:../DotNetAPI/" href="../DotNetAPI/classcom_1_1latencybusters_1_1lbm_1_1LBM.html#adda9e1ac033156d2ac9d943bd600b138">LBM.setConfiguration(string fileName)</a> API. However, note that this API is not recommended for use with XML-format LBM configuration files, largely because you are not able to specify an application name.</p>
+<p>To use an XML configuration file with a UM example application, set the environment variables: </p><ul>
+<li>
+LBM_XML_CONFIG_APPNAME - Desired name of application. </li>
+<li>
+LBM_XML_CONFIG_FILENAME - Path name of XML configuration file. </li>
+</ul>
+<p>In this way, UM will correctly set the example application's name and will properly load the XML configuration file.</p>
+<p><br />
+ </p>
 <h1><a class="anchor" id="unhandledcsevents"></a>
 Unhandled C# Events&nbsp;&nbsp;<small><a href="#unhandledcsevents">&lt;-</a></small></h1>
 <p>Each of the example programs is written to demonstrate a subset of UM's total available functionality. For example, some programs are written to demonstrate <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_REL_6_14/29West/lbm/doc/dotnet_example/design.tag:../Design/" href="../Design/fundamentalconcepts.html#streaming">Streaming</a> functionality (e.g. lbmsrc), while other programs are written to demonstrate <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_REL_6_14/29West/lbm/doc/dotnet_example/design.tag:../Design/" href="../Design/fundamentalconcepts.html#persistence">Persistence</a> functionality (e.g. umesrc), while still other programs are written to demonstrate <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_REL_6_14/29West/lbm/doc/dotnet_example/design.tag:../Design/" href="../Design/fundamentalconcepts.html#queuing">Queuing</a> functionality (e.g. umqsrc).</p>

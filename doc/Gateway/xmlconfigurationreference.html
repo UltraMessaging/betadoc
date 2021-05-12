@@ -113,7 +113,8 @@ Router Element "&lt;peer&gt;"&nbsp;&nbsp;<small><a href="#droelementpeer">&lt;-<
  </p>
 <h2><a class="anchor" id="droelementpublishinginterval"></a>
 Router Element "&lt;publishing-interval&gt;"&nbsp;&nbsp;<small><a href="#droelementpublishinginterval">&lt;-</a></small></h2>
-<p>Configures the rate at which Daemon Statistics messages are published. See <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_REL_6_14/29West/lbm/doc/Gateway/design.tag:../Design/" href="../Design/umfeatures.html#daemonstatistics">Daemon Statistics</a> for general information on Daemon Statistics.</p>
+<p>DEPRECATED: Configures the rate at which Daemon Statistics messages are published. See <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_REL_6_14/29West/lbm/doc/Gateway/design.tag:../Design/" href="../Design/umfeatures.html#daemonstatistics">Daemon Statistics</a> for general information on Daemon Statistics.</p>
+<p>Informatica requests users to migrate to using the UM configuration file to enable automatic monitoring with Protocol Buffer monitoring format for Store and DRO by setting <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_REL_6_14/29West/lbm/doc/Gateway/config.tag:../Config/" href="../Config/grpautomaticmonitoring.html#monitorformatcontext">monitor_format (context)</a> to "pb". See <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_REL_6_14/29West/lbm/doc/Gateway/operations.tag:../Operations/" href="../Operations/monitoringumwiththelbmmonapi.html#automaticmonitoring">Automatic Monitoring</a>.</p>
 <ul>
 <li>
 <b>Cardinality:</b> 0 .. 1 </li>
@@ -1573,7 +1574,8 @@ Router Element "&lt;propagation-delay&gt;"&nbsp;&nbsp;<small><a href="#droelemen
  </p>
 <h2><a class="anchor" id="droelementdaemonmonitor"></a>
 Router Element "&lt;daemon-monitor&gt;"&nbsp;&nbsp;<small><a href="#droelementdaemonmonitor">&lt;-</a></small></h2>
-<p>Configures the Daemon Statistics feature. See <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_REL_6_14/29West/lbm/doc/Gateway/design.tag:../Design/" href="../Design/umfeatures.html#daemonstatistics">Daemon Statistics</a> for general information on Daemon Statistics.</p>
+<p>DEPRECATED: Configures the Daemon Statistics feature. See <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_REL_6_14/29West/lbm/doc/Gateway/design.tag:../Design/" href="../Design/umfeatures.html#daemonstatistics">Daemon Statistics</a> for general information on Daemon Statistics.</p>
+<p>Informatica requests users to migrate to using the UM configuration file to enable automatic monitoring with Protocol Buffer monitoring format for Store and DRO by setting <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_REL_6_14/29West/lbm/doc/Gateway/config.tag:../Config/" href="../Config/grpautomaticmonitoring.html#monitorformatcontext">monitor_format (context)</a> to "pb". See <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_REL_6_14/29West/lbm/doc/Gateway/operations.tag:../Operations/" href="../Operations/monitoringumwiththelbmmonapi.html#automaticmonitoring">Automatic Monitoring</a>.</p>
 <ul>
 <li>
 <b>Cardinality:</b> 0 .. 1 </li>
@@ -1653,7 +1655,7 @@ Router Element "&lt;web-monitor&gt;"&nbsp;&nbsp;<small><a href="#droelementwebmo
 <h2><a class="anchor" id="droelementmonitor"></a>
 Router Element "&lt;monitor&gt;"&nbsp;&nbsp;<small><a href="#droelementmonitor">&lt;-</a></small></h2>
 <p>DEPRECATED: Container for UM Transport monitoring configuration elements.</p>
-<p>Informatica requests that users migrate to using the UM configuration file to enable transport monitoring. See <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_REL_6_14/29West/lbm/doc/Gateway/operations.tag:../Operations/" href="../Operations/monitoringumwiththelbmmonapi.html#automaticmonitoring">Automatic Monitoring</a>.</p>
+<p>Informatica requests users to migrate to using the UM configuration file to enable automatic monitoring with Protocol Buffer monitoring format for Store and DRO by setting <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_REL_6_14/29West/lbm/doc/Gateway/config.tag:../Config/" href="../Config/grpautomaticmonitoring.html#monitorformatcontext">monitor_format (context)</a> to "pb". See <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_REL_6_14/29West/lbm/doc/Gateway/operations.tag:../Operations/" href="../Operations/monitoringumwiththelbmmonapi.html#automaticmonitoring">Automatic Monitoring</a>.</p>
 <ul>
 <li>
 <b>Cardinality:</b> 0 .. 1 </li>
@@ -1667,7 +1669,7 @@ Router Element "&lt;monitor&gt;"&nbsp;&nbsp;<small><a href="#droelementmonitor">
 <th>Attribute </th><th>Description </th><th>Valid Values </th><th>Default Value </th></tr>
 <tr>
 <td><b>interval</b> </td><td><p class="starttd">DEPRECATED: Monitoring interval, in seconds. 0 disables monitoring.</p>
-<p class="endtd">Informatica requests that users migrate to using the UM configuration file to enable transport monitoring. See <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_REL_6_14/29West/lbm/doc/Gateway/operations.tag:../Operations/" href="../Operations/monitoringumwiththelbmmonapi.html#automaticmonitoring">Automatic Monitoring</a>. </p>
+<p class="endtd">Informatica requests users to migrate to using the UM configuration file to enable automatic monitoring with Protocol Buffer monitoring format for Store and DRO by setting <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_REL_6_14/29West/lbm/doc/Gateway/config.tag:../Config/" href="../Config/grpautomaticmonitoring.html#monitorformatcontext">monitor_format (context)</a> to "pb". See <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_REL_6_14/29West/lbm/doc/Gateway/operations.tag:../Operations/" href="../Operations/monitoringumwiththelbmmonapi.html#automaticmonitoring">Automatic Monitoring</a>. </p>
 </td><td>string </td><td><b><code>"0"</code></b> </td></tr>
 </table>
 <p><b>Example:</b> </p><div class="fragment"><div class="line">&lt;tnw-gateway version=<span class="stringliteral">&quot;1.0&quot;</span>&gt;</div><div class="line">  &lt;daemon&gt;</div><div class="line">    ...</div><div class="line">    &lt;monitor interval=<span class="stringliteral">&quot;30&quot;</span>&gt;</div><div class="line">      &lt;transport-module module=<span class="stringliteral">&quot;lbm&quot;</span> options=<span class="stringliteral">&quot;config=/cfgs/TD1.cfg;topic=stats&quot;</span>/&gt;</div><div class="line">      &lt;format-module options=<span class="stringliteral">&quot;config=/cfgs/TD1.cfg;separator=|&quot;</span>/&gt;</div><div class="line">    &lt;/monitor&gt;  </div><div class="line">  &lt;/daemon&gt;</div><div class="line">  ...</div><div class="line">&lt;/tnw-gateway&gt;</div></div><!-- fragment --><hr/>
@@ -1676,7 +1678,7 @@ Router Element "&lt;monitor&gt;"&nbsp;&nbsp;<small><a href="#droelementmonitor">
 <h2><a class="anchor" id="droelementformatmodule"></a>
 Router Element "&lt;format-module&gt;"&nbsp;&nbsp;<small><a href="#droelementformatmodule">&lt;-</a></small></h2>
 <p>DEPRECATED: Provides specifics about the monitoring format module.</p>
-<p>Informatica requests that users migrate to using the UM configuration file to enable transport monitoring. See <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_REL_6_14/29West/lbm/doc/Gateway/operations.tag:../Operations/" href="../Operations/monitoringumwiththelbmmonapi.html#automaticmonitoring">Automatic Monitoring</a>.</p>
+<p>Informatica requests users to migrate to using the UM configuration file to enable automatic monitoring with Protocol Buffer monitoring format for Store and DRO by setting <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_REL_6_14/29West/lbm/doc/Gateway/config.tag:../Config/" href="../Config/grpautomaticmonitoring.html#monitorformatcontext">monitor_format (context)</a> to "pb". See <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_REL_6_14/29West/lbm/doc/Gateway/operations.tag:../Operations/" href="../Operations/monitoringumwiththelbmmonapi.html#automaticmonitoring">Automatic Monitoring</a>.</p>
 <ul>
 <li>
 <b>Cardinality:</b> 0 .. 1 </li>
@@ -1688,7 +1690,7 @@ Router Element "&lt;format-module&gt;"&nbsp;&nbsp;<small><a href="#droelementfor
 <th>Attribute </th><th>Description </th><th>Valid Values </th><th>Default Value </th></tr>
 <tr>
 <td><b>module</b> </td><td><p class="starttd">Selects the message formatting module.</p>
-<p class="endtd">See monitoringformats. </p>
+<p class="endtd">See <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_REL_6_14/29West/lbm/doc/Gateway/operations.tag:../Operations/" href="../Operations/monitoring.html#monitoringformats">Monitoring Formats</a>. </p>
 </td><td><b><code>"csv"</code></b> - Comma-separated values. <br />
 <b><code>"pb"</code></b> - Google Protocol Buffers. </td><td><b><code>"csv"</code></b> </td></tr>
 <tr>
@@ -1700,7 +1702,7 @@ Router Element "&lt;format-module&gt;"&nbsp;&nbsp;<small><a href="#droelementfor
 <h2><a class="anchor" id="droelementtransportmodule"></a>
 Router Element "&lt;transport-module&gt;"&nbsp;&nbsp;<small><a href="#droelementtransportmodule">&lt;-</a></small></h2>
 <p>DEPRECATED: Specifies characteristics about the monitoring transport module used.</p>
-<p>Informatica requests that users migrate to using the UM configuration file to enable transport monitoring. See <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_REL_6_14/29West/lbm/doc/Gateway/operations.tag:../Operations/" href="../Operations/monitoringumwiththelbmmonapi.html#automaticmonitoring">Automatic Monitoring</a>.</p>
+<p>Informatica requests users to migrate to using the UM configuration file to enable automatic monitoring with Protocol Buffer monitoring format for Store and DRO by setting <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_REL_6_14/29West/lbm/doc/Gateway/config.tag:../Config/" href="../Config/grpautomaticmonitoring.html#monitorformatcontext">monitor_format (context)</a> to "pb". See <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_REL_6_14/29West/lbm/doc/Gateway/operations.tag:../Operations/" href="../Operations/monitoringumwiththelbmmonapi.html#automaticmonitoring">Automatic Monitoring</a>.</p>
 <ul>
 <li>
 <b>Cardinality:</b> 0 .. 1 </li>

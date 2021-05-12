@@ -3,6 +3,7 @@ var NAVTREE =
   [ ".NET Examples", "index.html", [
     [ "Introduction", "index.html#firstsect", [
       [ ".NET Examples Introduction", "index.html#csexamplesintroduction", null ],
+      [ "Configuring .NET Examples", "index.html#configuringdotnetexamples", null ],
       [ "Unhandled C# Events", "index.html#unhandledcsevents", null ],
       [ "C# Examples", "index.html#csexamples", [
         [ "Example MinRcv.cs", "index.html#exampleMinRcv_cs", null ],

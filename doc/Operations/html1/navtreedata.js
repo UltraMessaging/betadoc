@@ -15,11 +15,15 @@ var NAVTREE =
       [ "Application Installer", "index.html#applicationinstaller", null ]
     ] ],
     [ "Monitoring", "index.html#monitoring", [
+      [ "Monitoring Introduction", "index.html#monitoringintroduction", [
+        [ "Monitoring UM Data", "index.html#monitoringumdata", null ]
+      ] ],
       [ "Centralized Collector", "index.html#centralizedcollector", [
         [ "Monitoring Collector Service (MCS)", "index.html#monitoringcollectorservicemcs", null ],
         [ "User-Developed Collector", "index.html#userdevelopedcollector", null ]
       ] ],
       [ "Self-Monitoring Applications", "index.html#selfmonitoringapplications", null ],
+      [ "Monitoring Formats", "index.html#monitoringformats", null ],
       [ "Monitoring Transport Statistics", "index.html#monitoringtransportstatistics", [
         [ "LBT-RM and LBT-RU Receiver Statistics", "index.html#lbtrmandlbtrureceiverstatistics", null ],
         [ "LBT-RM and LBT-RU Source Statistics", "index.html#lbtrmandlbtrusourcestatistics", null ],
@@ -79,10 +83,8 @@ var NAVTREE =
       ] ]
     ] ],
     [ "Monitoring UM Applications", "index.html#monitoringumwiththelbmmonapi", [
-      [ "Monitoring Introduction", "index.html#monitoringintroduction", [
-        [ "What to Monitor", "index.html#whattomonitor", null ]
-      ] ],
       [ "Monitoring Methods", "index.html#monitoringmethods", [
+        [ "What to Monitor", "index.html#whattomonitor", null ],
         [ "Monitoring Field Sizes", "index.html#monitoringfieldsizes", null ],
         [ "Application Monitoring Context", "index.html#monitoringcontext", null ]
       ] ],

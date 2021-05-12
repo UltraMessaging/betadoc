@@ -67,6 +67,11 @@ Streaming Known Problems and Limitations&nbsp;&nbsp;<small><a href="#streamingkn
 <tr>
 <td>10985</td><td><p class="starttd">Request to add a configurable maximum number of TSNIs per datagram. For users of kernel bypass drivers who set their datagram max size above a network MTU, this can lead to undesirable IP fragmentation when a TSNI uses most of the configured max datagram size.</p>
 <p>At this time, this request is not planned to be implemented. Instead, the <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_REL_6_14/29West/lbm/doc/ChangeLog/design.tag:../Design/" href="../Design/architecture.html#dynamicfragmentationreduction">Dynamic Fragmentation Reduction</a> feature should be used to avoid IP fragmentation.</p>
+<p class="endtd"><a class="anchor" id="bug11038"></a></p>
+</td></tr>
+<tr>
+<td>11038 </td><td><p class="starttd">A low-traffic topic that transitions across a DRO can produce a series of "EOS" events on a receiver. This happens when the receiver is created <em>after</em> the source's TSNIs become inactive (60 seconds by default; see <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_REL_6_14/29West/lbm/doc/ChangeLog/config.tag:../Config/" href="../Config/grpmajoroptions.html#transporttopicsequencenumberinfoactivethresholdsource">transport_topic_sequence_number_info_active_threshold (source)</a>). Creation of the receiver triggers the creation of a proxy source on the DRO's portal. But in the absence of either user messages or TSNIs, the proxy source never starts sending session messages, resulting in the receiver timing out and re-creating the transport session.</p>
+<p><b>WORKAROUND</b>: Set <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_REL_6_14/29West/lbm/doc/ChangeLog/config.tag:../Config/" href="../Config/grpmajoroptions.html#transporttopicsequencenumberinfoactivethresholdsource">transport_topic_sequence_number_info_active_threshold (source)</a> to zero for the source that is causing the problem. This causes TSNIs to be sent in the absence of user data for unlimited time.</p>
 <p class="endtd"><a class="anchor" id="bug11036"></a></p>
 </td></tr>
 <tr>
