@@ -49,7 +49,6 @@ var NAVTREE =
         [ "Example minsrc.c", "index.html#exampleminsrc_c", null ],
         [ "Example srs_cmd.c", "index.html#examplesrs_cmd_c", null ],
         [ "Example srs_monitor_info_receiver.c", "index.html#examplesrs_monitor_info_receiver_c", null ],
-        [ "Example srs_monitor_info_receiver_json.c", "index.html#examplesrs_monitor_info_receiver_json_c", null ],
         [ "Example tnwgdcmd.c", "index.html#exampletnwgdcmd_c", null ],
         [ "Example tnwgdmon.c", "index.html#exampletnwgdmon_c", null ],
         [ "Example ume-example-rcv-2.c", "index.html#exampleume-example-rcv-2_c", null ],
@@ -70,6 +69,7 @@ var NAVTREE =
       ] ],
       [ "Example Protocol Files", "index.html#exampleprotocolfiles", [
         [ "Example dro_mon.proto", "index.html#exampledro_mon_proto", null ],
+        [ "Example srs_mon.proto", "index.html#examplesrs_mon_proto", null ],
         [ "Example um_mon_attributes.proto", "index.html#exampleum_mon_attributes_proto", null ],
         [ "Example um_mon_control.proto", "index.html#exampleum_mon_control_proto", null ],
         [ "Example ump_mon.proto", "index.html#exampleump_mon_proto", null ],

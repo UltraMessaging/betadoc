@@ -56,7 +56,7 @@ $(document).ready(function(){initNavTree('index.html','');});
 <div class="contents">
 <div class="textblock"><p> 
 <img src="infa_logo.png" width="400" height="138" alt="Informatica"/><br/><br/>
-<big><b>Ultra Messaging</b></big> <small>(Version 6.14)</small><br/>
+<big><b>Ultra Messaging</b></big> <small>(Version 6.17)</small><br/>
 <br/><br/><br/>
 <center class="mytitle">Java Examples</center>
 <br/><br/><br/>
@@ -66,7 +66,7 @@ $(document).ready(function(){initNavTree('index.html','');});
 </p>
 <p>This document lists and gives some background information on the Java-language example UM programs.</p>
 <p>For policies and procedures related to Ultra Messaging Technical Support, see <a href="https://ultramessaging.github.io/UM_Support.html">UM Support</a>.</p>
-<p><b>&copy; Copyright (C) 2004-2021, Informatica Corporation. All Rights Reserved.</b></p>
+<p><b>(C) Copyright 2004,2024 Informatica Inc. All Rights Reserved.</b></p>
 <p>This software and documentation are provided only under a separate license agreement containing restrictions on use and disclosure. No part of this document may be reproduced or transmitted in any form, by any means (electronic, photocopying, recording or otherwise) without prior consent of Informatica LLC.</p>
 <p>A current list of Informatica trademarks is available on the web at <a href="https://www.informatica.com/trademarks.html">https://www.informatica.com/trademarks.html</a>.</p>
 <p>Portions of this software and/or documentation are subject to copyright held by third parties. Required third party notices are included with the product.</p>
@@ -74,19 +74,19 @@ $(document).ready(function(){initNavTree('index.html','');});
 <p>The information in this documentation is subject to change without notice. If you find any problems in this documentation, please report them to us in writing at Informatica LLC 2100 Seaport Blvd. Redwood City, CA 94063.</p>
 <p>Informatica products are warranted according to the terms and conditions of the agreements under which they are provided. <br />
 INFORMATICA LLC PROVIDES THE INFORMATION IN THIS DOCUMENT "AS IS" WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING WITHOUT ANY WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND ANY WARRANTY OR CONDITION OF NON-INFRINGEMENT.</p>
-<p>See <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_REL_6_14/29West/lbm/doc/java_example/design.tag:../Design/" href="../Design/umglossary.html">UM Glossary</a> for Ultra Messaging terminology, abbreviations, and acronyms.</p>
+<p>See <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordw_DEV_MAIN/29West/lbm/doc/java_example/design.tag:../Design/" href="../Design/umglossary.html">UM Glossary</a> for Ultra Messaging terminology, abbreviations, and acronyms.</p>
 <p><br />
  </p>
 <h1><a class="anchor" id="javaexamplesintroduction"></a>
 Java Examples Introduction&nbsp;&nbsp;<small><a href="#javaexamplesintroduction">&lt;-</a></small></h1>
 <p>These programs were written to help in troubleshooting, testing, and demonstrating UM coding techniques. See also <a href="../example/index.html">C Example Source Code</a> and <a href="../dotnet_example/index.html">C# Example Source Code</a>.</p>
 <p>Since the tools are written to be useful as well as instructive, they are more complex than purely-instructive examples would be, with many options to add or subtract functionality. See <a href="https://ultramessaging.github.io/UMExamples/">UMExamples</a> for purely-instructive examples of a variety of UM use cases.</p>
-<p>The example Java programs listed here are provided in both source form and in binary executable form.</p>
+<p>The example Java programs listed here are provided in both source form and in binary executable form (in the main UMS jar file).</p>
 <p><br />
  </p>
 <h1><a class="anchor" id="configuringjavaexamples"></a>
 Configuring Java Examples&nbsp;&nbsp;<small><a href="#configuringjavaexamples">&lt;-</a></small></h1>
-<p>The example programs universally provide the "-c filename" command-line option. Using that option, the example application calls the <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_REL_6_14/29West/lbm/doc/java_example/javaapi.tag:../JavaAPI/" href="../JavaAPI/classcom_1_1latencybusters_1_1lbm_1_1LBM.html#a16611e3f888c3574327f5e1856341553">LBM.setConfiguration(String fileName)</a> API. However, note that this API is not recommended for use with XML-format LBM configuration files, largely because you are not able to specify an application name.</p>
+<p>The example programs universally provide the "-c filename" command-line option. Using that option, the example application calls the <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordw_DEV_MAIN/29West/lbm/doc/java_example/javaapi.tag:../JavaAPI/" href="../JavaAPI/classcom_1_1latencybusters_1_1lbm_1_1LBM.html#a16611e3f888c3574327f5e1856341553">LBM.setConfiguration(String fileName)</a> API. However, note that this API is not recommended for use with XML-format LBM configuration files, largely because you are not able to specify an application name.</p>
 <p>To use an XML configuration file with a UM example application, set the environment variables: </p><ul>
 <li>
 LBM_XML_CONFIG_APPNAME - Desired name of application. </li>
@@ -96,17 +96,41 @@ LBM_XML_CONFIG_FILENAME - Path name of XML configuration file. </li>
 <p>In this way, UM will correctly set the example application's name and will properly load the XML configuration file.</p>
 <p><br />
  </p>
+<h1><a class="anchor" id="runningjavaexamples"></a>
+Running Java Examples&nbsp;&nbsp;<small><a href="#runningjavaexamples">&lt;-</a></small></h1>
+<p>The minimal classpath depends on the features being used. Informatica recommends the following jar files be used with running the examples: </p><ul>
+<li>
+java-getopt-*.jar - <a href="https://github.com/arenn/java-getopt">java-getopt</a>, the GNU Java port of glibc getopt and getlong for parsing command-line options. </li>
+<li>
+UMS_6.17.jar - main jar file containing UM APIs and also compiled class files for example applications. </li>
+<li>
+UMSSDM_6.17.jar - Self Describing Messages API (rarely used by customers, but used by some example applications). </li>
+<li>
+UMSMON_PROTO2_6.17.jar - Monitoring protocol buffer (v2) definitions (rarely used by customers). </li>
+<li>
+UMSMON_PROTO3_6.17.jar - Monitoring protocol buffer (v3) definitions (rarely used by customers). </li>
+</ul>
+<p>Note that the java-getopt jar file can be found in either the MCS/lib or the SRS/lib directories.</p>
+<p>For example: </p><pre class="fragment">L=$HOME/UMQ_6.17/
+J=$L/java
+
+export LBM_LICENSE_INFO="Product=LBM,UME,UMQ,UMDRO:Organization=my organization:Expiration-Date=xxxx:License-Key=xxxx xxxx xxxx xxxx"
+export LD_LIBRARY_PATH=$L/Linux-glibc-2.17-x86_64
+
+java -cp $L/MCS/lib/java-getopt-1.0.13.jar:$J/UMS_6.17.jar:$J/UMSSDM_6.17.jar:$J/UMSMON_PROTO2_6.17.jar:$J/UMSMON_PROTO3_6.17.jar lbmsrc -c my_config.cfg my_topic
+</pre><p><br />
+ </p>
 <h1><a class="anchor" id="unhandledjavaevents"></a>
 Unhandled Java Events&nbsp;&nbsp;<small><a href="#unhandledjavaevents">&lt;-</a></small></h1>
-<p>Each of the example programs is written to demonstrate a subset of UM's total available functionality. For example, some programs are written to demonstrate <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_REL_6_14/29West/lbm/doc/java_example/design.tag:../Design/" href="../Design/fundamentalconcepts.html#streaming">Streaming</a> functionality (e.g. lbmsrc), while other programs are written to demonstrate <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_REL_6_14/29West/lbm/doc/java_example/design.tag:../Design/" href="../Design/fundamentalconcepts.html#persistence">Persistence</a> functionality (e.g. umesrc), while still other programs are written to demonstrate <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_REL_6_14/29West/lbm/doc/java_example/design.tag:../Design/" href="../Design/fundamentalconcepts.html#queuing">Queuing</a> functionality (e.g. umqsrc).</p>
+<p>Each of the example programs is written to demonstrate a subset of UM's total available functionality. For example, some programs are written to demonstrate <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordw_DEV_MAIN/29West/lbm/doc/java_example/design.tag:../Design/" href="../Design/fundamentalconcepts.html#streaming">Streaming</a> functionality (e.g. lbmsrc), while other programs are written to demonstrate <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordw_DEV_MAIN/29West/lbm/doc/java_example/design.tag:../Design/" href="../Design/fundamentalconcepts.html#persistence">Persistence</a> functionality (e.g. umesrc), while still other programs are written to demonstrate <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordw_DEV_MAIN/29West/lbm/doc/java_example/design.tag:../Design/" href="../Design/fundamentalconcepts.html#queuing">Queuing</a> functionality (e.g. umqsrc).</p>
 <p>UM is generally designed to be event-driven, with events being delivered to the programs through standard callbacks, like source callbacks and receiver callbacks. There are many events which are common across all streaming, persistence, and queuing. Other events are specific to persistence, and still other events are specific to queuing.</p>
 <p>This can lead to example programs reporting "unknown" or "unhandled" events. For example, if the "lbmsrc" streaming program is run with a configuration file that enables persistence, UM will deliver events that are specific to persistence to the "lbmsrc" program. But "lbmsrc" is designed for streaming, and does not include code cases for persistence or queuing events. Maybe you should change your configuration to disable persistence, or you should be using the "umesrc" example program.</p>
 <p>Similarly, the "umqsrc" program expects queuing functionality, and can report unhandled events if persistence is configured. Or "umesrc" can report unhandled events if queuing is configured.</p>
 <p>If you see an unhandled event, it is generally reported as a number. You can see which event this corresponds to by looking up the number in the C API document: </p><ul>
 <li>
-<a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_REL_6_14/29West/lbm/doc/java_example/api.tag:../API/" href="../API/creceiverevents.html">C Receiver Events</a> for subscribing programs and </li>
+<a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordw_DEV_MAIN/29West/lbm/doc/java_example/api.tag:../API/" href="../API/creceiverevents.html">C Receiver Events</a> for subscribing programs and </li>
 <li>
-<a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_REL_6_14/29West/lbm/doc/java_example/api.tag:../API/" href="../API/csourceevents.html">C Source Events</a> for publishing programs. </li>
+<a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordw_DEV_MAIN/29West/lbm/doc/java_example/api.tag:../API/" href="../API/csourceevents.html">C Source Events</a> for publishing programs. </li>
 </ul>
 <p>Note that Java uses the same numbering system.</p>
 <p>Once you understand the nature of the unhandled event, you can decide how to change your configuration or choose a different program.</p>
@@ -118,39 +142,39 @@ Java Examples&nbsp;&nbsp;<small><a href="#javaexamples">&lt;-</a></small></h1>
  </p>
 <h2><a class="anchor" id="exampleMinRcv_java"></a>
 Example MinRcv.java&nbsp;&nbsp;<small><a href="#exampleMinRcv_java">&lt;-</a></small></h2>
-<p>Source code: <a href="../java_example/MinRcv.java">MinRcv.java</a>: </p><pre>
+<p>Source code: <a href="../java_example/MinRcv.java">MinRcv.java</a>: </p><pre class="fragment">Purpose: minimal subscriber application.
+
 MinRcv.java - Minimal receiver program.
 </pre><p><br />
  </p>
 <h2><a class="anchor" id="exampleMinSrc_java"></a>
 Example MinSrc.java&nbsp;&nbsp;<small><a href="#exampleMinSrc_java">&lt;-</a></small></h2>
-<p>Source code: <a href="../java_example/MinSrc.java">MinSrc.java</a>: </p><pre>
+<p>Source code: <a href="../java_example/MinSrc.java">MinSrc.java</a>: </p><pre class="fragment">Purpose: minimal publisher application.
+
 MinSrc.java - Minimal source program.
 </pre><p><br />
  </p>
 <h2><a class="anchor" id="exampledisplayString_java"></a>
 Example displayString.java&nbsp;&nbsp;<small><a href="#exampledisplayString_java">&lt;-</a></small></h2>
-<p>Source code: <a href="../java_example/displayString.java">displayString.java</a>: </p><pre>
-Usage: This is not a directly-usable java file.
+<p>Source code: <a href="../java_example/displayString.java">displayString.java</a>: </p><pre class="fragment">Usage: This is not a directly-usable java file.
  It contains the 'displayString' methods from the LBM library
  statistics classes, and is provided for reference purposes.
 </pre><p><br />
  </p>
 <h2><a class="anchor" id="examplelbmExampleUtil_java"></a>
 Example lbmExampleUtil.java&nbsp;&nbsp;<small><a href="#examplelbmExampleUtil_java">&lt;-</a></small></h2>
-<p>Source code: <a href="../java_example/lbmExampleUtil.java">lbmExampleUtil.java</a>: </p><pre>
-Utility functions for UM example programs.
+<p>Source code: <a href="../java_example/lbmExampleUtil.java">lbmExampleUtil.java</a>: </p><pre class="fragment">Utility functions for UM example programs.
 </pre><p><br />
  </p>
 <h2><a class="anchor" id="examplelbmdump_java"></a>
 Example lbmdump.java&nbsp;&nbsp;<small><a href="#examplelbmdump_java">&lt;-</a></small></h2>
-<p>Source code: <a href="../java_example/lbmdump.java">lbmdump.java</a>: </p><pre>
-Utility functions for UM example programs.
+<p>Source code: <a href="../java_example/lbmdump.java">lbmdump.java</a>: </p><pre class="fragment">Utility functions for UM example programs.
 </pre><p><br />
  </p>
 <h2><a class="anchor" id="examplelbmhfxrcv_java"></a>
 Example lbmhfxrcv.java&nbsp;&nbsp;<small><a href="#examplelbmhfxrcv_java">&lt;-</a></small></h2>
-<p>Source code: <a href="../java_example/lbmhfxrcv.java">lbmhfxrcv.java</a>: </p><pre>
+<p>Source code: <a href="../java_example/lbmhfxrcv.java">lbmhfxrcv.java</a>: </p><pre class="fragment">Purpose: Receive messages on a single topic.
+
 Usage: lbmhfxrcv [options] topic
 Available options:
   -c filename = Use LBM configuration file filename.
@@ -166,7 +190,7 @@ Available options:
   -q = use an LBM event queue
   -v = be verbose about each message
   -V = verify message contents
-Monitoring options:<br />
+Monitoring options:\n
   --monitor-ctx NUM = monitor context every NUM seconds
   --monitor-rcv NUM = monitor receiver every NUM seconds
   --monitor-transport TRANS = use monitor transport module TRANS
@@ -180,7 +204,8 @@ Monitoring options:<br />
  </p>
 <h2><a class="anchor" id="examplelbmimsg_java"></a>
 Example lbmimsg.java&nbsp;&nbsp;<small><a href="#examplelbmimsg_java">&lt;-</a></small></h2>
-<p>Source code: <a href="../java_example/lbmimsg.java">lbmimsg.java</a>: </p><pre>
+<p>Source code: <a href="../java_example/lbmimsg.java">lbmimsg.java</a>: </p><pre class="fragment">Purpose: Send immediate messages on a single topic or send topic-less messages.
+
 Usage: lbmimsg [options] topic
 Available options:
   -c filename = Use LBM configuration file filename.
@@ -202,8 +227,7 @@ Available options:
  </p>
 <h2><a class="anchor" id="examplelbmlatping_java"></a>
 Example lbmlatping.java&nbsp;&nbsp;<small><a href="#examplelbmlatping_java">&lt;-</a></small></h2>
-<p>Source code: <a href="../java_example/lbmlatping.java">lbmlatping.java</a>: </p><pre>
-Usage: lbmlatping [options]
+<p>Source code: <a href="../java_example/lbmlatping.java">lbmlatping.java</a>: </p><pre class="fragment">Usage: lbmlatping [options]
 Available options:
   -a procnum = set cpu affinity to procnum (disabled).
   -c filename = Use LBM configuration file filename.
@@ -216,8 +240,7 @@ Available options:
  </p>
 <h2><a class="anchor" id="examplelbmlatpong_java"></a>
 Example lbmlatpong.java&nbsp;&nbsp;<small><a href="#examplelbmlatpong_java">&lt;-</a></small></h2>
-<p>Source code: <a href="../java_example/lbmlatpong.java">lbmlatpong.java</a>: </p><pre>
-Usage: lbmlatpong [options]
+<p>Source code: <a href="../java_example/lbmlatpong.java">lbmlatpong.java</a>: </p><pre class="fragment">Usage: lbmlatpong [options]
 Available options:
   -a procnum = set cpu affinity to procnum (disabled).
   -c filename = Use LBM configuration file filename.
@@ -228,7 +251,8 @@ Available options:
  </p>
 <h2><a class="anchor" id="examplelbmmon_java"></a>
 Example lbmmon.java&nbsp;&nbsp;<small><a href="#examplelbmmon_java">&lt;-</a></small></h2>
-<p>Source code: <a href="../java_example/lbmmon.java">lbmmon.java</a>: </p><pre>
+<p>Source code: <a href="../java_example/lbmmon.java">lbmmon.java</a>: </p><pre class="fragment">Purpose: Example LBM statistics monitoring application.
+
 Usage: lbmmon [options]
 Available options:
   -h, --help                 help
@@ -237,18 +261,28 @@ Available options:
       --transport-opts OPTS  use OPTS as transport module options
   -f, --format FMT           use format module FMT
                              FMT may be `csv' or `pb', default is `csv'
-      --format-opts OPTS     use OPTS as format module options</pre><pre>Transport and format options are passed as name=value pairs, separated by a semicolon.</pre><pre>LBM transport options:
+      --format-opts OPTS     use OPTS as format module options
+
+Transport and format options are passed as name=value pairs, separated by a semicolon.
+
+LBM transport options:
   config=FILE            use LBM configuration file FILE
   topic=TOPIC            receive statistics on topic TOPIC
                          default is /29west/statistics
-  wctopic=PATTERN        receive statistics on wildcard topic PATTERN</pre><pre>UDP transport options:
+  wctopic=PATTERN        receive statistics on wildcard topic PATTERN
+
+UDP transport options:
   port=NUM               receive on UDP port NUM
   interface=IP           receive multicast on interface IP
-  mcgroup=GRP            receive on multicast group GRP</pre><pre>LBMSNMP transport options:
+  mcgroup=GRP            receive on multicast group GRP
+
+LBMSNMP transport options:
   config=FILE            use LBM configuration file FILE
   topic=TOPIC            receive statistics on topic TOPIC
                          default is /29west/statistics
-  wctopic=PATTERN        receive statistics on wildcard topic PATTERN</pre><pre>CSV format options:
+  wctopic=PATTERN        receive statistics on wildcard topic PATTERN
+
+CSV format options:
   separator=CHAR         separate CSV fields with character CHAR
                          defaults to `,'
   passthrough=VAL        VAL may be `off', `on' or `convert'
@@ -260,7 +294,8 @@ PB format options:
  </p>
 <h2><a class="anchor" id="examplelbmmrcv_java"></a>
 Example lbmmrcv.java&nbsp;&nbsp;<small><a href="#examplelbmmrcv_java">&lt;-</a></small></h2>
-<p>Source code: <a href="../java_example/lbmmrcv.java">lbmmrcv.java</a>: </p><pre>
+<p>Source code: <a href="../java_example/lbmmrcv.java">lbmmrcv.java</a>: </p><pre class="fragment">Purpose: Receive messages on multiple topics.
+
 Usage: lbmrcv [options]
 Available options:
   -B # = Set receive socket buffer size to # (in MB)
@@ -279,7 +314,7 @@ Available options:
   -R rcvs = create rcvs receivers
   -s = print statistics along with bandwidth
   -v = be verbose about each message
-Monitoring options:<br />
+Monitoring options:\n
   --monitor-ctx NUM = monitor context every NUM seconds
   --monitor-rcv NUM = monitor all receivers every NUM seconds
   --monitor-transport TRANS = use monitor transport module TRANS
@@ -293,7 +328,8 @@ Monitoring options:<br />
  </p>
 <h2><a class="anchor" id="examplelbmmsrc_java"></a>
 Example lbmmsrc.java&nbsp;&nbsp;<small><a href="#examplelbmmsrc_java">&lt;-</a></small></h2>
-<p>Source code: <a href="../java_example/lbmmsrc.java">lbmmsrc.java</a>: </p><pre>
+<p>Source code: <a href="../java_example/lbmmsrc.java">lbmmsrc.java</a>: </p><pre class="fragment">Purpose: Send messages on multiple topics.
+
 Usage: lbmmsrc [options]
 Available options:
   -c filename = Use LBM configuration file filename.
@@ -317,7 +353,7 @@ Available options:
   -S srcs = use srcs sources
   -T thrds = use thrds threads
   -v = be verbose
-Monitoring options:<br />
+Monitoring options:\n
   --monitor-ctx NUM = monitor context every NUM seconds
   --monitor-src NUM = monitor each source every NUM seconds
   --monitor-transport TRANS = use monitor transport module TRANS
@@ -331,7 +367,8 @@ Monitoring options:<br />
  </p>
 <h2><a class="anchor" id="examplelbmpong_java"></a>
 Example lbmpong.java&nbsp;&nbsp;<small><a href="#examplelbmpong_java">&lt;-</a></small></h2>
-<p>Source code: <a href="../java_example/lbmpong.java">lbmpong.java</a>: </p><pre>
+<p>Source code: <a href="../java_example/lbmpong.java">lbmpong.java</a>: </p><pre class="fragment">Purpose: Message round trip processor.
+
 Usage: lbmpong [options] id
 Available options:
   -c filename = Use LBM configuration file filename.
@@ -365,7 +402,8 @@ Available options:
  </p>
 <h2><a class="anchor" id="examplelbmpong1_java"></a>
 Example lbmpong1.java&nbsp;&nbsp;<small><a href="#examplelbmpong1_java">&lt;-</a></small></h2>
-<p>Source code: <a href="../java_example/lbmpong1.java">lbmpong1.java</a>: </p><pre>
+<p>Source code: <a href="../java_example/lbmpong1.java">lbmpong1.java</a>: </p><pre class="fragment">Purpose: One-way message trip processor.
+
 Usage: lbmpong1 [options] id
   -c filename = Use LBM configuration file filename.
                 Multiple config files are allowed.
@@ -382,7 +420,8 @@ Usage: lbmpong1 [options] id
  </p>
 <h2><a class="anchor" id="examplelbmrcv_java"></a>
 Example lbmrcv.java&nbsp;&nbsp;<small><a href="#examplelbmrcv_java">&lt;-</a></small></h2>
-<p>Source code: <a href="../java_example/lbmrcv.java">lbmrcv.java</a>: </p><pre>
+<p>Source code: <a href="../java_example/lbmrcv.java">lbmrcv.java</a>: </p><pre class="fragment">Purpose: Receive messages on a single topic.
+
 Usage: lbmrcv [options] topic
 Available options:
   -c filename = Use LBM configuration file filename.
@@ -400,7 +439,7 @@ Available options:
   -q = use an LBM event queue
   -v = be verbose about each message
   -V = verify message contents
-Monitoring options:<br />
+Monitoring options:\n
   --monitor-ctx NUM = monitor context every NUM seconds
   --monitor-rcv NUM = monitor receiver every NUM seconds
   --monitor-transport TRANS = use monitor transport module TRANS
@@ -414,7 +453,8 @@ Monitoring options:<br />
  </p>
 <h2><a class="anchor" id="examplelbmrcvxsp_java"></a>
 Example lbmrcvxsp.java&nbsp;&nbsp;<small><a href="#examplelbmrcvxsp_java">&lt;-</a></small></h2>
-<p>Source code: <a href="../java_example/lbmrcvxsp.java">lbmrcvxsp.java</a>: </p><pre>
+<p>Source code: <a href="../java_example/lbmrcvxsp.java">lbmrcvxsp.java</a>: </p><pre class="fragment">Purpose: Receive messages on a single topic, mapping transports to various XSPs.
+
 Usage: lbmrcv [options] topic
 Available options:
   -c filename = Use LBM configuration file filename.
@@ -433,7 +473,7 @@ Available options:
   -S = exit after source ends, print throughput summary
   -v = be verbose about each message
   -V = verify message contents
-Monitoring options:<br />
+Monitoring options:\n
   --monitor-ctx NUM = monitor context every NUM seconds
   --monitor-rcv NUM = monitor receiver every NUM seconds
   --monitor-transport TRANS = use monitor transport module TRANS
@@ -447,7 +487,8 @@ Monitoring options:<br />
  </p>
 <h2><a class="anchor" id="examplelbmreq_java"></a>
 Example lbmreq.java&nbsp;&nbsp;<small><a href="#examplelbmreq_java">&lt;-</a></small></h2>
-<p>Source code: <a href="../java_example/lbmreq.java">lbmreq.java</a>: </p><pre>
+<p>Source code: <a href="../java_example/lbmreq.java">lbmreq.java</a>: </p><pre class="fragment">Purpose: Send request messages from a single source with settable interval between messages.
+
 Usage: [options] topic
 Available options:
   -c filename = Use LBM configuration file filename.
@@ -474,7 +515,8 @@ Available options:
  </p>
 <h2><a class="anchor" id="examplelbmresp_java"></a>
 Example lbmresp.java&nbsp;&nbsp;<small><a href="#examplelbmresp_java">&lt;-</a></small></h2>
-<p>Source code: <a href="../java_example/lbmresp.java">lbmresp.java</a>: </p><pre>
+<p>Source code: <a href="../java_example/lbmresp.java">lbmresp.java</a>: </p><pre class="fragment">Purpose: Respond to request messages on a single topic.
+
 Usage: lbmresp [options] topic
   -c filename = Use LBM configuration file filename.
                 Multiple config files are allowed.
@@ -492,7 +534,8 @@ Usage: lbmresp [options] topic
  </p>
 <h2><a class="anchor" id="examplelbmsrc_java"></a>
 Example lbmsrc.java&nbsp;&nbsp;<small><a href="#examplelbmsrc_java">&lt;-</a></small></h2>
-<p>Source code: <a href="../java_example/lbmsrc.java">lbmsrc.java</a>: </p><pre>
+<p>Source code: <a href="../java_example/lbmsrc.java">lbmsrc.java</a>: </p><pre class="fragment">Purpose: Send messages on a single topic.
+
 Usage: lbmsrc [options] topic
 Available options:
   -c filename = Use LBM configuration file filename.
@@ -521,7 +564,7 @@ Available options:
   -v = be verbose about each message
   -V = construct verifiable messages
   -x bits = Use 32 or 64 bits for hot-failover sequence numbers
-Monitoring options:<br />
+Monitoring options:\n
   --monitor-ctx NUM = monitor context every NUM seconds
   --monitor-src NUM = monitor source every NUM seconds
   --monitor-transport TRANS = use monitor transport module TRANS
@@ -535,7 +578,8 @@ Monitoring options:<br />
  </p>
 <h2><a class="anchor" id="examplelbmssrc_java"></a>
 Example lbmssrc.java&nbsp;&nbsp;<small><a href="#examplelbmssrc_java">&lt;-</a></small></h2>
-<p>Source code: <a href="../java_example/lbmssrc.java">lbmssrc.java</a>: </p><pre>
+<p>Source code: <a href="../java_example/lbmssrc.java">lbmssrc.java</a>: </p><pre class="fragment">Purpose: Uses Smart Source to send messages on a single topic.
+
 Usage: lbmssrc [options] topic
 Available options:
   -a available-data-space = print the length of available data space
@@ -557,7 +601,7 @@ Available options:
   -s sec = print stats every sec seconds
   -v = be verbose about each message
   -V = construct verifiable messages
-Monitoring options:<br />
+Monitoring options:\n
   --monitor-ctx NUM = monitor context every NUM seconds
   --monitor-src NUM = monitor source every NUM seconds
   --monitor-transport TRANS = use monitor transport module TRANS
@@ -571,7 +615,8 @@ Monitoring options:<br />
  </p>
 <h2><a class="anchor" id="examplelbmstrm_java"></a>
 Example lbmstrm.java&nbsp;&nbsp;<small><a href="#examplelbmstrm_java">&lt;-</a></small></h2>
-<p>Source code: <a href="../java_example/lbmstrm.java">lbmstrm.java</a>: </p><pre>
+<p>Source code: <a href="../java_example/lbmstrm.java">lbmstrm.java</a>: </p><pre class="fragment">Purpose: Send messages on multiple topics.
+
 Usage: lbmstrm [options]
 Available options:
   -c filename = Use LBM configuration file filename.
@@ -595,7 +640,7 @@ Available options:
   -t = tight loop (cpu-bound) for even message spacing
   -T thrds = use thrds threads
   -v = be verbose
-Monitoring options:<br />
+Monitoring options:\n
   --monitor-ctx NUM = monitor context every NUM seconds
   --monitor-src NUM = monitor each source every NUM seconds
   --monitor-transport TRANS = use monitor transport module TRANS
@@ -609,7 +654,8 @@ Monitoring options:<br />
  </p>
 <h2><a class="anchor" id="examplelbmtrreq_java"></a>
 Example lbmtrreq.java&nbsp;&nbsp;<small><a href="#examplelbmtrreq_java">&lt;-</a></small></h2>
-<p>Source code: <a href="../java_example/lbmtrreq.java">lbmtrreq.java</a>: </p><pre>
+<p>Source code: <a href="../java_example/lbmtrreq.java">lbmtrreq.java</a>: </p><pre class="fragment">Purpose: Request topic resolution for quiescent components.
+
 Usage: lbmtrreq [options]
 Available options:
   -c filename =      Use LBM configuration file filename.
@@ -626,7 +672,8 @@ Available options:
  </p>
 <h2><a class="anchor" id="examplelbmwrcv_java"></a>
 Example lbmwrcv.java&nbsp;&nbsp;<small><a href="#examplelbmwrcv_java">&lt;-</a></small></h2>
-<p>Source code: <a href="../java_example/lbmwrcv.java">lbmwrcv.java</a>: </p><pre>
+<p>Source code: <a href="../java_example/lbmwrcv.java">lbmwrcv.java</a>: </p><pre class="fragment">Purpose: Receive messages using a wildcard receiver.
+
 Usage: lbmwrcv [options] topic
 Available options:
   -c filename = Use LBM configuration file filename.
@@ -640,7 +687,7 @@ Available options:
   -s = print statistics along with bandwidth
   -N NUM = subscribe to channel NUM
   -v = be verbose about each message
-Monitoring options:<br />
+Monitoring options:\n
   --monitor-ctx NUM = monitor context every NUM seconds
   --monitor-transport TRANS = use monitor transport module TRANS
                               TRANS may be `lbm', `udp', or `lbmsnmp', default is `lbm'
@@ -648,11 +695,12 @@ Monitoring options:<br />
   --monitor-format FMT = use monitor format module FMT
                          FMT may be `csv' or `pb', default is `csv'
   --monitor-format-opts OPTS = use OPTS as format module options
-  --monitor-appid ID = use ID as application ID string</pre><pre></pre><p><br />
+  --monitor-appid ID = use ID as application ID string</pre><p><br />
  </p>
 <h2><a class="anchor" id="exampleumercv_java"></a>
 Example umercv.java&nbsp;&nbsp;<small><a href="#exampleumercv_java">&lt;-</a></small></h2>
-<p>Source code: <a href="../java_example/umercv.java">umercv.java</a>: </p><pre>
+<p>Source code: <a href="../java_example/umercv.java">umercv.java</a>: </p><pre class="fragment">Purpose: Receive messages on a single topic.
+
 Usage: umercv [options] topic
 Available options:
   -c filename = Use LBM configuration file filename.
@@ -673,7 +721,7 @@ Available options:
   -q = use an LBM event queue
   -r msgs = delete receiver after msgs messages
   -v = be verbose about each message
-Monitoring options:<br />
+Monitoring options:\n
   --monitor-ctx NUM = monitor context every NUM seconds
   --monitor-rcv NUM = monitor receiver every NUM seconds
   --monitor-transport TRANS = use monitor transport module TRANS
@@ -687,7 +735,8 @@ Monitoring options:<br />
  </p>
 <h2><a class="anchor" id="exampleumesrc_java"></a>
 Example umesrc.java&nbsp;&nbsp;<small><a href="#exampleumesrc_java">&lt;-</a></small></h2>
-<p>Source code: <a href="../java_example/umesrc.java">umesrc.java</a>: </p><pre>
+<p>Source code: <a href="../java_example/umesrc.java">umesrc.java</a>: </p><pre class="fragment">Purpose: Send messages on a single topic.
+
 Usage: umesrc [options] topic
 Available options:
   -c filename = Use LBM configuration file filename.
@@ -717,7 +766,7 @@ Available options:
   -s sec = print stats every sec seconds
   -t storename = use UME store with name storename
   -v = bump verbose level
-Monitoring options:<br />
+Monitoring options:\n
   --monitor-ctx NUM = monitor context every NUM seconds
   --monitor-src NUM = monitor source every NUM seconds
   --monitor-transport TRANS = use monitor transport module TRANS
@@ -731,7 +780,8 @@ Monitoring options:<br />
  </p>
 <h2><a class="anchor" id="exampleumessrc_java"></a>
 Example umessrc.java&nbsp;&nbsp;<small><a href="#exampleumessrc_java">&lt;-</a></small></h2>
-<p>Source code: <a href="../java_example/umessrc.java">umessrc.java</a>: </p><pre>
+<p>Source code: <a href="../java_example/umessrc.java">umessrc.java</a>: </p><pre class="fragment">Purpose: Uses smart source to send messages on a single topic.
+
 Usage: umessrc [options] topic
 Available options:
   -a available-data-space = print the length of available data space
@@ -760,7 +810,7 @@ Available options:
   -s sec = print stats every sec seconds
   -t storename = use UME store with name storename
   -v = bump verbose level
-Monitoring options:<br />
+Monitoring options:\n
   --monitor-ctx NUM = monitor context every NUM seconds
   --monitor-src NUM = monitor source every NUM seconds
   --monitor-transport TRANS = use monitor transport module TRANS
@@ -774,7 +824,8 @@ Monitoring options:<br />
  </p>
 <h2><a class="anchor" id="exampleumqrcv_java"></a>
 Example umqrcv.java&nbsp;&nbsp;<small><a href="#exampleumqrcv_java">&lt;-</a></small></h2>
-<p>Source code: <a href="../java_example/umqrcv.java">umqrcv.java</a>: </p><pre>
+<p>Source code: <a href="../java_example/umqrcv.java">umqrcv.java</a>: </p><pre class="fragment">Purpose: Receive messages on a single topic.
+
 Usage: umqrcv [options] topic
 Available options:
   -B broker = use broker given by address.
@@ -794,7 +845,7 @@ Available options:
   -q = use an LBM event queue
   -r msgs = delete receiver after msgs messages
   -v = be verbose about each message
-Monitoring options:<br />
+Monitoring options:\n
   --monitor-ctx NUM = monitor context every NUM seconds
   --monitor-rcv NUM = monitor receiver every NUM seconds
   --monitor-transport TRANS = use monitor transport module TRANS
@@ -808,7 +859,8 @@ Monitoring options:<br />
  </p>
 <h2><a class="anchor" id="exampleumqsrc_java"></a>
 Example umqsrc.java&nbsp;&nbsp;<small><a href="#exampleumqsrc_java">&lt;-</a></small></h2>
-<p>Source code: <a href="../java_example/umqsrc.java">umqsrc.java</a>: </p><pre>
+<p>Source code: <a href="../java_example/umqsrc.java">umqsrc.java</a>: </p><pre class="fragment">Purpose: Send messages on a single topic.
+
 Usage: umqsrc [options] topic
 Available options:
   -A cfg = use ULB application set specification cfg
@@ -831,20 +883,62 @@ Available options:
   -X = Send using numeric or named UMQ index for ULB sources X
      -Y = Send using named UMQ index for broker sources
   -v = bump verbose level
-Monitoring options:<br />
-  &ndash;monitor-ctx NUM = monitor context every NUM seconds
-  &ndash;monitor-src NUM = monitor source every NUM seconds
-  &ndash;monitor-transport TRANS = use monitor transport module TRANS
+Monitoring options:\n
+  --monitor-ctx NUM = monitor context every NUM seconds
+  --monitor-src NUM = monitor source every NUM seconds
+  --monitor-transport TRANS = use monitor transport module TRANS
                               TRANS may be `lbm', `udp', or `lbmsnmp', default is `lbm'
-  &ndash;monitor-transport-opts OPTS = use OPTS as transport module options
-  &ndash;monitor-format FMT = use monitor format module FMT
+  --monitor-transport-opts OPTS = use OPTS as transport module options
+  --monitor-format FMT = use monitor format module FMT
                          FMT may be `csv' or `pb', default is `csv'
-  &ndash;monitor-format-opts OPTS = use OPTS as format module options
-  &ndash;monitor-appid ID = use ID as application ID string
-  &ndash;flight-size = See -f above
-  &ndash;message-rate = See -m above
-  &ndash;appsets = see -A above
-</pre> </div></div><!-- contents -->
+  --monitor-format-opts OPTS = use OPTS as format module options
+  --monitor-appid ID = use ID as application ID string
+  --flight-size = See -f above
+  --message-rate = See -m above
+  --appsets = see -A above
+</pre><p><br />
+<br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ </p>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.8.11-->
 </body>

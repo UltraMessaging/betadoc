@@ -63,6 +63,8 @@ $(document).ready(function(){initNavTree('manpagesformcs.html','');});
 <li>
 <a class="el" href="manpagesformcs.html#mcsdsmanpage">Mcsds Man Page</a> - Windows Service interface. </li>
 </ul>
+<p>Note that these executables are not in the same "bin" directory as the platform native UM executables. Since it is a Java program, it has its own directory sub-tree, "MCS", with sub-directories "bin" and "lib". For example, the MCS executables are under "UMS_6.17/MCS/bin".</p>
+<p>However, MCS does use the underlying platform-specific UM library, so your proper paths should be set up.</p>
 <p><br />
  </p>
 <h1><a class="anchor" id="mcsmanpage"></a>
@@ -98,13 +100,27 @@ Available options:
                                 INFO
                                 WARN - default
                                 ERROR
-  -E, --env_var_file          update/set the environment Variable File</pre><dl class="section user"><dt><b>Description</b> </dt><dd>The <code>mcsds</code> command has two functions: <ul>
+  -E, --env_var_file          update/set the environment Variable File
+  -f, --flatdir               specify that binaries and java libraries are in the same directory
+                                Note: This sets UM_MCS_DIR environment variable to the directory path of this executable
+  -U, --noenv_var_file        unset env_var_file (-E) entry
+                                Note: -U and -E are not supported on the same command line</pre><dl class="section user"><dt><b>Description</b> </dt><dd>The <code>mcsds</code> command has two functions: <ul>
 <li>
-First, it lets the user supply Windows Service operating parameters, which the command saves into the Windows registry. Those operating parameters are subsequently used by the SRS Service. See <a class="el" href="startupshutdownprocedures.html#configurethewindowsservice">Configure the Windows Service</a>. </li>
+First, it lets the user supply Windows Service operating parameters, which the command saves into the Windows registry. Those operating parameters are subsequently used by the MCS Service. See <a class="el" href="startupshutdownprocedures.html#configurethewindowsservice">Configure the Windows Service</a>. </li>
 <li>
 Second, it provides Windows with the MCS daemon executable to run as a Service. </li>
 </ul>
 </dd></dl>
+<dl class="section user"><dt></dt><dd>The <b>"mcs_cfgfile_name"</b> parameter specifies the file path for the MCS's XML configuration file. It is supplied in conjunction with the "-s config" option (see below). See <a class="el" href="mcsconfigurationfile.html">MCS Configuration File</a> for configuration details.</dd></dl>
+<dl class="section user"><dt></dt><dd>The <b>"-l"</b> option specifies a "service" log file path, which is saved in the Windows registry and subsequently by the Windows Service. Under normal circumstances, this log file will never be written to. It will be written if the MCS is unsuccessful in starting up as a service. (The normal MCS log file is configured differently, using the <a class="el" href="mcsconfigurationfile.html#mcselementlog">&lt;log&gt;</a> element in the configuration file.)</dd></dl>
+<dl class="section user"><dt></dt><dd>The <b>"-p"</b> option specifies a "process" log file path, which is saved in the Windows registry and subsequently by the Windows Service. Under normal circumstances, this log file will never be written to. It will be written if the Java JVM writes to standard out or standard error, of if the MCS is not able to write to its configured log file.</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>By default, the MCS's configuration file uses <a class="el" href="mcsconfigurationfile.html#mcselementlog">&lt;log type="console"&gt;</a>. In this case, normal MCS logs are written to standard out and will be captured in the "process" log file. <b>This is not recommended as it leads to unbounded growth of the log file.</b> Users should set <a class="el" href="mcsconfigurationfile.html#mcselementlog">&lt;log type="file"&gt;</a> and related attributes to control the log file sizes.</dd></dl>
+<dl class="section user"><dt></dt><dd>For <b>"-s install"</b> see <a class="el" href="startupshutdownprocedures.html#installthewindowsservice">Install the Windows Service</a>.</dd></dl>
+<dl class="section user"><dt></dt><dd>For <b>"-s remove"</b> see <a class="el" href="startupshutdownprocedures.html#removethewindowsservice">Remove the Windows Service</a>.</dd></dl>
+<dl class="section user"><dt></dt><dd>For <b>"-s config"</b> and <b>"-e"</b>, see <a class="el" href="startupshutdownprocedures.html#configurethewindowsservice">Configure the Windows Service</a>.</dd></dl>
+<dl class="section user"><dt></dt><dd>The <b>"-h"</b> option prints the man page and exits.</dd></dl>
+<dl class="section user"><dt><b>Exit</b> <b>Status</b> </dt><dd>The exit status from MCS is 0 for success and some non-zero value for failure.</dd></dl>
+<dl class="section attention"><dt>Attention</dt><dd>Do not use the task manager or the "kill" command to stop a UM daemon running as a Windows service. Use the Windows service control panel to stop the service.</dd></dl>
 <p><br />
 <br />
  <br />

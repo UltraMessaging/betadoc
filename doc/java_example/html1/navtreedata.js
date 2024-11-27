@@ -4,6 +4,7 @@ var NAVTREE =
     [ "Introduction", "index.html#firstsect", [
       [ "Java Examples Introduction", "index.html#javaexamplesintroduction", null ],
       [ "Configuring Java Examples", "index.html#configuringjavaexamples", null ],
+      [ "Running Java Examples", "index.html#runningjavaexamples", null ],
       [ "Unhandled Java Events", "index.html#unhandledjavaevents", null ],
       [ "Java Examples", "index.html#javaexamples", [
         [ "Example MinRcv.java", "index.html#exampleMinRcv_java", null ],

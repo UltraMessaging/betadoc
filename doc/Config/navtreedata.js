@@ -10,11 +10,7 @@ var NAVTREE =
         [ "Configuration Error Handling", "index.html#configurationerrorhandling", null ],
         [ "Host Name Resolution", "index.html#hostnameresolution", null ],
         [ "Configuration Files", "index.html#configurationfiles", null ]
-      ] ],
-      [ "Plain Text Configuration Files", "index.html#plaintextconfigurationfiles", [
-        [ "Reading Plain Text Configuration Files", "index.html#readingplaintextconfigurationfiles", null ]
-      ] ],
-      [ "Plain Text Configuration File Format", "index.html#plaintextconfigurationfileformat", null ]
+      ] ]
     ] ],
     [ "XML Configuration Files", "xmlconfigurationfiles.html", [
       [ "XML Configuration Concepts", "xmlconfigurationfiles.html#xmlconfigurationconcepts", null ],
@@ -22,6 +18,7 @@ var NAVTREE =
         [ "XML Object Names", "xmlconfigurationfiles.html#xmlobjectnames", null ],
         [ "XML Application Names", "xmlconfigurationfiles.html#xmlapplicationnames", null ]
       ] ],
+      [ "xml:space Attribute", "xmlconfigurationfiles.html#xmlspaceattribute", null ],
       [ "Order and Rule Specifications", "xmlconfigurationfiles.html#orderandrulespecifications", [
         [ "Constraining Configuration Values", "xmlconfigurationfiles.html#constrainingconfigurationvalues", null ],
         [ "Restricting Topics", "xmlconfigurationfiles.html#restrictingtopics", null ],
@@ -31,7 +28,9 @@ var NAVTREE =
       [ "Reading XML Configuration Files", "xmlconfigurationfiles.html#readingxmlconfigurationfiles", null ],
       [ "Using XML Configuration Files With a UM Application", "xmlconfigurationfiles.html#usingxmlconfigurationfileswithaumapplication", null ],
       [ "XML Configuration File Format", "xmlconfigurationfiles.html#xmlconfigurationfileformat", null ],
-      [ "Merging Multiple XML Configuration Files", "xmlconfigurationfiles.html#mergingmultiplexmlconfigurationfiles", null ],
+      [ "Share/Merge XML Files with XInclude", "xmlconfigurationfiles.html#mergingmultiplexmlconfigurationfiles", [
+        [ "Common XInclude Use Case", "xmlconfigurationfiles.html#commonxincludeusecase", null ]
+      ] ],
       [ "XML Configuration File Elements", "xmlconfigurationfiles.html#xmlconfigurationfileelements", [
         [ "UM Element \"<um-configuration>\"", "xmlconfigurationfiles.html#umelementumconfiguration", null ],
         [ "UM Element \"<applications>\"", "xmlconfigurationfiles.html#umelementapplications", null ],
@@ -57,6 +56,10 @@ var NAVTREE =
       ] ],
       [ "XML Configuration File DTD", "xmlconfigurationfiles.html#xmlconfigurationfiledtd", null ],
       [ "Sample XML Configuration File", "xmlconfigurationfiles.html#samplexmlconfigurationfile", null ]
+    ] ],
+    [ "Plain Text Configuration Files", "plaintextconfigurationfiles.html", [
+      [ "Reading Plain Text Configuration Files", "plaintextconfigurationfiles.html#readingplaintextconfigurationfiles", null ],
+      [ "Plain Text Configuration File Format", "plaintextconfigurationfiles.html#plaintextconfigurationfileformat", null ]
     ] ],
     [ "Attributes Objects", "attributesobjects.html", [
       [ "Creating An Attributes Object", "attributesobjects.html#creatinganattributesobject", null ],
@@ -153,6 +156,8 @@ var NAVTREE =
         [ "transport_topic_sequence_number_info_request_interval (receiver)", "grpmajoroptions.html#transporttopicsequencenumberinforequestintervalreceiver", null ],
         [ "transport_topic_sequence_number_info_request_maximum (receiver)", "grpmajoroptions.html#transporttopicsequencenumberinforequestmaximumreceiver", null ],
         [ "use_extended_reclaim_notifications (source)", "grpmajoroptions.html#useextendedreclaimnotificationssource", null ],
+        [ "use_hotlink (receiver)", "grpmajoroptions.html#usehotlinkreceiver", null ],
+        [ "use_hotlink (source)", "grpmajoroptions.html#usehotlinksource", null ],
         [ "zero_transports_function (xsp)", "grpmajoroptions.html#zerotransportsfunctionxsp", null ]
       ] ]
     ] ],
@@ -185,9 +190,11 @@ var NAVTREE =
         [ "resolver_query_minimum_initial_interval (receiver)", "grpudpbasedresolveroperation.html#resolverqueryminimuminitialintervalreceiver", null ],
         [ "resolver_query_minimum_sustain_duration (receiver)", "grpudpbasedresolveroperation.html#resolverqueryminimumsustaindurationreceiver", null ],
         [ "resolver_query_sustain_interval (receiver)", "grpudpbasedresolveroperation.html#resolverquerysustainintervalreceiver", null ],
+        [ "resolver_receiver_datagram_max_size (context)", "grpudpbasedresolveroperation.html#resolverreceiverdatagrammaxsizecontext", null ],
         [ "resolver_receiver_map_tablesz (context)", "grpudpbasedresolveroperation.html#resolverreceivermaptableszcontext", null ],
         [ "resolver_send_final_advertisements (source)", "grpudpbasedresolveroperation.html#resolversendfinaladvertisementssource", null ],
         [ "resolver_send_initial_advertisement (source)", "grpudpbasedresolveroperation.html#resolversendinitialadvertisementsource", null ],
+        [ "resolver_source_datagram_max_size (context)", "grpudpbasedresolveroperation.html#resolversourcedatagrammaxsizecontext", null ],
         [ "resolver_source_map_tablesz (context)", "grpudpbasedresolveroperation.html#resolversourcemaptableszcontext", null ],
         [ "resolver_string_hash_function (context)", "grpudpbasedresolveroperation.html#resolverstringhashfunctioncontext", null ],
         [ "resolver_string_hash_function_ex (context)", "grpudpbasedresolveroperation.html#resolverstringhashfunctionexcontext", null ],
@@ -298,11 +305,13 @@ var NAVTREE =
         [ "transport_lbtrm_datagram_max_size (context)", "grptransportlbtrmoperation.html#transportlbtrmdatagrammaxsizecontext", null ],
         [ "transport_lbtrm_preactivity_timeout (receiver)", "grptransportlbtrmoperation.html#transportlbtrmpreactivitytimeoutreceiver", null ],
         [ "transport_lbtrm_rate_interval (context)", "grptransportlbtrmoperation.html#transportlbtrmrateintervalcontext", null ],
+        [ "transport_lbtrm_receiver_datagram_max_size (context)", "grptransportlbtrmoperation.html#transportlbtrmreceiverdatagrammaxsizecontext", null ],
         [ "transport_lbtrm_receiver_timestamp (context)", "grptransportlbtrmoperation.html#transportlbtrmreceivertimestampcontext", null ],
         [ "transport_lbtrm_recycle_receive_buffers (context)", "grptransportlbtrmoperation.html#transportlbtrmrecyclereceivebufferscontext", null ],
         [ "transport_lbtrm_retransmit_rate_limit (context)", "grptransportlbtrmoperation.html#transportlbtrmretransmitratelimitcontext", null ],
         [ "transport_lbtrm_sm_maximum_interval (source)", "grptransportlbtrmoperation.html#transportlbtrmsmmaximumintervalsource", null ],
         [ "transport_lbtrm_sm_minimum_interval (source)", "grptransportlbtrmoperation.html#transportlbtrmsmminimumintervalsource", null ],
+        [ "transport_lbtrm_source_datagram_max_size (context)", "grptransportlbtrmoperation.html#transportlbtrmsourcedatagrammaxsizecontext", null ],
         [ "transport_lbtrm_source_timestamp (context)", "grptransportlbtrmoperation.html#transportlbtrmsourcetimestampcontext", null ],
         [ "transport_lbtrm_tgsz (source)", "grptransportlbtrmoperation.html#transportlbtrmtgszsource", null ]
       ] ]
@@ -310,6 +319,7 @@ var NAVTREE =
     [ "Transport LBT-RU Network Options", "grptransportlbtrunetwork.html", [
       [ "LBT-RU Transport Session Management", "grptransportlbtrunetwork.html#lbtrutransportsessionmanagement", null ],
       [ "Reference", "grptransportlbtrunetwork.html#transportlbtrunetworkref", [
+        [ "transport_lbtru_allow_ephemeral (source)", "grptransportlbtrunetwork.html#transportlbtruallowephemeralsource", null ],
         [ "transport_lbtru_interface (receiver)", "grptransportlbtrunetwork.html#transportlbtruinterfacereceiver", null ],
         [ "transport_lbtru_interface (source)", "grptransportlbtrunetwork.html#transportlbtruinterfacesource", null ],
         [ "transport_lbtru_maximum_ports (context)", "grptransportlbtrunetwork.html#transportlbtrumaximumportscontext", null ],
@@ -328,6 +338,7 @@ var NAVTREE =
         [ "transport_lbtru_nak_initial_backoff_interval (receiver)", "grptransportlbtrureliability.html#transportlbtrunakinitialbackoffintervalreceiver", null ],
         [ "transport_lbtru_nak_suppress_interval (receiver)", "grptransportlbtrureliability.html#transportlbtrunaksuppressintervalreceiver", null ],
         [ "transport_lbtru_receiver_socket_buffer (context)", "grptransportlbtrureliability.html#transportlbtrureceiversocketbuffercontext", null ],
+        [ "transport_lbtru_send_naks (receiver)", "grptransportlbtrureliability.html#transportlbtrusendnaksreceiver", null ],
         [ "transport_lbtru_source_socket_buffer (context)", "grptransportlbtrureliability.html#transportlbtrusourcesocketbuffercontext", null ],
         [ "transport_lbtru_transmission_window_limit (source)", "grptransportlbtrureliability.html#transportlbtrutransmissionwindowlimitsource", null ],
         [ "transport_lbtru_transmission_window_size (source)", "grptransportlbtrureliability.html#transportlbtrutransmissionwindowsizesource", null ]
@@ -345,10 +356,12 @@ var NAVTREE =
         [ "transport_lbtru_datagram_max_size (context)", "grptransportlbtruoperation.html#transportlbtrudatagrammaxsizecontext", null ],
         [ "transport_lbtru_maximum_connect_attempts (receiver)", "grptransportlbtruoperation.html#transportlbtrumaximumconnectattemptsreceiver", null ],
         [ "transport_lbtru_rate_interval (context)", "grptransportlbtruoperation.html#transportlbtrurateintervalcontext", null ],
+        [ "transport_lbtru_receiver_datagram_max_size (context)", "grptransportlbtruoperation.html#transportlbtrureceiverdatagrammaxsizecontext", null ],
         [ "transport_lbtru_recycle_receive_buffers (context)", "grptransportlbtruoperation.html#transportlbtrurecyclereceivebufferscontext", null ],
         [ "transport_lbtru_retransmit_rate_limit (context)", "grptransportlbtruoperation.html#transportlbtruretransmitratelimitcontext", null ],
         [ "transport_lbtru_sm_maximum_interval (source)", "grptransportlbtruoperation.html#transportlbtrusmmaximumintervalsource", null ],
         [ "transport_lbtru_sm_minimum_interval (source)", "grptransportlbtruoperation.html#transportlbtrusmminimumintervalsource", null ],
+        [ "transport_lbtru_source_datagram_max_size (context)", "grptransportlbtruoperation.html#transportlbtrusourcedatagrammaxsizecontext", null ],
         [ "transport_lbtru_use_session_id (source)", "grptransportlbtruoperation.html#transportlbtruusesessionidsource", null ]
       ] ]
     ] ],
@@ -393,8 +406,13 @@ var NAVTREE =
         [ "dbl_mim_acceleration (context)", "grptransportacceleration.html#dblmimaccelerationcontext", null ],
         [ "dbl_resolver_acceleration (context)", "grptransportacceleration.html#dblresolveraccelerationcontext", null ]
       ] ],
-      [ "Solarflare Onload", "grptransportacceleration.html#solarflareonload", null ],
+      [ "Solarflare Onload", "grptransportacceleration.html#solarflareonload", [
+        [ "Onload Stack Names", "grptransportacceleration.html#onloadstacknames", null ],
+        [ "Using Onload with UM", "grptransportacceleration.html#usingonloadwithum", null ],
+        [ "Solarflare Tips", "grptransportacceleration.html#solarflaretips", null ]
+      ] ],
       [ "Reference", "grptransportacceleration.html#transportaccelerationsolarflareref", [
+        [ "onload_acceleration_stack_name (context)", "grptransportacceleration.html#onloadaccelerationstacknamecontext", null ],
         [ "onload_acceleration_stack_name (receiver)", "grptransportacceleration.html#onloadaccelerationstacknamereceiver", null ],
         [ "onload_acceleration_stack_name (source)", "grptransportacceleration.html#onloadaccelerationstacknamesource", null ]
       ] ],
@@ -486,6 +504,7 @@ var NAVTREE =
         [ "retransmit_request_maximum (receiver)", "grplatejoin.html#retransmitrequestmaximumreceiver", null ],
         [ "retransmit_request_message_timeout (receiver)", "grplatejoin.html#retransmitrequestmessagetimeoutreceiver", null ],
         [ "retransmit_request_outstanding_maximum (receiver)", "grplatejoin.html#retransmitrequestoutstandingmaximumreceiver", null ],
+        [ "retransmit_retention_age_threshold (source)", "grplatejoin.html#retransmitretentionagethresholdsource", null ],
         [ "retransmit_retention_size_limit (source)", "grplatejoin.html#retransmitretentionsizelimitsource", null ],
         [ "retransmit_retention_size_threshold (source)", "grplatejoin.html#retransmitretentionsizethresholdsource", null ],
         [ "use_late_join (receiver)", "grplatejoin.html#uselatejoinreceiver", null ]
@@ -514,11 +533,13 @@ var NAVTREE =
     ] ],
     [ "Unicast Immediate Messaging Operation Options", "grpunicastimmediatemessagingoperation.html", [
       [ "Reference", "grpunicastimmediatemessagingoperation.html#requestoperationref", [
+        [ "request_tcp_activity_timeout (context)", "grpunicastimmediatemessagingoperation.html#requesttcpactivitytimeoutcontext", null ],
         [ "request_tcp_exclusiveaddr (context)", "grpunicastimmediatemessagingoperation.html#requesttcpexclusiveaddrcontext", null ],
         [ "request_tcp_listen_backlog (context)", "grpunicastimmediatemessagingoperation.html#requesttcplistenbacklogcontext", null ],
         [ "request_tcp_reuseaddr (context)", "grpunicastimmediatemessagingoperation.html#requesttcpreuseaddrcontext", null ],
         [ "response_session_maximum_buffer (context)", "grpunicastimmediatemessagingoperation.html#responsesessionmaximumbuffercontext", null ],
         [ "response_session_sender_socket_buffer (context)", "grpunicastimmediatemessagingoperation.html#responsesessionsendersocketbuffercontext", null ],
+        [ "response_tcp_activity_timeout (context)", "grpunicastimmediatemessagingoperation.html#responsetcpactivitytimeoutcontext", null ],
         [ "response_tcp_deletion_timeout (context)", "grpunicastimmediatemessagingoperation.html#responsetcpdeletiontimeoutcontext", null ],
         [ "response_tcp_interface (context)", "grpunicastimmediatemessagingoperation.html#responsetcpinterfacecontext", null ],
         [ "response_tcp_nodelay (context)", "grpunicastimmediatemessagingoperation.html#responsetcpnodelaycontext", null ]
@@ -727,7 +748,6 @@ var NAVTREE =
         [ "resolver_unicast_port (context)", "grpdeprecated.html#resolverunicastportcontext", null ],
         [ "retransmit_message_map_tablesz (source)", "grpdeprecated.html#retransmitmessagemaptableszsource", null ],
         [ "retransmit_request_generation_interval (receiver)", "grpdeprecated.html#retransmitrequestgenerationintervalreceiver", null ],
-        [ "retransmit_retention_age_threshold (source)", "grpdeprecated.html#retransmitretentionagethresholdsource", null ],
         [ "source_cost_evaluation_function (context)", "grpdeprecated.html#sourcecostevaluationfunctioncontext", null ],
         [ "transport_datagram_max_size (context)", "grpdeprecated.html#transportdatagrammaxsizecontext", null ],
         [ "transport_lbtipc_acknowledgement_interval (receiver)", "grpdeprecated.html#transportlbtipcacknowledgementintervalreceiver", null ],
@@ -777,8 +797,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "accesstocurrentoperatingoptions.html",
-"grpmulticastimmediatemessagingreliability.html#mimtransmissionwindowsizecontext",
-"grpultramessagingpersistence.html#umeproactivekeepaliveintervalcontext"
+"grpmulticastimmediatemessagingreliability.html#mimsendnakscontext",
+"grpultramessagingpersistence.html#umeallowconfirmeddeliveryreceiver"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

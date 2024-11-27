@@ -1,6 +1,6 @@
 
 /*
- Copyright (C) 2005-2021, Informatica Corporation  Permission is granted to licensees to use
+ (C) Copyright 2005,2024 Informatica Inc.  Permission is granted to licensees to use
  or alter this software for any purpose, including commercial applications,
  according to the terms laid out in the Software License Agreement.
  
@@ -197,7 +197,20 @@ int main(int argc, char **argv) {
     char *target = NULL;
     int c, errflag = 0;
     int linger = DEFAULT_LINGER;
-    
+
+#if defined(_WIN32)
+    {
+        WSADATA wsadata;
+        int status;
+
+        /* Windows socket startup code */
+        if ((status = WSAStartup(MAKEWORD(2, 2), &wsadata)) != 0) {
+            fprintf(stderr, "%s: WSA startup error - %d\n", argv[0], status);
+            exit(1);
+        }
+    }
+#endif
+
     while ((c = getopt_long(argc, argv, OptionString, OptionTable, NULL)) != EOF) {
         switch (c) {
             case 'c':

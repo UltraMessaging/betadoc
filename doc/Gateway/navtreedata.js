@@ -5,7 +5,9 @@ var NAVTREE =
       [ "DRO Features", "index.html#drofeatures", null ]
     ] ],
     [ "DRO Architecture", "droarchitecture.html", [
-      [ "DRO Portals", "droarchitecture.html#umrouterportals", null ],
+      [ "DRO Portals", "droarchitecture.html#umrouterportals", [
+        [ "UDP Peer Link", "droarchitecture.html#udppeerlink", null ]
+      ] ],
       [ "Topic Resolution Domains", "droarchitecture.html#topicresolutiondomains", null ],
       [ "Proxy Sources and Proxy Receivers", "droarchitecture.html#proxysourcesandproxyreceivers", [
         [ "DRO and Transport Sessions", "droarchitecture.html#umrouterandtransportsessions", null ]
@@ -14,6 +16,7 @@ var NAVTREE =
     ] ],
     [ "DRO Concepts", "umrouterconcepts.html", [
       [ "Basic DRO Operation", "umrouterconcepts.html#basicumrouteroperation", [
+        [ "Interest and Topic Resolution", "umrouterconcepts.html#interestandtopicresolution", null ],
         [ "Interest and Use Queries", "umrouterconcepts.html#interestandusequeries", null ],
         [ "DRO Keepalive", "umrouterconcepts.html#umrouterkeepalive", null ],
         [ "Final Advertisements", "umrouterconcepts.html#finaladvertisements", null ],
@@ -24,6 +27,11 @@ var NAVTREE =
       [ "Routing Wildcard Receivers", "umrouterconcepts.html#routingwildcardreceivers", null ],
       [ "Forwarding Costs", "umrouterconcepts.html#forwardingcosts", null ],
       [ "DRO Routing", "umrouterconcepts.html#umrouterrouting", null ],
+      [ "DRO Hotlinks", "umrouterconcepts.html#drohotlinks", [
+        [ "Mixing Regular and Hotlinked DROs", "umrouterconcepts.html#mixingregularandhotlinkeddros", null ],
+        [ "Implementing DRO Hotlinks", "umrouterconcepts.html#implementingdrohotlinks", null ],
+        [ "DRO Hotlink Restrictions", "umrouterconcepts.html#drohotlinkrestrictions", null ]
+      ] ],
       [ "Routing Topologies", "umrouterconcepts.html#routingtopologies", [
         [ "Direct Link", "umrouterconcepts.html#directlink", null ],
         [ "Single Link", "umrouterconcepts.html#singlelink", null ],
@@ -31,7 +39,7 @@ var NAVTREE =
         [ "Loops", "umrouterconcepts.html#loops", null ],
         [ "Loop and Spur", "umrouterconcepts.html#loopandspur", null ],
         [ "Loop with Centralized TRD", "umrouterconcepts.html#loopwithcentralizedtrd", null ],
-        [ "with centralized TRD", "umrouterconcepts.html#Star", null ],
+        [ "Star with centralized TRD", "umrouterconcepts.html#Star", null ],
         [ "Star with Centralized DRO", "umrouterconcepts.html#starwithcentralizedumrouter", null ],
         [ "Mesh", "umrouterconcepts.html#mesh", null ],
         [ "Palm Tree", "umrouterconcepts.html#palmtree", null ],
@@ -72,12 +80,32 @@ var NAVTREE =
       ] ],
       [ "Running the DRO Daemon", "umrouterimplementation.html#runningtheumrouterdaemon", null ]
     ] ],
+    [ "DRO Monitoring", "umroutermonitoring.html", [
+      [ "DRO Monitoring: Logs", "umroutermonitoring.html#dromonitoringlogs", null ],
+      [ "DRO Monitoring: UM Library Stats", "umroutermonitoring.html#dromonitoringumlibrarystats", null ],
+      [ "DRO Monitoring: Daemon Stats", "umroutermonitoring.html#dromonitoringdaemonstats", null ],
+      [ "DRO Web Monitor", "umroutermonitoring.html#umrouterwebmonitor", [
+        [ "Main Page", "umroutermonitoring.html#mainpage", null ],
+        [ "Endpoint Portal Page", "umroutermonitoring.html#endpointportalpage", null ],
+        [ "Peer Portal Page", "umroutermonitoring.html#peerportalpage", null ],
+        [ "Topology Info Page", "umroutermonitoring.html#topologyinfopage", null ],
+        [ "Path Info", "umroutermonitoring.html#pathinfo", null ]
+      ] ],
+      [ "DRO Log Messages", "umroutermonitoring.html#umrouterlogmessages", [
+        [ "DRO Rolling Logs", "umroutermonitoring.html#umrouterrollinglogs", null ],
+        [ "Important DRO Log Messages", "umroutermonitoring.html#importantumrouterlogmessages", null ]
+      ] ],
+      [ "DRO Transport Stats", "umroutermonitoring.html#umroutertransportstats", null ]
+    ] ],
     [ "Man Pages for DRO", "manpagesforumrouter.html", [
       [ "Tnwgd Man Page", "manpagesforumrouter.html#tnwgdmanpage", null ],
       [ "Tnwgds Man Page", "manpagesforumrouter.html#tnwgdsmanpage", null ]
     ] ],
-    [ "XML Configuration Reference", "xmlconfigurationreference.html", [
+    [ "DRO Configuration Reference", "xmlconfigurationreference.html", [
       [ "File Structure", "xmlconfigurationreference.html#filestructure", null ],
+      [ "Share/Merge DRO XML Files with XInclude", "xmlconfigurationreference.html#mergingmultipledroxmlconfigurationfiles", [
+        [ "Common DRO XInclude Use Case", "xmlconfigurationreference.html#commondroxincludeusecase", null ]
+      ] ],
       [ "Elements Reference", "xmlconfigurationreference.html#elementsreference", [
         [ "Router Element \"<tnw-gateway>\"", "xmlconfigurationreference.html#droelementtnwgateway", null ],
         [ "Router Element \"<portals>\"", "xmlconfigurationreference.html#droelementportals", null ],
@@ -121,11 +149,21 @@ var NAVTREE =
         [ "Router Element \"<smart-batch>\"", "xmlconfigurationreference.html#droelementsmartbatch", null ],
         [ "Router Element \"<max-queue>\"", "xmlconfigurationreference.html#droelementmaxqueue", null ],
         [ "Router Element \"<source-deletion-delay>\"", "xmlconfigurationreference.html#droelementsourcedeletiondelay", null ],
+        [ "Router Element \"<udp>\"", "xmlconfigurationreference.html#droelementudp", null ],
+        [ "Router Element \"<connect>\"", "xmlconfigurationreference.html#droelementconnect", null ],
+        [ "Router Element \"<session-message>\"", "xmlconfigurationreference.html#droelementsessionmessage", null ],
+        [ "Router Element \"<nak-handling>\"", "xmlconfigurationreference.html#droelementnakhandling", null ],
+        [ "Router Element \"<peer-rate-limit>\"", "xmlconfigurationreference.html#droelementpeerratelimit", null ],
+        [ "Router Element \"<transmission-window>\"", "xmlconfigurationreference.html#droelementtransmissionwindow", null ],
+        [ "Router Element \"<coalesce-threshold>\"", "xmlconfigurationreference.html#droelementcoalescethreshold", null ],
+        [ "Router Element \"<multiple-receive-max-datagrams>\"", "xmlconfigurationreference.html#droelementmultiplereceivemaxdatagrams", null ],
+        [ "Router Element \"<send-buffer>\"", "xmlconfigurationreference.html#droelementsendbuffer", null ],
+        [ "Router Element \"<receive-buffer>\"", "xmlconfigurationreference.html#droelementreceivebuffer", null ],
+        [ "Router Element \"<port>\"", "xmlconfigurationreference.html#droelementport", null ],
         [ "Router Element \"<single-tcp>\"", "xmlconfigurationreference.html#droelementsingletcp", null ],
         [ "Router Element \"<acceptor>\"", "xmlconfigurationreference.html#droelementacceptor", null ],
         [ "Router Element \"<listen-port>\"", "xmlconfigurationreference.html#droelementlistenport", null ],
         [ "Router Element \"<initiator>\"", "xmlconfigurationreference.html#droelementinitiator", null ],
-        [ "Router Element \"<port>\"", "xmlconfigurationreference.html#droelementport", null ],
         [ "Router Element \"<address>\"", "xmlconfigurationreference.html#droelementaddress", null ],
         [ "Router Element \"<tls>\"", "xmlconfigurationreference.html#droelementtls", null ],
         [ "Router Element \"<cipher-suites>\"", "xmlconfigurationreference.html#droelementciphersuites", null ],
@@ -136,8 +174,6 @@ var NAVTREE =
         [ "Router Element \"<compression>\"", "xmlconfigurationreference.html#droelementcompression", null ],
         [ "Router Element \"<nodelay>\"", "xmlconfigurationreference.html#droelementnodelay", null ],
         [ "Router Element \"<keepalive>\"", "xmlconfigurationreference.html#droelementkeepalive", null ],
-        [ "Router Element \"<send-buffer>\"", "xmlconfigurationreference.html#droelementsendbuffer", null ],
-        [ "Router Element \"<receive-buffer>\"", "xmlconfigurationreference.html#droelementreceivebuffer", null ],
         [ "Router Element \"<interface>\"", "xmlconfigurationreference.html#droelementinterface", null ],
         [ "Router Element \"<tcp>\"", "xmlconfigurationreference.html#droelementtcp", null ],
         [ "Router Element \"<companion>\"", "xmlconfigurationreference.html#droelementcompanion", null ],
@@ -156,6 +192,7 @@ var NAVTREE =
         [ "Router Element \"<remote-topic-interest>\"", "xmlconfigurationreference.html#droelementremotetopicinterest", null ],
         [ "Router Element \"<pattern-use-query>\"", "xmlconfigurationreference.html#droelementpatternusequery", null ],
         [ "Router Element \"<topic-use-query>\"", "xmlconfigurationreference.html#droelementtopicusequery", null ],
+        [ "Router Element \"<hotlink-index>\"", "xmlconfigurationreference.html#droelementhotlinkindex", null ],
         [ "Router Element \"<domain-id>\"", "xmlconfigurationreference.html#droelementdomainid", null ],
         [ "Router Element \"<daemon>\"", "xmlconfigurationreference.html#droelementdaemon", null ],
         [ "Router Element \"<route-recalculation>\"", "xmlconfigurationreference.html#droelementrouterecalculation", null ],
@@ -179,7 +216,7 @@ var NAVTREE =
       ] ],
       [ "DRO Configuration DTD", "xmlconfigurationreference.html#umrouterconfigurationdtd", null ]
     ] ],
-    [ "DRO Daemon Statistics", "umrouterdaemonstatistics.html", [
+    [ "DRO Binary Daemon Statistics", "umrouterdaemonstatistics.html", [
       [ "DRO Daemon Statistics Structures", "umrouterdaemonstatistics.html#umrouterdaemonstatisticsstructures", [
         [ "DRO Daemon Statistics Byte Swapping", "umrouterdaemonstatistics.html#umrouterdaemonstatisticsbyteswapping", null ],
         [ "DRO Daemon Statistics String Buffers", "umrouterdaemonstatistics.html#umrouterdaemonstatisticsstructuresstringbuffers", null ]
@@ -189,20 +226,6 @@ var NAVTREE =
         [ "DRO Daemon Control Request Addressing", "umrouterdaemonstatistics.html#umrouterdaemoncontrolrequestaddressing", null ],
         [ "DRO Control Request Types", "umrouterdaemonstatistics.html#umrouterdaemoncontrolrequesttypes", null ]
       ] ]
-    ] ],
-    [ "DRO Monitoring", "umroutermonitoring.html", [
-      [ "DRO Web Monitor", "umroutermonitoring.html#umrouterwebmonitor", [
-        [ "Main Page", "umroutermonitoring.html#mainpage", null ],
-        [ "Endpoint Portal Page", "umroutermonitoring.html#endpointportalpage", null ],
-        [ "Peer Portal Page", "umroutermonitoring.html#peerportalpage", null ],
-        [ "Topology Info Page", "umroutermonitoring.html#topologyinfopage", null ],
-        [ "Path Info", "umroutermonitoring.html#pathinfo", null ]
-      ] ],
-      [ "DRO Log Messages", "umroutermonitoring.html#umrouterlogmessages", [
-        [ "DRO Rolling Logs", "umroutermonitoring.html#umrouterrollinglogs", null ],
-        [ "Important DRO Log Messages", "umroutermonitoring.html#importantumrouterlogmessages", null ]
-      ] ],
-      [ "DRO Transport Stats", "umroutermonitoring.html#umroutertransportstats", null ]
     ] ],
     [ "DRO Glossary", "umrouterglossary.html", null ],
     [ "Comparison to Pre-6.0 UM Gateway", "comparisontopre60umgateway.html", [

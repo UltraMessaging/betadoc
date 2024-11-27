@@ -8,7 +8,7 @@ var NAVTREE =
       [ "Persistence Configuration Concept", "index.html#persistenceconfigurationconcept", null ],
       [ "Registration Identifier Concept", "index.html#registrationidentifierconcept", null ],
       [ "Delivery Confirmation Concept", "index.html#deliveryconfirmationconcept", null ],
-      [ "Release Policy", "index.html#releasepolicy", null ],
+      [ "Retention Policy", "index.html#releasepolicy", null ],
       [ "Message Stability Concept", "index.html#messagestabilityconcept", null ],
       [ "Quorum/Consensus Store Failover", "index.html#quorumconsensusstorefailover", null ]
     ] ],
@@ -45,6 +45,11 @@ var NAVTREE =
       [ "Persistence Events", "index.html#persistenceevents", [
         [ "Persistence Source Events", "index.html#persistencesourceevents", null ],
         [ "Persistence Receiver Events", "index.html#persistencereceiverevents", null ]
+      ] ],
+      [ "Store Monitoring", "index.html#storemonitoring", [
+        [ "Store Monitoring: Logs", "index.html#storemonitoringlogs", null ],
+        [ "Store Monitoring: UM Library Stats", "index.html#storemonitoringumlibrarystats", null ],
+        [ "Store Monitoring: Daemon Stats", "index.html#storemonitoringdaemonstats", null ]
       ] ]
     ] ],
     [ "Store Repository Profiling (SRP)", "index.html#storerepositoryprofilingsrp", [
@@ -77,7 +82,7 @@ var NAVTREE =
       [ "Sources Must Be Able to Resume Sending", "index.html#sourcesmustbeabletoresumesending", null ],
       [ "Source Message Retention and Release", "index.html#sourcemessageretentionandrelease", null ],
       [ "Forced Reclaims", "index.html#forcedreclaims", null ],
-      [ "Source Release Policy Options", "index.html#sourcereleasepolicyoptions", null ],
+      [ "Source Retention Policy Options", "index.html#sourcereleasepolicyoptions", null ],
       [ "Confirmed Delivery", "index.html#confirmeddelivery", null ],
       [ "Source Event Handler", "index.html#sourceeventhandler", null ],
       [ "Source Event Handler - Stability, Confirmation and Release", "index.html#sourceeventhandlerstabilityconfirmationandrelease", null ],
@@ -99,6 +104,7 @@ var NAVTREE =
       [ "Object-free Explicit Acknowledgments", "index.html#objectfreeexplicitacknowledgments", null ]
     ] ],
     [ "Designing Persistent Stores", "index.html#designingpersistentstores", [
+      [ "Limit Initial Restore with Restore-Last", "index.html#limitinitialrestore", null ],
       [ "Store Log File", "index.html#storelogfile", null ],
       [ "Store Rolling Logs", "index.html#storerollinglogs", null ],
       [ "Quorum/Consensus Store Usage", "index.html#quorumconsensusstoreusage", null ],
@@ -112,11 +118,6 @@ var NAVTREE =
     [ "Store Thread Affinity", "index.html#storethreadaffinity", null ],
     [ "Persistence Fault Tolerance", "index.html#persistencefaulttolerance", [
       [ "Message Loss Recovery", "index.html#messagelossrecovery", null ],
-      [ "Configuring for Persistence and Recovery", "index.html#configuringforpersistenceandrecovery", [
-        [ "Source Considerations", "index.html#sourceconsiderations", null ],
-        [ "Receiver Considerations", "index.html#receiverconsiderations", null ],
-        [ "Store Configuration Considerations", "index.html#storeconfigurationconsiderations", null ]
-      ] ],
       [ "Persistence Proxy Sources", "index.html#persistenceproxysources", [
         [ "How Proxy Sources Operate", "index.html#howproxysourcesoperate", null ],
         [ "Activity Timeout and State Lifetimes", "index.html#activitytimeoutandstatelifetimes", null ],
@@ -125,11 +126,29 @@ var NAVTREE =
         [ "Proactive Retransmissions", "index.html#proactiveretransmissions", null ]
       ] ]
     ] ],
+    [ "Configuring for Persistence and Recovery", "index.html#configuringforpersistenceandrecovery", [
+      [ "Source Considerations", "index.html#sourceconsiderations", null ],
+      [ "Receiver Considerations", "index.html#receiverconsiderations", [
+        [ "Receiver Acknowledgement Generation", "index.html#receiveracknowledgementgeneration", null ],
+        [ "Controlling Retransmission", "index.html#controllingretransmission", null ],
+        [ "Receiver Recovery Process", "index.html#receiverrecoveryprocess", null ]
+      ] ],
+      [ "Store Configuration Considerations", "index.html#storeconfigurationconsiderations", [
+        [ "Configuring Store Usage per Source", "index.html#configuringstoreusagepersource", null ],
+        [ "Memory Use by Stores", "index.html#memoryusebystores", null ],
+        [ "Activity Timeouts", "index.html#activitytimeouts", null ],
+        [ "Recommendations for Store Configuration", "index.html#recommendationsforstoreconfiguration", null ],
+        [ "Store Configuration Practices to Avoid", "index.html#storeconfigurationpracticestoavoid", null ]
+      ] ]
+    ] ],
     [ "Man Pages for Store", "index.html#manpagesforstore", [
       [ "Umestored Man Page", "index.html#umestoredmanpage", null ],
       [ "Umestoreds Man Page", "index.html#umestoredsmanpage", null ]
     ] ],
     [ "Configuration Reference for Umestored", "index.html#configurationreferenceforumestored", [
+      [ "Share/Merge Store XML Files with XInclude", "index.html#mergingmultiplestorexmlconfigurationfiles", [
+        [ "Common Store XInclude Use Case", "index.html#commonstorexincludeusecase", null ]
+      ] ],
       [ "Store XML Configuration File Elements", "index.html#storexmlconfigurationfileelements", [
         [ "UMP Element \"<ume-store>\"", "index.html#umeelementumestore", null ],
         [ "UMP Element \"<stores>\"", "index.html#umeelementstores", null ],
@@ -138,6 +157,7 @@ var NAVTREE =
         [ "UMP Element \"<topic>\"", "index.html#umeelementtopic", null ],
         [ "UMP Element \"<ume-attributes>\"", "index.html#umeelementumeattributes", null ],
         [ "UMP Element \"<option>\"", "index.html#umeelementoption", null ],
+        [ "UMP Element \"<restore-last>\"", "index.html#umeelementrestorelast", null ],
         [ "UMP Element \"<publishing-interval>\"", "index.html#umeelementpublishinginterval", null ],
         [ "UMP Element \"<group>\"", "index.html#umeelementgroup", null ],
         [ "UMP Element \"<daemon>\"", "index.html#umeelementdaemon", null ],
@@ -162,6 +182,7 @@ var NAVTREE =
         [ "Store Option \"disk-cache-directory\"", "index.html#umecfgdiskcachedirectory", null ],
         [ "Store Option \"disk-state-directory\"", "index.html#umecfgdiskstatedirectory", null ],
         [ "Store Option \"allow-proxy-source\"", "index.html#umecfgallowproxysource", null ],
+        [ "Store Option \"proxy-source-repo-quorum-required\"", "index.html#umecfgproxysourcerepoquorumrequired", null ],
         [ "Store Option \"context-name\"", "index.html#umecfgcontextname", null ],
         [ "Store Option \"retransmission-request-processing-rate\"", "index.html#umecfgretransmissionrequestprocessingrate", null ]
       ] ],
@@ -195,9 +216,12 @@ var NAVTREE =
       ] ]
     ] ],
     [ "Special Configuration Topics", "index.html#specialconfigurationtopics", [
+      [ "Store Loss Repair", "index.html#storelossrepair", null ],
+      [ "Persistence Buffer Sizes", "index.html#persistencebuffersizes", null ],
+      [ "Calculating Options for SPP", "index.html#calculatingoptionsforspp", null ],
       [ "RPP Configuration Specifics", "index.html#rppconfigurationspecifics", null ]
     ] ],
-    [ "Store Daemon Statistics", "index.html#storedaemonstatistics", [
+    [ "Store Binary Daemon Statistics", "index.html#storedaemonstatistics", [
       [ "Store Daemon Statistics Structures", "index.html#storedaemonstatisticsstructures", [
         [ "Store Daemon Statistics Byte Swapping", "index.html#storedaemonstatisticsbyteswapping", null ],
         [ "Store Daemon Statistics String Buffers", "index.html#storedaemonstatisticsstructuresstringbuffers", null ],

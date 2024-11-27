@@ -9,7 +9,9 @@ var NAVTREE =
     ] ],
     [ "Ultra Messaging Programming Quick Start", "ultramessagingprogrammingquickstart.html", [
       [ "Building Notes: C on Windows", "ultramessagingprogrammingquickstart.html#buildingnotesconwindows", null ],
-      [ "Building Notes: C on Unix", "ultramessagingprogrammingquickstart.html#buildingnotesconunix", null ],
+      [ "Building Notes: C on Linux", "ultramessagingprogrammingquickstart.html#buildingnotesconunix", null ],
+      [ "Building Notes: Java", "ultramessagingprogrammingquickstart.html#buildingnotesjava", null ],
+      [ "Building Notes: Dotnet", "ultramessagingprogrammingquickstart.html#buildingnotesdotnet", null ],
       [ "Minimal Ultra Messaging Source Implementation", "ultramessagingprogrammingquickstart.html#minimalultramessagingsourceimplementation", null ],
       [ "Minimal Ultra Messaging Receiver Implementation", "ultramessagingprogrammingquickstart.html#minimalultramessagingreceiverimplementation", null ]
     ] ],

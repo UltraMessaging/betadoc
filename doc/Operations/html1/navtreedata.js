@@ -14,42 +14,67 @@ var NAVTREE =
       ] ],
       [ "Application Installer", "index.html#applicationinstaller", null ]
     ] ],
+    [ "Virtualized Environments", "index.html#virtualizedenvironments", [
+      [ "Physical Network in a Virtualized Environment", "index.html#physicalnetworkinavirtualizedenvironment", null ],
+      [ "Shared Memory Between Containers", "index.html#sharedmemorybetweencontainers", null ]
+    ] ],
     [ "Monitoring", "index.html#monitoring", [
       [ "Monitoring Introduction", "index.html#monitoringintroduction", [
-        [ "Monitoring UM Data", "index.html#monitoringumdata", null ]
+        [ "Network and Host Equipment Monitoring", "index.html#networkandhostmonitoring", null ],
+        [ "Monitoring UM", "index.html#monitoringum", null ]
+      ] ],
+      [ "Monitoring UM Applications", "index.html#monitoringumapplications", [
+        [ "Application Log File", "index.html#applicationlogfile", null ]
+      ] ],
+      [ "Monitoring UM Daemons", "index.html#monitoringumdaemons", null ],
+      [ "Automatic Monitoring", "index.html#automaticmonitoring", [
+        [ "Automatic Monitoring Sample", "index.html#automaticmonitoringsample", null ]
       ] ],
       [ "Centralized Collector", "index.html#centralizedcollector", [
         [ "Monitoring Collector Service (MCS)", "index.html#monitoringcollectorservicemcs", null ],
         [ "User-Developed Collector", "index.html#userdevelopedcollector", null ]
       ] ],
-      [ "Self-Monitoring Applications", "index.html#selfmonitoringapplications", null ],
       [ "Monitoring Formats", "index.html#monitoringformats", null ],
-      [ "Monitoring Transport Statistics", "index.html#monitoringtransportstatistics", [
-        [ "LBT-RM and LBT-RU Receiver Statistics", "index.html#lbtrmandlbtrureceiverstatistics", null ],
-        [ "LBT-RM and LBT-RU Source Statistics", "index.html#lbtrmandlbtrusourcestatistics", null ],
-        [ "TCP Statistics", "index.html#tcpstatistics", null ],
-        [ "LBT-IPC Statistics", "index.html#lbtipcstatistics", null ]
+      [ "Protocol Buffer Format", "index.html#protocolbufferformat", null ]
+    ] ],
+    [ "Man Pages for MCS", "index.html#manpagesformcs", [
+      [ "MCS Man Page", "index.html#mcsmanpage", null ],
+      [ "Mcsds Man Page", "index.html#mcsdsmanpage", null ]
+    ] ],
+    [ "MCS Configuration File", "index.html#mcsconfigurationfile", [
+      [ "MCS Configuration Elements", "index.html#mcsconfigurationelements", [
+        [ "MCS Element \"<um-mcs>\"", "index.html#mcselementummcs", null ],
+        [ "MCS Element \"<receiver-transport-opts>\"", "index.html#mcselementreceivertransportopts", null ],
+        [ "MCS Element \"<config-file>\"", "index.html#mcselementconfigfile", null ],
+        [ "MCS Element \"<wildcard-topic>\"", "index.html#mcselementwildcardtopic", null ],
+        [ "MCS Element \"<topic>\"", "index.html#mcselementtopic", null ],
+        [ "MCS Element \"<connector>\"", "index.html#mcselementconnector", null ],
+        [ "MCS Element \"<properties-file>\"", "index.html#mcselementpropertiesfile", null ],
+        [ "MCS Element \"<type>\"", "index.html#mcselementtype", null ],
+        [ "MCS Element \"<daemon>\"", "index.html#mcselementdaemon", null ],
+        [ "MCS Element \"<pid-file>\"", "index.html#mcselementpidfile", null ],
+        [ "MCS Element \"<log>\"", "index.html#mcselementlog", null ]
+      ] ]
+    ] ],
+    [ "Legacy Monitoring", "index.html#legacymonitoring", [
+      [ "Self-Monitoring Applications", "index.html#selfmonitoringapplications", null ]
+    ] ],
+    [ "Monitoring UM with the lbmmon API", "index.html#monitoringumwiththelbmmonapi", [
+      [ "\"lbmmon\" API", "index.html#lbmmonapi", [
+        [ "Monitoring Process Flow", "index.html#monitoringprocessflow", null ],
+        [ "API Framework Flexibility", "index.html#apiframeworkflexibility", null ],
+        [ "Creating a Monitoring Source", "index.html#creatingamonitoringsource", null ],
+        [ "Specifying the Object to Monitor", "index.html#specifyingtheobjecttomonitor", null ],
+        [ "Receiving Monitoring Data", "index.html#receivingmonitoringdata", null ]
       ] ],
-      [ "Monitoring Event Queues", "index.html#monitoringeventqueues", null ],
-      [ "Monitoring Application Log Messages", "index.html#monitoringapplicationlogmessages", null ],
-      [ "Monitoring the Persistent Store Daemon (umestored)", "index.html#monitoringthepersistentstoredaemonumestored", [
-        [ "Monitoring Store Log File", "index.html#monitoringstorelogfile", null ],
-        [ "Monitoring a Store's Internal Transport Statistics", "index.html#monitoringastoresinternaltransportstatistics", null ],
-        [ "Persistent Store Web Monitoring", "index.html#persistentstorewebmonitoring", null ],
-        [ "Persistent Store Daemon Statistics", "index.html#persistentstoredaemonstatistics", null ],
-        [ "Detecting Persistent Store Failures", "index.html#detectingpersistentstorefailures", null ]
+      [ "Monitoring Transport Modules", "index.html#monitoringtransportmodules", [
+        [ "The LBM Transport Module", "index.html#thelbmtransportmodule", null ],
+        [ "The UDP Transport Module", "index.html#theudptransportmodule", null ],
+        [ "The SNMP Transport Module", "index.html#thesnmptransportmodule", null ]
       ] ],
-      [ "Monitoring the DRO Daemon (tnwgd)", "index.html#monitoringtheumrouterdaemontnwgd", [
-        [ "Monitoring DRO Log File", "index.html#monitoringumrouterlogfile", null ],
-        [ "DRO Transport Statistics", "index.html#umroutertransportstatistics", null ],
-        [ "DRO Web Monitoring", "index.html#umrouterwebmonitoring", null ],
-        [ "DRO Daemon Statistics", "index.html#op-umrouterdaemonstatistics", null ],
-        [ "Detecting DRO Failures", "index.html#detectingumrouterfailures", null ]
-      ] ],
-      [ "Monitoring Messaging System Resources", "index.html#monitoringmessagingsystemresources", [
-        [ "Persistent Store System Considerations", "index.html#persistentstoresystemconsiderations", null ],
-        [ "Sources of Latency", "index.html#sourcesoflatency", null ],
-        [ "Runtime Diagnostics", "index.html#runtimediagnostics", null ]
+      [ "Monitoring Format Modules", "index.html#monitoringformatmodules", [
+        [ "The PB Format Module", "index.html#thepbformatmodule", null ],
+        [ "The CSV Format Module", "index.html#thecsvformatmodule", null ]
       ] ]
     ] ],
     [ "Startup/Shutdown Procedures", "index.html#startupshutdownprocedures", [
@@ -57,9 +82,11 @@ var NAVTREE =
       [ "UM Applications", "index.html#umapplications", null ],
       [ "Indications of Possible Application Shutdown", "index.html#indicationsofpossibleapplicationshutdown", null ],
       [ "Unicast Topic Resolver (lbmrd)", "index.html#unicasttopicresolverlbmrd", null ],
-      [ "Persistent Store (umestored)", "index.html#persistentstoreumestored", [
+      [ "Running Persistent Stores (umestored)", "index.html#persistentstoreumestored", [
+        [ "Eliminate Past State", "index.html#eliminatepaststate", null ],
+        [ "Retain Past State", "index.html#retainpaststate", null ],
         [ "Starting a Store", "index.html#startingastore", null ],
-        [ "Restarting a Store", "index.html#restartingastore", null ],
+        [ "Shutting Down a Store", "index.html#restartingastore", null ],
         [ "Common Startup and Shutdown Issues", "index.html#commonstartupandshutdownissues", null ]
       ] ],
       [ "DRO (tnwgd)", "index.html#umroutertnwgd", [
@@ -80,65 +107,6 @@ var NAVTREE =
         [ "Network Tools", "index.html#networktools", null ],
         [ "UM Tools", "index.html#umtools", null ],
         [ "UM Debug Flags", "index.html#umdebugflags", null ]
-      ] ]
-    ] ],
-    [ "Monitoring UM Applications", "index.html#monitoringumwiththelbmmonapi", [
-      [ "Monitoring Methods", "index.html#monitoringmethods", [
-        [ "What to Monitor", "index.html#whattomonitor", null ],
-        [ "Monitoring Field Sizes", "index.html#monitoringfieldsizes", null ],
-        [ "Application Monitoring Context", "index.html#monitoringcontext", null ]
-      ] ],
-      [ "UM API Functions and Data Structures", "index.html#umsapifunctionsanddatastructures", [
-        [ "Context Statistics", "index.html#contextstatistics", null ],
-        [ "Event Queue Statistics", "index.html#eventqueuestatistics", null ],
-        [ "Source or Receiver Transport Statistics", "index.html#sourceorreceivertransportstatistics", null ]
-      ] ],
-      [ "\"lbmmon\" Client API", "index.html#lbmmonapi", [
-        [ "Monitoring Process Flow", "index.html#monitoringprocessflow", null ],
-        [ "API Framework Flexibility", "index.html#apiframeworkflexibility", null ],
-        [ "Initial Monitoring Questions", "index.html#initialmonitoringquestions", null ],
-        [ "Creating a Monitoring Source", "index.html#creatingamonitoringsource", null ],
-        [ "Specifying the Object to Monitor", "index.html#specifyingtheobjecttomonitor", null ],
-        [ "Receiving Monitoring Data", "index.html#receivingmonitoringdata", null ]
-      ] ],
-      [ "Monitoring Transport Modules", "index.html#monitoringtransportmodules", [
-        [ "The LBM Transport Module", "index.html#thelbmtransportmodule", null ],
-        [ "The UDP Transport Module", "index.html#theudptransportmodule", null ],
-        [ "The SNMP Transport Module", "index.html#thesnmptransportmodule", null ]
-      ] ],
-      [ "Monitoring Format Modules", "index.html#monitoringformatmodules", [
-        [ "The CSV Format Module", "index.html#thecsvformatmodule", null ]
-      ] ],
-      [ "Automatic Monitoring", "index.html#automaticmonitoring", null ],
-      [ "Monitoring Examples", "index.html#monitoringexamples", [
-        [ "lbmmon.c", "index.html#lbmmonc", null ],
-        [ "lbmmonudp.c and lbmmondiag.pl", "index.html#lbmmonudpcandlbmmondiagpl", null ]
-      ] ],
-      [ "Interpreting LBT-RM Source Statistics", "index.html#interpretinglbtrmsourcestatistics", null ]
-    ] ],
-    [ "UM Monitoring Statistics", "index.html#ummonitoringstatistics", [
-      [ "Monitoring Receiving Statistics", "index.html#monitoringreceivingstatistics", null ],
-      [ "Monitoring Sending Statistics", "index.html#monitoringsendingstatistics", null ],
-      [ "Monitoring Context Statistics", "index.html#monitoringcontextstatistics", null ],
-      [ "Monitoring Event Queue Statistics", "index.html#monitoringeventqueuestatistics", null ]
-    ] ],
-    [ "Man Pages for MCS", "index.html#manpagesformcs", [
-      [ "MCS Man Page", "index.html#mcsmanpage", null ],
-      [ "Mcsds Man Page", "index.html#mcsdsmanpage", null ]
-    ] ],
-    [ "MCS Configuration File", "index.html#mcsconfigurationfile", [
-      [ "MCS Configuration Elements", "index.html#mcsconfigurationelements", [
-        [ "MCS Element \"<um-mcs>\"", "index.html#mcselementummcs", null ],
-        [ "MCS Element \"<receiver-transport-opts>\"", "index.html#mcselementreceivertransportopts", null ],
-        [ "MCS Element \"<config-file>\"", "index.html#mcselementconfigfile", null ],
-        [ "MCS Element \"<wildcard-topic>\"", "index.html#mcselementwildcardtopic", null ],
-        [ "MCS Element \"<topic>\"", "index.html#mcselementtopic", null ],
-        [ "MCS Element \"<connector>\"", "index.html#mcselementconnector", null ],
-        [ "MCS Element \"<properties-file>\"", "index.html#mcselementpropertiesfile", null ],
-        [ "MCS Element \"<type>\"", "index.html#mcselementtype", null ],
-        [ "MCS Element \"<daemon>\"", "index.html#mcselementdaemon", null ],
-        [ "MCS Element \"<pid-file>\"", "index.html#mcselementpidfile", null ],
-        [ "MCS Element \"<log>\"", "index.html#mcselementlog", null ]
       ] ]
     ] ],
     [ "Troubleshooting UM Applications", "index.html#troubleshootingumapplications", [

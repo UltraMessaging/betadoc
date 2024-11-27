@@ -56,7 +56,7 @@ $(document).ready(function(){initNavTree('index.html','');});
 <div class="contents">
 <div class="textblock"><p> 
 <img src="infa_logo.png" width="400" height="138" alt="Informatica"/><br/><br/>
-<big><b>Ultra Messaging</b></big> <small>(Version 6.14)</small><br/>
+<big><b>Ultra Messaging</b></big> <small>(Version 6.17)</small><br/>
 <br/><br/><br/>
 <center class="mytitle">.NET Examples</center>
 <br/><br/><br/>
@@ -67,7 +67,7 @@ $(document).ready(function(){initNavTree('index.html','');});
 Introduction&nbsp;&nbsp;<small><a href="#firstsect">&lt;-</a></small></h1>
 <p>This document lists and gives some background information on the C#-language example UM programs.</p>
 <p>For policies and procedures related to Ultra Messaging Technical Support, see <a href="https://ultramessaging.github.io/UM_Support.html">UM Support</a>.</p>
-<p><b>&copy; Copyright (C) 2004-2021, Informatica Corporation. All Rights Reserved.</b></p>
+<p><b>(C) Copyright 2004,2024 Informatica Inc. All Rights Reserved.</b></p>
 <p>This software and documentation are provided only under a separate license agreement containing restrictions on use and disclosure. No part of this document may be reproduced or transmitted in any form, by any means (electronic, photocopying, recording or otherwise) without prior consent of Informatica LLC.</p>
 <p>A current list of Informatica trademarks is available on the web at <a href="https://www.informatica.com/trademarks.html">https://www.informatica.com/trademarks.html</a>.</p>
 <p>Portions of this software and/or documentation are subject to copyright held by third parties. Required third party notices are included with the product.</p>
@@ -75,7 +75,7 @@ Introduction&nbsp;&nbsp;<small><a href="#firstsect">&lt;-</a></small></h1>
 <p>The information in this documentation is subject to change without notice. If you find any problems in this documentation, please report them to us in writing at Informatica LLC 2100 Seaport Blvd. Redwood City, CA 94063.</p>
 <p>Informatica products are warranted according to the terms and conditions of the agreements under which they are provided. <br />
 INFORMATICA LLC PROVIDES THE INFORMATION IN THIS DOCUMENT "AS IS" WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING WITHOUT ANY WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND ANY WARRANTY OR CONDITION OF NON-INFRINGEMENT.</p>
-<p>See <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_REL_6_14/29West/lbm/doc/dotnet_example/design.tag:../../Design/" href="../../Design/umglossary.html">UM Glossary</a> for Ultra Messaging terminology, abbreviations, and acronyms.</p>
+<p>See <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordw_DEV_MAIN/29West/lbm/doc/dotnet_example/design.tag:../../Design/" href="../../Design/umglossary.html">UM Glossary</a> for Ultra Messaging terminology, abbreviations, and acronyms.</p>
 <p><br />
  </p>
 <h2><a class="anchor" id="csexamplesintroduction"></a>
@@ -87,7 +87,7 @@ INFORMATICA LLC PROVIDES THE INFORMATION IN THIS DOCUMENT "AS IS" WITHOUT WARRAN
  </p>
 <h2><a class="anchor" id="configuringdotnetexamples"></a>
 Configuring .NET Examples&nbsp;&nbsp;<small><a href="#configuringdotnetexamples">&lt;-</a></small></h2>
-<p>The example programs universally provide the "-c filename" command-line option. Using that option, the example application calls the <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_REL_6_14/29West/lbm/doc/dotnet_example/dotnetapi.tag:../../DotNetAPI/" href="../../DotNetAPI/classcom_1_1latencybusters_1_1lbm_1_1LBM.html#adda9e1ac033156d2ac9d943bd600b138">LBM.setConfiguration(string fileName)</a> API. However, note that this API is not recommended for use with XML-format LBM configuration files, largely because you are not able to specify an application name.</p>
+<p>The example programs universally provide the "-c filename" command-line option. Using that option, the example application calls the <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordw_DEV_MAIN/29West/lbm/doc/dotnet_example/dotnetapi.tag:../../DotNetAPI/" href="../../DotNetAPI/classcom_1_1latencybusters_1_1lbm_1_1LBM.html#adda9e1ac033156d2ac9d943bd600b138">LBM.setConfiguration(string fileName)</a> API. However, note that this API is not recommended for use with XML-format LBM configuration files, largely because you are not able to specify an application name.</p>
 <p>To use an XML configuration file with a UM example application, set the environment variables: </p><ul>
 <li>
 LBM_XML_CONFIG_APPNAME - Desired name of application. </li>
@@ -99,15 +99,15 @@ LBM_XML_CONFIG_FILENAME - Path name of XML configuration file. </li>
  </p>
 <h2><a class="anchor" id="unhandledcsevents"></a>
 Unhandled C# Events&nbsp;&nbsp;<small><a href="#unhandledcsevents">&lt;-</a></small></h2>
-<p>Each of the example programs is written to demonstrate a subset of UM's total available functionality. For example, some programs are written to demonstrate <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_REL_6_14/29West/lbm/doc/dotnet_example/design.tag:../../Design/" href="../../Design/fundamentalconcepts.html#streaming">Streaming</a> functionality (e.g. lbmsrc), while other programs are written to demonstrate <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_REL_6_14/29West/lbm/doc/dotnet_example/design.tag:../../Design/" href="../../Design/fundamentalconcepts.html#persistence">Persistence</a> functionality (e.g. umesrc), while still other programs are written to demonstrate <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_REL_6_14/29West/lbm/doc/dotnet_example/design.tag:../../Design/" href="../../Design/fundamentalconcepts.html#queuing">Queuing</a> functionality (e.g. umqsrc).</p>
+<p>Each of the example programs is written to demonstrate a subset of UM's total available functionality. For example, some programs are written to demonstrate <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordw_DEV_MAIN/29West/lbm/doc/dotnet_example/design.tag:../../Design/" href="../../Design/fundamentalconcepts.html#streaming">Streaming</a> functionality (e.g. lbmsrc), while other programs are written to demonstrate <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordw_DEV_MAIN/29West/lbm/doc/dotnet_example/design.tag:../../Design/" href="../../Design/fundamentalconcepts.html#persistence">Persistence</a> functionality (e.g. umesrc), while still other programs are written to demonstrate <a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordw_DEV_MAIN/29West/lbm/doc/dotnet_example/design.tag:../../Design/" href="../../Design/fundamentalconcepts.html#queuing">Queuing</a> functionality (e.g. umqsrc).</p>
 <p>UM is generally designed to be event-driven, with events being delivered to the programs through standard callbacks, like source callbacks and receiver callbacks. There are many events which are common across all streaming, persistence, and queuing. Other events are specific to persistence, and still other events are specific to queuing.</p>
 <p>This can lead to example programs reporting "unknown" or "unhandled" events. For example, if the "lbmsrc" streaming program is run with a configuration file that enables persistence, UM will deliver events that are specific to persistence to the "lbmsrc" program. But "lbmsrc" is designed for streaming, and does not include code cases for persistence or queuing events. Maybe you should change your configuration to disable persistence, or you should be using the "umesrc" example program.</p>
 <p>Similarly, the "umqsrc" program expects queuing functionality, and can report unhandled events if persistence is configured. Or "umesrc" can report unhandled events if queuing is configured.</p>
 <p>If you see an unhandled event, it is generally reported as a number. You can see which event this corresponds to by looking up the number in the C API document: </p><ul>
 <li>
-<a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_REL_6_14/29West/lbm/doc/dotnet_example/api.tag:../../API/" href="../../API/creceiverevents.html">C Receiver Events</a> for subscribing programs and </li>
+<a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordw_DEV_MAIN/29West/lbm/doc/dotnet_example/api.tag:../../API/" href="../../API/creceiverevents.html">C Receiver Events</a> for subscribing programs and </li>
 <li>
-<a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordmac_REL_6_14/29West/lbm/doc/dotnet_example/api.tag:../../API/" href="../../API/csourceevents.html">C Source Events</a> for publishing programs. </li>
+<a class="elRef" doxygen="/29W/Amun/home/sford/backup_exclude/labbox/sfordw_DEV_MAIN/29West/lbm/doc/dotnet_example/api.tag:../../API/" href="../../API/csourceevents.html">C Source Events</a> for publishing programs. </li>
 </ul>
 <p>Note that C# uses the same numbering system.</p>
 <p>Once you understand the nature of the unhandled event, you can decide how to change your configuration or choose a different program.</p>
@@ -119,40 +119,40 @@ C# Examples&nbsp;&nbsp;<small><a href="#csexamples">&lt;-</a></small></h2>
  </p>
 <h3><a class="anchor" id="exampleMinRcv_cs"></a>
 Example MinRcv.cs&nbsp;&nbsp;<small><a href="#exampleMinRcv_cs">&lt;-</a></small></h3>
-<p>Source code: <a href="../../dotnet_example/MinRcv.cs">MinRcv.cs</a>: </p><pre>
+<p>Source code: <a href="../../dotnet_example/MinRcv.cs">MinRcv.cs</a>: </p><pre class="fragment">Purpose: minimal subscriber application.
+
 MinRcv.cs - Minimal receiver program.
 See Quick Start document.
 </pre><p><br />
  </p>
 <h3><a class="anchor" id="exampleMinSrc_cs"></a>
 Example MinSrc.cs&nbsp;&nbsp;<small><a href="#exampleMinSrc_cs">&lt;-</a></small></h3>
-<p>Source code: <a href="../../dotnet_example/MinSrc.cs">MinSrc.cs</a>: </p><pre>
+<p>Source code: <a href="../../dotnet_example/MinSrc.cs">MinSrc.cs</a>: </p><pre class="fragment">Purpose: minimal publisher application.
+
 MinSrc.cs - Minimal source program.
 See Quick Start document.
 </pre><p><br />
  </p>
 <h3><a class="anchor" id="exampleVerifiableMessage_cs"></a>
 Example VerifiableMessage.cs&nbsp;&nbsp;<small><a href="#exampleVerifiableMessage_cs">&lt;-</a></small></h3>
-<p>Source code: <a href="../../dotnet_example/VerifiableMessage.cs">VerifiableMessage.cs</a>: </p><pre>
-Utility functions to produce randomized messages whose contents
+<p>Source code: <a href="../../dotnet_example/VerifiableMessage.cs">VerifiableMessage.cs</a>: </p><pre class="fragment">Utility functions to produce randomized messages whose contents
 can be checked.
 </pre><p><br />
  </p>
 <h3><a class="anchor" id="examplelbmExampleUtil_cs"></a>
 Example lbmExampleUtil.cs&nbsp;&nbsp;<small><a href="#examplelbmExampleUtil_cs">&lt;-</a></small></h3>
-<p>Source code: <a href="../../dotnet_example/lbmExampleUtil.cs">lbmExampleUtil.cs</a>: </p><pre>
-General utility functions for UM example programs.
+<p>Source code: <a href="../../dotnet_example/lbmExampleUtil.cs">lbmExampleUtil.cs</a>: </p><pre class="fragment">General utility functions for UM example programs.
 </pre><p><br />
  </p>
 <h3><a class="anchor" id="examplelbmStatistics_cs"></a>
 Example lbmStatistics.cs&nbsp;&nbsp;<small><a href="#examplelbmStatistics_cs">&lt;-</a></small></h3>
-<p>Source code: <a href="../../dotnet_example/lbmStatistics.cs">lbmStatistics.cs</a>: </p><pre>
-General utility functions for UM example programs.
+<p>Source code: <a href="../../dotnet_example/lbmStatistics.cs">lbmStatistics.cs</a>: </p><pre class="fragment">General utility functions for UM example programs.
 </pre><p><br />
  </p>
 <h3><a class="anchor" id="examplelbmhfxrcv_cs"></a>
 Example lbmhfxrcv.cs&nbsp;&nbsp;<small><a href="#examplelbmhfxrcv_cs">&lt;-</a></small></h3>
-<p>Source code: <a href="../../dotnet_example/lbmhfxrcv.cs">lbmhfxrcv.cs</a>: </p><pre>
+<p>Source code: <a href="../../dotnet_example/lbmhfxrcv.cs">lbmhfxrcv.cs</a>: </p><pre class="fragment">Purpose: Receive messages via a HFX.
+
 Usage: lbmhfxrcv [options] topic
 Available options:
   -c filename = Use LBM configuration file filename.
@@ -171,7 +171,7 @@ Available options:
   -v = be verbose about each message
   -V = verify message contents
   -z qsize = monitor event queue size above qsize in length
-Monitoring options:<br />
+Monitoring options:\n
   --monitor-ctx NUM = monitor context every NUM seconds
   --monitor-rcv NUM = monitor receiver every NUM seconds
   --monitor-transport TRANS = use monitor transport module TRANS
@@ -185,7 +185,8 @@ Monitoring options:<br />
  </p>
 <h3><a class="anchor" id="examplelbmimsg_cs"></a>
 Example lbmimsg.cs&nbsp;&nbsp;<small><a href="#examplelbmimsg_cs">&lt;-</a></small></h3>
-<p>Source code: <a href="../../dotnet_example/lbmimsg.cs">lbmimsg.cs</a>: </p><pre>
+<p>Source code: <a href="../../dotnet_example/lbmimsg.cs">lbmimsg.cs</a>: </p><pre class="fragment">Purpose: Send immediate messages on a single topic or send topic-less messages.
+
 Usage: lbmimsg [options] topic
 Available options:
   -c filename = Use LBM configuration file filename.
@@ -208,11 +209,12 @@ Available options:
  </p>
 <h3><a class="anchor" id="examplelbmlatping_cs"></a>
 Example lbmlatping.cs&nbsp;&nbsp;<small><a href="#examplelbmlatping_cs">&lt;-</a></small></h3>
-<p>Source code: <a href="../../dotnet_example/lbmlatping.cs">lbmlatping.cs</a>: </p><pre>
-Usage: lbmlatping [options]
+<p>Source code: <a href="../../dotnet_example/lbmlatping.cs">lbmlatping.cs</a>: </p><pre class="fragment">Usage: lbmlatping [options]
 Available options:
   -a procmask = set cpu affinity mask.
-               Available processors bitmask:</pre><pre>  -c filename = Use LBM configuration file filename.
+               Available processors bitmask: 
+
+  -c filename = Use LBM configuration file filename.
                 Multiple config files are allowed.
                 Example:  '-c file1.cfg -c file2.cfg'
   -h = help
@@ -222,11 +224,12 @@ Available options:
  </p>
 <h3><a class="anchor" id="examplelbmlatpong_cs"></a>
 Example lbmlatpong.cs&nbsp;&nbsp;<small><a href="#examplelbmlatpong_cs">&lt;-</a></small></h3>
-<p>Source code: <a href="../../dotnet_example/lbmlatpong.cs">lbmlatpong.cs</a>: </p><pre>
-Usage: lbmlatpong [options]
+<p>Source code: <a href="../../dotnet_example/lbmlatpong.cs">lbmlatpong.cs</a>: </p><pre class="fragment">Usage: lbmlatpong [options]
 Available options:
   -a procmask = set cpu affinity mask.
-               Available processors bitmask:</pre><pre>  -c filename = Use LBM configuration file filename.
+               Available processors bitmask: 
+
+  -c filename = Use LBM configuration file filename.
                 Multiple config files are allowed.
                 Example:  '-c file1.cfg -c file2.cfg'
   -h = help
@@ -234,7 +237,8 @@ Available options:
  </p>
 <h3><a class="anchor" id="examplelbmmon_cs"></a>
 Example lbmmon.cs&nbsp;&nbsp;<small><a href="#examplelbmmon_cs">&lt;-</a></small></h3>
-<p>Source code: <a href="../../dotnet_example/lbmmon.cs">lbmmon.cs</a>: </p><pre>
+<p>Source code: <a href="../../dotnet_example/lbmmon.cs">lbmmon.cs</a>: </p><pre class="fragment">Purpose: Example LBM statistics monitoring application.
+
 Usage: lbmmon [options]
 Available options:
   -h = help
@@ -243,25 +247,36 @@ Available options:
       --transport-opts OPTS  use OPTS as transport module options
   -f, --format FMT           use format module FMT
                              FMT may be `csv'
-      --format-opts OPTS     use OPTS as format module options</pre><pre>Transport and format options are passed as name=value pairs, separated by a semicolon.</pre><pre>LBM transport options:
+      --format-opts OPTS     use OPTS as format module options
+
+Transport and format options are passed as name=value pairs, separated by a semicolon.
+
+LBM transport options:
   config=FILE            use LBM configuration file FILE
   topic=TOPIC            receive statistics on topic TOPIC
                          default is /29west/statistics
-  wctopic=PATTERN        receive statistics on wildcard topic PATTERN</pre><pre>UDP transport options:
+  wctopic=PATTERN        receive statistics on wildcard topic PATTERN
+
+UDP transport options:
   port=NUM               receive on UDP port NUM
   interface=IP           receive multicast on interface IP
-  mcgroup=GRP            receive on multicast group GRP</pre><pre>LBMSNMP transport options:
+  mcgroup=GRP            receive on multicast group GRP
+
+LBMSNMP transport options:
   config=FILE            use LBM configuration file FILE
   topic=TOPIC            receive statistics on topic TOPIC
                          default is /29west/statistics
-  wctopic=PATTERN        receive statistics on wildcard topic PATTERN</pre><pre>CSV format options:
+  wctopic=PATTERN        receive statistics on wildcard topic PATTERN
+
+CSV format options:
   separator=CHAR         separate CSV fields with character CHAR
                          defaults to `,'
 </pre><p><br />
  </p>
 <h3><a class="anchor" id="examplelbmmrcv_cs"></a>
 Example lbmmrcv.cs&nbsp;&nbsp;<small><a href="#examplelbmmrcv_cs">&lt;-</a></small></h3>
-<p>Source code: <a href="../../dotnet_example/lbmmrcv.cs">lbmmrcv.cs</a>: </p><pre>
+<p>Source code: <a href="../../dotnet_example/lbmmrcv.cs">lbmmrcv.cs</a>: </p><pre class="fragment">Purpose: Receive messages on multiple topics.
+
 Usage: lbmmrcv [options]
 Available options:
   -B # = Set receive socket buffer size to # (in MB)
@@ -275,7 +290,7 @@ Available options:
   -R rcvs = create rcvs receivers
   -s = print statistics along with bandwidth
   -v = be verbose about each message
-Monitoring options:<br />
+Monitoring options:\n
   --monitor-ctx NUM = monitor context every NUM seconds
   --monitor-rcv NUM = monitor each receiver every NUM seconds
   --monitor-transport TRANS = use monitor transport module TRANS
@@ -289,7 +304,8 @@ Monitoring options:<br />
  </p>
 <h3><a class="anchor" id="examplelbmmsrc_cs"></a>
 Example lbmmsrc.cs&nbsp;&nbsp;<small><a href="#examplelbmmsrc_cs">&lt;-</a></small></h3>
-<p>Source code: <a href="../../dotnet_example/lbmmsrc.cs">lbmmsrc.cs</a>: </p><pre>
+<p>Source code: <a href="../../dotnet_example/lbmmsrc.cs">lbmmsrc.cs</a>: </p><pre class="fragment">Purpose: Send messages on multiple topics.
+
 Usage: lbmmsrc [options]
 Available options:
   -c filename = Use LBM configuration file filename.
@@ -311,7 +327,7 @@ Available options:
                      '-R 1m/500k' is the same as '-R 1000000/500000'
   -S srcs = use srcs sources
   -T thrds = use thrds threads
-Monitoring options:<br />
+Monitoring options:\n
   --monitor-ctx NUM = monitor context every NUM seconds
   --monitor-src NUM = monitor each source every NUM seconds
   --monitor-transport TRANS = use monitor transport module TRANS
@@ -325,7 +341,8 @@ Monitoring options:<br />
  </p>
 <h3><a class="anchor" id="examplelbmpong_cs"></a>
 Example lbmpong.cs&nbsp;&nbsp;<small><a href="#examplelbmpong_cs">&lt;-</a></small></h3>
-<p>Source code: <a href="../../dotnet_example/lbmpong.cs">lbmpong.cs</a>: </p><pre>
+<p>Source code: <a href="../../dotnet_example/lbmpong.cs">lbmpong.cs</a>: </p><pre class="fragment">Purpose: Message round trip processor.
+
 Usage: lbmpong [options] id
 Available options:
   -c filename = Use LBM configuration file filename.
@@ -352,7 +369,8 @@ Available options:
  </p>
 <h3><a class="anchor" id="examplelbmrcv_cs"></a>
 Example lbmrcv.cs&nbsp;&nbsp;<small><a href="#examplelbmrcv_cs">&lt;-</a></small></h3>
-<p>Source code: <a href="../../dotnet_example/lbmrcv.cs">lbmrcv.cs</a>: </p><pre>
+<p>Source code: <a href="../../dotnet_example/lbmrcv.cs">lbmrcv.cs</a>: </p><pre class="fragment">Purpose: Receive messages on a single topic.
+
 Usage: lbmrcv [options] topic
 Available options:
   -c filename = Use LBM configuration file filename.
@@ -372,7 +390,7 @@ Available options:
   -v = be verbose about each message
   -V = verify message contents
   -z qsize = monitor event queue size above qsize in length
-Monitoring options:<br />
+Monitoring options:\n
   --monitor-ctx NUM = monitor context every NUM seconds
   --monitor-rcv NUM = monitor receiver every NUM seconds
   --monitor-transport TRANS = use monitor transport module TRANS
@@ -386,7 +404,8 @@ Monitoring options:<br />
  </p>
 <h3><a class="anchor" id="examplelbmrcvxsp_cs"></a>
 Example lbmrcvxsp.cs&nbsp;&nbsp;<small><a href="#examplelbmrcvxsp_cs">&lt;-</a></small></h3>
-<p>Source code: <a href="../../dotnet_example/lbmrcvxsp.cs">lbmrcvxsp.cs</a>: </p><pre>
+<p>Source code: <a href="../../dotnet_example/lbmrcvxsp.cs">lbmrcvxsp.cs</a>: </p><pre class="fragment">Purpose: Receive messages on a single topic, mapping transports to various XSPs.
+
 Usage: lbmrcvxsp [options] topic
 Available options:
   -c filename = Use LBM configuration file filename.
@@ -405,7 +424,7 @@ Available options:
   -s num_secs = print statistics every num_secs along with bandwidth
   -v = be verbose about each message
   -V = verify message contents
-Monitoring options:<br />
+Monitoring options:\n
   --monitor-ctx NUM = monitor context every NUM seconds
   --monitor-rcv NUM = monitor receiver every NUM seconds
   --monitor-transport TRANS = use monitor transport module TRANS
@@ -419,7 +438,8 @@ Monitoring options:<br />
  </p>
 <h3><a class="anchor" id="examplelbmreq_cs"></a>
 Example lbmreq.cs&nbsp;&nbsp;<small><a href="#examplelbmreq_cs">&lt;-</a></small></h3>
-<p>Source code: <a href="../../dotnet_example/lbmreq.cs">lbmreq.cs</a>: </p><pre>
+<p>Source code: <a href="../../dotnet_example/lbmreq.cs">lbmreq.cs</a>: </p><pre class="fragment">Purpose: Send request messages from a single source with setttable interval between messages.
+
 Usage: lbmreq [options] topic
 Available options:
   -c filename = Use LBM configuration file filename.
@@ -446,7 +466,8 @@ Available options:
  </p>
 <h3><a class="anchor" id="examplelbmresp_cs"></a>
 Example lbmresp.cs&nbsp;&nbsp;<small><a href="#examplelbmresp_cs">&lt;-</a></small></h3>
-<p>Source code: <a href="../../dotnet_example/lbmresp.cs">lbmresp.cs</a>: </p><pre>
+<p>Source code: <a href="../../dotnet_example/lbmresp.cs">lbmresp.cs</a>: </p><pre class="fragment">Purpose: Respond to request messages on a single topic.
+
 Usage: lbmresp [options] topic
 Available options:
   -c filename = Use LBM configuration file filename.
@@ -463,7 +484,8 @@ Available options:
  </p>
 <h3><a class="anchor" id="examplelbmsrc_cs"></a>
 Example lbmsrc.cs&nbsp;&nbsp;<small><a href="#examplelbmsrc_cs">&lt;-</a></small></h3>
-<p>Source code: <a href="../../dotnet_example/lbmsrc.cs">lbmsrc.cs</a>: </p><pre>
+<p>Source code: <a href="../../dotnet_example/lbmsrc.cs">lbmsrc.cs</a>: </p><pre class="fragment">Purpose: Send messages on a single topic.
+
 Usage: lbmsrc [options] topic
 Available options:
   -c filename = Use LBM configuration file filename.
@@ -489,7 +511,7 @@ Available options:
   -t filename = use filename contents as a recording of message sequence numbers (HF only!)
   -V = construct verifiable messages
   -x bits = Use 32 or 64 bits for hot-failover sequence numbers
-Monitoring options:<br />
+Monitoring options:\n
   --monitor-ctx NUM = monitor context every NUM seconds
   --monitor-src NUM = monitor source every NUM seconds
   --monitor-transport TRANS = use monitor transport module TRANS
@@ -503,7 +525,8 @@ Monitoring options:<br />
  </p>
 <h3><a class="anchor" id="examplelbmtrreq_cs"></a>
 Example lbmtrreq.cs&nbsp;&nbsp;<small><a href="#examplelbmtrreq_cs">&lt;-</a></small></h3>
-<p>Source code: <a href="../../dotnet_example/lbmtrreq.cs">lbmtrreq.cs</a>: </p><pre>
+<p>Source code: <a href="../../dotnet_example/lbmtrreq.cs">lbmtrreq.cs</a>: </p><pre class="fragment">Purpose: Request topic resolution for quiescent components.
+
 Usage: lbmtrreq [options]
 Available options:
   -c filename =      Use LBM configuration file filename.
@@ -519,7 +542,8 @@ Available options:
  </p>
 <h3><a class="anchor" id="examplelbmwrcv_cs"></a>
 Example lbmwrcv.cs&nbsp;&nbsp;<small><a href="#examplelbmwrcv_cs">&lt;-</a></small></h3>
-<p>Source code: <a href="../../dotnet_example/lbmwrcv.cs">lbmwrcv.cs</a>: </p><pre>
+<p>Source code: <a href="../../dotnet_example/lbmwrcv.cs">lbmwrcv.cs</a>: </p><pre class="fragment">Purpose: Receive messages using a wildcard receiver.
+
 Usage: [options] topic
 Available options
   -c filename = Use LBM configuration file filename.
@@ -533,7 +557,7 @@ Available options
   -s = print statistics along with bandwidth
   -N NUM = subscribe to channel NUM
   -v = be verbose about each message
-Monitoring options:<br />
+Monitoring options:\n
   --monitor-ctx NUM = monitor context every NUM seconds
   --monitor-transport TRANS = use monitor transport module TRANS
                               TRANS may be `lbm', `udp', or `lbmsnmp', default is `lbm'
@@ -546,7 +570,8 @@ Monitoring options:<br />
  </p>
 <h3><a class="anchor" id="exampleumercv_cs"></a>
 Example umercv.cs&nbsp;&nbsp;<small><a href="#exampleumercv_cs">&lt;-</a></small></h3>
-<p>Source code: <a href="../../dotnet_example/umercv.cs">umercv.cs</a>: </p><pre>
+<p>Source code: <a href="../../dotnet_example/umercv.cs">umercv.cs</a>: </p><pre class="fragment">Purpose: Receive messages on a single topic via the UM .NET API.
+
 Usage: umercv [options] topic
 Available options:
   -c filename = Use LBM configuration file filename.
@@ -568,7 +593,7 @@ Available options:
   -S = exit after source ends, print throughput summary
   -v = be verbose about each message
   -z qsize = monitor event queue size above qsize in length
-Monitoring options:<br />
+Monitoring options:\n
   --monitor-ctx NUM = monitor context every NUM seconds
   --monitor-rcv NUM = monitor receiver every NUM seconds
   --monitor-transport TRANS = use monitor transport module TRANS
@@ -582,7 +607,8 @@ Monitoring options:<br />
  </p>
 <h3><a class="anchor" id="exampleumesrc_cs"></a>
 Example umesrc.cs&nbsp;&nbsp;<small><a href="#exampleumesrc_cs">&lt;-</a></small></h3>
-<p>Source code: <a href="../../dotnet_example/umesrc.cs">umesrc.cs</a>: </p><pre>
+<p>Source code: <a href="../../dotnet_example/umesrc.cs">umesrc.cs</a>: </p><pre class="fragment">Purpose: Send messages on a single topic via the UM .NET API
+
 Usage: umesrc [options] topic
 Available options:
   -c filename = Use LBM configuration file filename.
@@ -610,7 +636,7 @@ Available options:
   -s sec = print stats every sec seconds
   -t storename = use UME store with name storename
   -v = verbose
-Monitoring options:<br />
+Monitoring options:\n
   --monitor-ctx NUM = monitor context every NUM seconds
   --monitor-src NUM = monitor source every NUM seconds
   --monitor-transport TRANS = use monitor transport module TRANS
@@ -625,7 +651,8 @@ default is `lbm'
  </p>
 <h3><a class="anchor" id="exampleumqrcv_cs"></a>
 Example umqrcv.cs&nbsp;&nbsp;<small><a href="#exampleumqrcv_cs">&lt;-</a></small></h3>
-<p>Source code: <a href="../../dotnet_example/umqrcv.cs">umqrcv.cs</a>: </p><pre>
+<p>Source code: <a href="../../dotnet_example/umqrcv.cs">umqrcv.cs</a>: </p><pre class="fragment">Purpose: Receive messages from a queue.
+
 Usage: umqrcv [options] topic
 Available options:
   -B broker = use broker specified by address
@@ -649,7 +676,7 @@ Available options:
   -z qsize = monitor event queue size above qsize in length
   -r msgs = delete receiver after msgs messages
   -v = be verbose about each message
-Monitoring options:<br />
+Monitoring options:\n
   --monitor-ctx NUM = monitor context every NUM seconds
   --monitor-rcv NUM = monitor receiver every NUM seconds
   --monitor-transport TRANS = use monitor transport module TRANS
@@ -663,7 +690,8 @@ Monitoring options:<br />
  </p>
 <h3><a class="anchor" id="exampleumqsrc_cs"></a>
 Example umqsrc.cs&nbsp;&nbsp;<small><a href="#exampleumqsrc_cs">&lt;-</a></small></h3>
-<p>Source code: <a href="../../dotnet_example/umqsrc.cs">umqsrc.cs</a>: </p><pre>
+<p>Source code: <a href="../../dotnet_example/umqsrc.cs">umqsrc.cs</a>: </p><pre class="fragment">Purpose: Send messages on a single topic.
+
 Usage: umqsrc [options] topic
 Available options:
   -A cfg = use ULB Application Sets given by cfg
@@ -687,19 +715,61 @@ Available options:
   -X = Send using numeric or named UMQ index X
      -Y = Send using named UMQ index for broker sources
   -v = verbose
-Monitoring options:<br />
-  &ndash;monitor-ctx NUM = monitor context every NUM seconds
-  &ndash;monitor-src NUM = monitor source every NUM seconds
-  &ndash;monitor-transport TRANS = use monitor transport module TRANS
+Monitoring options:\n
+  --monitor-ctx NUM = monitor context every NUM seconds
+  --monitor-src NUM = monitor source every NUM seconds
+  --monitor-transport TRANS = use monitor transport module TRANS
                               TRANS may be `lbm', `udp', or `lbmsnmp', default is `lbm'
-  &ndash;monitor-transport-opts OPTS = use OPTS as transport module options
-  &ndash;monitor-format FMT = use monitor format module FMT
+  --monitor-transport-opts OPTS = use OPTS as transport module options
+  --monitor-format FMT = use monitor format module FMT
                          FMT may be `csv'
-  &ndash;monitor-format-opts OPTS = use OPTS as format module options
-  &ndash;monitor-appid ID = use ID as application ID string
-  &ndash;flight-size = See -f above
-  &ndash;message-rate = See -m above
-</pre> </div></div><!-- contents -->
+  --monitor-format-opts OPTS = use OPTS as format module options
+  --monitor-appid ID = use ID as application ID string
+  --flight-size = See -f above
+  --message-rate = See -m above
+</pre><p><br />
+<br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ <br />
+ </p>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.8.11-->
 </body>
